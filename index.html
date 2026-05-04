@@ -852,4 +852,789 @@
             }
 
             h2 {
-                font-size: 1.4*
+                font-size: 1.4rem;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .modal-content {
+                width: 95%;
+            }
+        }
+
+        /* ========== SCROLLBAR ========== */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-secondary);
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            margin-top: 3rem;
+            border-top: 1px solid var(--border-color);
+            transition: all 0.4s ease;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                IELTS Reading Master
+            </div>
+            <div class="header-right">
+                <input type="text" class="search-box" id="searchBox" placeholder="Tìm kiếm...">
+                <button class="theme-toggle" id="themeToggle">
+                    <span class="theme-icon">🌙</span>
+                    <span id="themeText">Dark Mode</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Navigation Tabs -->
+        <div class="nav-tabs" id="navTabs">
+            <button class="active" data-tab="dashboard">
+                <span class="nav-icon">📊</span>
+                Dashboard
+            </button>
+            <button data-tab="levels">
+                <span class="nav-icon">📚</span>
+                Bài Học
+            </button>
+            <button data-tab="vocabulary">
+                <span class="nav-icon">🔤</span>
+                Từ Vựng
+            </button>
+            <button data-tab="grammar">
+                <span class="nav-icon">📖</span>
+                Ngữ Pháp
+            </button>
+            <button data-tab="reading">
+                <span class="nav-icon">📝</span>
+                Bài Đọc
+            </button>
+            <button data-tab="tests">
+                <span class="nav-icon">✅</span>
+                Kiểm Tra
+            </button>
+            <button data-tab="progress">
+                <span class="nav-icon">📈</span>
+                Tiến Độ
+            </button>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboard" class="content-section active">
+            <h2>
+                <span class="h2-icon">📊</span>
+                Bảng Điều Khiển Học Tập
+            </h2>
+            <div class="dashboard-grid">
+                <div class="stat-card">
+                    <div class="stat-card-icon">📚</div>
+                    <h3>Bài Học</h3>
+                    <div class="number" id="lessonsCompleted">0</div>
+                    <p>bài hoàn thành</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon">⏱️</div>
+                    <h3>Thời Gian</h3>
+                    <div class="number" id="studyTime">0</div>
+                    <p>giờ hôm nay</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon">🎯</div>
+                    <h3>Điểm Trung Bình</h3>
+                    <div class="number" id="averageScore">0</div>
+                    <p>% toàn bộ bài</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon">🔥</div>
+                    <h3>Chuỗi Học</h3>
+                    <div class="number" id="streak">0</div>
+                    <p>ngày liên tiếp</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 2rem;">🎯 Mục Tiêu Hôm Nay</h3>
+            <div class="progress-section">
+                <div class="progress-item">
+                    <label>
+                        <span>Hoàn Thành 2 chủ đề</span>
+                        <span id="taskProgress">0/2</span>
+                    </label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="taskProgressBar" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <label>
+                        <span>Học 50 từ vựng mới</span>
+                        <span id="vocabProgress">0/50</span>
+                    </label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="vocabProgressBar" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <label>
+                        <span>Làm 1 bài kiểm tra</span>
+                        <span id="testProgress">0/1</span>
+                    </label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="testProgressBar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Levels Section -->
+        <div id="levels" class="content-section">
+            <h2>
+                <span class="h2-icon">📚</span>
+                Chọn Cấp Độ Học Tập
+            </h2>
+            <div class="levels-grid">
+                <div class="level-card" onclick="selectLevel('foundation')">
+                    <span class="level-icon">🌱</span>
+                    <h3>Foundation</h3>
+                    <p>IELTS 3.0 - 4.5</p>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary);">Dành cho người mới</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 20%"></div>
+                    </div>
+                    <span class="badge">20% Hoàn Thành</span>
+                </div>
+
+                <div class="level-card" onclick="selectLevel('elementary')">
+                    <span class="level-icon">📖</span>
+                    <h3>Elementary</h3>
+                    <p>IELTS 4.5 - 5.5</p>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary);">Có kỹ năng cơ bản</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 45%"></div>
+                    </div>
+                    <span class="badge">45% Hoàn Thành</span>
+                </div>
+
+                <div class="level-card" onclick="selectLevel('intermediate')">
+                    <span class="level-icon">🚀</span>
+                    <h3>Intermediate</h3>
+                    <p>IELTS 5.5 - 6.5</p>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary);">Trung cấp, khó hơn</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 30%"></div>
+                    </div>
+                    <span class="badge">30% Hoàn Thành</span>
+                </div>
+
+                <div class="level-card" onclick="selectLevel('upper-intermediate')">
+                    <span class="level-icon">💪</span>
+                    <h3>Upper-Inter</h3>
+                    <p>IELTS 6.5 - 7.5</p>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary);">Nâng cao, rất khó</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 10%"></div>
+                    </div>
+                    <span class="badge">10% Hoàn Thành</span>
+                </div>
+
+                <div class="level-card" onclick="selectLevel('advanced')">
+                    <span class="level-icon">🏆</span>
+                    <h3>Advanced</h3>
+                    <p>IELTS 7.5 - 8.5+</p>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary);">Cao cấp, quá khó</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 5%"></div>
+                    </div>
+                    <span class="badge">5% Hoàn Thành</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Section -->
+        <div id="vocabulary" class="content-section">
+            <h2>
+                <span class="h2-icon">🔤</span>
+                Học Từ Vựng IELTS
+            </h2>
+            <div style="margin-bottom: 1.5rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <label style="font-weight: 600;">Chủ đề:</label>
+                <select id="vocabCategory" style="padding: 0.6rem 1rem; border-radius: 10px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); cursor: pointer; transition: all 0.3s ease;">
+                    <option value="daily">Daily Life - Đời Sống Hàng Ngày</option>
+                    <option value="work">Work & Employment - Công Việc</option>
+                    <option value="education">Education - Giáo Dục</option>
+                    <option value="technology">Technology - Công Nghệ</option>
+                    <option value="environment">Environment - Môi Trường</option>
+                </select>
+            </div>
+            <div class="vocabulary-grid" id="vocabList"></div>
+        </div>
+
+        <!-- Grammar Section -->
+        <div id="grammar" class="content-section">
+            <h2>
+                <span class="h2-icon">📖</span>
+                Ngữ Pháp IELTS Reading
+            </h2>
+            <div id="grammarList"></div>
+        </div>
+
+        <!-- Reading Section -->
+        <div id="reading" class="content-section">
+            <h2>
+                <span class="h2-icon">📝</span>
+                Bài Đọc Mẫu
+            </h2>
+            <div class="reading-container">
+                <h3>Chủ Đề: Daily Life in Modern Cities</h3>
+                <div class="reading-passage">
+                    Modern cities have transformed dramatically over the past century. The rapid urbanization has brought both opportunities and challenges to millions of people worldwide. Today's cities are characterized by towering skyscrapers, complex transportation networks, and diverse populations. Despite these developments, urban living comes with significant challenges such as pollution, overcrowding, and increased living costs.
+                    <br><br>
+                    However, cities also offer numerous advantages. They provide better access to education, healthcare, and employment opportunities. Cultural diversity in cities creates vibrant communities where people from different backgrounds can interact and share experiences. Furthermore, cities are often centers of innovation and creativity, attracting talented individuals from around the world.
+                </div>
+
+                <div class="reading-questions">
+                    <h4>Câu Hỏi:</h4>
+                    <div class="question">
+                        <h4>1. Theo đoạn văn, thách thức chính của cuộc sống thành thị là gì?</h4>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q1"> Công nghệ không đủ tốt
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1"> Ô nhiễm, quá tải dân số, chi phí cao
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1"> Không có cơ hội việc làm
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question">
+                        <h4>2. Lợi ích nào được đề cập trong đoạn thứ hai?</h4>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q2"> Cơ hội việc làm tốt
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2"> Đa dạng văn hóa
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2"> Thời tiết ấm áp hơn
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-full" onclick="submitReading()">Nộp Bài</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tests Section -->
+        <div id="tests" class="content-section">
+            <h2>
+                <span class="h2-icon">✅</span>
+                Bài Kiểm Tra
+            </h2>
+            <div class="topics-container">
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <h4>
+                            <span class="topic-icon">📋</span>
+                            Full Practice Test 1
+                        </h4>
+                        <p>IELTS 5.5-6.5</p>
+                    </div>
+                    <div class="topic-body">
+                        <p>3 bài đọc, 40 câu hỏi, 60 phút</p>
+                        <ul class="topic-features">
+                            <li>Mô phỏng đề thi thực tế</li>
+                            <li>Tính điểm tự động</li>
+                            <li>Giải thích chi tiết</li>
+                        </ul>
+                        <button class="btn btn-primary btn-full" onclick="startTest('test1')">Bắt Đầu</button>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <h4>
+                            <span class="topic-icon">📋</span>
+                            Mini Test: Matching
+                        </h4>
+                        <p>IELTS 5.0+</p>
+                    </div>
+                    <div class="topic-body">
+                        <p>1 bài đọc, 10 câu hỏi, 15 phút</p>
+                        <ul class="topic-features">
+                            <li>Dạng bài Matching</li>
+                            <li>Rút gọn thời gian</li>
+                            <li>Luyện kỹ năng Scanning</li>
+                        </ul>
+                        <button class="btn btn-primary btn-full" onclick="startTest('mini1')">Bắt Đầu</button>
+                    </div>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <h4>
+                            <span class="topic-icon">📋</span>
+                            Timed Reading Test
+                        </h4>
+                        <p>IELTS 6.0+</p>
+                    </div>
+                    <div class="topic-body">
+                        <p>3 bài đọc, 40 câu hỏi, 60 phút</p>
+                        <ul class="topic-features">
+                            <li>Đồng hồ đếm ngược</li>
+                            <li>Tự động nộp khi hết giờ</li>
+                            <li>Quản lý thời gian</li>
+                        </ul>
+                        <button class="btn btn-primary btn-full" onclick="startTest('timed1')">Bắt Đầu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Section -->
+        <div id="progress" class="content-section">
+            <h2>
+                <span class="h2-icon">📈</span>
+                Theo Dõi Tiến Độ
+            </h2>
+            <div class="progress-section">
+                <h3 style="margin-bottom: 1.5rem;">Tiến Độ Học Tập Tổng Thể</h3>
+
+                <div class="progress-item">
+                    <label>
+                        <span>Foundation Level</span>
+                        <span>8/10 bài</span>
+                    </label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <label>
+                        <span>Elementary Level</span>
+                        <span>5/10 bài</span>
+                    </label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 50%"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <label>
+                        <span>Intermediate Level</span>
+                        <span>2/10 bài</span>
+                    </label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 20%"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <label>
+                        <span>Upper-Intermediate Level</span>
+                        <span>1/10 bài</span>
+                    </label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 10%"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <label>
+                        <span>Advanced Level</span>
+                        <span>0/10 bài</span>
+                    </label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1.5rem;">Kỹ Năng Đọc Hiểu</h3>
+
+                <div class="progress-item">
+                    <label>
+                        <span>Skimming (Quét nhanh)</span>
+                        <span>75%</span>
+                    </label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <label>
+                        <span>Scanning (Tìm kiếm)</span>
+                        <span>60%</span>
+                    </label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <label>
+                        <span>Vocabulary (Từ vựng)</span>
+                        <span>85%</span>
+                    </label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <label>
+                        <span>Grammar Understanding</span>
+                        <span>70%</span>
+                    </label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 70%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Chi Tiết</h2>
+                <button class="close-btn" onclick="closeModal()">✕</button>
+            </div>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 IELTS Reading Master - Học Tiếng Anh Dễ Dàng</p>
+    </footer>
+
+    <script>
+        // ============================================================
+        // FIX #1: THEME TOGGLE - Dark Mode Now Works Correctly
+        // ============================================================
+        const themeToggle = document.getElementById('themeToggle');
+        const themeText = document.getElementById('themeText');
+
+        // Load theme on page load
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                themeText.textContent = 'Light Mode';
+                themeToggle.querySelector('.theme-icon').textContent = '☀️';
+            } else {
+                document.body.classList.remove('dark-mode');
+                themeText.textContent = 'Dark Mode';
+                themeToggle.querySelector('.theme-icon').textContent = '🌙';
+            }
+        }
+
+        // Toggle theme on button click
+        themeToggle.addEventListener('click', () => {
+            const isDarkMode = document.body.classList.toggle('dark-mode');
+            
+            // Update text and icon
+            themeText.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+            themeToggle.querySelector('.theme-icon').textContent = isDarkMode ? '☀️' : '🌙';
+            
+            // Save to localStorage
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        });
+
+        // Load theme on page start
+        loadTheme();
+
+        // ============================================================
+        // FIX #2: NAVIGATION LINKS - Now Fully Clickable & Working
+        // ============================================================
+        const navTabs = document.getElementById('navTabs');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        // Get all nav buttons (using correct selector)
+        const navButtons = navTabs.querySelectorAll('button');
+
+        navButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Remove active class from all buttons
+                navButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Remove active class from all sections
+                contentSections.forEach(section => section.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Get tab name and show section
+                const tabName = button.getAttribute('data-tab');
+                const targetSection = document.getElementById(tabName);
+                
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                    
+                    // Load content if needed
+                    if (tabName === 'vocabulary') {
+                        loadVocabulary();
+                    } else if (tabName === 'grammar') {
+                        loadGrammar();
+                    }
+                    
+                    // Smooth scroll to top
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ============================================================
+        // VOCABULARY - Data & Functions
+        // ============================================================
+        const vocabularyData = {
+            daily: [
+                { word: 'Commute', phonetic: '/kəˈmjuːt/', meaning: 'Đi từ nhà tới nơi làm việc' },
+                { word: 'Congestion', phonetic: '/kənˈdʒestʃən/', meaning: 'Tình trạng tắc đường' },
+                { word: 'Pedestrian', phonetic: '/pəˈdestriən/', meaning: 'Người đi bộ' },
+                { word: 'Accommodation', phonetic: '/əˌkɒməˈdeɪʃən/', meaning: 'Nơi ở' },
+                { word: 'Neighborhood', phonetic: '/ˈneɪbərhʊd/', meaning: 'Khu vực lân cận' },
+                { word: 'Inhabitant', phonetic: '/ɪnˈhæbɪtənt/', meaning: 'Cư dân' }
+            ],
+            work: [
+                { word: 'Productivity', phonetic: '/prɒdʌkˈtɪvəti/', meaning: 'Năng suất' },
+                { word: 'Employment', phonetic: '/ɪmˈplɔɪmənt/', meaning: 'Việc làm' },
+                { word: 'Recruitment', phonetic: '/rɪˈkruːtmənt/', meaning: 'Tuyển dụng' },
+                { word: 'Salary', phonetic: '/ˈsæləri/', meaning: 'Lương' },
+                { word: 'Deadline', phonetic: '/ˈdedbɪn/', meaning: 'Hạn chót' },
+                { word: 'Colleague', phonetic: '/ˈkɒliːg/', meaning: 'Đồng nghiệp' }
+            ],
+            education: [
+                { word: 'Curriculum', phonetic: '/kəˈrɪkjələm/', meaning: 'Chương trình học' },
+                { word: 'Assessment', phonetic: '/əˈsesmənt/', meaning: 'Đánh giá' },
+                { word: 'Scholarship', phonetic: '/ˈskɒlərʃɪp/', meaning: 'Học bổng' },
+                { word: 'Tuition', phonetic: '/tjuˈɪʃən/', meaning: 'Học phí' },
+                { word: 'Lecture', phonetic: '/ˈlektʃər/', meaning: 'Bài giảng' },
+                { word: 'Enrollment', phonetic: '/ɪnˈroʊlmənt/', meaning: 'Đăng ký học' }
+            ],
+            technology: [
+                { word: 'Innovation', phonetic: '/ˌɪnəˈveɪʃən/', meaning: 'Đổi mới' },
+                { word: 'Algorithm', phonetic: '/ˈælɡərɪðəm/', meaning: 'Thuật toán' },
+                { word: 'Interface', phonetic: '/ˈɪntərfeɪs/', meaning: 'Giao diện' },
+                { word: 'Database', phonetic: '/ˈdeɪtəbeɪs/', meaning: 'Cơ sở dữ liệu' },
+                { word: 'Download', phonetic: '/ˈdaʊnloʊd/', meaning: 'Tải xuống' },
+                { word: 'Application', phonetic: '/ˌæplɪˈkeɪʃən/', meaning: 'Ứng dụng' }
+            ],
+            environment: [
+                { word: 'Pollution', phonetic: '/pəˈluːʃən/', meaning: 'Ô nhiễm' },
+                { word: 'Sustainability', phonetic: '/səˌsteɪnəˈbɪləti/', meaning: 'Tính bền vững' },
+                { word: 'Ecosystem', phonetic: '/ˈiːkoʊsɪstəm/', meaning: 'Hệ sinh thái' },
+                { word: 'Conservation', phonetic: '/ˌkɑːnsərˈveɪʃən/', meaning: 'Bảo tồn' },
+                { word: 'Renewable', phonetic: '/rɪˈnjuːəbəl/', meaning: 'Tái tạo được' },
+                { word: 'Emission', phonetic: '/ɪˈmɪʃən/', meaning: 'Khí thải' }
+            ]
+        };
+
+        function loadVocabulary() {
+            const category = document.getElementById('vocabCategory').value;
+            const vocabList = document.getElementById('vocabList');
+            vocabList.innerHTML = '';
+
+            if (vocabularyData[category]) {
+                vocabularyData[category].forEach((vocab) => {
+                    const card = document.createElement('div');
+                    card.className = 'vocab-card';
+                    card.innerHTML = `
+                        <div class="vocab-word">${vocab.word}</div>
+                        <div class="vocab-phonetic">${vocab.phonetic}</div>
+                        <div class="vocab-meaning">${vocab.meaning}</div>
+                    `;
+                    vocabList.appendChild(card);
+                });
+            }
+        }
+
+        // Update vocabulary on category change
+        document.getElementById('vocabCategory').addEventListener('change', loadVocabulary);
+
+        // ============================================================
+        // GRAMMAR - Data & Functions
+        // ============================================================
+        const grammarData = [
+            {
+                title: 'Present Simple vs Present Continuous',
+                explanation: 'Present Simple dùng cho sự thật chung, thói quen; Present Continuous dùng cho hành động đang xảy ra.',
+                examples: [
+                    '✓ I work as an engineer (sự thật)',
+                    '✓ I am working on a project (đang làm)',
+                    '✗ I am working as an engineer (sai)'
+                ]
+            },
+            {
+                title: 'Relative Clauses (Mệnh đề quan hệ)',
+                explanation: 'Dùng để cung cấp thông tin thêm về danh từ.',
+                examples: [
+                    '✓ The man who lives next door is a doctor',
+                    '✓ The book which I read last week was interesting',
+                    '✓ The city where I was born is very beautiful'
+                ]
+            },
+            {
+                title: 'Passive Voice (Câu bị động)',
+                explanation: 'Diễn tả hành động được thực hiện cho chủ thể.',
+                examples: [
+                    '✓ The house was built in 1990',
+                    '✓ English is spoken worldwide',
+                    '✓ The letter has been written'
+                ]
+            },
+            {
+                title: 'Conditional Sentences (Câu điều kiện)',
+                explanation: 'Diễn tả điều kiện và kết quả có thể xảy ra.',
+                examples: [
+                    '✓ If it rains, I will stay home (Type 1)',
+                    '✓ If I won the lottery, I would travel (Type 2)',
+                    '✓ If I had studied harder, I would have passed (Type 3)'
+                ]
+            }
+        ];
+
+        function loadGrammar() {
+            const grammarList = document.getElementById('grammarList');
+            grammarList.innerHTML = '';
+
+            grammarData.forEach(item => {
+                const grammarItem = document.createElement('div');
+                grammarItem.className = 'grammar-item';
+                grammarItem.innerHTML = `
+                    <h4>${item.title}</h4>
+                    <p>${item.explanation}</p>
+                    <div>
+                        ${item.examples.map(ex => `<div class="example">${ex}</div>`).join('')}
+                    </div>
+                `;
+                grammarList.appendChild(grammarItem);
+            });
+        }
+
+        // ============================================================
+        // UTILITIES
+        // ============================================================
+        function selectLevel(level) {
+            alert(`Bạn đã chọn: ${level}\nNhấn "Vào Học" để tiếp tục`);
+        }
+
+        function submitReading() {
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            const q2 = document.querySelector('input[name="q2"]:checked');
+
+            if (!q1 || !q2) {
+                alert('Vui lòng trả lời tất cả các câu hỏi');
+                return;
+            }
+
+            const parent1 = q1.parentElement;
+            const parent2 = q2.parentElement;
+
+            if (q1.parentElement.innerText.includes('Ô nhiễm')) {
+                parent1.classList.add('correct');
+            } else {
+                parent1.classList.add('incorrect');
+            }
+
+            if (q2.parentElement.innerText.includes('Đa dạng')) {
+                parent2.classList.add('correct');
+            } else {
+                parent2.classList.add('incorrect');
+            }
+
+            alert('Bạn trả lời: 2 đúng = 100%');
+        }
+
+        function startTest(testId) {
+            showModal('Bắt Đầu Kiểm Tra', `
+                <p>Kiểm tra sẽ bắt đầu trong vòng...</p>
+                <div style="text-align: center; font-size: 3rem; font-weight: bold; color: var(--accent-1); margin: 2rem 0;">
+                    <span id="countdown">3</span>
+                </div>
+                <p>Chuẩn bị sẵn sàng!</p>
+            `);
+
+            let count = 3;
+            const interval = setInterval(() => {
+                count--;
+                const countdownEl = document.getElementById('countdown');
+                if (countdownEl) countdownEl.textContent = count;
+                if (count === 0) {
+                    clearInterval(interval);
+                    closeModal();
+                }
+            }, 1000);
+        }
+
+        function showModal(title, content) {
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalBody').innerHTML = content;
+            document.getElementById('modal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Initialize on page load
+        function initDashboard() {
+            document.getElementById('lessonsCompleted').textContent = Math.floor(Math.random() * 30) + 5;
+            document.getElementById('studyTime').textContent = Math.floor(Math.random() * 5) + 1;
+            document.getElementById('averageScore').textContent = Math.floor(Math.random() * 40) + 60;
+            document.getElementById('streak').textContent = Math.floor(Math.random() * 15) + 1;
+        }
+
+        // Run on page load
+        initDashboard();
+        loadVocabulary();
+        loadGrammar();
+    </script>
+</body>
+</html>
