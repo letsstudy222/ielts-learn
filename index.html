@@ -3,607 +3,309 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IELTS Reading Master - Luyện Thi IELTS Reading</title>
+    <title>IELTS Reading Master</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f5f5f5; color: #333; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .nav-tabs { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        .nav-tabs button { padding: 10px 20px; background: white; border: 2px solid #ddd; border-radius: 5px; cursor: pointer; font-weight: bold; transition: all 0.3s; }
+        .nav-tabs button:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .nav-tabs button.active { background: #667eea; color: white; border-color: #667eea; }
+        .content-section { display: none; animation: fadeIn 0.3s; }
+        .content-section.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: all 0.3s; cursor: pointer; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+        .card h3 { color: #667eea; margin-bottom: 10px; }
+        .card p { color: #666; font-size: 0.9em; }
+        .btn { padding: 10px 20px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: all 0.3s; }
+        .btn:hover { background: #5568d3; }
+        .btn-full { width: 100%; display: block; margin-top: 15px; }
+        .stat-box { background: white; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .stat-box .number { font-size: 2.5em; color: #667eea; font-weight: bold; }
+        .progress-bar { width: 100%; height: 10px; background: #ddd; border-radius: 5px; overflow: hidden; margin: 10px 0; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); transition: width 0.3s; }
+        .vocab-card { background: white; padding: 20px; border-radius: 10px; text-align: center; cursor: pointer; min-height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .vocab-card:hover { transform: scale(1.05); }
+        .vocab-word { font-size: 1.3em; font-weight: bold; color: #667eea; }
+        .vocab-meaning { font-size: 0.9em; color: #666; margin-top: 10px; }
+        .reading-passage { background: #f9f9f9; padding: 20px; border-radius: 8px; line-height: 1.8; margin: 20px 0; }
+        .question { background: white; padding: 15px; border-left: 4px solid #667eea; margin: 15px 0; border-radius: 5px; }
+        .option { padding: 10px; margin: 5px 0; border: 2px solid #ddd; border-radius: 5px; cursor: pointer; transition: all 0.3s; }
+        .option:hover { border-color: #667eea; background: #f5f5ff; }
+        .option input { margin-right: 10px; }
+        footer { text-align: center; padding: 20px; background: #667eea; color: white; margin-top: 40px; }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } .nav-tabs { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📚 IELTS Reading Master</h1>
+        <p>Luyện Thi IELTS Reading Online</p>
+    </header>
 
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --success-color: #27ae60;
-            --warning-color: #f39c12;
-            --light-bg: #ecf0f1;
-            --text-color: #2c3e50;
-            --border-color: #bdc3c7;
-            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.15);
-        }
+    <div class="container">
+        <div class="nav-tabs">
+            <button class="nav-btn active" data-tab="dashboard">📊 Dashboard</button>
+            <button class="nav-btn" data-tab="levels">📚 Bài Học</button>
+            <button class="nav-btn" data-tab="vocabulary">🔤 Từ Vựng</button>
+            <button class="nav-btn" data-tab="grammar">📖 Ngữ Pháp</button>
+            <button class="nav-btn" data-tab="reading">📝 Bài Đọc</button>
+            <button class="nav-btn" data-tab="tests">✅ Kiểm Tra</button>
+            <button class="nav-btn" data-tab="progress">📈 Tiến Độ</button>
+        </div>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: var(--text-color);
-            min-height: 100vh;
-            transition: background 0.3s ease;
-        }
+        <!-- Dashboard -->
+        <div id="dashboard" class="content-section active">
+            <h2>📊 Bảng Điều Khiển</h2>
+            <div class="grid">
+                <div class="stat-box">
+                    <h3>📚 Bài Hoàn Thành</h3>
+                    <div class="number">12</div>
+                    <p>từ 50 bài</p>
+                </div>
+                <div class="stat-box">
+                    <h3>⏱️ Thời Gian Học</h3>
+                    <div class="number">5h</div>
+                    <p>tuần này</p>
+                </div>
+                <div class="stat-box">
+                    <h3>🎯 Điểm Trung Bình</h3>
+                    <div class="number">75%</div>
+                    <p>tất cả bài test</p>
+                </div>
+                <div class="stat-box">
+                    <h3>🔥 Streak</h3>
+                    <div class="number">7</div>
+                    <p>ngày liên tiếp</p>
+                </div>
+            </div>
+        </div>
 
-        body.dark-mode {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            --text-color: #ecf0f1;
-            --primary-color: #ecf0f1;
-        }
+        <!-- Levels -->
+        <div id="levels" class="content-section">
+            <h2>📚 Chọn Cấp Độ Học</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🌱 Foundation</h3>
+                    <p>IELTS 3.0 - 4.5</p>
+                    <p style="color: #999; font-size: 0.85em;">Dành cho người mới bắt đầu</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 20%"></div></div>
+                    <button class="btn btn-full">Vào Học</button>
+                </div>
+                <div class="card">
+                    <h3>📖 Elementary</h3>
+                    <p>IELTS 4.5 - 5.5</p>
+                    <p style="color: #999; font-size: 0.85em;">Cơ bản có kỹ năng</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 45%"></div></div>
+                    <button class="btn btn-full">Vào Học</button>
+                </div>
+                <div class="card">
+                    <h3>🚀 Intermediate</h3>
+                    <p>IELTS 5.5 - 6.5</p>
+                    <p style="color: #999; font-size: 0.85em;">Trung cấp, yêu cầu cao</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 30%"></div></div>
+                    <button class="btn btn-full">Vào Học</button>
+                </div>
+                <div class="card">
+                    <h3>💪 Upper-Intermediate</h3>
+                    <p>IELTS 6.5 - 7.5</p>
+                    <p style="color: #999; font-size: 0.85em;">Nâng cao, bài khó</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 10%"></div></div>
+                    <button class="btn btn-full">Vào Học</button>
+                </div>
+                <div class="card">
+                    <h3>🏆 Advanced</h3>
+                    <p>IELTS 7.5 - 8.5+</p>
+                    <p style="color: #999; font-size: 0.85em;">Cao cấp, rất khó</p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 5%"></div></div>
+                    <button class="btn btn-full">Vào Học</button>
+                </div>
+            </div>
+        </div>
 
-        /* Header */
-        header {
-            background: var(--primary-color);
-            color: white;
-            padding: 1.5rem 2rem;
-            box-shadow: var(--shadow-lg);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+        <!-- Vocabulary -->
+        <div id="vocabulary" class="content-section">
+            <h2>🔤 Học Từ Vựng IELTS</h2>
+            <p style="margin-bottom: 20px;">Chủ đề: <strong>Daily Life - Đời Sống Hàng Ngày</strong></p>
+            <div class="grid">
+                <div class="vocab-card">
+                    <div class="vocab-word">Commute</div>
+                    <div class="vocab-meaning">Đi từ nhà tới nơi làm việc</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Congestion</div>
+                    <div class="vocab-meaning">Tình trạng tắc đường</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Pedestrian</div>
+                    <div class="vocab-meaning">Người đi bộ</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Accommodation</div>
+                    <div class="vocab-meaning">Nơi ở</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Neighborhood</div>
+                    <div class="vocab-meaning">Khu vực lân cận</div>
+                </div>
+                <div class="vocab-card">
+                    <div class="vocab-word">Inhabitant</div>
+                    <div class="vocab-meaning">Cư dân</div>
+                </div>
+            </div>
+        </div>
 
-        .header-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        <!-- Grammar -->
+        <div id="grammar" class="content-section">
+            <h2>📖 Ngữ Pháp IELTS Reading</h2>
+            <div style="background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                <h3 style="color: #667eea; margin-bottom: 10px;">1. Present Simple vs Present Continuous</h3>
+                <p><strong>Giải thích:</strong> Present Simple dùng cho sự thật chung, thói quen. Present Continuous dùng cho hành động đang xảy ra.</p>
+                <div style="background: #f9f9f9; padding: 15px; margin: 15px 0; border-left: 4px solid #667eea;">
+                    <p>✓ <em>I work as an engineer</em> (sự thật)</p>
+                    <p>✓ <em>I am working on a project</em> (đang làm)</p>
+                </div>
+            </div>
+            <div style="background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                <h3 style="color: #667eea; margin-bottom: 10px;">2. Relative Clauses (Mệnh đề quan hệ)</h3>
+                <p><strong>Giải thích:</strong> Dùng để cung cấp thông tin thêm về danh từ.</p>
+                <div style="background: #f9f9f9; padding: 15px; margin: 15px 0; border-left: 4px solid #667eea;">
+                    <p>✓ <em>The man who lives next door is a doctor</em></p>
+                    <p>✓ <em>The book which I read was interesting</em></p>
+                </div>
+            </div>
+            <div style="background: white; padding: 20px; border-radius: 10px;">
+                <h3 style="color: #667eea; margin-bottom: 10px;">3. Passive Voice (Câu bị động)</h3>
+                <p><strong>Giải thích:</strong> Diễn tả hành động được thực hiện cho chủ thể.</p>
+                <div style="background: #f9f9f9; padding: 15px; margin: 15px 0; border-left: 4px solid #667eea;">
+                    <p>✓ <em>The house was built in 1990</em></p>
+                    <p>✓ <em>English is spoken worldwide</em></p>
+                </div>
+            </div>
+        </div>
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+        <!-- Reading -->
+        <div id="reading" class="content-section">
+            <h2>📝 Bài Đọc Mẫu</h2>
+            <h3>Chủ Đề: Daily Life in Modern Cities</h3>
+            <div class="reading-passage">
+                Modern cities have transformed dramatically over the past century. The rapid urbanization has brought both opportunities and challenges to millions of people worldwide. Today's cities are characterized by towering skyscrapers, complex transportation networks, and diverse populations. Despite these developments, urban living comes with significant challenges such as pollution, overcrowding, and increased living costs.
+                <br><br>
+                However, cities also offer numerous advantages. They provide better access to education, healthcare, and employment opportunities. Cultural diversity in cities creates vibrant communities where people from different backgrounds can interact and share experiences. Furthermore, cities are often centers of innovation and creativity.
+            </div>
+            <h4>Câu Hỏi:</h4>
+            <div class="question">
+                <p><strong>1. Theo đoạn văn, thách thức chính của cuộc sống thành thị là gì?</strong></p>
+                <div>
+                    <label class="option"><input type="radio" name="q1"> Công nghệ không đủ tốt</label>
+                    <label class="option"><input type="radio" name="q1"> Ô nhiễm, quá tải dân số, chi phí cao</label>
+                    <label class="option"><input type="radio" name="q1"> Không có cơ hội việc làm</label>
+                </div>
+            </div>
+            <div class="question">
+                <p><strong>2. Lợi ích nào được đề cập trong đoạn thứ hai?</strong></p>
+                <div>
+                    <label class="option"><input type="radio" name="q2"> Cơ hội việc làm tốt</label>
+                    <label class="option"><input type="radio" name="q2"> Đa dạng văn hóa</label>
+                    <label class="option"><input type="radio" name="q2"> Thời tiết ấm áp</label>
+                </div>
+            </div>
+            <button class="btn btn-full" onclick="checkAnswers()">Kiểm Tra Đáp Án</button>
+        </div>
 
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
+        <!-- Tests -->
+        <div id="tests" class="content-section">
+            <h2>✅ Bài Kiểm Tra</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>📋 Full Practice Test 1</h3>
+                    <p>IELTS 5.5-6.5</p>
+                    <p style="color: #999;">3 bài đọc, 40 c��u hỏi, 60 phút</p>
+                    <button class="btn btn-full">Bắt Đầu</button>
+                </div>
+                <div class="card">
+                    <h3>📋 Mini Test: Matching</h3>
+                    <p>IELTS 5.0+</p>
+                    <p style="color: #999;">1 bài đọc, 10 câu hỏi, 15 phút</p>
+                    <button class="btn btn-full">Bắt Đầu</button>
+                </div>
+                <div class="card">
+                    <h3>📋 Timed Reading Test</h3>
+                    <p>IELTS 6.0+</p>
+                    <p style="color: #999;">3 bài đọc, 40 câu hỏi, 60 phút</p>
+                    <button class="btn btn-full">Bắt Đầu</button>
+                </div>
+            </div>
+        </div>
 
-        .theme-toggle {
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: background 0.3s;
-        }
+        <!-- Progress -->
+        <div id="progress" class="content-section">
+            <h2>📈 Theo Dõi Tiến Độ</h2>
+            <div style="background: white; padding: 20px; border-radius: 10px;">
+                <h3 style="margin-bottom: 20px;">Tiến Độ Học Tập</h3>
+                <div style="margin-bottom: 20px;">
+                    <p><strong>Foundation Level</strong> <span style="float: right;">8/10</span></p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <p><strong>Elementary Level</strong> <span style="float: right;">5/10</span></p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 50%"></div></div>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <p><strong>Intermediate Level</strong> <span style="float: right;">2/10</span></p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 20%"></div></div>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <p><strong>Upper-Intermediate Level</strong> <span style="float: right;">1/10</span></p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 10%"></div></div>
+                </div>
+                <div>
+                    <p><strong>Advanced Level</strong> <span style="float: right;">0/10</span></p>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 0%"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        .theme-toggle:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
+    <footer>
+        <p>&copy; 2026 IELTS Reading Master - Luyện Thi IELTS Online</p>
+    </footer>
 
-        .user-info {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-        }
+    <script>
+        // Tab Navigation
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active from all
+                document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+                
+                // Add active to clicked
+                this.classList.add('active');
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
 
-        /* Main Container */
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        /* Navigation Tabs */
-        .nav-tabs {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .nav-tabs button {
-            padding: 0.75rem 1.5rem;
-            border: none;
-            background: rgba(255, 255, 255, 0.9);
-            color: var(--primary-color);
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
-            box-shadow: var(--shadow);
-        }
-
-        .nav-tabs button.active {
-            background: var(--secondary-color);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .nav-tabs button:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Content Sections */
-        .content-section {
-            display: none;
-            animation: fadeIn 0.3s ease-in;
-        }
-
-        .content-section.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
+        // Check Answers
+        function checkAnswers() {
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            const q2 = document.querySelector('input[name="q2"]:checked');
+            
+            if (!q1 || !q2) {
+                alert('Vui lòng trả lời tất cả câu hỏi!');
+                return;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Dashboard */
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .stat-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .stat-card h3 {
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-card .number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: var(--accent-color);
-        }
-
-        /* Level Selection */
-        .levels-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .level-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            cursor: pointer;
-            transition: all 0.3s;
-            border-left: 5px solid transparent;
-        }
-
-        .level-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .level-card.foundation {
-            border-left-color: var(--warning-color);
-        }
-
-        .level-card.elementary {
-            border-left-color: var(--secondary-color);
-        }
-
-        .level-card.intermediate {
-            border-left-color: var(--success-color);
-        }
-
-        .level-card.upper-intermediate {
-            border-left-color: var(--accent-color);
-        }
-
-        .level-card.advanced {
-            border-left-color: #9b59b6;
-        }
-
-        .level-card h3 {
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .level-card p {
-            font-size: 0.9rem;
-            color: #7f8c8d;
-            margin-bottom: 1rem;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background: var(--light-bg);
-            border-radius: 4px;
-            overflow: hidden;
-            margin-bottom: 0.5rem;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
-            width: 0%;
-            transition: width 0.3s;
-        }
-
-        /* Topics & Lessons */
-        .topics-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .topic-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: all 0.3s;
-        }
-
-        .topic-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .topic-header {
-            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
-            color: white;
-            padding: 1.5rem;
-        }
-
-        .topic-header h4 {
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .topic-body {
-            padding: 1.5rem;
-        }
-
-        .topic-body p {
-            font-size: 0.9rem;
-            color: #7f8c8d;
-            margin-bottom: 1rem;
-        }
-
-        .topic-features {
-            list-style: none;
-            margin-bottom: 1rem;
-        }
-
-        .topic-features li {
-            padding: 0.4rem 0;
-            font-size: 0.85rem;
-            color: #555;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .topic-features li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--success-color);
-            font-weight: bold;
-        }
-
-        /* Buttons */
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 0.95rem;
-            font-weight: 600;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: var(--secondary-color);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #2980b9;
-        }
-
-        .btn-success {
-            background: var(--success-color);
-            color: white;
-        }
-
-        .btn-success:hover {
-            background: #229954;
-        }
-
-        .btn-full {
-            width: 100%;
-            display: block;
-            text-align: center;
-        }
-
-        /* Reading Content */
-        .reading-container {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            margin-bottom: 2rem;
-        }
-
-        .reading-passage {
-            background: var(--light-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            font-size: 1rem;
-        }
-
-        .reading-questions {
-            margin-top: 2rem;
-        }
-
-        .question {
-            background: white;
-            padding: 1.5rem;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-        }
-
-        .question h4 {
-            margin-bottom: 1rem;
-            color: var(--secondary-color);
-        }
-
-        .options {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .option {
-            padding: 0.75rem 1rem;
-            border: 2px solid var(--border-color);
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.3s;
-            background: white;
-        }
-
-        .option:hover {
-            border-color: var(--secondary-color);
-            background: rgba(52, 152, 219, 0.1);
-        }
-
-        .option input {
-            margin-right: 0.5rem;
-        }
-
-        .option.correct {
-            border-color: var(--success-color);
-            background: rgba(39, 174, 96, 0.1);
-        }
-
-        .option.incorrect {
-            border-color: var(--accent-color);
-            background: rgba(231, 76, 60, 0.1);
-        }
-
-        /* Vocabulary */
-        .vocabulary-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .vocab-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            cursor: pointer;
-            transition: all 0.3s;
-            min-height: 150px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .vocab-card:hover {
-            transform: rotateY(180deg);
-        }
-
-        .vocab-card.flipped {
-            background: var(--secondary-color);
-            color: white;
-        }
-
-        .vocab-word {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .vocab-phonetic {
-            font-size: 0.85rem;
-            color: #7f8c8d;
-            margin-bottom: 0.5rem;
-        }
-
-        .vocab-meaning {
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        /* Grammar */
-        .grammar-item {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            margin-bottom: 1.5rem;
-            border-left: 5px solid var(--secondary-color);
-        }
-
-        .grammar-item h4 {
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .grammar-item .example {
-            background: var(--light-bg);
-            padding: 1rem;
-            border-radius: 6px;
-            margin: 1rem 0;
-            font-style: italic;
-        }
-
-        /* Progress Bar */
-        .progress-section {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-        }
-
-        .progress-item {
-            margin-bottom: 1.5rem;
-        }
-
-        .progress-item label {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .progress-item .progress-bar {
-            margin-bottom: 0;
-        }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal.active {
-            display: flex;
-        }
-
-        .modal-content {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            max-width: 600px;
-            width: 90%;
-            max-height: 90vh;
-            overflow-y: auto;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid var(--light-bg);
-            padding-bottom: 1rem;
-        }
-
-        .modal-header h2 {
-            color: var(--primary-color);
-        }
-
-        .close-btn {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #7f8c8d;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-
-            .header-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .logo {
-                font-size: 1.4rem;
-            }
-
-            .nav-tabs {
-                justify-content: center;
-            }
-
-            .levels-grid,
-            .topics-container,
-            .vocabulary-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stat-card {
-                padding: 1rem;
-            }
-
-            .stat-card .number {
-                font-size: 2rem;
-            }
-        }
-
-        /* Animations */
-        .loading {
-            display: inline-block;
-            width: 20px;
-            height: 20*
+            
+            let correct = 0;
+            if (q1.parentElement.textContent.includes('Ô nhiễm')) correct++;
+            if (q2.parentElement.textContent.includes('Đa dạng')) correct++;
+            
+            alert('Bạn trả lời đúng: ' + correct + '/2 câu = ' + (correct * 50) + '%');
+        }
+    </script>
+</body>
+</html>
