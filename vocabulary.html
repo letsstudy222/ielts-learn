@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vocabulary · IELTS Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;0,9..144,900;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --coral:#FF6B6B; --tangerine:#FF9F45; --sunshine:#FFD23F;
+    --mint:#06D6A0; --sky:#4ECDC4; --lavender:#A78BFA; --hotpink:#FF4FB8;
+    --ink:#1A1B3A; --paper:#FFF8F0; --cream:#FFEED9;
+    --shadow:6px 6px 0 var(--ink); --shadow-sm:3px 3px 0 var(--ink);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Plus Jakarta Sans',sans-serif;
+    background:var(--paper); color:var(--ink);
+    overflow-x:hidden; min-height:100vh;
+    background-image:
+      radial-gradient(circle at 92% 8%, rgba(167,139,250,.28) 0, transparent 35%),
+      radial-gradient(circle at 8% 50%, rgba(255,210,63,.18) 0, transparent 35%),
+      radial-gradient(circle at 50% 95%, rgba(6,214,160,.2) 0, transparent 40%);
+  }
+  body::before{
+    content:'';position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.4;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode:multiply;
+  }
+  .wrap{max-width:1280px;margin:0 auto;padding:24px clamp(16px,3vw,32px);position:relative;z-index:2;}
+
+  nav.topbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 24px;background:var(--ink);color:var(--paper);
+    border:3px solid var(--ink);border-radius:18px;box-shadow:var(--shadow);
+    margin-bottom:32px;
+  }
+  .logo{font-family:'Fraunces',serif;font-weight:900;font-size:24px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--paper);}
+  .logo-dot{width:14px;height:14px;border-radius:50%;background:var(--sunshine);box-shadow:0 0 0 3px var(--coral);animation:pulse 2s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.2);}}
+  .back-btn{
+    background:var(--lavender);color:var(--ink);
+    padding:8px 14px;border-radius:10px;text-decoration:none;
+    font-weight:700;font-size:13px;display:flex;align-items:center;gap:6px;
+    border:2px solid var(--ink);
+  }
+  .back-btn:hover{background:var(--sunshine);}
+
+  /* HEADER */
+  .page-header{
+    background:var(--lavender); border:3px solid var(--ink); border-radius:24px;
+    padding:36px; box-shadow:var(--shadow); margin-bottom:32px;
+    position:relative; overflow:hidden;
+  }
+  .page-header::before{
+    content:'';position:absolute;right:-30px;top:-30px;
+    width:160px;height:160px;background:var(--hotpink);
+    border:3px solid var(--ink);border-radius:50%;z-index:0;
+  }
+  .page-header::after{
+    content:'V';position:absolute;right:30px;top:30px;
+    font-family:'Fraunces',serif;font-size:140px;font-weight:900;
+    color:var(--paper);line-height:1;z-index:1;
+  }
+  .page-header > *{position:relative;z-index:2;}
+  .crumb{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;background:var(--ink);color:var(--paper);display:inline-block;padding:6px 12px;border-radius:20px;margin-bottom:14px;}
+  .page-title{font-family:'Fraunces',serif;font-size:clamp(34px,5vw,52px);font-weight:900;line-height:1;letter-spacing:-.03em;margin-bottom:12px;max-width:600px;}
+  .page-title em{font-style:italic;background:var(--ink);color:var(--sunshine);padding:0 8px;border-radius:8px;display:inline-block;transform:rotate(-2deg);}
+  .page-sub{font-size:15px;line-height:1.5;max-width:560px;font-weight:500;margin-bottom:20px;}
+  .quick-stats{display:flex;gap:10px;flex-wrap:wrap;}
+  .stat-pill{background:var(--ink);color:var(--paper);padding:8px 14px;border-radius:10px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:6px;}
+  .stat-pill strong{color:var(--sunshine);font-family:'JetBrains Mono',monospace;}
+
+  /* TOPIC GRID */
+  .section-title{
+    font-family:'Fraunces',serif;font-size:28px;font-weight:800;
+    letter-spacing:-.02em;margin:30px 0 20px;display:flex;align-items:center;gap:12px;
+  }
+  .section-title::before{
+    content:'';width:30px;height:30px;background:var(--hotpink);
+    border:3px solid var(--ink);border-radius:8px;transform:rotate(-8deg);
+  }
+
+  .topic-grid{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;
+  }
+  .topic-card{
+    background:var(--paper);border:3px solid var(--ink);
+    border-radius:18px;padding:24px;box-shadow:var(--shadow-sm);
+    cursor:pointer;transition:all .2s;position:relative;overflow:hidden;
+  }
+  .topic-card::before{
+    content:'';position:absolute;top:-20px;right:-20px;
+    width:90px;height:90px;border-radius:50%;
+    background:var(--topic-color, var(--mint));opacity:.4;
+  }
+  .topic-card:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink);}
+  .topic-icon{
+    font-size:36px;margin-bottom:14px;position:relative;z-index:1;
+    display:inline-block;background:var(--topic-color, var(--mint));
+    padding:8px 12px;border-radius:12px;border:2px solid var(--ink);
+  }
+  .topic-name{font-family:'Fraunces',serif;font-size:22px;font-weight:800;line-height:1.1;letter-spacing:-.02em;position:relative;z-index:1;margin-bottom:4px;}
+  .topic-name-vi{font-size:13px;font-weight:600;opacity:.65;margin-bottom:14px;position:relative;z-index:1;}
+  .topic-meta{display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:2px dashed rgba(26,27,58,.2);font-size:12px;font-weight:600;position:relative;z-index:1;}
+  .topic-progress{display:flex;align-items:center;gap:6px;}
+  .progress-mini{
+    width:60px;height:6px;background:rgba(26,27,58,.15);
+    border-radius:3px;overflow:hidden;border:1px solid var(--ink);
+  }
+  .progress-mini-bar{height:100%;background:var(--mint);transition:width .3s;}
+  .topic-arrow{font-size:18px;font-weight:900;}
+
+  /* STUDY VIEW */
+  .study-view{display:none;}
+  .study-view.active{display:block;}
+  .topic-list.hidden{display:none;}
+
+  .study-header{
+    background:var(--ink);color:var(--paper);border-radius:18px;padding:20px 24px;
+    border:3px solid var(--ink);box-shadow:var(--shadow-sm);
+    display:flex;align-items:center;justify-content:space-between;
+    margin-bottom:20px;flex-wrap:wrap;gap:14px;position:sticky;top:12px;z-index:50;
+  }
+  .study-title{font-family:'Fraunces',serif;font-size:22px;font-weight:800;}
+  .study-info{font-size:13px;opacity:.8;}
+  .study-info strong{color:var(--sunshine);font-family:'JetBrains Mono',monospace;}
+  .mode-tabs{display:flex;gap:6px;flex-wrap:wrap;}
+  .mode-btn{
+    padding:8px 14px;background:var(--paper);color:var(--ink);
+    border:2px solid var(--ink);border-radius:10px;
+    font-weight:700;font-size:12px;cursor:pointer;font-family:inherit;
+  }
+  .mode-btn.active{background:var(--sunshine);}
+  .mode-btn:hover:not(.active){background:var(--cream);}
+
+  /* FLASHCARD MODE */
+  .flashcard-container{
+    max-width:640px;margin:0 auto;
+  }
+  .flashcard{
+    background:var(--paper);border:3px solid var(--ink);border-radius:24px;
+    padding:48px 36px;box-shadow:var(--shadow);
+    min-height:380px;display:flex;flex-direction:column;justify-content:center;
+    cursor:pointer;perspective:1000px;position:relative;
+    text-align:center;transition:transform .3s;
+  }
+  .flashcard.flipped .card-front{display:none;}
+  .flashcard.flipped .card-back{display:flex;}
+  .card-front{display:flex;flex-direction:column;justify-content:center;align-items:center;}
+  .card-back{display:none;flex-direction:column;justify-content:center;align-items:center;text-align:left;}
+  
+  .card-word{
+    font-family:'Fraunces',serif;font-size:clamp(36px,5vw,52px);font-weight:900;
+    line-height:1;letter-spacing:-.02em;margin-bottom:14px;
+  }
+  .card-ipa{font-family:'JetBrains Mono',monospace;font-size:18px;color:var(--hotpink);font-weight:600;margin-bottom:8px;}
+  .card-pos{
+    display:inline-block;background:var(--cream);border:2px solid var(--ink);
+    padding:4px 12px;border-radius:8px;font-size:12px;font-weight:700;
+    text-transform:uppercase;letter-spacing:.1em;
+  }
+  .card-hint{position:absolute;bottom:20px;left:0;right:0;text-align:center;font-size:12px;opacity:.5;font-weight:600;}
+  
+  .card-back .card-word{font-size:32px;margin-bottom:8px;}
+  .card-back-content{width:100%;}
+  .card-vi{
+    font-family:'Fraunces',serif;font-size:24px;font-weight:700;
+    color:var(--hotpink);margin-bottom:16px;text-align:center;font-style:italic;
+  }
+  .card-section{margin-bottom:14px;padding:12px;background:var(--cream);border-radius:10px;border:2px solid var(--ink);}
+  .card-section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;opacity:.6;margin-bottom:4px;}
+  .card-example{font-size:15px;line-height:1.5;font-style:italic;}
+  .card-coll{font-size:13px;line-height:1.5;font-weight:600;}
+
+  /* CONTROLS */
+  .card-controls{
+    display:flex;gap:10px;justify-content:center;margin-top:24px;flex-wrap:wrap;
+  }
+  .card-btn{
+    padding:14px 24px;border:3px solid var(--ink);border-radius:12px;
+    font-weight:800;font-size:14px;cursor:pointer;font-family:inherit;
+    box-shadow:var(--shadow-sm);transition:all .15s;display:flex;align-items:center;gap:6px;
+  }
+  .card-btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);}
+  .btn-prev{background:var(--paper);}
+  .btn-flip{background:var(--sunshine);}
+  .btn-next{background:var(--paper);}
+  .btn-know{background:var(--mint);}
+  .btn-review{background:var(--coral);color:var(--paper);}
+
+  .progress-bar-wrap{
+    background:var(--cream);border:2px solid var(--ink);border-radius:12px;
+    padding:4px;margin-bottom:20px;
+  }
+  .progress-bar-bg{
+    background:rgba(26,27,58,.1);border-radius:8px;overflow:hidden;height:24px;
+    position:relative;
+  }
+  .progress-bar-fill{
+    height:100%;background:var(--mint);transition:width .4s;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--ink);
+  }
+
+  /* LIST MODE */
+  .word-list{display:flex;flex-direction:column;gap:10px;max-width:900px;margin:0 auto;}
+  .word-row{
+    background:var(--paper);border:3px solid var(--ink);border-radius:14px;
+    padding:18px 22px;box-shadow:var(--shadow-sm);
+    display:grid;grid-template-columns:1fr auto;gap:14px;align-items:start;
+  }
+  .word-row.known{background:#e8fff5;border-color:var(--mint);}
+  .word-row.review{background:#fff4e8;border-color:var(--tangerine);}
+  .word-main{display:flex;flex-direction:column;}
+  .word-row-header{display:flex;align-items:baseline;gap:10px;margin-bottom:6px;flex-wrap:wrap;}
+  .word-row-word{font-family:'Fraunces',serif;font-size:22px;font-weight:800;letter-spacing:-.01em;}
+  .word-row-ipa{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--hotpink);}
+  .word-row-pos{
+    display:inline-block;background:var(--cream);border:1.5px solid var(--ink);
+    padding:1px 8px;border-radius:6px;font-size:10px;font-weight:700;text-transform:uppercase;
+  }
+  .word-row-vi{font-size:15px;font-weight:600;color:var(--hotpink);font-style:italic;margin-bottom:6px;}
+  .word-row-ex{font-size:13px;line-height:1.4;font-style:italic;margin-bottom:4px;opacity:.85;}
+  .word-row-coll{font-size:12px;line-height:1.4;font-weight:600;opacity:.7;}
+  .word-actions{display:flex;flex-direction:column;gap:6px;}
+  .word-btn{
+    padding:6px 10px;border:2px solid var(--ink);border-radius:8px;
+    font-size:11px;font-weight:700;cursor:pointer;font-family:inherit;
+    background:var(--paper);white-space:nowrap;
+  }
+  .word-btn.active-know{background:var(--mint);}
+  .word-btn.active-review{background:var(--tangerine);}
+  .word-btn:hover{background:var(--cream);}
+
+  /* QUIZ MODE */
+  .quiz-container{max-width:640px;margin:0 auto;}
+  .quiz-card{
+    background:var(--paper);border:3px solid var(--ink);border-radius:24px;
+    padding:36px;box-shadow:var(--shadow);
+  }
+  .quiz-progress{font-size:13px;font-weight:700;opacity:.6;margin-bottom:14px;text-transform:uppercase;letter-spacing:.1em;}
+  .quiz-question{
+    font-family:'Fraunces',serif;font-size:24px;font-weight:700;
+    line-height:1.3;margin-bottom:24px;
+  }
+  .quiz-word-display{
+    font-family:'Fraunces',serif;font-size:44px;font-weight:900;
+    color:var(--hotpink);text-align:center;margin:14px 0;letter-spacing:-.02em;
+  }
+  .quiz-ipa-display{font-family:'JetBrains Mono',monospace;text-align:center;font-size:16px;opacity:.6;margin-bottom:20px;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-option{
+    padding:14px 18px;background:var(--cream);border:2.5px solid var(--ink);
+    border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;
+    text-align:left;font-family:inherit;transition:all .15s;
+  }
+  .quiz-option:hover{background:var(--sunshine);transform:translate(-1px,-1px);box-shadow:var(--shadow-sm);}
+  .quiz-option.correct{background:var(--mint);border-color:var(--ink);}
+  .quiz-option.wrong{background:var(--coral);color:var(--paper);}
+  .quiz-option:disabled{cursor:not-allowed;}
+  .quiz-next-btn{
+    margin-top:20px;padding:14px 28px;background:var(--mint);color:var(--ink);
+    border:3px solid var(--ink);border-radius:12px;font-weight:800;font-size:14px;
+    cursor:pointer;box-shadow:var(--shadow-sm);font-family:inherit;width:100%;
+  }
+  .quiz-next-btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);}
+  
+  /* QUIZ RESULT */
+  .quiz-result{
+    background:var(--paper);border:3px solid var(--ink);border-radius:24px;
+    padding:40px;box-shadow:var(--shadow);text-align:center;max-width:520px;margin:0 auto;
+  }
+  .quiz-score{font-family:'Fraunces',serif;font-size:84px;font-weight:900;color:var(--hotpink);line-height:1;margin:14px 0;}
+  .quiz-msg{font-size:16px;font-weight:600;margin-bottom:24px;}
+  
+  .empty-state{
+    text-align:center;padding:60px 20px;opacity:.6;
+  }
+  .empty-state-icon{font-size:60px;margin-bottom:14px;}
+  .empty-state-text{font-size:16px;font-weight:600;}
+
+  /* FILTER */
+  .filter-bar{
+    display:flex;gap:12px;align-items:center;flex-wrap:wrap;
+    margin-bottom:20px;padding:14px 18px;
+    background:var(--cream);border:3px solid var(--ink);border-radius:14px;
+  }
+  .filter-bar label{font-size:13px;font-weight:700;}
+  .filter-bar select{
+    padding:8px 12px;border:2px solid var(--ink);border-radius:8px;
+    font-family:inherit;font-size:13px;font-weight:600;background:var(--paper);cursor:pointer;
+  }
+
+  .fade-in{opacity:0;transform:translateY(20px);animation:fadeIn .6s ease-out forwards;}
+  @keyframes fadeIn{to{opacity:1;transform:translateY(0);}}
+  .delay-1{animation-delay:.1s;}.delay-2{animation-delay:.2s;}.delay-3{animation-delay:.3s;}
+  
+  @media(max-width:600px){
+    .word-row{grid-template-columns:1fr;}
+    .word-actions{flex-direction:row;}
+    .card-word{font-size:36px;}
+    .flashcard{padding:32px 24px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="topbar fade-in">
+    <a href="index.html" class="logo">
+      <span class="logo-dot"></span>
+      <span>IELTS<em style="color:var(--sunshine);font-style:italic;">.lab</em></span>
+    </a>
+    <a href="index.html" class="back-btn">← Dashboard</a>
+  </nav>
+
+  <!-- =================== TOPIC LIST =================== -->
+  <div class="topic-list" id="topicList">
+
+    <header class="page-header fade-in delay-1">
+      <span class="crumb">Module 05 · Vocabulary</span>
+      <h1 class="page-title">Từ vựng theo <em>chủ đề</em></h1>
+      <p class="page-sub">300 từ vựng band 6.5-8.0 trên 10 chủ đề IELTS phổ biến. Học bằng flashcard, kiểm tra với quiz, theo dõi tiến độ chi tiết.</p>
+      <div class="quick-stats">
+        <div class="stat-pill">📚 <strong>10</strong> chủ đề</div>
+        <div class="stat-pill">📝 <strong>300</strong> từ vựng</div>
+        <div class="stat-pill">✅ Đã thuộc: <strong id="totalKnown">0</strong></div>
+        <div class="stat-pill">🔄 Cần ôn: <strong id="totalReview">0</strong></div>
+      </div>
+    </header>
+
+    <h2 class="section-title">Chọn chủ đề</h2>
+    <div class="topic-grid fade-in delay-2" id="topicGrid"></div>
+
+  </div>
+
+  <!-- =================== STUDY VIEW =================== -->
+  <div class="study-view" id="studyView">
+
+    <div class="study-header">
+      <div>
+        <button class="mode-btn" onclick="exitStudy()" style="margin-bottom:6px;">← Quay lại</button>
+        <div class="study-title" id="studyTitle">Topic Name</div>
+        <div class="study-info">Từ <strong id="studyCurrent">1</strong>/<strong id="studyTotal">30</strong> · Đã thuộc: <strong id="studyKnown">0</strong> · Cần ôn: <strong id="studyReview">0</strong></div>
+      </div>
+      <div class="mode-tabs">
+        <button class="mode-btn active" id="mode-flashcard" onclick="setMode('flashcard')">🎴 Flashcard</button>
+        <button class="mode-btn" id="mode-list" onclick="setMode('list')">📋 Danh sách</button>
+        <button class="mode-btn" id="mode-quiz" onclick="setMode('quiz')">🎯 Quiz</button>
+      </div>
+    </div>
+
+    <div class="filter-bar" id="filterBar" style="display:none;">
+      <label>Hiển thị:</label>
+      <select id="filterStatus" onchange="renderListMode()">
+        <option value="all">Tất cả</option>
+        <option value="unknown">Chưa thuộc</option>
+        <option value="known">Đã thuộc</option>
+        <option value="review">Cần ôn lại</option>
+      </select>
+      <button class="mode-btn" onclick="resetTopicProgress()" style="margin-left:auto;background:var(--coral);color:var(--paper);">🔄 Reset chủ đề</button>
+    </div>
+
+    <!-- FLASHCARD -->
+    <div id="flashcardMode">
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progressFill" style="width:0%;">0%</div>
+        </div>
+      </div>
+      <div class="flashcard-container">
+        <div class="flashcard" id="flashcard" onclick="flipCard()">
+          <div class="card-front">
+            <div class="card-pos" id="cardPos">noun</div>
+            <div class="card-word" id="cardWord">example</div>
+            <div class="card-ipa" id="cardIpa">/ɪɡˈzɑːmpl/</div>
+          </div>
+          <div class="card-back">
+            <div class="card-back-content">
+              <div class="card-word" id="cardWordBack">example</div>
+              <div class="card-vi" id="cardVi">ví dụ</div>
+              <div class="card-section">
+                <div class="card-section-label">📝 Example</div>
+                <div class="card-example" id="cardExample">This is an example sentence.</div>
+              </div>
+              <div class="card-section">
+                <div class="card-section-label">🔗 Collocations</div>
+                <div class="card-coll" id="cardColl">give an example, follow an example</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-hint">Click để lật thẻ</div>
+        </div>
+        <div class="card-controls">
+          <button class="card-btn btn-prev" onclick="prevCard()">← Trước</button>
+          <button class="card-btn btn-review" onclick="markCard('review')">🔄 Cần ôn</button>
+          <button class="card-btn btn-know" onclick="markCard('known')">✅ Đã thuộc</button>
+          <button class="card-btn btn-next" onclick="nextCard()">Tiếp →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIST -->
+    <div id="listMode" style="display:none;">
+      <div class="word-list" id="wordList"></div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="quizMode" style="display:none;">
+      <div class="quiz-container" id="quizContainer"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="vocab-data.js"></script>
+<script>
+const TOPIC_ORDER = ['environment','education','technology','health','work','society','travel','media','crime','family'];
+const COLORS = {mint:'var(--mint)',sky:'var(--sky)',lavender:'var(--lavender)',coral:'var(--coral)',tangerine:'var(--tangerine)',hotpink:'var(--hotpink)',sunshine:'var(--sunshine)'};
+
+// State
+let currentTopic = null;
+let currentMode = 'flashcard';
+let cardIndex = 0;
+let isFlipped = false;
+let quizState = null;
+
+// Storage
+function getStatus(){try{return JSON.parse(localStorage.getItem('ielts_vocab_status')||'{}');}catch(e){return {};}}
+function saveStatus(s){localStorage.setItem('ielts_vocab_status',JSON.stringify(s));}
+function getWordStatus(topic, word){
+  const all = getStatus();
+  return all[topic]?.[word] || null;
+}
+function setWordStatus(topic, word, status){
+  const all = getStatus();
+  if(!all[topic]) all[topic] = {};
+  if(status === null) delete all[topic][word];
+  else all[topic][word] = status;
+  saveStatus(all);
+}
+
+// =================== TOPIC LIST ===================
+function renderTopicList(){
+  const grid = document.getElementById('topicGrid');
+  const status = getStatus();
+  
+  let totalKnown = 0, totalReview = 0;
+  TOPIC_ORDER.forEach(t=>{
+    const s = status[t]||{};
+    Object.values(s).forEach(v=>{
+      if(v==='known') totalKnown++;
+      else if(v==='review') totalReview++;
+    });
+  });
+  document.getElementById('totalKnown').textContent = totalKnown;
+  document.getElementById('totalReview').textContent = totalReview;
+  
+  grid.innerHTML = TOPIC_ORDER.map(t=>{
+    const topic = VOCAB_DATA[t];
+    const s = status[t]||{};
+    const known = Object.values(s).filter(v=>v==='known').length;
+    const total = topic.words.length;
+    const pct = Math.round((known/total)*100);
+    return `
+      <div class="topic-card" style="--topic-color:${COLORS[topic.color]};" onclick="openTopic('${t}')">
+        <div class="topic-icon">${topic.icon}</div>
+        <div class="topic-name">${topic.title}</div>
+        <div class="topic-name-vi">${topic.titleVi}</div>
+        <div class="topic-meta">
+          <div class="topic-progress">
+            <div class="progress-mini"><div class="progress-mini-bar" style="width:${pct}%;"></div></div>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;">${known}/${total}</span>
+          </div>
+          <span class="topic-arrow">→</span>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+// =================== STUDY VIEW ===================
+function openTopic(topicId){
+  currentTopic = topicId;
+  cardIndex = 0;
+  isFlipped = false;
+  document.getElementById('topicList').classList.add('hidden');
+  document.getElementById('studyView').classList.add('active');
+  const topic = VOCAB_DATA[topicId];
+  document.getElementById('studyTitle').textContent = topic.icon + ' ' + topic.title + ' · ' + topic.titleVi;
+  document.getElementById('studyTotal').textContent = topic.words.length;
+  setMode('flashcard');
+  window.scrollTo(0,0);
+}
+
+function exitStudy(){
+  document.getElementById('studyView').classList.remove('active');
+  document.getElementById('topicList').classList.remove('hidden');
+  renderTopicList();
+  window.scrollTo(0,0);
+}
+
+function setMode(mode){
+  currentMode = mode;
+  ['flashcard','list','quiz'].forEach(m=>{
+    document.getElementById('mode-'+m).classList.toggle('active', m===mode);
+    document.getElementById(m+'Mode').style.display = m===mode?'block':'none';
+  });
+  document.getElementById('filterBar').style.display = (mode==='list')?'flex':'none';
+  
+  if(mode==='flashcard'){
+    cardIndex = 0; isFlipped = false;
+    renderFlashcard();
+  } else if(mode==='list'){
+    renderListMode();
+  } else if(mode==='quiz'){
+    startQuiz();
+  }
+  updateStudyStats();
+}
+
+function updateStudyStats(){
+  const topic = VOCAB_DATA[currentTopic];
+  const all = getStatus()[currentTopic]||{};
+  const known = Object.values(all).filter(v=>v==='known').length;
+  const review = Object.values(all).filter(v=>v==='review').length;
+  document.getElementById('studyKnown').textContent = known;
+  document.getElementById('studyReview').textContent = review;
+  document.getElementById('studyCurrent').textContent = cardIndex+1;
+}
+
+// =================== FLASHCARD MODE ===================
+function renderFlashcard(){
+  const topic = VOCAB_DATA[currentTopic];
+  const word = topic.words[cardIndex];
+  document.getElementById('cardWord').textContent = word.w;
+  document.getElementById('cardWordBack').textContent = word.w;
+  document.getElementById('cardIpa').textContent = word.ipa;
+  document.getElementById('cardPos').textContent = word.pos;
+  document.getElementById('cardVi').textContent = word.vi;
+  document.getElementById('cardExample').textContent = word.ex;
+  document.getElementById('cardColl').textContent = word.coll;
+  
+  const card = document.getElementById('flashcard');
+  card.classList.toggle('flipped', isFlipped);
+  
+  const pct = Math.round(((cardIndex+1)/topic.words.length)*100);
+  const fill = document.getElementById('progressFill');
+  fill.style.width = pct+'%';
+  fill.textContent = pct+'%';
+  
+  updateStudyStats();
+}
+
+function flipCard(){
+  isFlipped = !isFlipped;
+  document.getElementById('flashcard').classList.toggle('flipped', isFlipped);
+}
+
+function nextCard(){
+  const topic = VOCAB_DATA[currentTopic];
+  cardIndex = (cardIndex+1) % topic.words.length;
+  isFlipped = false;
+  renderFlashcard();
+}
+
+function prevCard(){
+  const topic = VOCAB_DATA[currentTopic];
+  cardIndex = (cardIndex-1+topic.words.length) % topic.words.length;
+  isFlipped = false;
+  renderFlashcard();
+}
+
+function markCard(status){
+  const topic = VOCAB_DATA[currentTopic];
+  const word = topic.words[cardIndex];
+  const current = getWordStatus(currentTopic, word.w);
+  // Toggle if same status
+  setWordStatus(currentTopic, word.w, current===status?null:status);
+  // Auto next
+  setTimeout(()=>{
+    nextCard();
+  }, 200);
+}
+
+// =================== LIST MODE ===================
+function renderListMode(){
+  const topic = VOCAB_DATA[currentTopic];
+  const filter = document.getElementById('filterStatus').value;
+  const list = document.getElementById('wordList');
+  const status = getStatus()[currentTopic]||{};
+  
+  let words = topic.words.map((w,i)=>({...w, idx:i, status:status[w.w]||null}));
+  if(filter==='unknown') words = words.filter(w=>!w.status);
+  else if(filter==='known') words = words.filter(w=>w.status==='known');
+  else if(filter==='review') words = words.filter(w=>w.status==='review');
+  
+  if(words.length===0){
+    list.innerHTML = `<div class="empty-state"><div class="empty-state-icon">🌱</div><div class="empty-state-text">Không có từ nào trong nhóm này.</div></div>`;
+    return;
+  }
+  
+  list.innerHTML = words.map(w=>`
+    <div class="word-row ${w.status==='known'?'known':w.status==='review'?'review':''}" data-word="${w.w}">
+      <div class="word-main">
+        <div class="word-row-header">
+          <span class="word-row-word">${w.w}</span>
+          <span class="word-row-ipa">${w.ipa}</span>
+          <span class="word-row-pos">${w.pos}</span>
+        </div>
+        <div class="word-row-vi">${w.vi}</div>
+        <div class="word-row-ex">📝 ${w.ex}</div>
+        <div class="word-row-coll">🔗 ${w.coll}</div>
+      </div>
+      <div class="word-actions">
+        <button class="word-btn ${w.status==='known'?'active-know':''}" onclick="toggleStatus('${w.w}','known')">✅ Đã thuộc</button>
+        <button class="word-btn ${w.status==='review'?'active-review':''}" onclick="toggleStatus('${w.w}','review')">🔄 Cần ôn</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function toggleStatus(word, status){
+  const current = getWordStatus(currentTopic, word);
+  setWordStatus(currentTopic, word, current===status?null:status);
+  renderListMode();
+  updateStudyStats();
+}
+
+function resetTopicProgress(){
+  if(!confirm('Bạn có chắc muốn reset tiến độ chủ đề này?')) return;
+  const all = getStatus();
+  delete all[currentTopic];
+  saveStatus(all);
+  renderListMode();
+  updateStudyStats();
+}
+
+// =================== QUIZ MODE ===================
+function startQuiz(){
+  const topic = VOCAB_DATA[currentTopic];
+  // Take 10 random words
+  const pool = [...topic.words];
+  for(let i=pool.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [pool[i],pool[j]] = [pool[j],pool[i]];
+  }
+  const questions = pool.slice(0, Math.min(10, pool.length));
+  
+  quizState = {
+    questions: questions,
+    current: 0,
+    score: 0,
+    answered: false
+  };
+  renderQuiz();
+}
+
+function renderQuiz(){
+  const container = document.getElementById('quizContainer');
+  const topic = VOCAB_DATA[currentTopic];
+  const q = quizState.questions[quizState.current];
+  
+  // Build 4 options (1 correct + 3 random wrong)
+  const wrongPool = topic.words.filter(w=>w.w!==q.w);
+  const wrongs = [];
+  while(wrongs.length<3 && wrongPool.length>0){
+    const idx = Math.floor(Math.random()*wrongPool.length);
+    wrongs.push(wrongPool.splice(idx,1)[0]);
+  }
+  const options = [q, ...wrongs].sort(()=>Math.random()-0.5);
+  
+  container.innerHTML = `
+    <div class="quiz-card">
+      <div class="quiz-progress">Câu ${quizState.current+1}/${quizState.questions.length} · Điểm: ${quizState.score}</div>
+      <div class="quiz-question">Từ này nghĩa là gì?</div>
+      <div class="quiz-word-display">${q.w}</div>
+      <div class="quiz-ipa-display">${q.ipa} · ${q.pos}</div>
+      <div class="quiz-options">
+        ${options.map((opt,i)=>`<button class="quiz-option" data-vi="${opt.vi}" data-correct="${opt.w===q.w}" onclick="answerQuiz(this)">${String.fromCharCode(65+i)}. ${opt.vi}</button>`).join('')}
+      </div>
+    </div>
+  `;
+  quizState.answered = false;
+}
+
+function answerQuiz(btn){
+  if(quizState.answered) return;
+  quizState.answered = true;
+  const correct = btn.dataset.correct === 'true';
+  if(correct) quizState.score++;
+  
+  document.querySelectorAll('.quiz-option').forEach(o=>{
+    o.disabled = true;
+    if(o.dataset.correct==='true') o.classList.add('correct');
+    else if(o===btn) o.classList.add('wrong');
+  });
+  
+  setTimeout(()=>{
+    quizState.current++;
+    if(quizState.current >= quizState.questions.length){
+      showQuizResult();
+    } else {
+      renderQuiz();
+    }
+  }, 1400);
+}
+
+function showQuizResult(){
+  const container = document.getElementById('quizContainer');
+  const score = quizState.score;
+  const total = quizState.questions.length;
+  const pct = Math.round((score/total)*100);
+  let msg = '';
+  if(pct>=90) msg = '🔥 Tuyệt vời! Bạn đã thuộc rất tốt.';
+  else if(pct>=70) msg = '💪 Rất tốt! Vài từ còn lại cần ôn thêm.';
+  else if(pct>=50) msg = '👍 Khá ổn. Hãy ôn thêm bằng flashcard.';
+  else msg = '📚 Cần luyện thêm. Xem qua danh sách rồi quay lại nhé!';
+  
+  container.innerHTML = `
+    <div class="quiz-result">
+      <div class="quiz-progress">Kết quả Quiz</div>
+      <div class="quiz-score">${score}/${total}</div>
+      <div class="quiz-msg">${msg} (${pct}%)</div>
+      <button class="quiz-next-btn" onclick="startQuiz()" style="background:var(--sunshine);margin-bottom:10px;">🔄 Làm lại Quiz</button>
+      <button class="quiz-next-btn" onclick="setMode('flashcard')">📚 Ôn lại flashcard</button>
+    </div>
+  `;
+}
+
+// Keyboard navigation
+document.addEventListener('keydown',(e)=>{
+  if(!document.getElementById('studyView').classList.contains('active')) return;
+  if(currentMode!=='flashcard') return;
+  if(e.target.tagName==='INPUT'||e.target.tagName==='SELECT') return;
+  
+  if(e.key===' '||e.key==='Enter'){ e.preventDefault(); flipCard(); }
+  else if(e.key==='ArrowRight') nextCard();
+  else if(e.key==='ArrowLeft') prevCard();
+  else if(e.key==='k'||e.key==='K') markCard('known');
+  else if(e.key==='r'||e.key==='R') markCard('review');
+});
+
+renderTopicList();
+</script>
+</body>
+</html>

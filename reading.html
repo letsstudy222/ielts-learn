@@ -190,11 +190,9 @@
   .passage-body ::selection{background:var(--sunshine);color:var(--ink);}
   
   .vocab{
-    background:linear-gradient(transparent 60%, var(--sunshine) 60%);
-    cursor:pointer;font-weight:600;position:relative;
-    transition:all .2s;
+    /* No highlight - reads as normal text */
+    cursor:text;
   }
-  .vocab:hover{background:linear-gradient(transparent 0%, var(--sunshine) 100%);}
   
   .translation-box{
     display:none;background:var(--cream);border:2px solid var(--ink);
@@ -545,32 +543,8 @@ function renderPassage(){
 }
 
 function attachVocabHandlers(){
-  document.querySelectorAll('.vocab').forEach(el=>{
-    const showPopup=(e)=>{
-      const popup=document.getElementById('vocabPopup');
-      popup.innerHTML=`<div class="word">${el.dataset.word}</div><div>${el.dataset.def}</div>`;
-      popup.classList.add('show');
-      requestAnimationFrame(()=>{
-        const rect=el.getBoundingClientRect();
-        const popupRect=popup.getBoundingClientRect();
-        let left=rect.left;
-        if(left+popupRect.width>window.innerWidth-10) left=window.innerWidth-popupRect.width-10;
-        let top=rect.top-popupRect.height-10;
-        if(top<10) top=rect.bottom+10;
-        popup.style.left=left+'px';
-        popup.style.top=top+'px';
-      });
-    };
-    el.addEventListener('mouseenter',showPopup);
-    el.addEventListener('mouseleave',()=>{
-      document.getElementById('vocabPopup').classList.remove('show');
-    });
-    el.addEventListener('click',e=>{
-      e.preventDefault();
-      showPopup(e);
-      setTimeout(()=>document.getElementById('vocabPopup').classList.remove('show'),2500);
-    });
-  });
+  // Vocab highlight disabled per user request
+  // Words display as normal text without popup
 }
 
 function renderQuestions(){
