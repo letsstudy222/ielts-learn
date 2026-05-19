@@ -1,1640 +1,666 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IELTS Reading Master - Học Tiếng Anh Dễ Dàng</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            /* Light Mode Colors - Pastel Palette */
-            --bg-primary: #fafbfc;
-            --bg-secondary: #f5f7fa;
-            --bg-card: #ffffff;
-            --text-primary: #2d3748;
-            --text-secondary: #718096;
-            --accent-1: #a8d8ea;
-            --accent-2: #ffc9de;
-            --accent-3: #c7f0d8;
-            --accent-4: #ffeaa7;
-            --border-color: #e2e8f0;
-            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
-        }
-
-        body.dark-mode {
-            --bg-primary: #1a1f2e;
-            --bg-secondary: #232d3f;
-            --bg-card: #2d3748;
-            --text-primary: #f7fafc;
-            --text-secondary: #cbd5e0;
-            --accent-1: #667eea;
-            --accent-2: #f687b3;
-            --accent-3: #48bb78;
-            --accent-4: #ed8936;
-            --border-color: #4a5568;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            transition: background-color 0.4s ease, color 0.4s ease;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* ========== HEADER ========== */
-        header {
-            background: linear-gradient(135deg, var(--accent-1) 0%, var(--accent-2) 100%);
-            padding: 1.5rem 2rem;
-            box-shadow: var(--shadow-md);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            transition: all 0.4s ease;
-        }
-
-        .header-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            white-space: nowrap;
-        }
-
-        .logo-icon {
-            font-size: 1.8rem;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-        }
-
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .search-box {
-            padding: 0.6rem 1rem;
-            border: 2px solid var(--border-color);
-            border-radius: 25px;
-            background: var(--bg-card);
-            color: var(--text-primary);
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            width: 200px;
-        }
-
-        .search-box::placeholder {
-            color: var(--text-secondary);
-        }
-
-        .search-box:focus {
-            outline: none;
-            border-color: var(--accent-1);
-            box-shadow: 0 0 0 3px rgba(168, 216, 234, 0.1);
-        }
-
-        /* ========== THEME TOGGLE ========== */
-        .theme-toggle {
-            background: var(--bg-card);
-            border: 2px solid var(--border-color);
-            padding: 0.6rem 1rem;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            white-space: nowrap;
-        }
-
-        .theme-toggle:hover {
-            background: var(--bg-secondary);
-            transform: scale(1.05);
-        }
-
-        .theme-toggle:active {
-            transform: scale(0.95);
-        }
-
-        .theme-icon {
-            font-size: 1.1rem;
-            transition: transform 0.3s ease;
-        }
-
-        .theme-toggle:hover .theme-icon {
-            transform: rotate(20deg);
-        }
-
-        /* ========== NAVIGATION TABS ========== */
-        .nav-tabs {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-            padding: 0.5rem;
-            background: var(--bg-secondary);
-            border-radius: 15px;
-            width: fit-content;
-        }
-
-        .nav-tabs button {
-            padding: 0.75rem 1.5rem;
-            border: none;
-            background: transparent;
-            color: var(--text-secondary);
-            border-radius: 12px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .nav-tabs button:hover {
-            color: var(--text-primary);
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-        }
-
-        .nav-tabs button.active {
-            background: var(--bg-card);
-            color: var(--text-primary);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .nav-icon {
-            font-size: 1.2rem;
-            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.05));
-        }
-
-        /* ========== MAIN CONTAINER ========== */
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .content-section {
-            display: none;
-            animation: fadeInUp 0.4s ease-out;
-        }
-
-        .content-section.active {
-            display: block;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-primary);
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .h2-icon {
-            font-size: 2rem;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-        }
-
-        h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        /* ========== DASHBOARD ========== */
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .stat-card {
-            background: var(--bg-card);
-            padding: 1.8rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-sm);
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid var(--border-color);
-        }
-
-        .stat-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--accent-1);
-        }
-
-        .stat-card-icon {
-            font-size: 2rem;
-            margin-bottom: 0.8rem;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-        }
-
-        .stat-card h3 {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.8rem;
-            margin: 0;
-        }
-
-        .stat-card .number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--accent-1) 0%, var(--accent-2) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-card p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin: 0;
-        }
-
-        /* ========== LEVEL CARDS ========== */
-        .levels-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .level-card {
-            background: var(--bg-card);
-            padding: 1.5rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-sm);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .level-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent-1) 0%, var(--accent-2) 100%);
-            transition: all 0.3s ease;
-        }
-
-        .level-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--accent-1);
-        }
-
-        .level-icon {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .level-card h3 {
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-            margin: 0 0 0.5rem 0;
-        }
-
-        .level-card p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 0.8rem;
-            margin: 0 0 0.8rem 0;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 6px;
-            background: var(--bg-secondary);
-            border-radius: 3px;
-            overflow: hidden;
-            margin-bottom: 1rem;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
-            width: 0%;
-            transition: width 0.4s ease;
-            border-radius: 3px;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 0.4rem 0.8rem;
-            background: var(--accent-3);
-            color: var(--text-primary);
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.03em;
-        }
-
-        /* ========== TOPIC CARDS ========== */
-        .topics-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .topic-card {
-            background: var(--bg-card);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            transition: all 0.3s ease;
-            border: 1px solid var(--border-color);
-        }
-
-        .topic-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .topic-header {
-            background: linear-gradient(135deg, var(--accent-1) 0%, var(--accent-2) 100%);
-            color: var(--text-primary);
-            padding: 1.5rem;
-        }
-
-        .topic-header h4 {
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .topic-icon {
-            font-size: 1.4rem;
-            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
-        }
-
-        .topic-body {
-            padding: 1.5rem;
-        }
-
-        .topic-body p {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .topic-features {
-            list-style: none;
-            margin-bottom: 1.5rem;
-        }
-
-        .topic-features li {
-            padding: 0.5rem 0;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .topic-features li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--accent-3);
-            font-weight: bold;
-        }
-
-        /* ========== BUTTONS ========== */
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            font-size: 0.95rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-block;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
-            transform: translate(-50%, -50%);
-            transition: width 0.4s ease, height 0.4s ease;
-        }
-
-        .btn:active::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-1) 0%, var(--accent-2) 100%);
-            color: var(--text-primary);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-primary:active {
-            transform: translateY(-1px);
-        }
-
-        .btn-success {
-            background: var(--accent-3);
-            color: var(--text-primary);
-        }
-
-        .btn-success:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-full {
-            width: 100%;
-            display: block;
-        }
-
-        /* ========== VOCABULARY ========== */
-        .vocabulary-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 1rem;
-        }
-
-        .vocab-card {
-            background: var(--bg-card);
-            padding: 1.5rem;
-            border-radius: 14px;
-            box-shadow: var(--shadow-sm);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            min-height: 150px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            border: 1px solid var(--border-color);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .vocab-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent-1), var(--accent-2), var(--accent-3));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-            transform-origin: left;
-        }
-
-        .vocab-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .vocab-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .vocab-word {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .vocab-phonetic {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            margin-bottom: 0.8rem;
-            font-style: italic;
-        }
-
-        .vocab-meaning {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-
-        /* ========== READING ========== */
-        .reading-container {
-            background: var(--bg-card);
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: var(--shadow-sm);
-            margin-bottom: 2rem;
-            border: 1px solid var(--border-color);
-        }
-
-        .reading-passage {
-            background: var(--bg-secondary);
-            padding: 1.5rem;
-            border-radius: 12px;
-            line-height: 1.9;
-            margin-bottom: 2rem;
-            font-size: 1rem;
-            color: var(--text-primary);
-            border-left: 4px solid var(--accent-1);
-        }
-
-        .reading-questions {
-            margin-top: 2rem;
-        }
-
-        .question {
-            background: var(--bg-secondary);
-            padding: 1.5rem;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .question:hover {
-            border-color: var(--accent-1);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .question h4 {
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        .options {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-        }
-
-        .option {
-            padding: 0.75rem 1rem;
-            border: 2px solid var(--border-color);
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            background: transparent;
-            display: flex;
-            align-items: center;
-        }
-
-        .option:hover {
-            border-color: var(--accent-1);
-            background: rgba(168, 216, 234, 0.05);
-        }
-
-        .option input {
-            margin-right: 0.8rem;
-            cursor: pointer;
-            accent-color: var(--accent-1);
-        }
-
-        .option.correct {
-            border-color: var(--accent-3);
-            background: rgba(199, 240, 216, 0.1);
-        }
-
-        .option.incorrect {
-            border-color: var(--accent-2);
-            background: rgba(255, 201, 222, 0.1);
-        }
-
-        /* ========== GRAMMAR ========== */
-        .grammar-item {
-            background: var(--bg-card);
-            padding: 1.5rem;
-            border-radius: 14px;
-            box-shadow: var(--shadow-sm);
-            margin-bottom: 1.5rem;
-            border: 1px solid var(--border-color);
-            border-left: 4px solid var(--accent-1);
-            transition: all 0.3s ease;
-        }
-
-        .grammar-item:hover {
-            box-shadow: var(--shadow-md);
-            transform: translateX(4px);
-        }
-
-        .grammar-item h4 {
-            color: var(--text-primary);
-            margin-bottom: 0.8rem;
-            font-weight: 600;
-        }
-
-        .grammar-item p {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-        }
-
-        .grammar-item .example {
-            background: var(--bg-secondary);
-            padding: 1rem;
-            border-radius: 10px;
-            margin: 0.8rem 0;
-            font-style: italic;
-            color: var(--text-primary);
-            border-left: 3px solid var(--accent-3);
-        }
-
-        /* ========== PROGRESS ========== */
-        .progress-section {
-            background: var(--bg-card);
-            padding: 1.5rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-color);
-        }
-
-        .progress-item {
-            margin-bottom: 1.8rem;
-        }
-
-        .progress-item label {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.8rem;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .progress-item .progress-bar {
-            margin-bottom: 0;
-        }
-
-        /* ========== MODAL ========== */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            animation: fadeInModal 0.3s ease;
-            backdrop-filter: blur(2px);
-        }
-
-        @keyframes fadeInModal {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        .modal.active {
-            display: flex;
-        }
-
-        .modal-content {
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 16px;
-            max-width: 600px;
-            width: 90%;
-            max-height: 90vh;
-            overflow-y: auto;
-            box-shadow: var(--shadow-lg);
-            animation: slideInModal 0.3s ease;
-        }
-
-        @keyframes slideInModal {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 1rem;
-        }
-
-        .modal-header h2 {
-            margin: 0;
-            font-size: 1.5rem;
-        }
-
-        .close-btn {
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: var(--text-secondary);
-            transition: all 0.3s ease;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-        }
-
-        .close-btn:hover {
-            background: var(--bg-secondary);
-            color: var(--text-primary);
-            transform: rotate(90deg);
-        }
-
-        /* ========== RESPONSIVE ========== */
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-
-            .header-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .search-box {
-                width: 100%;
-            }
-
-            .header-right {
-                width: 100%;
-                justify-content: space-between;
-            }
-
-            .nav-tabs {
-                overflow-x: auto;
-                padding-bottom: 0.5rem;
-                max-width: 100%;
-            }
-
-            .nav-tabs button {
-                font-size: 0.85rem;
-                padding: 0.6rem 1rem;
-            }
-
-            .levels-grid,
-            .topics-container,
-            .vocabulary-grid {
-                grid-template-columns: 1fr;
-            }
-
-            h2 {
-                font-size: 1.4rem;
-            }
-
-            .dashboard-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .modal-content {
-                width: 95%;
-            }
-        }
-
-        /* ========== SCROLLBAR ========== */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--bg-secondary);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--border-color);
-            border-radius: 4px;
-            transition: background 0.3s ease;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--text-secondary);
-        }
-
-        /* ========== FOOTER ========== */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background: var(--bg-secondary);
-            color: var(--text-secondary);
-            margin-top: 3rem;
-            border-top: 1px solid var(--border-color);
-            transition: all 0.4s ease;
-        }
-
-        footer p {
-            margin: 0;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IELTS Lab — Cambridge English Practice Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;0,9..144,900;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --coral:#FF6B6B;
+    --tangerine:#FF9F45;
+    --sunshine:#FFD23F;
+    --mint:#06D6A0;
+    --sky:#4ECDC4;
+    --lavender:#A78BFA;
+    --hotpink:#FF4FB8;
+    --ink:#1A1B3A;
+    --paper:#FFF8F0;
+    --cream:#FFEED9;
+    --shadow:6px 6px 0 var(--ink);
+    --shadow-sm:3px 3px 0 var(--ink);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Plus Jakarta Sans',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    overflow-x:hidden;
+    min-height:100vh;
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(255,210,63,.25) 0, transparent 35%),
+      radial-gradient(circle at 88% 12%, rgba(255,79,184,.18) 0, transparent 35%),
+      radial-gradient(circle at 50% 95%, rgba(78,205,196,.2) 0, transparent 40%);
+  }
+  /* Grain overlay */
+  body::before{
+    content:'';
+    position:fixed;inset:0;
+    pointer-events:none;
+    z-index:1;
+    opacity:.4;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode:multiply;
+  }
+  .wrap{
+    max-width:1280px;
+    margin:0 auto;
+    padding:24px clamp(16px,3vw,32px);
+    position:relative;
+    z-index:2;
+  }
+  /* NAV */
+  nav.topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 24px;
+    background:var(--ink);
+    color:var(--paper);
+    border:3px solid var(--ink);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    margin-bottom:32px;
+  }
+  .logo{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:24px;
+    letter-spacing:-.02em;
+    display:flex;align-items:center;gap:10px;
+  }
+  .logo-dot{
+    width:14px;height:14px;border-radius:50%;
+    background:var(--sunshine);
+    box-shadow:0 0 0 3px var(--coral);
+    animation:pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+  }
+  .nav-links{display:flex;gap:6px;}
+  .nav-links a{
+    color:var(--paper);
+    text-decoration:none;
+    font-size:13px;
+    font-weight:600;
+    padding:8px 14px;
+    border-radius:10px;
+    transition:all .2s;
+  }
+  .nav-links a:hover{background:var(--coral);color:var(--ink);}
+  @media(max-width:768px){.nav-links{display:none;}}
+  .streak-badge{
+    background:var(--sunshine);
+    color:var(--ink);
+    padding:8px 14px;
+    border-radius:10px;
+    font-weight:700;
+    font-size:13px;
+    display:flex;align-items:center;gap:6px;
+  }
+  /* HERO */
+  .hero{
+    display:grid;
+    grid-template-columns:1.4fr 1fr;
+    gap:24px;
+    margin-bottom:40px;
+  }
+  @media(max-width:900px){.hero{grid-template-columns:1fr;}}
+  .hero-main{
+    background:var(--coral);
+    border:3px solid var(--ink);
+    border-radius:24px;
+    padding:36px;
+    box-shadow:var(--shadow);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-main::before{
+    content:'';
+    position:absolute;
+    right:-40px;top:-40px;
+    width:180px;height:180px;
+    background:var(--sunshine);
+    border:3px solid var(--ink);
+    border-radius:50%;
+    z-index:0;
+  }
+  .hero-main::after{
+    content:'';
+    position:absolute;
+    right:60px;top:60px;
+    width:50px;height:50px;
+    background:var(--mint);
+    border:3px solid var(--ink);
+    border-radius:50%;
+    z-index:0;
+  }
+  .hero-main > *{position:relative;z-index:1;}
+  .greeting{
+    font-size:13px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.15em;
+    background:var(--ink);
+    color:var(--paper);
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:20px;
+    margin-bottom:18px;
+  }
+  .hero-title{
+    font-family:'Fraunces',serif;
+    font-size:clamp(32px,5vw,52px);
+    font-weight:900;
+    line-height:1;
+    letter-spacing:-.03em;
+    margin-bottom:14px;
+  }
+  .hero-title em{
+    font-style:italic;
+    background:var(--ink);
+    color:var(--sunshine);
+    padding:0 8px;
+    border-radius:8px;
+    display:inline-block;
+    transform:rotate(-2deg);
+  }
+  .hero-sub{
+    font-size:16px;
+    line-height:1.5;
+    max-width:480px;
+    margin-bottom:24px;
+    font-weight:500;
+  }
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    padding:14px 24px;
+    border-radius:14px;
+    border:3px solid var(--ink);
+    font-weight:700;
+    font-size:14px;
+    cursor:pointer;
+    text-decoration:none;
+    display:inline-flex;align-items:center;gap:8px;
+    transition:transform .15s, box-shadow .15s;
+    box-shadow:var(--shadow-sm);
+    font-family:inherit;
+  }
+  .btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);}
+  .btn:active{transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink);}
+  .btn-primary{background:var(--ink);color:var(--paper);}
+  .btn-secondary{background:var(--paper);color:var(--ink);}
+  /* SCORE CARD */
+  .score-card{
+    background:var(--ink);
+    color:var(--paper);
+    border:3px solid var(--ink);
+    border-radius:24px;
+    padding:28px;
+    box-shadow:var(--shadow);
+    position:relative;
+    overflow:hidden;
+  }
+  .score-card::before{
+    content:'';
+    position:absolute;
+    bottom:-30px;left:-30px;
+    width:120px;height:120px;
+    background:var(--hotpink);
+    border-radius:50%;
+    opacity:.7;
+    filter:blur(20px);
+  }
+  .score-label{
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.2em;
+    color:var(--sunshine);
+    font-weight:700;
+    margin-bottom:8px;
+    position:relative;
+  }
+  .score-num{
+    font-family:'Fraunces',serif;
+    font-size:80px;
+    font-weight:900;
+    line-height:.9;
+    margin-bottom:8px;
+    position:relative;
+  }
+  .score-num span{color:var(--sunshine);}
+  .score-meta{font-size:13px;opacity:.8;position:relative;margin-bottom:18px;}
+  .skill-bars{position:relative;display:flex;flex-direction:column;gap:10px;}
+  .skill-bar{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;}
+  .skill-bar-name{width:64px;}
+  .skill-bar-track{flex:1;height:8px;background:rgba(255,248,240,.15);border-radius:4px;overflow:hidden;}
+  .skill-bar-fill{height:100%;border-radius:4px;transition:width 1s ease-out;}
+  .skill-bar-val{width:30px;text-align:right;font-family:'JetBrains Mono',monospace;}
+  /* SECTION TITLE */
+  .section-title{
+    font-family:'Fraunces',serif;
+    font-size:32px;
+    font-weight:800;
+    letter-spacing:-.02em;
+    margin:48px 0 24px;
+    display:flex;align-items:center;gap:14px;
+  }
+  .section-title::before{
+    content:'';
+    width:36px;height:36px;
+    background:var(--sunshine);
+    border:3px solid var(--ink);
+    border-radius:8px;
+    transform:rotate(-8deg);
+  }
+  .section-sub{font-size:14px;font-weight:500;color:var(--ink);opacity:.6;margin-left:auto;}
+  /* MODULES GRID */
+  .modules{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+    gap:20px;
+  }
+  .module{
+    background:var(--paper);
+    border:3px solid var(--ink);
+    border-radius:20px;
+    padding:24px;
+    box-shadow:var(--shadow-sm);
+    transition:all .2s;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    text-decoration:none;
+    color:var(--ink);
+    display:flex;
+    flex-direction:column;
+    min-height:200px;
+  }
+  .module:hover{
+    transform:translate(-3px,-3px);
+    box-shadow:6px 6px 0 var(--ink);
+  }
+  .module-icon{
+    width:48px;height:48px;
+    border:3px solid var(--ink);
+    border-radius:12px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:22px;
+    margin-bottom:14px;
+    font-weight:900;
+    font-family:'Fraunces',serif;
+  }
+  .module-tag{
+    position:absolute;
+    top:18px;right:18px;
+    font-size:10px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    padding:4px 8px;
+    background:var(--ink);
+    color:var(--paper);
+    border-radius:6px;
+  }
+  .module-name{
+    font-family:'Fraunces',serif;
+    font-size:22px;
+    font-weight:800;
+    margin-bottom:6px;
+    line-height:1.1;
+    letter-spacing:-.01em;
+  }
+  .module-desc{
+    font-size:13px;
+    line-height:1.5;
+    opacity:.75;
+    flex:1;
+    margin-bottom:16px;
+  }
+  .module-stat{
+    font-size:12px;
+    font-weight:600;
+    font-family:'JetBrains Mono',monospace;
+    display:flex;align-items:center;gap:6px;
+    padding-top:12px;
+    border-top:2px dashed rgba(26,27,58,.2);
+  }
+  .module-stat .arrow{
+    margin-left:auto;
+    font-size:18px;
+    transition:transform .2s;
+  }
+  .module:hover .arrow{transform:translateX(4px);}
+  /* Variant colors */
+  .m-listening .module-icon{background:var(--mint);}
+  .m-reading .module-icon{background:var(--sky);}
+  .m-writing .module-icon{background:var(--hotpink);color:var(--paper);}
+  .m-speaking .module-icon{background:var(--coral);color:var(--paper);}
+  .m-vocab .module-icon{background:var(--sunshine);}
+  .m-grammar .module-icon{background:var(--lavender);color:var(--paper);}
+  .m-mock .module-icon{background:var(--ink);color:var(--sunshine);}
+  .m-plan .module-icon{background:var(--tangerine);}
+  .m-resources .module-icon{background:var(--cream);}
+  /* WEEKLY PLAN */
+  .plan-strip{
+    background:var(--ink);
+    border-radius:24px;
+    padding:32px;
+    margin-top:24px;
+    color:var(--paper);
+    border:3px solid var(--ink);
+    box-shadow:var(--shadow);
+    position:relative;
+    overflow:hidden;
+  }
+  .plan-header{
+    display:flex;justify-content:space-between;align-items:center;
+    margin-bottom:24px;flex-wrap:wrap;gap:12px;
+  }
+  .plan-title{font-family:'Fraunces',serif;font-size:24px;font-weight:800;}
+  .plan-title span{color:var(--sunshine);}
+  .week-grid{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:8px;
+  }
+  @media(max-width:768px){.week-grid{grid-template-columns:repeat(4,1fr);}}
+  .day{
+    background:rgba(255,248,240,.08);
+    border:2px solid rgba(255,248,240,.2);
+    border-radius:14px;
+    padding:14px 10px;
+    text-align:center;
+    transition:all .2s;
+    cursor:pointer;
+  }
+  .day:hover{background:rgba(255,248,240,.18);transform:translateY(-2px);}
+  .day.today{background:var(--sunshine);color:var(--ink);border-color:var(--sunshine);}
+  .day.done{background:var(--mint);color:var(--ink);border-color:var(--mint);}
+  .day-name{font-size:10px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;opacity:.7;}
+  .day.today .day-name,.day.done .day-name{opacity:1;}
+  .day-num{font-family:'Fraunces',serif;font-size:22px;font-weight:800;margin:4px 0;}
+  .day-task{font-size:10px;font-weight:600;opacity:.8;line-height:1.3;}
+  /* QUOTE */
+  .quote-card{
+    background:var(--cream);
+    border:3px solid var(--ink);
+    border-radius:24px;
+    padding:36px;
+    margin-top:32px;
+    box-shadow:var(--shadow-sm);
+    position:relative;
+    text-align:center;
+  }
+  .quote-mark{
+    font-family:'Fraunces',serif;
+    font-size:120px;
+    font-weight:900;
+    line-height:.5;
+    color:var(--coral);
+    position:absolute;
+    top:30px;left:30px;
+  }
+  .quote-text{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:clamp(18px,2.5vw,26px);
+    font-weight:600;
+    line-height:1.4;
+    max-width:680px;
+    margin:0 auto 14px;
+  }
+  .quote-author{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;}
+  /* FOOTER */
+  footer{
+    margin-top:60px;padding:30px 0;
+    text-align:center;
+    font-size:13px;font-weight:600;
+    opacity:.6;
+  }
+  footer a{color:var(--ink);font-weight:700;}
+  /* Animations on load */
+  .fade-in{opacity:0;transform:translateY(20px);animation:fadeIn .6s ease-out forwards;}
+  @keyframes fadeIn{to{opacity:1;transform:translateY(0);}}
+  .delay-1{animation-delay:.1s;}
+  .delay-2{animation-delay:.2s;}
+  .delay-3{animation-delay:.3s;}
+  .delay-4{animation-delay:.4s;}
+</style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <span class="logo-icon">📚</span>
-                IELTS Reading Master
-            </div>
-            <div class="header-right">
-                <input type="text" class="search-box" id="searchBox" placeholder="Tìm kiếm...">
-                <button class="theme-toggle" id="themeToggle">
-                    <span class="theme-icon">🌙</span>
-                    <span id="themeText">Dark Mode</span>
-                </button>
-            </div>
-        </div>
-    </header>
+<div class="wrap">
 
-    <!-- Main Content -->
-    <div class="container">
-        <!-- Navigation Tabs -->
-        <div class="nav-tabs" id="navTabs">
-            <button class="active" data-tab="dashboard">
-                <span class="nav-icon">📊</span>
-                Dashboard
-            </button>
-            <button data-tab="levels">
-                <span class="nav-icon">📚</span>
-                Bài Học
-            </button>
-            <button data-tab="vocabulary">
-                <span class="nav-icon">🔤</span>
-                Từ Vựng
-            </button>
-            <button data-tab="grammar">
-                <span class="nav-icon">📖</span>
-                Ngữ Pháp
-            </button>
-            <button data-tab="reading">
-                <span class="nav-icon">📝</span>
-                Bài Đọc
-            </button>
-            <button data-tab="tests">
-                <span class="nav-icon">✅</span>
-                Kiểm Tra
-            </button>
-            <button data-tab="progress">
-                <span class="nav-icon">📈</span>
-                Tiến Độ
-            </button>
-        </div>
+  <!-- NAVBAR -->
+  <nav class="topbar fade-in">
+    <div class="logo">
+      <span class="logo-dot"></span>
+      <span>IELTS<em style="color:var(--sunshine);font-style:italic;">.lab</em></span>
+    </div>
+    <div class="nav-links">
+      <a href="#dashboard">Dashboard</a>
+      <a href="#modules">Modules</a>
+      <a href="#plan">Plan</a>
+      <a href="#resources">Resources</a>
+    </div>
+    <div class="streak-badge">🔥 <span id="streak">0</span> day streak</div>
+  </nav>
 
-        <!-- Dashboard Section -->
-        <div id="dashboard" class="content-section active">
-            <h2>
-                <span class="h2-icon">📊</span>
-                Bảng Điều Khiển Học Tập
-            </h2>
-            <div class="dashboard-grid">
-                <div class="stat-card">
-                    <div class="stat-card-icon">📚</div>
-                    <h3>Bài Học</h3>
-                    <div class="number" id="lessonsCompleted">0</div>
-                    <p>bài hoàn thành</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-card-icon">⏱️</div>
-                    <h3>Thời Gian</h3>
-                    <div class="number" id="studyTime">0</div>
-                    <p>giờ hôm nay</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-card-icon">🎯</div>
-                    <h3>Điểm Trung Bình</h3>
-                    <div class="number" id="averageScore">0</div>
-                    <p>% toàn bộ bài</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-card-icon">🔥</div>
-                    <h3>Chuỗi Học</h3>
-                    <div class="number" id="streak">0</div>
-                    <p>ngày liên tiếp</p>
-                </div>
-            </div>
-
-            <h3 style="margin-top: 2rem;">🎯 Mục Tiêu Hôm Nay</h3>
-            <div class="progress-section">
-                <div class="progress-item">
-                    <label>
-                        <span>Hoàn Thành 2 chủ đề</span>
-                        <span id="taskProgress">0/2</span>
-                    </label>
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="taskProgressBar" style="width: 0%"></div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <label>
-                        <span>Học 50 từ vựng mới</span>
-                        <span id="vocabProgress">0/50</span>
-                    </label>
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="vocabProgressBar" style="width: 0%"></div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <label>
-                        <span>Làm 1 bài kiểm tra</span>
-                        <span id="testProgress">0/1</span>
-                    </label>
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="testProgressBar" style="width: 0%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Levels Section -->
-        <div id="levels" class="content-section">
-            <h2>
-                <span class="h2-icon">📚</span>
-                Chọn Cấp Độ Học Tập
-            </h2>
-            <div class="levels-grid">
-                <div class="level-card" onclick="selectLevel('foundation')">
-                    <span class="level-icon">🌱</span>
-                    <h3>Foundation</h3>
-                    <p>IELTS 3.0 - 4.5</p>
-                    <p style="font-size: 0.8rem; color: var(--text-secondary);">Dành cho người mới</p>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 20%"></div>
-                    </div>
-                    <span class="badge">20% Hoàn Thành</span>
-                </div>
-
-                <div class="level-card" onclick="selectLevel('elementary')">
-                    <span class="level-icon">📖</span>
-                    <h3>Elementary</h3>
-                    <p>IELTS 4.5 - 5.5</p>
-                    <p style="font-size: 0.8rem; color: var(--text-secondary);">Có kỹ năng cơ bản</p>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 45%"></div>
-                    </div>
-                    <span class="badge">45% Hoàn Thành</span>
-                </div>
-
-                <div class="level-card" onclick="selectLevel('intermediate')">
-                    <span class="level-icon">🚀</span>
-                    <h3>Intermediate</h3>
-                    <p>IELTS 5.5 - 6.5</p>
-                    <p style="font-size: 0.8rem; color: var(--text-secondary);">Trung cấp, khó hơn</p>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 30%"></div>
-                    </div>
-                    <span class="badge">30% Hoàn Thành</span>
-                </div>
-
-                <div class="level-card" onclick="selectLevel('upper-intermediate')">
-                    <span class="level-icon">💪</span>
-                    <h3>Upper-Inter</h3>
-                    <p>IELTS 6.5 - 7.5</p>
-                    <p style="font-size: 0.8rem; color: var(--text-secondary);">Nâng cao, rất khó</p>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 10%"></div>
-                    </div>
-                    <span class="badge">10% Hoàn Thành</span>
-                </div>
-
-                <div class="level-card" onclick="selectLevel('advanced')">
-                    <span class="level-icon">🏆</span>
-                    <h3>Advanced</h3>
-                    <p>IELTS 7.5 - 8.5+</p>
-                    <p style="font-size: 0.8rem; color: var(--text-secondary);">Cao cấp, quá khó</p>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 5%"></div>
-                    </div>
-                    <span class="badge">5% Hoàn Thành</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Vocabulary Section -->
-        <div id="vocabulary" class="content-section">
-            <h2>
-                <span class="h2-icon">🔤</span>
-                Học Từ Vựng IELTS
-            </h2>
-            <div style="margin-bottom: 1.5rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
-                <label style="font-weight: 600;">Chủ đề:</label>
-                <select id="vocabCategory" style="padding: 0.6rem 1rem; border-radius: 10px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); cursor: pointer; transition: all 0.3s ease;">
-                    <option value="daily">Daily Life - Đời Sống Hàng Ngày</option>
-                    <option value="work">Work & Employment - Công Việc</option>
-                    <option value="education">Education - Giáo Dục</option>
-                    <option value="technology">Technology - Công Nghệ</option>
-                    <option value="environment">Environment - Môi Trường</option>
-                </select>
-            </div>
-            <div class="vocabulary-grid" id="vocabList"></div>
-        </div>
-
-        <!-- Grammar Section -->
-        <div id="grammar" class="content-section">
-            <h2>
-                <span class="h2-icon">📖</span>
-                Ngữ Pháp IELTS Reading
-            </h2>
-            <div id="grammarList"></div>
-        </div>
-
-        <!-- Reading Section -->
-        <div id="reading" class="content-section">
-            <h2>
-                <span class="h2-icon">📝</span>
-                Bài Đọc Mẫu
-            </h2>
-            <div class="reading-container">
-                <h3>Chủ Đề: Daily Life in Modern Cities</h3>
-                <div class="reading-passage">
-                    Modern cities have transformed dramatically over the past century. The rapid urbanization has brought both opportunities and challenges to millions of people worldwide. Today's cities are characterized by towering skyscrapers, complex transportation networks, and diverse populations. Despite these developments, urban living comes with significant challenges such as pollution, overcrowding, and increased living costs.
-                    <br><br>
-                    However, cities also offer numerous advantages. They provide better access to education, healthcare, and employment opportunities. Cultural diversity in cities creates vibrant communities where people from different backgrounds can interact and share experiences. Furthermore, cities are often centers of innovation and creativity, attracting talented individuals from around the world.
-                </div>
-
-                <div class="reading-questions">
-                    <h4>Câu Hỏi:</h4>
-                    <div class="question">
-                        <h4>1. Theo đoạn văn, thách thức chính của cuộc sống thành thị là gì?</h4>
-                        <div class="options">
-                            <label class="option">
-                                <input type="radio" name="q1"> Công nghệ không đủ tốt
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q1"> Ô nhiễm, quá tải dân số, chi phí cao
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q1"> Không có cơ hội việc làm
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="question">
-                        <h4>2. Lợi ích nào được đề cập trong đoạn thứ hai?</h4>
-                        <div class="options">
-                            <label class="option">
-                                <input type="radio" name="q2"> Cơ hội việc làm tốt
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q2"> Đa dạng văn hóa
-                            </label>
-                            <label class="option">
-                                <input type="radio" name="q2"> Thời tiết ấm áp hơn
-                            </label>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-primary btn-full" onclick="submitReading()">Nộp Bài</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tests Section -->
-        <div id="tests" class="content-section">
-            <h2>
-                <span class="h2-icon">✅</span>
-                Bài Kiểm Tra
-            </h2>
-            <div class="topics-container">
-                <div class="topic-card">
-                    <div class="topic-header">
-                        <h4>
-                            <span class="topic-icon">📋</span>
-                            Full Practice Test 1
-                        </h4>
-                        <p>IELTS 5.5-6.5</p>
-                    </div>
-                    <div class="topic-body">
-                        <p>3 bài đọc, 40 câu hỏi, 60 phút</p>
-                        <ul class="topic-features">
-                            <li>Mô phỏng đề thi thực tế</li>
-                            <li>Tính điểm tự động</li>
-                            <li>Giải thích chi tiết</li>
-                        </ul>
-                        <button class="btn btn-primary btn-full" onclick="startTest('test1')">Bắt Đầu</button>
-                    </div>
-                </div>
-
-                <div class="topic-card">
-                    <div class="topic-header">
-                        <h4>
-                            <span class="topic-icon">📋</span>
-                            Mini Test: Matching
-                        </h4>
-                        <p>IELTS 5.0+</p>
-                    </div>
-                    <div class="topic-body">
-                        <p>1 bài đọc, 10 câu hỏi, 15 phút</p>
-                        <ul class="topic-features">
-                            <li>Dạng bài Matching</li>
-                            <li>Rút gọn thời gian</li>
-                            <li>Luyện kỹ năng Scanning</li>
-                        </ul>
-                        <button class="btn btn-primary btn-full" onclick="startTest('mini1')">Bắt Đầu</button>
-                    </div>
-                </div>
-
-                <div class="topic-card">
-                    <div class="topic-header">
-                        <h4>
-                            <span class="topic-icon">📋</span>
-                            Timed Reading Test
-                        </h4>
-                        <p>IELTS 6.0+</p>
-                    </div>
-                    <div class="topic-body">
-                        <p>3 bài đọc, 40 câu hỏi, 60 phút</p>
-                        <ul class="topic-features">
-                            <li>Đồng hồ đếm ngược</li>
-                            <li>Tự động nộp khi hết giờ</li>
-                            <li>Quản lý thời gian</li>
-                        </ul>
-                        <button class="btn btn-primary btn-full" onclick="startTest('timed1')">Bắt Đầu</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Progress Section -->
-        <div id="progress" class="content-section">
-            <h2>
-                <span class="h2-icon">📈</span>
-                Theo Dõi Tiến Độ
-            </h2>
-            <div class="progress-section">
-                <h3 style="margin-bottom: 1.5rem;">Tiến Độ Học Tập Tổng Thể</h3>
-
-                <div class="progress-item">
-                    <label>
-                        <span>Foundation Level</span>
-                        <span>8/10 bài</span>
-                    </label>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 80%"></div>
-                    </div>
-                </div>
-
-                <div class="progress-item">
-                    <label>
-                        <span>Elementary Level</span>
-                        <span>5/10 bài</span>
-                    </label>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 50%"></div>
-                    </div>
-                </div>
-
-                <div class="progress-item">
-                    <label>
-                        <span>Intermediate Level</span>
-                        <span>2/10 bài</span>
-                    </label>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 20%"></div>
-                    </div>
-                </div>
-
-                <div class="progress-item">
-                    <label>
-                        <span>Upper-Intermediate Level</span>
-                        <span>1/10 bài</span>
-                    </label>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 10%"></div>
-                    </div>
-                </div>
-
-                <div class="progress-item">
-                    <label>
-                        <span>Advanced Level</span>
-                        <span>0/10 bài</span>
-                    </label>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 0%"></div>
-                    </div>
-                </div>
-
-                <h3 style="margin-top: 2rem; margin-bottom: 1.5rem;">Kỹ Năng Đọc Hiểu</h3>
-
-                <div class="progress-item">
-                    <label>
-                        <span>Skimming (Quét nhanh)</span>
-                        <span>75%</span>
-                    </label>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 75%"></div>
-                    </div>
-                </div>
-
-                <div class="progress-item">
-                    <label>
-                        <span>Scanning (Tìm kiếm)</span>
-                        <span>60%</span>
-                    </label>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 60%"></div>
-                    </div>
-                </div>
-
-                <div class="progress-item">
-                    <label>
-                        <span>Vocabulary (Từ vựng)</span>
-                        <span>85%</span>
-                    </label>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 85%"></div>
-                    </div>
-                </div>
-
-                <div class="progress-item">
-                    <label>
-                        <span>Grammar Understanding</span>
-                        <span>70%</span>
-                    </label>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 70%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- HERO -->
+  <section class="hero" id="dashboard">
+    <div class="hero-main fade-in delay-1">
+      <span class="greeting">👋 Xin chào, Duy</span>
+      <h1 class="hero-title">Hành trình<br>chinh phục <em>IELTS</em><br>bắt đầu hôm nay.</h1>
+      <p class="hero-sub">Luyện tập theo bộ Cambridge English IELTS 10–19 với lộ trình cá nhân hóa, từ Listening đến Speaking — tất cả trong một nơi.</p>
+      <div class="cta-row">
+        <a href="#modules" class="btn btn-primary">Bắt đầu học →</a>
+        <a href="#plan" class="btn btn-secondary">Xem lộ trình</a>
+      </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modalTitle">Chi Tiết</h2>
-                <button class="close-btn" onclick="closeModal()">✕</button>
-            </div>
-            <div id="modalBody"></div>
+    <div class="score-card fade-in delay-2">
+      <div class="score-label">Estimated Band</div>
+      <div class="score-num">5<span>.5</span></div>
+      <div class="score-meta">Target band: chưa thiết lập · cập nhật khi làm mock test</div>
+      <div class="skill-bars">
+        <div class="skill-bar">
+          <span class="skill-bar-name">Listening</span>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:65%;background:var(--mint);"></div></div>
+          <span class="skill-bar-val">6.0</span>
         </div>
+        <div class="skill-bar">
+          <span class="skill-bar-name">Reading</span>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:62%;background:var(--sky);"></div></div>
+          <span class="skill-bar-val">5.5</span>
+        </div>
+        <div class="skill-bar">
+          <span class="skill-bar-name">Writing</span>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:30%;background:var(--hotpink);"></div></div>
+          <span class="skill-bar-val">--</span>
+        </div>
+        <div class="skill-bar">
+          <span class="skill-bar-name">Speaking</span>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="width:25%;background:var(--coral);"></div></div>
+          <span class="skill-bar-val">--</span>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <footer>
-        <p>© 2026 IELTS Reading Master - Học Tiếng Anh Dễ Dàng</p>
-    </footer>
+  <!-- MODULES -->
+  <h2 class="section-title fade-in delay-3" id="modules">
+    Modules
+    <span class="section-sub">10 khu vực học · click để mở</span>
+  </h2>
 
-    <script>
-        // ============================================================
-        // FIX #1: THEME TOGGLE - Dark Mode Now Works Correctly
-        // ============================================================
-        const themeToggle = document.getElementById('themeToggle');
-        const themeText = document.getElementById('themeText');
+  <div class="modules fade-in delay-3">
 
-        // Load theme on page load
-        function loadTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
-                themeText.textContent = 'Light Mode';
-                themeToggle.querySelector('.theme-icon').textContent = '☀️';
-            } else {
-                document.body.classList.remove('dark-mode');
-                themeText.textContent = 'Dark Mode';
-                themeToggle.querySelector('.theme-icon').textContent = '🌙';
-            }
-        }
+    <a href="listening.html" class="module m-listening">
+      <span class="module-tag">Skill</span>
+      <div class="module-icon">L</div>
+      <div class="module-name">Listening</div>
+      <div class="module-desc">40 tests từ Cambridge 10–19. Audio + transcript + chấm điểm tự động theo band.</div>
+      <div class="module-stat">0 / 40 tests <span class="arrow">→</span></div>
+    </a>
 
-        // Toggle theme on button click
-        themeToggle.addEventListener('click', () => {
-            const isDarkMode = document.body.classList.toggle('dark-mode');
-            
-            // Update text and icon
-            themeText.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
-            themeToggle.querySelector('.theme-icon').textContent = isDarkMode ? '☀️' : '🌙';
-            
-            // Save to localStorage
-            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-        });
+    <a href="reading.html" class="module m-reading">
+      <span class="module-tag">Skill</span>
+      <div class="module-icon">R</div>
+      <div class="module-name">Reading</div>
+      <div class="module-desc">Academic & General passages, highlight từ vựng, timer 60 phút, giải thích đáp án.</div>
+      <div class="module-stat">0 / 40 tests <span class="arrow">→</span></div>
+    </a>
 
-        // Load theme on page start
-        loadTheme();
+    <a href="writing.html" class="module m-writing">
+      <span class="module-tag">Skill</span>
+      <div class="module-icon">W</div>
+      <div class="module-name">Writing</div>
+      <div class="module-desc">Task 1 & 2, sample band 6–9, template, checklist 4 tiêu chí chấm.</div>
+      <div class="module-stat">0 essays viết <span class="arrow">→</span></div>
+    </a>
 
-        // ============================================================
-        // FIX #2: NAVIGATION LINKS - Now Fully Clickable & Working
-        // ============================================================
-        const navTabs = document.getElementById('navTabs');
-        const contentSections = document.querySelectorAll('.content-section');
+    <a href="speaking.html" class="module m-speaking">
+      <span class="module-tag">Skill</span>
+      <div class="module-icon">S</div>
+      <div class="module-name">Speaking</div>
+      <div class="module-desc">Part 1/2/3 với cue card, timer, ghi âm trực tiếp, sample answers theo band.</div>
+      <div class="module-stat">0 buổi nói <span class="arrow">→</span></div>
+    </a>
 
-        // Get all nav buttons (using correct selector)
-        const navButtons = navTabs.querySelectorAll('button');
+    <a href="vocabulary.html" class="module m-vocab">
+      <span class="module-tag">Tool</span>
+      <div class="module-icon">V</div>
+      <div class="module-name">Vocabulary</div>
+      <div class="module-desc">Flashcard + spaced repetition, 20 chủ đề IELTS, collocations.</div>
+      <div class="module-stat">0 từ đã thuộc <span class="arrow">→</span></div>
+    </a>
 
-        navButtons.forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                
-                // Remove active class from all buttons
-                navButtons.forEach(btn => btn.classList.remove('active'));
-                
-                // Remove active class from all sections
-                contentSections.forEach(section => section.classList.remove('active'));
-                
-                // Add active class to clicked button
-                button.classList.add('active');
-                
-                // Get tab name and show section
-                const tabName = button.getAttribute('data-tab');
-                const targetSection = document.getElementById(tabName);
-                
-                if (targetSection) {
-                    targetSection.classList.add('active');
-                    
-                    // Load content if needed
-                    if (tabName === 'vocabulary') {
-                        loadVocabulary();
-                    } else if (tabName === 'grammar') {
-                        loadGrammar();
-                    }
-                    
-                    // Smooth scroll to top
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
-            });
-        });
+    <a href="grammar.html" class="module m-grammar">
+      <span class="module-tag">Tool</span>
+      <div class="module-icon">G</div>
+      <div class="module-name">Grammar</div>
+      <div class="module-desc">Cấu trúc band 7+, bài tập tương tác, lỗi sai thường gặp.</div>
+      <div class="module-stat">0 / 30 bài <span class="arrow">→</span></div>
+    </a>
 
-        // ============================================================
-        // VOCABULARY - Data & Functions
-        // ============================================================
-        const vocabularyData = {
-            daily: [
-                { word: 'Commute', phonetic: '/kəˈmjuːt/', meaning: 'Đi từ nhà tới nơi làm việc' },
-                { word: 'Congestion', phonetic: '/kənˈdʒestʃən/', meaning: 'Tình trạng tắc đường' },
-                { word: 'Pedestrian', phonetic: '/pəˈdestriən/', meaning: 'Người đi bộ' },
-                { word: 'Accommodation', phonetic: '/əˌkɒməˈdeɪʃən/', meaning: 'Nơi ở' },
-                { word: 'Neighborhood', phonetic: '/ˈneɪbərhʊd/', meaning: 'Khu vực lân cận' },
-                { word: 'Inhabitant', phonetic: '/ɪnˈhæbɪtənt/', meaning: 'Cư dân' }
-            ],
-            work: [
-                { word: 'Productivity', phonetic: '/prɒdʌkˈtɪvəti/', meaning: 'Năng suất' },
-                { word: 'Employment', phonetic: '/ɪmˈplɔɪmənt/', meaning: 'Việc làm' },
-                { word: 'Recruitment', phonetic: '/rɪˈkruːtmənt/', meaning: 'Tuyển dụng' },
-                { word: 'Salary', phonetic: '/ˈsæləri/', meaning: 'Lương' },
-                { word: 'Deadline', phonetic: '/ˈdedbɪn/', meaning: 'Hạn chót' },
-                { word: 'Colleague', phonetic: '/ˈkɒliːg/', meaning: 'Đồng nghiệp' }
-            ],
-            education: [
-                { word: 'Curriculum', phonetic: '/kəˈrɪkjələm/', meaning: 'Chương trình học' },
-                { word: 'Assessment', phonetic: '/əˈsesmənt/', meaning: 'Đánh giá' },
-                { word: 'Scholarship', phonetic: '/ˈskɒlərʃɪp/', meaning: 'Học bổng' },
-                { word: 'Tuition', phonetic: '/tjuˈɪʃən/', meaning: 'Học phí' },
-                { word: 'Lecture', phonetic: '/ˈlektʃər/', meaning: 'Bài giảng' },
-                { word: 'Enrollment', phonetic: '/ɪnˈroʊlmənt/', meaning: 'Đăng ký học' }
-            ],
-            technology: [
-                { word: 'Innovation', phonetic: '/ˌɪnəˈveɪʃən/', meaning: 'Đổi mới' },
-                { word: 'Algorithm', phonetic: '/ˈælɡərɪðəm/', meaning: 'Thuật toán' },
-                { word: 'Interface', phonetic: '/ˈɪntərfeɪs/', meaning: 'Giao diện' },
-                { word: 'Database', phonetic: '/ˈdeɪtəbeɪs/', meaning: 'Cơ sở dữ liệu' },
-                { word: 'Download', phonetic: '/ˈdaʊnloʊd/', meaning: 'Tải xuống' },
-                { word: 'Application', phonetic: '/ˌæplɪˈkeɪʃən/', meaning: 'Ứng dụng' }
-            ],
-            environment: [
-                { word: 'Pollution', phonetic: '/pəˈluːʃən/', meaning: 'Ô nhiễm' },
-                { word: 'Sustainability', phonetic: '/səˌsteɪnəˈbɪləti/', meaning: 'Tính bền vững' },
-                { word: 'Ecosystem', phonetic: '/ˈiːkoʊsɪstəm/', meaning: 'Hệ sinh thái' },
-                { word: 'Conservation', phonetic: '/ˌkɑːnsərˈveɪʃən/', meaning: 'Bảo tồn' },
-                { word: 'Renewable', phonetic: '/rɪˈnjuːəbəl/', meaning: 'Tái tạo được' },
-                { word: 'Emission', phonetic: '/ɪˈmɪʃən/', meaning: 'Khí thải' }
-            ]
-        };
+    <a href="mocktest.html" class="module m-mock">
+      <span class="module-tag">Exam</span>
+      <div class="module-icon">M</div>
+      <div class="module-name">Mock Test</div>
+      <div class="module-desc">Thi thử full 2h45p mô phỏng phòng thi, chấm 4 kỹ năng, báo cáo chi tiết.</div>
+      <div class="module-stat">0 lần thi thử <span class="arrow">→</span></div>
+    </a>
 
-        function loadVocabulary() {
-            const category = document.getElementById('vocabCategory').value;
-            const vocabList = document.getElementById('vocabList');
-            vocabList.innerHTML = '';
+    <a href="studyplan.html" class="module m-plan">
+      <span class="module-tag">Plan</span>
+      <div class="module-icon">P</div>
+      <div class="module-name">Study Plan</div>
+      <div class="module-desc">Lộ trình 3–6 tháng cá nhân hóa, milestone, điều chỉnh theo điểm yếu.</div>
+      <div class="module-stat">Chưa thiết lập <span class="arrow">→</span></div>
+    </a>
 
-            if (vocabularyData[category]) {
-                vocabularyData[category].forEach((vocab) => {
-                    const card = document.createElement('div');
-                    card.className = 'vocab-card';
-                    card.innerHTML = `
-                        <div class="vocab-word">${vocab.word}</div>
-                        <div class="vocab-phonetic">${vocab.phonetic}</div>
-                        <div class="vocab-meaning">${vocab.meaning}</div>
-                    `;
-                    vocabList.appendChild(card);
-                });
-            }
-        }
+    <a href="resources.html" class="module m-resources">
+      <span class="module-tag">Hub</span>
+      <div class="module-icon">★</div>
+      <div class="module-name">Resources</div>
+      <div class="module-desc">Cambridge audio, IELTS Liz, Simon, Mat Clark, YouTube channels uy tín.</div>
+      <div class="module-stat">15+ tài liệu <span class="arrow">→</span></div>
+    </a>
 
-        // Update vocabulary on category change
-        document.getElementById('vocabCategory').addEventListener('change', loadVocabulary);
+  </div>
 
-        // ============================================================
-        // GRAMMAR - Data & Functions
-        // ============================================================
-        const grammarData = [
-            {
-                title: 'Present Simple vs Present Continuous',
-                explanation: 'Present Simple dùng cho sự thật chung, thói quen; Present Continuous dùng cho hành động đang xảy ra.',
-                examples: [
-                    '✓ I work as an engineer (sự thật)',
-                    '✓ I am working on a project (đang làm)',
-                    '✗ I am working as an engineer (sai)'
-                ]
-            },
-            {
-                title: 'Relative Clauses (Mệnh đề quan hệ)',
-                explanation: 'Dùng để cung cấp thông tin thêm về danh từ.',
-                examples: [
-                    '✓ The man who lives next door is a doctor',
-                    '✓ The book which I read last week was interesting',
-                    '✓ The city where I was born is very beautiful'
-                ]
-            },
-            {
-                title: 'Passive Voice (Câu bị động)',
-                explanation: 'Diễn tả hành động được thực hiện cho chủ thể.',
-                examples: [
-                    '✓ The house was built in 1990',
-                    '✓ English is spoken worldwide',
-                    '✓ The letter has been written'
-                ]
-            },
-            {
-                title: 'Conditional Sentences (Câu điều kiện)',
-                explanation: 'Diễn tả điều kiện và kết quả có thể xảy ra.',
-                examples: [
-                    '✓ If it rains, I will stay home (Type 1)',
-                    '✓ If I won the lottery, I would travel (Type 2)',
-                    '✓ If I had studied harder, I would have passed (Type 3)'
-                ]
-            }
-        ];
+  <!-- WEEKLY PLAN -->
+  <h2 class="section-title fade-in delay-4" id="plan">
+    Tuần này
+    <span class="section-sub">Gợi ý lịch học · 7 ngày</span>
+  </h2>
 
-        function loadGrammar() {
-            const grammarList = document.getElementById('grammarList');
-            grammarList.innerHTML = '';
+  <div class="plan-strip fade-in delay-4">
+    <div class="plan-header">
+      <div class="plan-title">Week 1 · <span>Foundation</span></div>
+      <div style="font-size:13px;opacity:.8;">Mục tiêu: 1.5h/ngày · Cambridge 10</div>
+    </div>
+    <div class="week-grid">
+      <div class="day done">
+        <div class="day-name">Mon</div>
+        <div class="day-num">12</div>
+        <div class="day-task">Listening T1</div>
+      </div>
+      <div class="day done">
+        <div class="day-name">Tue</div>
+        <div class="day-num">13</div>
+        <div class="day-task">Reading P1</div>
+      </div>
+      <div class="day today">
+        <div class="day-name">Wed</div>
+        <div class="day-num">14</div>
+        <div class="day-task">Vocab + Grammar</div>
+      </div>
+      <div class="day">
+        <div class="day-name">Thu</div>
+        <div class="day-num">15</div>
+        <div class="day-task">Writing T1</div>
+      </div>
+      <div class="day">
+        <div class="day-name">Fri</div>
+        <div class="day-num">16</div>
+        <div class="day-task">Speaking P1</div>
+      </div>
+      <div class="day">
+        <div class="day-name">Sat</div>
+        <div class="day-num">17</div>
+        <div class="day-task">Listening T2</div>
+      </div>
+      <div class="day">
+        <div class="day-name">Sun</div>
+        <div class="day-num">18</div>
+        <div class="day-task">Review tuần</div>
+      </div>
+    </div>
+  </div>
 
-            grammarData.forEach(item => {
-                const grammarItem = document.createElement('div');
-                grammarItem.className = 'grammar-item';
-                grammarItem.innerHTML = `
-                    <h4>${item.title}</h4>
-                    <p>${item.explanation}</p>
-                    <div>
-                        ${item.examples.map(ex => `<div class="example">${ex}</div>`).join('')}
-                    </div>
-                `;
-                grammarList.appendChild(grammarItem);
-            });
-        }
+  <!-- QUOTE -->
+  <div class="quote-card fade-in delay-4">
+    <div class="quote-mark">"</div>
+    <p class="quote-text">Tiếng Anh không phải đỉnh núi để chinh phục — nó là chiếc cầu để đến nơi bạn muốn.</p>
+    <div class="quote-author">— Mỗi ngày một bước nhỏ</div>
+  </div>
 
-        // ============================================================
-        // UTILITIES
-        // ============================================================
-        function selectLevel(level) {
-            alert(`Bạn đã chọn: ${level}\nNhấn "Vào Học" để tiếp tục`);
-        }
+  <footer>
+    Made for <strong>Duy</strong> · Tài liệu dựa trên <strong>Cambridge English IELTS 10–19</strong> · Lưu tiến độ local, không cần đăng nhập
+  </footer>
 
-        function submitReading() {
-            const q1 = document.querySelector('input[name="q1"]:checked');
-            const q2 = document.querySelector('input[name="q2"]:checked');
+</div>
 
-            if (!q1 || !q2) {
-                alert('Vui lòng trả lời tất cả các câu hỏi');
-                return;
-            }
+<script>
+  // Streak counter from localStorage
+  (function(){
+    const today = new Date().toDateString();
+    const last = localStorage.getItem('ielts_last_visit');
+    let streak = parseInt(localStorage.getItem('ielts_streak') || '0');
+    if(last !== today){
+      const yesterday = new Date();
+      yesterday.setDate(yesterday.getDate()-1);
+      if(last === yesterday.toDateString()) streak++;
+      else streak = 1;
+      localStorage.setItem('ielts_streak', streak);
+      localStorage.setItem('ielts_last_visit', today);
+    }
+    document.getElementById('streak').textContent = streak;
+  })();
 
-            const parent1 = q1.parentElement;
-            const parent2 = q2.parentElement;
-
-            if (q1.parentElement.innerText.includes('Ô nhiễm')) {
-                parent1.classList.add('correct');
-            } else {
-                parent1.classList.add('incorrect');
-            }
-
-            if (q2.parentElement.innerText.includes('Đa dạng')) {
-                parent2.classList.add('correct');
-            } else {
-                parent2.classList.add('incorrect');
-            }
-
-            alert('Bạn trả lời: 2 đúng = 100%');
-        }
-
-        function startTest(testId) {
-            showModal('Bắt Đầu Kiểm Tra', `
-                <p>Kiểm tra sẽ bắt đầu trong vòng...</p>
-                <div style="text-align: center; font-size: 3rem; font-weight: bold; color: var(--accent-1); margin: 2rem 0;">
-                    <span id="countdown">3</span>
-                </div>
-                <p>Chuẩn bị sẵn sàng!</p>
-            `);
-
-            let count = 3;
-            const interval = setInterval(() => {
-                count--;
-                const countdownEl = document.getElementById('countdown');
-                if (countdownEl) countdownEl.textContent = count;
-                if (count === 0) {
-                    clearInterval(interval);
-                    closeModal();
-                }
-            }, 1000);
-        }
-
-        function showModal(title, content) {
-            document.getElementById('modalTitle').textContent = title;
-            document.getElementById('modalBody').innerHTML = content;
-            document.getElementById('modal').classList.add('active');
-        }
-
-        function closeModal() {
-            document.getElementById('modal').classList.remove('active');
-        }
-
-        // Close modal when clicking outside
-        document.getElementById('modal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeModal();
-            }
-        });
-
-        // Initialize on page load
-        function initDashboard() {
-            document.getElementById('lessonsCompleted').textContent = Math.floor(Math.random() * 30) + 5;
-            document.getElementById('studyTime').textContent = Math.floor(Math.random() * 5) + 1;
-            document.getElementById('averageScore').textContent = Math.floor(Math.random() * 40) + 60;
-            document.getElementById('streak').textContent = Math.floor(Math.random() * 15) + 1;
-        }
-
-        // Run on page load
-        initDashboard();
-        loadVocabulary();
-        loadGrammar();
-    </script>
+  // Animate skill bars on scroll
+  const bars = document.querySelectorAll('.skill-bar-fill');
+  bars.forEach(bar=>{
+    const w = bar.style.width;
+    bar.style.width = '0';
+    setTimeout(()=>bar.style.width = w, 400);
+  });
+</script>
 </body>
 </html>
