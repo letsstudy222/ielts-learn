@@ -9,27 +9,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;0,9..144,900;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   :root{
-    --coral:#FF6B6B;
-    --tangerine:#FF9F45;
-    --sunshine:#FFD23F;
-    --mint:#06D6A0;
-    --sky:#4ECDC4;
-    --lavender:#A78BFA;
-    --hotpink:#FF4FB8;
-    --ink:#1A1B3A;
-    --paper:#FFF8F0;
-    --cream:#FFEED9;
-    --shadow:6px 6px 0 var(--ink);
-    --shadow-sm:3px 3px 0 var(--ink);
+    --coral:#FF6B6B; --tangerine:#FF9F45; --sunshine:#FFD23F;
+    --mint:#06D6A0; --sky:#4ECDC4; --lavender:#A78BFA; --hotpink:#FF4FB8;
+    --ink:#1A1B3A; --paper:#FFF8F0; --cream:#FFEED9;
+    --shadow:6px 6px 0 var(--ink); --shadow-sm:3px 3px 0 var(--ink);
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     font-family:'Plus Jakarta Sans',sans-serif;
-    background:var(--paper);
-    color:var(--ink);
-    overflow-x:hidden;
-    min-height:100vh;
+    background:var(--paper); color:var(--ink);
+    overflow-x:hidden; min-height:100vh;
     background-image:
       radial-gradient(circle at 92% 8%, rgba(78,205,196,.28) 0, transparent 35%),
       radial-gradient(circle at 8% 50%, rgba(167,139,250,.18) 0, transparent 35%),
@@ -42,7 +32,6 @@
   }
   .wrap{max-width:1280px;margin:0 auto;padding:24px clamp(16px,3vw,32px);position:relative;z-index:2;}
 
-  /* NAV */
   nav.topbar{
     display:flex;align-items:center;justify-content:space-between;
     padding:16px 24px;background:var(--ink);color:var(--paper);
@@ -60,16 +49,10 @@
   }
   .back-btn:hover{background:var(--sunshine);}
 
-  /* HEADER */
   .page-header{
-    background:var(--sky);
-    border:3px solid var(--ink);
-    border-radius:24px;
-    padding:36px;
-    box-shadow:var(--shadow);
-    margin-bottom:32px;
-    position:relative;
-    overflow:hidden;
+    background:var(--sky); border:3px solid var(--ink); border-radius:24px;
+    padding:36px; box-shadow:var(--shadow); margin-bottom:32px;
+    position:relative; overflow:hidden;
   }
   .page-header::before{
     content:'';position:absolute;right:-30px;top:-30px;
@@ -90,72 +73,52 @@
   .stat-pill{background:var(--ink);color:var(--paper);padding:8px 14px;border-radius:10px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:6px;}
   .stat-pill strong{color:var(--sunshine);font-family:'JetBrains Mono',monospace;}
 
-  /* TABS */
-  .tabs{
-    display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap;
-  }
+  .tabs{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap;}
   .tab{
     padding:12px 20px;background:var(--paper);
     border:3px solid var(--ink);border-radius:12px;
     font-weight:700;font-size:14px;cursor:pointer;
-    box-shadow:var(--shadow-sm);font-family:inherit;
-    transition:all .15s;
+    box-shadow:var(--shadow-sm);font-family:inherit;transition:all .15s;
   }
   .tab:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);}
   .tab.active{background:var(--ink);color:var(--paper);}
 
-  /* FILTER BAR */
   .filter-bar{
     display:flex;gap:12px;align-items:center;flex-wrap:wrap;
     margin-bottom:24px;padding:14px 18px;
     background:var(--cream);border:3px solid var(--ink);border-radius:14px;
   }
   .filter-bar label{font-size:13px;font-weight:700;}
-  .filter-bar select, .filter-bar input{
+  .filter-bar select{
     padding:8px 12px;border:2px solid var(--ink);border-radius:8px;
-    font-family:inherit;font-size:13px;font-weight:600;background:var(--paper);
-    cursor:pointer;
+    font-family:inherit;font-size:13px;font-weight:600;background:var(--paper);cursor:pointer;
   }
 
-  /* TEST GRID */
-  .test-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-    gap:18px;
-  }
+  .test-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;}
   .test-card{
     background:var(--paper);border:3px solid var(--ink);
     border-radius:18px;padding:22px;box-shadow:var(--shadow-sm);
     cursor:pointer;transition:all .2s;position:relative;overflow:hidden;
   }
   .test-card:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink);}
-  .test-card.locked{opacity:.55;cursor:not-allowed;background:#f0e8db;}
-  .test-book{
-    font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;
-    color:var(--ink);opacity:.6;margin-bottom:8px;
-  }
-  .test-num{
-    font-family:'Fraunces',serif;font-size:34px;font-weight:900;
-    line-height:1;margin-bottom:6px;letter-spacing:-.02em;
-  }
-  .test-type-row{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap;}
-  .type-badge{
-    font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;
-    text-transform:uppercase;letter-spacing:.05em;
-  }
+  .test-card.coming{opacity:.55;cursor:not-allowed;background:#f0e8db;}
+  .test-card.coming:hover{transform:none;box-shadow:var(--shadow-sm);}
+  .test-book{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;opacity:.6;margin-bottom:8px;}
+  .test-num{font-family:'Fraunces',serif;font-size:34px;font-weight:900;line-height:1;margin-bottom:6px;letter-spacing:-.02em;}
+  .test-topic{font-size:13px;font-weight:600;opacity:.75;margin-bottom:12px;}
+  .test-badges{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap;}
+  .badge{font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em;}
   .badge-acad{background:var(--mint);color:var(--ink);}
-  .badge-gen{background:var(--tangerine);color:var(--ink);}
-  .test-passages{font-size:13px;font-weight:600;opacity:.7;margin-bottom:14px;line-height:1.4;}
-  .test-meta{
-    display:flex;justify-content:space-between;align-items:center;
-    padding-top:12px;border-top:2px dashed rgba(26,27,58,.2);
-    font-size:12px;font-weight:600;
-  }
+  .badge-easy{background:#a8e6cf;color:var(--ink);}
+  .badge-med{background:var(--sunshine);color:var(--ink);}
+  .badge-hard{background:var(--coral);color:var(--paper);}
+  .badge-ready{background:var(--ink);color:var(--sunshine);}
+  .badge-soon{background:#999;color:var(--paper);}
+  .test-meta{display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:2px dashed rgba(26,27,58,.2);font-size:12px;font-weight:600;}
   .test-score{font-family:'JetBrains Mono',monospace;color:var(--mint);}
   .test-score.empty{color:var(--ink);opacity:.4;}
   .test-arrow{font-size:18px;font-weight:900;}
 
-  /* SECTION TITLE */
   .section-title{
     font-family:'Fraunces',serif;font-size:28px;font-weight:800;
     letter-spacing:-.02em;margin:40px 0 20px;display:flex;align-items:center;gap:12px;
@@ -165,173 +128,162 @@
     border:3px solid var(--ink);border-radius:8px;transform:rotate(-8deg);
   }
 
-  /* QUESTION TYPES INFO */
-  .qtypes-grid{
-    display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;
-  }
-  .qtype{
-    background:var(--paper);border:3px solid var(--ink);border-radius:14px;
-    padding:18px;box-shadow:var(--shadow-sm);
-  }
-  .qtype-icon{
-    width:36px;height:36px;border:2px solid var(--ink);border-radius:8px;
-    display:flex;align-items:center;justify-content:center;
-    font-family:'Fraunces',serif;font-weight:900;font-size:18px;
-    margin-bottom:10px;
-  }
-  .qtype-name{font-weight:800;font-size:14px;margin-bottom:4px;line-height:1.2;}
-  .qtype-desc{font-size:12px;opacity:.7;line-height:1.4;}
-
-  /* TIPS */
   .tips-box{
-    background:var(--ink);color:var(--paper);
-    border-radius:20px;padding:30px;
-    border:3px solid var(--ink);box-shadow:var(--shadow);
-    margin-top:32px;
+    background:var(--ink);color:var(--paper);border-radius:20px;padding:30px;
+    border:3px solid var(--ink);box-shadow:var(--shadow);margin-top:32px;
   }
-  .tips-title{
-    font-family:'Fraunces',serif;font-size:24px;font-weight:800;
-    margin-bottom:18px;color:var(--sunshine);
-  }
+  .tips-title{font-family:'Fraunces',serif;font-size:24px;font-weight:800;margin-bottom:18px;color:var(--sunshine);}
   .tips-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
-  .tip-item{
-    background:rgba(255,248,240,.08);border-radius:12px;padding:16px;
-    border:2px solid rgba(255,248,240,.15);
-  }
-  .tip-num{
-    font-family:'Fraunces',serif;font-size:32px;font-weight:900;
-    color:var(--sunshine);line-height:1;margin-bottom:6px;
-  }
+  .tip-item{background:rgba(255,248,240,.08);border-radius:12px;padding:16px;border:2px solid rgba(255,248,240,.15);}
+  .tip-num{font-family:'Fraunces',serif;font-size:32px;font-weight:900;color:var(--sunshine);line-height:1;margin-bottom:6px;}
   .tip-text{font-size:13px;line-height:1.5;}
 
-  /* ============ TEST VIEW (HIDDEN BY DEFAULT) ============ */
   .test-view{display:none;}
   .test-view.active{display:block;}
   .listing-view.hidden{display:none;}
 
   .test-toolbar{
-    background:var(--ink);color:var(--paper);
-    border-radius:18px;padding:16px 24px;
+    background:var(--ink);color:var(--paper);border-radius:18px;padding:14px 20px;
     border:3px solid var(--ink);box-shadow:var(--shadow-sm);
     display:flex;align-items:center;justify-content:space-between;
     margin-bottom:20px;flex-wrap:wrap;gap:12px;
     position:sticky;top:12px;z-index:50;
   }
-  .timer-box{
-    display:flex;align-items:center;gap:12px;
-  }
+  .timer-box{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
   .timer-display{
-    font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;
+    font-family:'JetBrains Mono',monospace;font-size:26px;font-weight:700;
     background:var(--sunshine);color:var(--ink);padding:6px 14px;border-radius:10px;
     border:2px solid var(--ink);
   }
   .timer-display.warning{background:var(--coral);color:var(--paper);animation:blink 1s infinite;}
   @keyframes blink{50%{opacity:.7;}}
-  .toolbar-btns{display:flex;gap:8px;flex-wrap:wrap;}
+  .test-title-bar{font-size:13px;font-weight:700;color:var(--paper);flex:1;text-align:center;min-width:160px;}
+  .toolbar-btns{display:flex;gap:6px;flex-wrap:wrap;}
   .tool-btn{
-    padding:8px 14px;background:var(--paper);color:var(--ink);
+    padding:8px 12px;background:var(--paper);color:var(--ink);
     border:2px solid var(--ink);border-radius:8px;
-    font-weight:700;font-size:13px;cursor:pointer;font-family:inherit;
+    font-weight:700;font-size:12px;cursor:pointer;font-family:inherit;
+    transition:transform .1s;
   }
-  .tool-btn.danger{background:var(--coral);color:var(--paper);}
   .tool-btn:hover{transform:translateY(-1px);}
+  .tool-btn.active{background:var(--sunshine);}
+  .tool-btn.danger{background:var(--coral);color:var(--paper);}
 
-  .reading-layout{
-    display:grid;grid-template-columns:1.3fr 1fr;gap:20px;
-  }
+  .reading-layout{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;}
   @media(max-width:980px){.reading-layout{grid-template-columns:1fr;}}
 
-  .passage-panel{
+  .passage-panel,.questions-panel{
     background:var(--paper);border:3px solid var(--ink);border-radius:20px;
     padding:28px;box-shadow:var(--shadow-sm);
     max-height:calc(100vh - 140px);overflow-y:auto;
   }
-  .passage-panel::-webkit-scrollbar{width:8px;}
-  .passage-panel::-webkit-scrollbar-thumb{background:var(--ink);border-radius:4px;}
+  .passage-panel::-webkit-scrollbar,.questions-panel::-webkit-scrollbar{width:8px;}
+  .passage-panel::-webkit-scrollbar-thumb,.questions-panel::-webkit-scrollbar-thumb{background:var(--ink);border-radius:4px;}
+  
   .passage-header{padding-bottom:16px;border-bottom:2px dashed rgba(26,27,58,.2);margin-bottom:18px;}
   .passage-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--hotpink);}
   .passage-title{font-family:'Fraunces',serif;font-size:26px;font-weight:800;line-height:1.1;margin-top:6px;letter-spacing:-.01em;}
-  .passage-body{
-    font-family:'Lora',serif;font-size:16px;line-height:1.7;color:var(--ink);
-  }
+  
+  .passage-body{font-family:'Lora',serif;font-size:16px;line-height:1.7;color:var(--ink);}
   .passage-body p{margin-bottom:16px;}
-  .passage-body .para-num{
-    font-family:'Fraunces',serif;font-weight:800;color:var(--hotpink);
-    margin-right:6px;
-  }
-  /* Highlight */
+  .passage-body .para-num{font-family:'Fraunces',serif;font-weight:800;color:var(--hotpink);margin-right:6px;font-size:18px;}
   .passage-body ::selection{background:var(--sunshine);color:var(--ink);}
-  .highlight{background:var(--sunshine);padding:1px 2px;border-radius:3px;cursor:pointer;}
-
-  .questions-panel{
-    background:var(--paper);border:3px solid var(--ink);border-radius:20px;
-    padding:28px;box-shadow:var(--shadow-sm);
-    max-height:calc(100vh - 140px);overflow-y:auto;
+  
+  .vocab{
+    background:linear-gradient(transparent 60%, var(--sunshine) 60%);
+    cursor:pointer;font-weight:600;position:relative;
+    transition:all .2s;
   }
-  .questions-panel::-webkit-scrollbar{width:8px;}
-  .questions-panel::-webkit-scrollbar-thumb{background:var(--ink);border-radius:4px;}
-  .q-group{margin-bottom:30px;}
+  .vocab:hover{background:linear-gradient(transparent 0%, var(--sunshine) 100%);}
+  
+  .translation-box{
+    display:none;background:var(--cream);border:2px solid var(--ink);
+    border-radius:12px;padding:18px;margin-top:16px;
+    font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;line-height:1.6;
+  }
+  .translation-box.show{display:block;animation:fadeSlide .3s ease-out;}
+  @keyframes fadeSlide{from{opacity:0;transform:translateY(-8px);}to{opacity:1;transform:translateY(0);}}
+  .translation-box p{margin-bottom:12px;}
+  .translation-box strong{color:var(--hotpink);}
+
+  .q-group{margin-bottom:24px;}
   .q-group-title{
-    font-family:'Fraunces',serif;font-size:18px;font-weight:800;
+    font-family:'Fraunces',serif;font-size:17px;font-weight:800;
     padding:10px 14px;background:var(--cream);border:2px solid var(--ink);
-    border-radius:10px;margin-bottom:14px;
+    border-radius:10px;margin-bottom:12px;
   }
   .q-group-instruction{
-    font-size:13px;font-style:italic;background:var(--sunshine);
-    padding:10px 14px;border-radius:10px;margin-bottom:16px;line-height:1.5;
+    font-size:12px;font-style:italic;background:var(--sunshine);
+    padding:10px 14px;border-radius:10px;margin-bottom:14px;line-height:1.5;
     border:2px solid var(--ink);
   }
   .q-item{
     background:#fffaf2;border:2px solid var(--ink);border-radius:12px;
-    padding:14px 16px;margin-bottom:12px;
+    padding:12px 14px;margin-bottom:10px;position:relative;transition:border-color .2s;
   }
+  .q-item.marked{border-color:var(--hotpink);background:#fff0f7;}
+  .q-item.correct-after{border-color:var(--mint);background:#e8fff5;}
+  .q-item.wrong-after{border-color:var(--coral);background:#ffeded;}
   .q-num{
     display:inline-flex;align-items:center;justify-content:center;
-    width:28px;height:28px;background:var(--ink);color:var(--paper);
-    border-radius:50%;font-weight:800;font-size:13px;margin-right:10px;
+    width:26px;height:26px;background:var(--ink);color:var(--paper);
+    border-radius:50%;font-weight:800;font-size:12px;margin-right:8px;
     font-family:'JetBrains Mono',monospace;
   }
-  .q-text{font-size:14px;line-height:1.5;margin-bottom:10px;display:inline;font-weight:500;}
-  .q-options{display:flex;flex-direction:column;gap:6px;margin-top:10px;}
+  .q-text{font-size:13px;line-height:1.5;font-weight:500;}
+  .q-mark{
+    position:absolute;top:10px;right:10px;background:transparent;
+    border:none;cursor:pointer;font-size:16px;opacity:.3;transition:opacity .2s;
+  }
+  .q-mark:hover,.q-mark.active{opacity:1;}
+  .q-options{display:flex;flex-direction:column;gap:5px;margin-top:8px;}
   .q-opt-label{
-    display:flex;align-items:center;gap:8px;padding:8px 12px;
+    display:flex;align-items:center;gap:8px;padding:7px 10px;
     background:var(--paper);border:2px solid var(--ink);border-radius:8px;
-    cursor:pointer;font-size:13px;font-weight:500;transition:all .15s;
+    cursor:pointer;font-size:12px;font-weight:500;transition:all .15s;
   }
   .q-opt-label:hover{background:var(--cream);}
-  .q-opt-label input{cursor:pointer;}
-  .q-opt-label input:checked + span{font-weight:700;}
-  .q-opt-label:has(input:checked){background:var(--sunshine);border-color:var(--ink);}
+  .q-opt-label:has(input:checked){background:var(--sunshine);}
   .q-input{
-    padding:8px 12px;border:2px solid var(--ink);border-radius:8px;
-    font-family:inherit;font-size:14px;font-weight:600;background:var(--paper);
-    width:100%;max-width:280px;
+    padding:7px 10px;border:2px solid var(--ink);border-radius:8px;
+    font-family:inherit;font-size:13px;font-weight:600;background:var(--paper);
+    width:100%;max-width:280px;margin-top:6px;
   }
   .q-input:focus{outline:none;background:var(--sunshine);}
-
-  /* TF/NG buttons */
-  .tfng-group{display:flex;gap:6px;flex-wrap:wrap;}
+  .tfng-group{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px;}
   .tfng-btn{
-    padding:6px 12px;background:var(--paper);border:2px solid var(--ink);
-    border-radius:8px;font-weight:700;font-size:12px;cursor:pointer;font-family:inherit;
+    padding:6px 11px;background:var(--paper);border:2px solid var(--ink);
+    border-radius:8px;font-weight:700;font-size:11px;cursor:pointer;font-family:inherit;
   }
   .tfng-btn.selected{background:var(--ink);color:var(--paper);}
-
-  /* SUBMIT */
-  .submit-row{
-    margin-top:20px;display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;
+  
+  .q-explain{
+    display:none;margin-top:10px;padding:10px 12px;background:var(--ink);
+    color:var(--paper);border-radius:8px;font-size:12px;line-height:1.5;
   }
+  .q-explain.show{display:block;}
+  .q-explain strong{color:var(--sunshine);}
+
+  .submit-row{margin-top:16px;display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;}
   .submit-btn{
-    padding:14px 28px;background:var(--mint);color:var(--ink);
-    border:3px solid var(--ink);border-radius:12px;font-weight:800;font-size:15px;
+    padding:13px 26px;background:var(--mint);color:var(--ink);
+    border:3px solid var(--ink);border-radius:12px;font-weight:800;font-size:14px;
     cursor:pointer;box-shadow:var(--shadow-sm);font-family:inherit;
   }
   .submit-btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);}
 
-  /* RESULT MODAL */
+  .vocab-popup{
+    position:fixed;background:var(--ink);color:var(--paper);
+    padding:10px 14px;border-radius:10px;font-size:13px;font-weight:600;
+    box-shadow:var(--shadow-sm);border:2px solid var(--sunshine);
+    z-index:200;max-width:240px;pointer-events:none;
+    opacity:0;transition:opacity .2s;font-family:inherit;
+  }
+  .vocab-popup.show{opacity:1;}
+  .vocab-popup .word{color:var(--sunshine);font-family:'Fraunces',serif;font-size:15px;font-weight:800;margin-bottom:4px;}
+
   .result-modal{
-    display:none;position:fixed;inset:0;
-    background:rgba(26,27,58,.7);
+    display:none;position:fixed;inset:0;background:rgba(26,27,58,.7);
     z-index:100;align-items:center;justify-content:center;padding:20px;
   }
   .result-modal.show{display:flex;}
@@ -340,27 +292,12 @@
     padding:36px;max-width:520px;width:100%;box-shadow:var(--shadow);
     text-align:center;max-height:90vh;overflow-y:auto;
   }
-  .result-band{
-    font-family:'Fraunces',serif;font-size:96px;font-weight:900;line-height:1;
-    color:var(--hotpink);margin:14px 0;
-  }
-  .result-stats{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0;
-  }
-  .result-stat{
-    background:var(--cream);border:2px solid var(--ink);border-radius:12px;padding:12px;
-  }
+  .result-band{font-family:'Fraunces',serif;font-size:96px;font-weight:900;line-height:1;color:var(--hotpink);margin:14px 0;}
+  .result-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0;}
+  .result-stat{background:var(--cream);border:2px solid var(--ink);border-radius:12px;padding:12px;}
   .result-stat-val{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:800;}
   .result-stat-lbl{font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;opacity:.7;}
-  .result-detail{
-    text-align:left;background:#fffaf2;border:2px solid var(--ink);border-radius:12px;
-    padding:14px;margin-top:14px;font-size:13px;max-height:200px;overflow-y:auto;
-  }
-  .result-detail .q-result{padding:6px 0;border-bottom:1px dashed rgba(26,27,58,.15);font-family:'JetBrains Mono',monospace;font-size:12px;}
-  .q-result.correct{color:var(--mint);}
-  .q-result.wrong{color:var(--coral);}
 
-  /* fade */
   .fade-in{opacity:0;transform:translateY(20px);animation:fadeIn .6s ease-out forwards;}
   @keyframes fadeIn{to{opacity:1;transform:translateY(0);}}
   .delay-1{animation-delay:.1s;}.delay-2{animation-delay:.2s;}.delay-3{animation-delay:.3s;}
@@ -369,7 +306,6 @@
 <body>
 <div class="wrap">
 
-  <!-- NAVBAR -->
   <nav class="topbar fade-in">
     <a href="index.html" class="logo">
       <span class="logo-dot"></span>
@@ -378,44 +314,36 @@
     <a href="index.html" class="back-btn">← Dashboard</a>
   </nav>
 
-  <!-- =================== LISTING VIEW =================== -->
   <div class="listing-view" id="listingView">
 
     <header class="page-header fade-in delay-1">
       <span class="crumb">Module 02 · Reading</span>
       <h1 class="page-title">Đọc hiểu với <em>Cambridge</em></h1>
-      <p class="page-sub">Academic & General Training passages từ Cambridge IELTS 10–19. Highlight từ vựng, timer 60 phút, chấm điểm tự động theo band scale.</p>
+      <p class="page-sub">5 tests đã sẵn sàng với passages tự viết theo phong cách Cambridge IELTS. Có dịch tiếng Việt, từ vựng popup, giải thích đáp án chi tiết.</p>
       <div class="quick-stats">
-        <div class="stat-pill">📚 <strong id="totalTests">40</strong> tests</div>
+        <div class="stat-pill">📚 <strong id="readyTests">5</strong>/40 tests ready</div>
         <div class="stat-pill">✅ <strong id="doneTests">0</strong> completed</div>
         <div class="stat-pill">⭐ Best: <strong id="bestScore">--</strong></div>
         <div class="stat-pill">📊 Avg: <strong id="avgScore">--</strong></div>
       </div>
     </header>
 
-    <!-- Tabs -->
     <div class="tabs fade-in delay-2">
       <button class="tab active" data-tab="all" onclick="filterTests('all')">All</button>
-      <button class="tab" data-tab="academic" onclick="filterTests('academic')">Academic</button>
-      <button class="tab" data-tab="general" onclick="filterTests('general')">General Training</button>
-      <button class="tab" data-tab="done" onclick="filterTests('done')">Đã làm</button>
+      <button class="tab" data-tab="ready" onclick="filterTests('ready')">📍 Sẵn sàng</button>
+      <button class="tab" data-tab="done" onclick="filterTests('done')">✅ Đã làm</button>
+      <button class="tab" data-tab="marked" onclick="filterTests('marked')">🔖 Đánh dấu</button>
     </div>
 
-    <!-- Filter -->
     <div class="filter-bar fade-in delay-2">
       <label>Sách:</label>
       <select id="bookFilter" onchange="renderTests()">
-        <option value="all">Tất cả (Cambridge 10–19)</option>
-        <option value="19">Cambridge 19</option>
-        <option value="18">Cambridge 18</option>
-        <option value="17">Cambridge 17</option>
-        <option value="16">Cambridge 16</option>
-        <option value="15">Cambridge 15</option>
-        <option value="14">Cambridge 14</option>
-        <option value="13">Cambridge 13</option>
-        <option value="12">Cambridge 12</option>
-        <option value="11">Cambridge 11</option>
-        <option value="10">Cambridge 10</option>
+        <option value="all">Tất cả</option>
+        <option value="19">Cambridge 19</option><option value="18">Cambridge 18</option>
+        <option value="17">Cambridge 17</option><option value="16">Cambridge 16</option>
+        <option value="15">Cambridge 15</option><option value="14">Cambridge 14</option>
+        <option value="13">Cambridge 13</option><option value="12">Cambridge 12</option>
+        <option value="11">Cambridge 11</option><option value="10">Cambridge 10</option>
       </select>
       <label style="margin-left:auto;">Sắp xếp:</label>
       <select id="sortFilter" onchange="renderTests()">
@@ -424,181 +352,87 @@
       </select>
     </div>
 
-    <!-- Test grid -->
     <div class="test-grid fade-in delay-3" id="testGrid"></div>
 
-    <!-- Question types info -->
-    <h2 class="section-title">14 dạng câu hỏi Reading</h2>
-    <div class="qtypes-grid">
-      <div class="qtype"><div class="qtype-icon" style="background:var(--mint);">①</div><div class="qtype-name">Multiple Choice</div><div class="qtype-desc">Chọn 1 hoặc nhiều đáp án từ danh sách A, B, C, D...</div></div>
-      <div class="qtype"><div class="qtype-icon" style="background:var(--sky);">②</div><div class="qtype-name">True / False / Not Given</div><div class="qtype-desc">Xác định thông tin có đúng / sai / không nêu.</div></div>
-      <div class="qtype"><div class="qtype-icon" style="background:var(--lavender);color:var(--paper);">③</div><div class="qtype-name">Yes / No / Not Given</div><div class="qtype-desc">Xác định ý kiến tác giả có đồng tình hay không.</div></div>
-      <div class="qtype"><div class="qtype-icon" style="background:var(--coral);color:var(--paper);">④</div><div class="qtype-name">Matching Headings</div><div class="qtype-desc">Ghép tiêu đề phù hợp với từng đoạn văn.</div></div>
-      <div class="qtype"><div class="qtype-icon" style="background:var(--tangerine);">⑤</div><div class="qtype-name">Matching Information</div><div class="qtype-desc">Tìm đoạn văn chứa thông tin cho sẵn.</div></div>
-      <div class="qtype"><div class="qtype-icon" style="background:var(--sunshine);">⑥</div><div class="qtype-name">Matching Features</div><div class="qtype-desc">Ghép thông tin với người/sự kiện/danh mục.</div></div>
-      <div class="qtype"><div class="qtype-icon" style="background:var(--hotpink);color:var(--paper);">⑦</div><div class="qtype-name">Matching Sentence Endings</div><div class="qtype-desc">Ghép nửa câu đầu với nửa cuối cho phù hợp.</div></div>
-      <div class="qtype"><div class="qtype-icon" style="background:var(--mint);">⑧</div><div class="qtype-name">Sentence Completion</div><div class="qtype-desc">Điền từ vào câu (no more than X words).</div></div>
-      <div class="qtype"><div class="qtype-icon" style="background:var(--sky);">⑨</div><div class="qtype-name">Summary Completion</div><div class="qtype-desc">Điền từ vào bản tóm tắt đoạn văn.</div></div>
-      <div class="qtype"><div class="qtype-icon" style="background:var(--lavender);color:var(--paper);">⑩</div><div class="qtype-name">Note / Table / Flow-chart Completion</div><div class="qtype-desc">Điền từ vào ghi chú, bảng, lưu đồ.</div></div>
-      <div class="qtype"><div class="qtype-icon" style="background:var(--coral);color:var(--paper);">⑪</div><div class="qtype-name">Diagram Label Completion</div><div class="qtype-desc">Điền nhãn vào sơ đồ kỹ thuật.</div></div>
-      <div class="qtype"><div class="qtype-icon" style="background:var(--tangerine);">⑫</div><div class="qtype-name">Short Answer Questions</div><div class="qtype-desc">Trả lời ngắn (no more than 3 words).</div></div>
-    </div>
-
-    <!-- Tips -->
+    <h2 class="section-title">Chiến lược band 7+</h2>
     <div class="tips-box">
       <div class="tips-title">⚡ 6 chiến lược Reading band 7+</div>
       <div class="tips-list">
-        <div class="tip-item"><div class="tip-num">01</div><div class="tip-text"><strong>Skim 2 phút/passage</strong> trước khi đọc câu hỏi — nắm topic, main idea, không cần hiểu chi tiết.</div></div>
-        <div class="tip-item"><div class="tip-num">02</div><div class="tip-text"><strong>Đọc câu hỏi trước</strong>, gạch chân keywords (tên riêng, số, năm, từ khóa danh từ).</div></div>
-        <div class="tip-item"><div class="tip-num">03</div><div class="tip-text"><strong>Scan tìm keywords</strong> trong passage — paraphrase là chìa khóa, ít khi giống y nguyên.</div></div>
-        <div class="tip-item"><div class="tip-num">04</div><div class="tip-text"><strong>Quản lý thời gian</strong>: 20 phút/passage. Passage 3 thường khó nhất — đừng để hết giờ.</div></div>
-        <div class="tip-item"><div class="tip-num">05</div><div class="tip-text"><strong>True/False/NG</strong>: NG = không có thông tin trong bài. False = có nhưng trái ngược. Đừng đoán dựa vào kiến thức ngoài.</div></div>
-        <div class="tip-item"><div class="tip-num">06</div><div class="tip-text"><strong>Đừng bỏ trống</strong> — không bị trừ điểm khi sai. Câu khó? Đánh dấu, quay lại sau.</div></div>
+        <div class="tip-item"><div class="tip-num">01</div><div class="tip-text"><strong>Skim 2 phút/passage</strong> trước khi đọc câu hỏi — nắm topic, không cần hiểu chi tiết.</div></div>
+        <div class="tip-item"><div class="tip-num">02</div><div class="tip-text"><strong>Đọc câu hỏi trước</strong>, gạch chân keywords (tên riêng, số, năm, từ khóa).</div></div>
+        <div class="tip-item"><div class="tip-num">03</div><div class="tip-text"><strong>Scan tìm keywords</strong> — paraphrase là chìa khóa, ít khi giống y nguyên.</div></div>
+        <div class="tip-item"><div class="tip-num">04</div><div class="tip-text"><strong>Quản lý thời gian</strong>: 20 phút/passage. Passage 3 thường khó nhất.</div></div>
+        <div class="tip-item"><div class="tip-num">05</div><div class="tip-text"><strong>True/False/NG</strong>: NG = không có trong bài. False = có nhưng trái ngược.</div></div>
+        <div class="tip-item"><div class="tip-num">06</div><div class="tip-text"><strong>Đừng bỏ trống</strong> — không bị trừ điểm khi sai. Câu khó? Đánh dấu, quay lại.</div></div>
       </div>
     </div>
 
   </div>
 
-  <!-- =================== TEST VIEW =================== -->
   <div class="test-view" id="testView">
 
-    <!-- Toolbar -->
     <div class="test-toolbar">
       <div class="timer-box">
         <button class="tool-btn" onclick="exitTest()">← Thoát</button>
-        <div class="timer-display" id="timerDisplay">60:00</div>
-        <button class="tool-btn" onclick="toggleTimer()" id="timerBtn">⏸ Pause</button>
+        <div class="timer-display" id="timerDisplay">20:00</div>
+        <button class="tool-btn" onclick="toggleTimer()" id="timerBtn">⏸</button>
       </div>
-      <div style="font-size:14px;font-weight:700;color:var(--paper);" id="testTitle">Cambridge 19 · Test 1</div>
+      <div class="test-title-bar" id="testTitle">Reading Test</div>
       <div class="toolbar-btns">
-        <button class="tool-btn" onclick="switchPassage(1)" id="p1Btn">P1</button>
-        <button class="tool-btn" onclick="switchPassage(2)" id="p2Btn">P2</button>
-        <button class="tool-btn" onclick="switchPassage(3)" id="p3Btn">P3</button>
+        <button class="tool-btn" onclick="toggleTranslation()" id="vnBtn">🇻🇳 VN</button>
         <button class="tool-btn danger" onclick="submitTest()">Nộp bài</button>
       </div>
     </div>
 
-    <!-- Reading layout -->
     <div class="reading-layout">
-      <div class="passage-panel" id="passagePanel">
-        <!-- Passage content injected -->
-      </div>
-      <div class="questions-panel" id="questionsPanel">
-        <!-- Questions injected -->
-      </div>
+      <div class="passage-panel" id="passagePanel"></div>
+      <div class="questions-panel" id="questionsPanel"></div>
     </div>
 
   </div>
 
-  <!-- RESULT MODAL -->
   <div class="result-modal" id="resultModal">
     <div class="result-card">
       <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--hotpink);">Estimated Band</div>
       <div class="result-band" id="resultBand">6.5</div>
-      <div style="font-size:14px;font-weight:600;opacity:.7;" id="resultMsg">Khá tốt! Tiếp tục luyện tập.</div>
+      <div style="font-size:14px;font-weight:600;opacity:.7;" id="resultMsg">Khá tốt!</div>
       <div class="result-stats">
         <div class="result-stat"><div class="result-stat-val" id="resultCorrect">0</div><div class="result-stat-lbl">Đúng</div></div>
         <div class="result-stat"><div class="result-stat-val" id="resultTotal">13</div><div class="result-stat-lbl">Tổng</div></div>
         <div class="result-stat"><div class="result-stat-val" id="resultTime">--:--</div><div class="result-stat-lbl">Thời gian</div></div>
       </div>
-      <div class="result-detail" id="resultDetail"></div>
+      <p style="font-size:13px;line-height:1.5;margin-top:14px;opacity:.8;">Click "Xem lại bài" để xem giải thích chi tiết từng câu trong panel câu hỏi.</p>
       <div style="display:flex;gap:10px;margin-top:20px;justify-content:center;flex-wrap:wrap;">
-        <button class="tool-btn" onclick="closeResult()">Xem lại bài</button>
-        <button class="submit-btn" onclick="exitTest()" style="padding:10px 20px;font-size:13px;">Quay lại danh sách</button>
+        <button class="tool-btn" onclick="closeResult()">📖 Xem lại bài</button>
+        <button class="submit-btn" onclick="exitTest()" style="padding:10px 20px;font-size:13px;">Về danh sách</button>
       </div>
     </div>
   </div>
 
+  <div class="vocab-popup" id="vocabPopup"></div>
+
 </div>
 
+<script src="tests-data.js"></script>
 <script>
-/* =================== DATA: Test list =================== */
 const BOOKS = [10,11,12,13,14,15,16,17,18,19];
 const TEST_LIST = [];
 BOOKS.forEach(book=>{
   for(let t=1;t<=4;t++){
+    const id=`cam${book}-t${t}`;
     TEST_LIST.push({
-      id:`cam${book}-t${t}`,
-      book:book,
-      test:t,
-      type:'academic',
-      topics:['Education','Science','Nature'][t%3]
+      id:id, book:book, test:t,
+      ready: TESTS_DATA[id] ? true : false,
+      data: TESTS_DATA[id] || null
     });
   }
 });
 
-/* =================== SAMPLE PASSAGE (Demo) =================== */
-const SAMPLE_TEST = {
-  passages:[
-    {
-      label:'Passage 1',
-      title:'The History of Glass',
-      content:`<p><span class="para-num">A</span> From our earliest origins, man has been making use of glass. Historians have discovered that a type of natural glass — obsidian — formed in places such as the mouth of a volcano as a result of the intense heat of an eruption melting sand — was first used as tips for spears.</p>
-      <p><span class="para-num">B</span> Archaeologists have even found evidence of man-made glass which dates back to 4000 BC; this took the form of glazes used for coating stone beads. It was not until 1500 BC, however, that the first hollow glass container was made by covering a sand core with a layer of molten glass.</p>
-      <p><span class="para-num">C</span> Glass blowing became the most common way to make glass containers from the first century BC. The technique of glass blowing was very simple — a tube was dipped into a pot containing molten glass, and the glass blower blew air into the tube to create a bubble.</p>
-      <p><span class="para-num">D</span> In Britain, the modern glass industry only really started to develop after the repeal of the Excise Act in 1845. Before that, heavy taxes had been placed on the amount of glass melted in a glasshouse, and were levied continuously from 1745 to 1845.</p>
-      <p><span class="para-num">E</span> Modern glass production is largely automated. The float process for making flat glass was invented in 1952. Glass produced this way is known as float glass and accounts for around 90 percent of current production.</p>
-      <p><span class="para-num">F</span> Glass is one of the most versatile substances on Earth, used for many applications and in a wide variety of forms. It plays an essential role in science, industry, medicine, art, commerce and transport.</p>`
-    },
-    {
-      label:'Passage 2',
-      title:'(Demo) Bird Migration Patterns',
-      content:`<p style="text-align:center;padding:40px 0;opacity:.5;font-family:'Plus Jakarta Sans',sans-serif;">⚙️ Đây là bản demo. Passage 2 sẽ được thêm khi bạn import nội dung Cambridge.</p>`
-    },
-    {
-      label:'Passage 3',
-      title:'(Demo) The Rise of AI',
-      content:`<p style="text-align:center;padding:40px 0;opacity:.5;font-family:'Plus Jakarta Sans',sans-serif;">⚙️ Đây là bản demo. Passage 3 sẽ được thêm khi bạn import nội dung Cambridge.</p>`
-    }
-  ],
-  questions:[
-    {
-      group:'Questions 1–5',
-      type:'tfng',
-      instruction:'Do the following statements agree with the information given in Reading Passage 1? Write TRUE if the statement agrees with the information, FALSE if it contradicts, or NOT GIVEN if there is no information.',
-      items:[
-        {q:'Obsidian was used by early humans as weapon tips.', answer:'TRUE'},
-        {q:'The first man-made glass containers were made in 4000 BC.', answer:'FALSE'},
-        {q:'Glass blowing technique requires specialized education.', answer:'NOT GIVEN'},
-        {q:'The Excise Act on glass was in place for exactly 100 years.', answer:'TRUE'},
-        {q:'Float glass was invented in the United States.', answer:'NOT GIVEN'}
-      ]
-    },
-    {
-      group:'Questions 6–9',
-      type:'mcq',
-      instruction:'Choose the correct letter, A, B, C or D.',
-      items:[
-        {q:'According to the passage, natural glass (obsidian) is formed by:', options:['A. Industrial heating','B. Volcanic activity melting sand','C. Lightning strikes','D. Underwater pressure'], answer:'B'},
-        {q:'The float process for making flat glass was invented in:', options:['A. 1845','B. 1900','C. 1952','D. 1970'], answer:'C'},
-        {q:'What percentage of current production uses the float process?', options:['A. 50%','B. 70%','C. 90%','D. 100%'], answer:'C'},
-        {q:'Glass blowing became common from:', options:['A. 4000 BC','B. 1500 BC','C. 1st century BC','D. 1845 AD'], answer:'C'}
-      ]
-    },
-    {
-      group:'Questions 10–13',
-      type:'fill',
-      instruction:'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
-      items:[
-        {q:'Natural glass formed in volcanoes is called __________.', answer:'obsidian'},
-        {q:'The earliest man-made glass took the form of __________ for stone beads.', answer:'glazes'},
-        {q:'The first hollow glass container was made by covering a sand core with __________ glass.', answer:'molten'},
-        {q:'In Britain, modern glass industry developed after the repeal of the __________ in 1845.', answer:'Excise Act'}
-      ]
-    }
-  ]
-};
+function getProgress(){try{return JSON.parse(localStorage.getItem('ielts_reading_progress')||'{}');}catch(e){return {};}}
+function saveProgress(p){localStorage.setItem('ielts_reading_progress',JSON.stringify(p));}
+function getMarks(){try{return JSON.parse(localStorage.getItem('ielts_reading_marks')||'{}');}catch(e){return {};}}
+function saveMarks(m){localStorage.setItem('ielts_reading_marks',JSON.stringify(m));}
 
-/* =================== STORAGE =================== */
-function getProgress(){
-  try{return JSON.parse(localStorage.getItem('ielts_reading_progress')||'{}');}
-  catch(e){return {};}
-}
-function saveProgress(p){
-  localStorage.setItem('ielts_reading_progress',JSON.stringify(p));
-}
-
-/* =================== RENDER TEST LIST =================== */
 let currentTab='all';
 function filterTests(tab){
   currentTab=tab;
@@ -611,14 +445,15 @@ function renderTests(){
   const book=document.getElementById('bookFilter').value;
   const sort=document.getElementById('sortFilter').value;
   const progress=getProgress();
+  const marks=getMarks();
   
   let list=[...TEST_LIST];
   if(book!=='all') list=list.filter(t=>t.book===parseInt(book));
-  if(currentTab==='academic') list=list.filter(t=>t.type==='academic');
-  if(currentTab==='general') list=list.filter(t=>t.type==='general');
+  if(currentTab==='ready') list=list.filter(t=>t.ready);
   if(currentTab==='done') list=list.filter(t=>progress[t.id]);
+  if(currentTab==='marked') list=list.filter(t=>marks[t.id] && Object.keys(marks[t.id]).length>0);
   
-  list.sort((a,b)=>sort==='newest'?b.book-a.book||a.test-b.test:a.book-b.book||a.test-b.test);
+  list.sort((a,b)=>sort==='newest'?(b.book-a.book||a.test-b.test):(a.book-b.book||a.test-b.test));
   
   if(list.length===0){
     grid.innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:40px;opacity:.6;font-weight:600;">Không có test nào phù hợp.</div>`;
@@ -627,16 +462,18 @@ function renderTests(){
   
   grid.innerHTML=list.map(t=>{
     const p=progress[t.id];
-    const isDemo=(t.book===19 && t.test===1);
+    const ready=t.ready;
+    const difficulty=t.data?.difficulty||'';
+    const diffClass={'Easy':'badge-easy','Medium':'badge-med','Hard':'badge-hard'}[difficulty]||'badge-med';
     return `
-      <div class="test-card ${isDemo?'':'locked'}" onclick="${isDemo?`openTest('${t.id}')`:'alert(\"Import nội dung Cambridge để mở khóa test này.\")'}">
+      <div class="test-card ${ready?'':'coming'}" onclick="${ready?`openTest('${t.id}')`:'showComingSoon()'}">
         <div class="test-book">Cambridge IELTS ${t.book}</div>
         <div class="test-num">Test ${t.test}</div>
-        <div class="test-type-row">
-          <span class="type-badge badge-acad">Academic</span>
-          ${isDemo?'<span class="type-badge" style="background:var(--sunshine);">📍 Demo</span>':''}
+        <div class="test-topic">${ready?t.data.topic:'Coming soon · Nội dung sẽ được thêm'}</div>
+        <div class="test-badges">
+          <span class="badge badge-acad">Academic</span>
+          ${ready?`<span class="badge ${diffClass}">${difficulty}</span><span class="badge badge-ready">📍 Ready</span>`:`<span class="badge badge-soon">Coming Soon</span>`}
         </div>
-        <div class="test-passages">3 passages · 40 câu hỏi · 60 phút</div>
         <div class="test-meta">
           <span class="test-score ${p?'':'empty'}">${p?`Band ${p.band}`:'Chưa làm'}</span>
           <span class="test-arrow">→</span>
@@ -645,73 +482,120 @@ function renderTests(){
     `;
   }).join('');
   
-  // Update stats
   const done=Object.keys(progress).length;
   document.getElementById('doneTests').textContent=done;
   const scores=Object.values(progress).map(p=>parseFloat(p.band)).filter(b=>!isNaN(b));
   if(scores.length){
     document.getElementById('bestScore').textContent=Math.max(...scores).toFixed(1);
     document.getElementById('avgScore').textContent=(scores.reduce((a,b)=>a+b,0)/scores.length).toFixed(1);
+  } else {
+    document.getElementById('bestScore').textContent='--';
+    document.getElementById('avgScore').textContent='--';
   }
 }
 
-/* =================== OPEN TEST =================== */
+function showComingSoon(){
+  alert('🚧 Test này đang được biên soạn. Hiện đã có 5 tests sẵn sàng — click các thẻ có nhãn "📍 Ready" để bắt đầu.');
+}
+
 let currentTest=null;
-let currentPassage=1;
 let userAnswers={};
 let timerInterval=null;
-let timeLeft=3600;
+let timeLeft=1200;
 let timerPaused=false;
 let testStartTime=0;
+let testSubmitted=false;
 
 function openTest(testId){
   currentTest=testId;
   userAnswers={};
-  timeLeft=3600;
+  timeLeft=1200;
   timerPaused=false;
+  testSubmitted=false;
   testStartTime=Date.now();
+  
+  const data=TESTS_DATA[testId];
   document.getElementById('listingView').classList.add('hidden');
   document.getElementById('testView').classList.add('active');
-  document.getElementById('testTitle').textContent=`Cambridge ${testId.match(/cam(\d+)/)[1]} · Test ${testId.match(/t(\d+)/)[1]}`;
-  switchPassage(1);
-  renderAllQuestions();
+  document.getElementById('testTitle').textContent=`${testId.toUpperCase().replace('CAM','Cambridge ').replace('-T',' · Test ')} · ${data.title}`;
+  
+  renderPassage();
+  renderQuestions();
   startTimer();
+  document.getElementById('vnBtn').textContent='🇻🇳 VN';
+  document.getElementById('vnBtn').classList.remove('active');
   window.scrollTo(0,0);
 }
 
-function switchPassage(n){
-  currentPassage=n;
-  const passage=SAMPLE_TEST.passages[n-1];
+function renderPassage(){
+  const data=TESTS_DATA[currentTest];
+  const passage=data.passages[0];
   document.getElementById('passagePanel').innerHTML=`
     <div class="passage-header">
       <div class="passage-label">${passage.label}</div>
       <div class="passage-title">${passage.title}</div>
     </div>
     <div class="passage-body">${passage.content}</div>
+    <div class="translation-box" id="translationBox">
+      <div style="font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--hotpink);margin-bottom:12px;">📘 Bản dịch tiếng Việt</div>
+      ${passage.vi}
+    </div>
   `;
-  document.querySelectorAll('[id^="p"][id$="Btn"]').forEach(b=>{
-    b.style.background=b.id===`p${n}Btn`?'var(--sunshine)':'var(--paper)';
+  attachVocabHandlers();
+}
+
+function attachVocabHandlers(){
+  document.querySelectorAll('.vocab').forEach(el=>{
+    const showPopup=(e)=>{
+      const popup=document.getElementById('vocabPopup');
+      popup.innerHTML=`<div class="word">${el.dataset.word}</div><div>${el.dataset.def}</div>`;
+      popup.classList.add('show');
+      requestAnimationFrame(()=>{
+        const rect=el.getBoundingClientRect();
+        const popupRect=popup.getBoundingClientRect();
+        let left=rect.left;
+        if(left+popupRect.width>window.innerWidth-10) left=window.innerWidth-popupRect.width-10;
+        let top=rect.top-popupRect.height-10;
+        if(top<10) top=rect.bottom+10;
+        popup.style.left=left+'px';
+        popup.style.top=top+'px';
+      });
+    };
+    el.addEventListener('mouseenter',showPopup);
+    el.addEventListener('mouseleave',()=>{
+      document.getElementById('vocabPopup').classList.remove('show');
+    });
+    el.addEventListener('click',e=>{
+      e.preventDefault();
+      showPopup(e);
+      setTimeout(()=>document.getElementById('vocabPopup').classList.remove('show'),2500);
+    });
   });
 }
 
-function renderAllQuestions(){
-  const panel=document.getElementById('questionsPanel');
+function renderQuestions(){
+  const data=TESTS_DATA[currentTest];
+  const marks=getMarks();
+  const testMarks=marks[currentTest]||{};
   let html='';
   let qNum=1;
-  SAMPLE_TEST.questions.forEach((g,gi)=>{
+  data.questions.forEach((g,gi)=>{
     html+=`<div class="q-group">
       <div class="q-group-title">${g.group}</div>
       <div class="q-group-instruction">${g.instruction}</div>`;
     g.items.forEach((item,i)=>{
       const qId=`q${qNum}`;
-      html+=`<div class="q-item">
+      const isMarked=testMarks[qId];
+      html+=`<div class="q-item ${isMarked?'marked':''}" id="item-${qId}">
+        <button class="q-mark ${isMarked?'active':''}" onclick="toggleMark('${qId}',event)" title="Đánh dấu xem lại">🔖</button>
         <span class="q-num">${qNum}</span>
         <span class="q-text">${item.q}</span>`;
       if(g.type==='mcq'){
         html+=`<div class="q-options">`;
         item.options.forEach(opt=>{
+          const val=opt.charAt(0);
           html+=`<label class="q-opt-label">
-            <input type="radio" name="${qId}" value="${opt.charAt(0)}" onchange="saveAnswer('${qId}',this.value)" ${userAnswers[qId]===opt.charAt(0)?'checked':''}>
+            <input type="radio" name="${qId}" value="${val}" onchange="saveAnswer('${qId}',this.value)" ${userAnswers[qId]===val?'checked':''}>
             <span>${opt}</span>
           </label>`;
         });
@@ -723,27 +607,52 @@ function renderAllQuestions(){
           <button class="tfng-btn ${userAnswers[qId]==='NOT GIVEN'?'selected':''}" onclick="selectTFNG('${qId}','NOT GIVEN',this)">NOT GIVEN</button>
         </div>`;
       } else if(g.type==='fill'){
-        html+=`<div style="margin-top:8px;"><input type="text" class="q-input" placeholder="Nhập đáp án..." value="${userAnswers[qId]||''}" oninput="saveAnswer('${qId}',this.value)"></div>`;
+        html+=`<input type="text" class="q-input" placeholder="Nhập đáp án..." value="${userAnswers[qId]||''}" oninput="saveAnswer('${qId}',this.value)">`;
       }
+      html+=`<div class="q-explain" id="explain-${qId}"></div>`;
       html+=`</div>`;
       qNum++;
     });
     html+=`</div>`;
   });
-  panel.innerHTML=html;
+  html+=`<div class="submit-row"><button class="submit-btn" onclick="submitTest()">Nộp bài →</button></div>`;
+  document.getElementById('questionsPanel').innerHTML=html;
 }
 
-function saveAnswer(qId,val){
-  userAnswers[qId]=val;
-}
-
+function saveAnswer(qId,val){userAnswers[qId]=val;}
 function selectTFNG(qId,val,btn){
   userAnswers[qId]=val;
   btn.parentNode.querySelectorAll('.tfng-btn').forEach(b=>b.classList.remove('selected'));
   btn.classList.add('selected');
 }
 
-/* =================== TIMER =================== */
+function toggleMark(qId,e){
+  e.stopPropagation();
+  const marks=getMarks();
+  if(!marks[currentTest]) marks[currentTest]={};
+  if(marks[currentTest][qId]){
+    delete marks[currentTest][qId];
+  } else {
+    marks[currentTest][qId]=true;
+  }
+  saveMarks(marks);
+  document.getElementById('item-'+qId).classList.toggle('marked');
+  e.target.classList.toggle('active');
+}
+
+function toggleTranslation(){
+  const box=document.getElementById('translationBox');
+  const btn=document.getElementById('vnBtn');
+  box.classList.toggle('show');
+  btn.classList.toggle('active');
+  if(box.classList.contains('show')){
+    btn.textContent='🇻🇳 Ẩn VN';
+    box.scrollIntoView({behavior:'smooth',block:'nearest'});
+  } else {
+    btn.textContent='🇻🇳 VN';
+  }
+}
+
 function startTimer(){
   clearInterval(timerInterval);
   timerInterval=setInterval(()=>{
@@ -752,33 +661,33 @@ function startTimer(){
     updateTimerDisplay();
     if(timeLeft<=0){
       clearInterval(timerInterval);
-      alert('Hết giờ! Bài thi sẽ tự động được nộp.');
+      alert('⏰ Hết giờ! Bài sẽ tự động nộp.');
       submitTest();
     }
   },1000);
 }
-
 function updateTimerDisplay(){
   const m=Math.floor(timeLeft/60).toString().padStart(2,'0');
   const s=(timeLeft%60).toString().padStart(2,'0');
-  const display=document.getElementById('timerDisplay');
-  display.textContent=`${m}:${s}`;
-  display.classList.toggle('warning',timeLeft<=300);
+  const d=document.getElementById('timerDisplay');
+  d.textContent=`${m}:${s}`;
+  d.classList.toggle('warning',timeLeft<=180);
 }
-
 function toggleTimer(){
   timerPaused=!timerPaused;
-  document.getElementById('timerBtn').textContent=timerPaused?'▶ Resume':'⏸ Pause';
+  document.getElementById('timerBtn').textContent=timerPaused?'▶':'⏸';
 }
 
-/* =================== SUBMIT & SCORING =================== */
 function submitTest(){
+  if(testSubmitted) return;
+  if(!confirm('Bạn có chắc muốn nộp bài? Sau khi nộp sẽ xem được giải thích chi tiết.')) return;
+  testSubmitted=true;
   clearInterval(timerInterval);
-  let correct=0;
-  let total=0;
-  let qNum=1;
-  let detail='';
-  SAMPLE_TEST.questions.forEach(g=>{
+  
+  const data=TESTS_DATA[currentTest];
+  let correct=0,total=0,qNum=1;
+  
+  data.questions.forEach(g=>{
     g.items.forEach(item=>{
       const qId=`q${qNum}`;
       const user=(userAnswers[qId]||'').trim().toLowerCase();
@@ -786,17 +695,24 @@ function submitTest(){
       const ok=user===expected;
       if(ok) correct++;
       total++;
-      detail+=`<div class="q-result ${ok?'correct':'wrong'}">Q${qNum}: ${user||'(trống)'} ${ok?'✓':'✗ → '+item.answer}</div>`;
+      
+      const elItem=document.getElementById('item-'+qId);
+      if(elItem){
+        elItem.classList.add(ok?'correct-after':'wrong-after');
+      }
+      const elExp=document.getElementById('explain-'+qId);
+      if(elExp){
+        elExp.innerHTML=`<strong>${ok?'✓ ĐÚNG':'✗ SAI'}</strong> · Đáp án: <strong>${item.answer}</strong>${user&&!ok?` (bạn trả lời: ${user})`:''}<br>💡 ${item.explain}`;
+        elExp.classList.add('show');
+      }
       qNum++;
     });
   });
   
-  // For demo: scale to band based on % correct (proxy)
-  const pct=correct/total;
-  // IELTS Academic Reading band table (approximate, 40 questions)
-  const band=calcBand(Math.round(pct*40));
+  const scaled=Math.round((correct/total)*40);
+  const band=calcBand(scaled);
   
-  const timeUsed=3600-timeLeft;
+  const timeUsed=1200-timeLeft;
   const tm=Math.floor(timeUsed/60).toString().padStart(2,'0');
   const ts=(timeUsed%60).toString().padStart(2,'0');
   
@@ -804,40 +720,27 @@ function submitTest(){
   document.getElementById('resultCorrect').textContent=correct;
   document.getElementById('resultTotal').textContent=total;
   document.getElementById('resultTime').textContent=`${tm}:${ts}`;
-  document.getElementById('resultDetail').innerHTML=detail;
   document.getElementById('resultMsg').textContent=getMsg(parseFloat(band));
   document.getElementById('resultModal').classList.add('show');
   
-  // Save progress
   const p=getProgress();
   p[currentTest]={band:band,correct:correct,total:total,date:Date.now()};
   saveProgress(p);
 }
 
 function calcBand(raw){
-  // Approx IELTS Academic Reading raw → band (40 Qs)
-  const table=[
-    [39,9.0],[37,8.5],[35,8.0],[33,7.5],[30,7.0],[27,6.5],
-    [23,6.0],[19,5.5],[15,5.0],[13,4.5],[10,4.0],[8,3.5],[6,3.0],[4,2.5]
-  ];
-  for(const [min,b] of table){
-    if(raw>=min) return b.toFixed(1);
-  }
+  const table=[[39,9.0],[37,8.5],[35,8.0],[33,7.5],[30,7.0],[27,6.5],[23,6.0],[19,5.5],[15,5.0],[13,4.5],[10,4.0],[8,3.5],[6,3.0],[4,2.5]];
+  for(const [min,b] of table) if(raw>=min) return b.toFixed(1);
   return '2.0';
 }
-
 function getMsg(band){
-  if(band>=8) return '🔥 Xuất sắc! Trình độ thi thật rất khả quan.';
-  if(band>=7) return '💪 Rất tốt! Tiếp tục giữ phong độ.';
-  if(band>=6) return '👍 Khá ổn. Luyện thêm các dạng khó.';
-  if(band>=5) return '📚 Cần cải thiện. Tập trung paraphrase & vocabulary.';
-  return '🎯 Hãy luyện đều mỗi ngày. Mọi người đều bắt đầu từ đây!';
+  if(band>=8) return '🔥 Xuất sắc! Trình độ rất tốt.';
+  if(band>=7) return '💪 Rất tốt! Giữ phong độ.';
+  if(band>=6) return '👍 Khá ổn. Luyện thêm dạng khó.';
+  if(band>=5) return '📚 Cần cải thiện. Tập trung paraphrase & vocab.';
+  return '🎯 Hãy luyện đều mỗi ngày!';
 }
-
-function closeResult(){
-  document.getElementById('resultModal').classList.remove('show');
-}
-
+function closeResult(){document.getElementById('resultModal').classList.remove('show');}
 function exitTest(){
   if(timerInterval) clearInterval(timerInterval);
   document.getElementById('resultModal').classList.remove('show');
@@ -847,7 +750,6 @@ function exitTest(){
   window.scrollTo(0,0);
 }
 
-/* =================== INIT =================== */
 renderTests();
 </script>
 </body>
