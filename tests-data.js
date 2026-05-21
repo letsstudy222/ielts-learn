@@ -438,73 +438,211 @@ const TESTS_DATA = {
     title: 'The Decline of Bees',
     topic: 'Environment · Biology',
     difficulty: 'Medium',
-    passages: [{
-      label: 'Reading Passage 1',
-      title: 'The Silent Hives: Understanding the Decline of Bees',
-      content: `<p><span class="para-num">A</span> Bees pollinate approximately one-third of the food we eat. From apples and almonds to coffee and cocoa, our breakfast tables would look dramatically different without these tiny workers. Globally, the economic value of pollination services provided by bees is estimated at over 200 billion dollars annually. Yet in recent decades, bee populations have been declining at alarming rates across North America, Europe, and parts of Asia, prompting urgent scientific investigation into the causes.</p>
-      
-      <p><span class="para-num">B</span> The phenomenon known as Colony Collapse Disorder (CCD) first attracted widespread attention in 2006, when beekeepers in the United States reported losing 30 to 90 percent of their hives in a single winter. The hallmark of CCD is mysterious: worker bees simply vanish, leaving behind the queen, immature bees, and ample food stores. Unlike other forms of <span class="vocab" data-word="hive" data-def="tổ ong">hive</span> death, dead bodies are rarely found near the colony. This sudden disappearance puzzled scientists for years, and although CCD reports have decreased since 2010, overall bee declines have continued.</p>
-      
-      <p><span class="para-num">C</span> Researchers now believe that no single cause explains the crisis; instead, multiple stressors interact in complex ways. Among the most heavily investigated factors are <span class="vocab" data-word="neonicotinoids" data-def="thuốc trừ sâu neonicotinoid">neonicotinoids</span>, a class of pesticides introduced in the 1990s that became one of the most widely used insecticides in the world. These chemicals are absorbed into the tissues of treated plants, including their pollen and nectar, exposing bees that visit flowers. Studies have shown that even at sub-lethal doses, neonicotinoids impair bees\' ability to navigate, learn, and reproduce.</p>
-      
-      <p><span class="para-num">D</span> A second major factor is the parasitic mite Varroa destructor. Originally a parasite of Asian honeybees, which have evolved defenses against it, Varroa jumped to European honeybees in the mid-twentieth century and has since spread worldwide. The mite attaches to bees and feeds on their fat reserves, weakening individuals and transmitting devastating viruses. Beekeepers describe Varroa as the single most damaging pest in modern apiculture, requiring constant management to keep colonies alive.</p>
-      
-      <p><span class="para-num">E</span> Habitat loss compounds these threats. Modern agriculture often features vast monocultures — single crops grown over enormous areas — which provide bees with food during bloom but leave them starving for the rest of the year. Wildflower meadows, hedgerows, and other diverse habitats have <span class="vocab" data-word="dwindled" data-def="suy giảm, thu hẹp">dwindled</span> dramatically in industrialized countries. In the United Kingdom alone, an estimated 97 percent of flower-rich grasslands have disappeared since the 1930s.</p>
-      
-      <p><span class="para-num">F</span> Climate change adds yet another layer of complexity. As temperatures shift, the synchronization between bees and the flowers they pollinate can break down. Some flowers now bloom earlier than the bees that traditionally pollinated them emerge, leaving both partners without their usual resources. Extreme weather events, including unseasonal frosts and prolonged droughts, also damage bee populations directly. Researchers in the Rocky Mountains have documented declining bumblebee numbers correlating with rising summer temperatures.</p>
-      
-      <p><span class="para-num">G</span> Solutions are being pursued on multiple fronts. The European Union banned outdoor use of three major neonicotinoids in 2018, and similar restrictions are being considered elsewhere. Urban beekeeping has grown in popularity, and cities such as Oslo have created "bee highways" — corridors of flower-rich plantings designed to support pollinators. Farmers are being encouraged to plant pollinator-friendly hedgerows and reduce pesticide use. Individual gardeners can contribute by choosing native flowering plants and avoiding chemical sprays. The fate of bees, ultimately, is tied to choices made at every scale, from international policy to backyard gardens.</p>`,
-      
-      vi: `<p><strong>Đoạn A:</strong> Ong thụ phấn khoảng 1/3 thực phẩm chúng ta ăn. Giá trị kinh tế dịch vụ thụ phấn của ong toàn cầu ước tính hơn 200 tỷ đô la mỗi năm. Tuy nhiên, số lượng ong đã suy giảm đáng báo động.</p>
-      
-      <p><strong>Đoạn B:</strong> Hiện tượng Rối loạn Sụp đổ Đàn ong (CCD) thu hút sự chú ý từ năm 2006, khi người nuôi ong Mỹ báo cáo mất 30-90% tổ ong trong một mùa đông. Đặc điểm kỳ lạ: ong thợ biến mất, để lại ong chúa và thức ăn dồi dào.</p>
-      
-      <p><strong>Đoạn C:</strong> Không có nguyên nhân duy nhất nào giải thích khủng hoảng này. Trong số các yếu tố là neonicotinoids - thuốc trừ sâu được hấp thụ vào mô cây, kể cả phấn hoa và mật. Ngay cả ở liều thấp, chúng cũng làm suy giảm khả năng định hướng, học hỏi và sinh sản của ong.</p>
-      
-      <p><strong>Đoạn D:</strong> Yếu tố thứ hai là loài ve ký sinh Varroa destructor. Loài này hút mỡ dự trữ của ong, làm yếu cá thể và truyền virus tàn phá. Người nuôi ong mô tả Varroa là sâu bệnh tổn hại nhất trong ngành nuôi ong hiện đại.</p>
-      
-      <p><strong>Đoạn E:</strong> Mất môi trường sống cộng hưởng các mối đe dọa. Nông nghiệp hiện đại với canh tác độc canh khiến ong chết đói phần lớn thời gian năm. Ở Anh, 97% đồng cỏ giàu hoa đã biến mất kể từ những năm 1930.</p>
-      
-      <p><strong>Đoạn F:</strong> Biến đổi khí hậu thêm lớp phức tạp. Sự đồng bộ giữa ong và hoa có thể bị phá vỡ - một số hoa nở sớm hơn ong xuất hiện. Hiện tượng thời tiết cực đoan cũng tổn hại trực tiếp đến quần thể ong.</p>
-      
-      <p><strong>Đoạn G:</strong> Giải pháp đang được theo đuổi trên nhiều mặt. EU đã cấm 3 loại neonicotinoid chính ngoài trời năm 2018. Các thành phố như Oslo tạo "xa lộ ong". Người làm vườn cá nhân cũng có thể đóng góp.</p>`
-    }],
+    passages: [
+      {
+        label: 'Reading Passage 1',
+        title: 'The Silent Hives: Understanding the Decline of Bees',
+        content: `<p><span class="para-num">A</span> Bees pollinate approximately one-third of the food we eat. From apples and almonds to coffee and cocoa, our breakfast tables would look dramatically different without these tiny workers. Globally, the economic value of pollination services provided by bees is estimated at over 200 billion dollars annually. Yet in recent decades, bee populations have been declining at alarming rates across North America, Europe, and parts of Asia, prompting urgent scientific investigation into the causes.</p>
+        
+        <p><span class="para-num">B</span> The phenomenon known as Colony Collapse Disorder (CCD) first attracted widespread attention in 2006, when beekeepers in the United States reported losing 30 to 90 percent of their hives in a single winter. The hallmark of CCD is mysterious: worker bees simply vanish, leaving behind the queen, immature bees, and ample food stores. Unlike other forms of <span class="vocab" data-word="hive" data-def="tổ ong">hive</span> death, dead bodies are rarely found near the colony. This sudden disappearance puzzled scientists for years, and although CCD reports have decreased since 2010, overall bee declines have continued.</p>
+        
+        <p><span class="para-num">C</span> Researchers now believe that no single cause explains the crisis; instead, multiple stressors interact in complex ways. Among the most heavily investigated factors are <span class="vocab" data-word="neonicotinoids" data-def="thuốc trừ sâu neonicotinoid">neonicotinoids</span>, a class of pesticides introduced in the 1990s that became one of the most widely used insecticides in the world. These chemicals are absorbed into the tissues of treated plants, including their pollen and nectar, exposing bees that visit flowers. Studies have shown that even at sub-lethal doses, neonicotinoids impair bees\' ability to navigate, learn, and reproduce.</p>
+        
+        <p><span class="para-num">D</span> A second major factor is the parasitic mite Varroa destructor. Originally a parasite of Asian honeybees, which have evolved defenses against it, Varroa jumped to European honeybees in the mid-twentieth century and has since spread worldwide. The mite attaches to bees and feeds on their fat reserves, weakening individuals and transmitting devastating viruses. Beekeepers describe Varroa as the single most damaging pest in modern apiculture, requiring constant management to keep colonies alive.</p>
+        
+        <p><span class="para-num">E</span> Habitat loss compounds these threats. Modern agriculture often features vast monocultures — single crops grown over enormous areas — which provide bees with food during bloom but leave them starving for the rest of the year. Wildflower meadows, hedgerows, and other diverse habitats have <span class="vocab" data-word="dwindled" data-def="suy giảm, thu hẹp">dwindled</span> dramatically in industrialized countries. In the United Kingdom alone, an estimated 97 percent of flower-rich grasslands have disappeared since the 1930s.</p>
+        
+        <p><span class="para-num">F</span> Climate change adds yet another layer of complexity. As temperatures shift, the synchronization between bees and the flowers they pollinate can break down. Some flowers now bloom earlier than the bees that traditionally pollinated them emerge, leaving both partners without their usual resources. Extreme weather events, including unseasonal frosts and prolonged droughts, also damage bee populations directly. Researchers in the Rocky Mountains have documented declining bumblebee numbers correlating with rising summer temperatures.</p>
+        
+        <p><span class="para-num">G</span> Solutions are being pursued on multiple fronts. The European Union banned outdoor use of three major neonicotinoids in 2018, and similar restrictions are being considered elsewhere. Urban beekeeping has grown in popularity, and cities such as Oslo have created "bee highways" — corridors of flower-rich plantings designed to support pollinators. Farmers are being encouraged to plant pollinator-friendly hedgerows and reduce pesticide use. Individual gardeners can contribute by choosing native flowering plants and avoiding chemical sprays. The fate of bees, ultimately, is tied to choices made at every scale, from international policy to backyard gardens.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Ong thụ phấn khoảng 1/3 thực phẩm chúng ta ăn. Giá trị kinh tế dịch vụ thụ phấn của ong toàn cầu ước tính hơn 200 tỷ đô la mỗi năm. Tuy nhiên, số lượng ong đã suy giảm đáng báo động.</p>
+        <p><strong>Đoạn B:</strong> Hiện tượng Rối loạn Sụp đổ Đàn ong (CCD) thu hút sự chú ý từ năm 2006, khi người nuôi ong Mỹ báo cáo mất 30-90% tổ ong trong một mùa đông.</p>
+        <p><strong>Đoạn C:</strong> Không có nguyên nhân duy nhất nào giải thích khủng hoảng này. Trong số các yếu tố là neonicotinoids - thuốc trừ sâu được hấp thụ vào mô cây, kể cả phấn hoa và mật.</p>
+        <p><strong>Đoạn D:</strong> Yếu tố thứ hai là loài ve ký sinh Varroa destructor. Người nuôi ong mô tả Varroa là sâu bệnh tổn hại nhất trong ngành nuôi ong hiện đại.</p>
+        <p><strong>Đoạn E:</strong> Mất môi trường sống cộng hưởng các mối đe dọa. Ở Anh, 97% đồng cỏ giàu hoa đã biến mất kể từ những năm 1930.</p>
+        <p><strong>Đoạn F:</strong> Biến đổi khí hậu thêm lớp phức tạp. Sự đồng bộ giữa ong và hoa có thể bị phá vỡ.</p>
+        <p><strong>Đoạn G:</strong> Giải pháp đang được theo đuổi trên nhiều mặt. EU đã cấm 3 loại neonicotinoid chính ngoài trời năm 2018.</p>`
+      },
+      {
+        label: 'Reading Passage 2',
+        title: 'The Lost Wisdom of Sand Drawings',
+        content: `<p><span class="para-num">A</span> On the remote island of Malekula in the South Pacific nation of Vanuatu, an extraordinary art form survives that has fascinated anthropologists for over a century. The sand drawings of Vanuatu — geometrical designs traced rapidly in sand or ash with a single continuous finger movement — combine artistic beauty, mathematical sophistication, and cultural knowledge in a way that has few parallels anywhere else in the world. In 2003, UNESCO recognised these drawings as part of humanity\'s intangible cultural heritage, acknowledging their unique value at a time when the tradition itself faced increasing threats.</p>
+        
+        <p><span class="para-num">B</span> The technical achievement of the drawings becomes apparent when one watches a master practitioner at work. The artist begins by drawing a network of guidelines in the sand — perhaps a simple grid of intersecting lines. Then, without lifting the finger from the sand, they trace an intricate design that crosses and recrosses itself many times, eventually returning precisely to the starting point. The final pattern can include hundreds of intersections and yet maintain perfect mathematical regularity. Some designs require fingers tracing for nearly a minute without pause.</p>
+        
+        <p><span class="para-num">C</span> Each sand drawing is associated with specific cultural meanings. Designs may represent particular places, mythical stories, kinship relationships, or ceremonial occasions. The complete tradition encompasses several hundred different drawings, with experts able to perform them in specific narrative sequences. The drawings function not just as art but as a kind of writing system — a visual library of cultural knowledge passed from generation to generation. Different designs are appropriate for different audiences and contexts; some are restricted to particular initiates and not shown to outsiders.</p>
+        
+        <p><span class="para-num">D</span> Mathematicians have studied the sand drawings with considerable interest. The designs reveal sophisticated understanding of what mathematicians call Eulerian graphs — networks that can be traversed completely without lifting the pen or retracing any edge. While European mathematicians did not formalise the theory of such paths until the eighteenth century, the people of Vanuatu had been producing complex examples of them for centuries. The drawings also demonstrate intuitive grasp of geometric symmetries, topological properties, and visual rhythm.</p>
+        
+        <p><span class="para-num">E</span> The first systematic documentation of the sand drawings was conducted by the British anthropologist John Layard in the 1910s, who recorded hundreds of designs and analysed their cultural functions. Later researchers, including the French ethnographer Jean Guiart in the 1950s, added substantially to this record. Their work preserved knowledge that might otherwise have been lost as colonial influences disrupted traditional ways of life. Today, the original recordings of these researchers remain crucial sources for cultural revival efforts.</p>
+        
+        <p><span class="para-num">F</span> Despite UNESCO recognition, the sand drawing tradition faces serious threats. Few young people are learning the more complex designs, and the elderly masters who possess complete knowledge of the tradition are gradually disappearing. Modern educational systems and economic pressures pull young Vanuatu people toward different priorities. Television, internet, and mobile phones provide entertainment that once would have come from cultural traditions including sand drawing performances. Without active intervention, complete loss of the tradition within a generation seems plausible.</p>
+        
+        <p><span class="para-num">G</span> Various initiatives now aim to preserve and revive sand drawing knowledge. Workshops in schools teach children basic designs, with elders demonstrating techniques and explaining cultural meanings. Cultural festivals provide opportunities for masters to perform publicly and pass on their knowledge to wider audiences. Digital recordings document complete performances for permanent preservation, though there is debate about whether such recordings risk reducing living traditions to museum artefacts. The future of Vanuatu sand drawings, like that of many traditional knowledge systems, depends on whether modern societies can value such heritage enough to maintain it.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Trên đảo Malekula thuộc Vanuatu, một hình thức nghệ thuật phi thường vẫn tồn tại - vẽ trên cát. Các họa tiết hình học vẽ trong cát chỉ bằng một đường ngón tay liên tục. UNESCO công nhận năm 2003.</p>
+        <p><strong>Đoạn B:</strong> Người nghệ sĩ bắt đầu vẽ lưới hướng dẫn, sau đó không nhấc ngón tay, vẽ thiết kế phức tạp quay trở về điểm bắt đầu. Một số thiết kế đòi hỏi vẽ gần một phút không nghỉ.</p>
+        <p><strong>Đoạn C:</strong> Mỗi bản vẽ có ý nghĩa văn hóa cụ thể. Truyền thống đầy đủ bao gồm hàng trăm bản vẽ khác nhau. Bản vẽ hoạt động như hệ thống chữ viết - thư viện kiến thức văn hóa.</p>
+        <p><strong>Đoạn D:</strong> Các nhà toán học đã nghiên cứu các bản vẽ cát với sự quan tâm lớn. Các thiết kế tiết lộ hiểu biết tinh vi về đồ thị Eulerian. Trong khi các nhà toán học châu Âu chưa chính thức hóa lý thuyết này đến thế kỷ 18, người Vanuatu đã sản xuất các ví dụ phức tạp trong nhiều thế kỷ.</p>
+        <p><strong>Đoạn E:</strong> Tài liệu hóa hệ thống đầu tiên do nhà nhân học Anh John Layard thực hiện trong những năm 1910. Sau đó, nhà dân tộc học Pháp Jean Guiart trong những năm 1950 đã bổ sung đáng kể.</p>
+        <p><strong>Đoạn F:</strong> Mặc dù được UNESCO công nhận, truyền thống vẽ cát đối mặt các mối đe dọa nghiêm trọng. Ít người trẻ học các thiết kế phức tạp. Các bậc thầy lớn tuổi dần biến mất.</p>
+        <p><strong>Đoạn G:</strong> Các sáng kiến đang nhằm bảo tồn kiến thức vẽ cát. Hội thảo dạy trẻ em các thiết kế cơ bản. Lễ hội văn hóa, ghi âm kỹ thuật số tài liệu hóa các biểu diễn.</p>`
+      },
+      {
+        label: 'Reading Passage 3',
+        title: 'The Psychology of Productivity',
+        content: `<p><span class="para-num">A</span> Few topics receive more attention in modern professional life than productivity. Bookstores devote entire sections to productivity self-help; software companies build products promising to optimize work output; consulting firms develop methodologies they sell to organisations seeking efficiency improvements. Beneath this enormous industry lies a fundamental question that has occupied philosophers since antiquity: what does it mean to use time well? Modern psychology has approached this question scientifically, producing findings that often contradict popular productivity advice.</p>
+        
+        <p><span class="para-num">B</span> The most persistent myth about productivity concerns multitasking — the practice of doing several things simultaneously. Many productivity systems promise to help workers handle more tasks at once, and most modern workers spend significant portions of their day juggling multiple responsibilities. Yet psychological research has consistently demonstrated that what people call multitasking is actually rapid task-switching, with significant cognitive costs each time attention moves from one activity to another. Studies measuring brain activity show that the brain cannot truly process multiple complex tasks simultaneously; it can only alternate between them with reduced quality on each.</p>
+        
+        <p><span class="para-num">C</span> Researchers have found that the costs of task-switching are far higher than most workers realize. Each switch typically requires about twenty minutes for the mind to refocus completely on the new task. When workers frequently switch between activities, they may spend most of their day in a state of partial attention to everything and full attention to nothing. Studies of workers with high email loads have found that those who check email constantly may produce roughly 40 percent less work than those who limit email checks to a few times per day. The myth of multitasking productivity, in other words, may be actively undermining productivity.</p>
+        
+        <p><span class="para-num">D</span> Another well-established finding concerns the relationship between hours worked and productive output. The intuitive assumption — that more hours produce more work — proves incorrect beyond a certain threshold. Research consistently shows that productivity per hour declines significantly after about 50 hours of work per week, and total weekly output may actually decrease as hours increase beyond 55. The exhausted worker not only produces less but also produces work of lower quality and creates errors that require correction. Counterintuitively, organisations that have experimented with shorter work weeks — particularly the four-day week — have often found that productivity remained stable or even increased.</p>
+        
+        <p><span class="para-num">E</span> The psychologist Mihaly Csikszentmihalyi\'s research on the experience of "flow" has profoundly influenced productivity thinking. Flow describes the state of complete absorption in a challenging but achievable task — the feeling that athletes call being "in the zone" and that creative workers often report when fully engaged in their projects. Productive workers tend to experience flow states regularly. These states are characterised by intense focus, loss of time awareness, and high-quality output. Workplaces that enable flow states tend to produce better results than those that constantly interrupt workers with meetings and communications.</p>
+        
+        <p><span class="para-num">F</span> Sleep, often viewed as an unproductive activity that takes time from work, turns out to be one of the most important contributors to productive work. Studies of sleep-deprived workers consistently show declining performance on cognitive tasks, decision-making, and creative work. The Harvard Business Review estimated that sleep deprivation costs the American economy roughly 411 billion dollars annually through reduced productivity and increased errors. Workers who consistently sleep less than six hours per night perform similarly to those legally too drunk to drive on tests of cognitive function — yet many workplaces continue to treat extensive sleep deprivation as a sign of dedication.</p>
+        
+        <p><span class="para-num">G</span> The implications of productivity research for individuals and organisations are clear, even if rarely fully implemented. Workers and managers should focus on quality of attention rather than quantity of hours, protect time for deep focused work, build genuine rest into the workday, and prioritise sleep over additional work hours. Yet these recommendations contradict workplace cultures that celebrate long hours and constant availability. The gap between what research shows and how most workplaces operate may represent the largest single opportunity for improving productivity in modern economies — but closing this gap requires changes in workplace norms that have proven remarkably resistant.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Ít chủ đề nhận được nhiều sự chú ý trong đời sống nghề nghiệp hiện đại hơn năng suất. Tâm lý học hiện đại đã tiếp cận câu hỏi này một cách khoa học, tạo ra các phát hiện thường mâu thuẫn với lời khuyên năng suất phổ biến.</p>
+        <p><strong>Đoạn B:</strong> Huyền thoại bền vững nhất về năng suất liên quan đến đa nhiệm. Nghiên cứu tâm lý đã liên tục chứng minh rằng những gì mọi người gọi là đa nhiệm thực ra là chuyển nhiệm nhanh, với chi phí nhận thức đáng kể.</p>
+        <p><strong>Đoạn C:</strong> Mỗi lần chuyển đổi thường yêu cầu khoảng 20 phút để tâm trí tập trung hoàn toàn. Nghiên cứu cho thấy người kiểm tra email liên tục có thể sản xuất ít hơn khoảng 40% so với người giới hạn kiểm tra vài lần mỗi ngày.</p>
+        <p><strong>Đoạn D:</strong> Phát hiện đã thiết lập tốt khác liên quan đến mối quan hệ giữa giờ làm việc và năng suất. Năng suất mỗi giờ giảm đáng kể sau khoảng 50 giờ làm việc mỗi tuần. Các tổ chức thử nghiệm tuần làm việc 4 ngày thường thấy năng suất ổn định hoặc tăng.</p>
+        <p><strong>Đoạn E:</strong> Nghiên cứu của Mihaly Csikszentmihalyi về trải nghiệm "flow" đã ảnh hưởng sâu sắc đến tư duy năng suất. Flow mô tả trạng thái hấp thụ hoàn toàn vào nhiệm vụ thách thức nhưng khả thi.</p>
+        <p><strong>Đoạn F:</strong> Giấc ngủ, thường được xem như hoạt động không năng suất, hóa ra là một trong những yếu tố đóng góp quan trọng nhất cho công việc năng suất. Harvard Business Review ước tính thiếu ngủ tốn 411 tỷ đô la hàng năm cho nền kinh tế Mỹ.</p>
+        <p><strong>Đoạn G:</strong> Hàm ý của nghiên cứu năng suất là rõ ràng. Tập trung vào chất lượng chú ý hơn số lượng giờ, bảo vệ thời gian cho công việc tập trung sâu, xây dựng nghỉ ngơi thực sự, ưu tiên giấc ngủ. Tuy nhiên các khuyến nghị này mâu thuẫn với văn hóa nơi làm việc.</p>`
+      }
+    ],
     
     questions: [
-      {
-        group: 'Questions 1–5',
-        type: 'tfng',
-        instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
-        items: [
-          { q: 'Bees are responsible for pollinating about a third of human food.', answer: 'TRUE', explain: 'Đoạn A: "Bees pollinate approximately one-third of the food we eat".' },
-          { q: 'Colony Collapse Disorder usually leaves many dead bees near the hive.', answer: 'FALSE', explain: 'Đoạn B: "dead bodies are rarely found near the colony".' },
-          { q: 'Neonicotinoids are only harmful to bees at high doses.', answer: 'FALSE', explain: 'Đoạn C: "even at sub-lethal doses, neonicotinoids impair bees\' ability".' },
-          { q: 'Asian honeybees have natural defenses against the Varroa mite.', answer: 'TRUE', explain: 'Đoạn D: "Asian honeybees, which have evolved defenses against it".' },
-          { q: 'Bumblebee populations in the Rocky Mountains have remained stable.', answer: 'FALSE', explain: 'Đoạn F: "declining bumblebee numbers correlating with rising summer temperatures".' }
-        ]
-      },
-      {
-        group: 'Questions 6–9',
-        type: 'mcq',
-        instruction: 'Choose the correct letter, A, B, C or D.',
-        items: [
-          { q: 'According to the passage, the cause of bee decline is:', options: ['A. Primarily due to neonicotinoid pesticides', 'B. A combination of multiple interacting factors', 'C. Mostly attributable to climate change', 'D. Still completely unknown to scientists'], answer: 'B', explain: 'Đoạn C: "no single cause explains the crisis; instead, multiple stressors interact".' },
-          { q: 'The Varroa mite originally affected:', options: ['A. European honeybees', 'B. American bumblebees', 'C. Asian honeybees', 'D. All bee species equally'], answer: 'C', explain: 'Đoạn D: "Originally a parasite of Asian honeybees".' },
-          { q: 'Modern monoculture farming affects bees by:', options: ['A. Killing them with pesticide residues year-round', 'B. Providing food only during specific bloom periods', 'C. Reducing the number of bee species', 'D. Spreading parasites between hives'], answer: 'B', explain: 'Đoạn E: "provide bees with food during bloom but leave them starving for the rest of the year".' },
-          { q: 'The European Union\'s 2018 action against neonicotinoids:', options: ['A. Banned all uses of the chemicals', 'B. Only banned outdoor use of three specific types', 'C. Required mandatory labeling for farmers', 'D. Imposed heavy fines on manufacturers'], answer: 'B', explain: 'Đoạn G: "banned outdoor use of three major neonicotinoids in 2018".' }
-        ]
-      },
-      {
-        group: 'Questions 10–13',
-        type: 'fill',
-        instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
-        items: [
-          { q: 'CCD first attracted widespread attention in the year __________.', answer: '2006', explain: 'Đoạn B: "first attracted widespread attention in 2006".' },
-          { q: 'Neonicotinoids were introduced in the __________.', answer: '1990s', explain: 'Đoạn C: "a class of pesticides introduced in the 1990s".' },
-          { q: 'In the UK, 97 percent of __________ have disappeared since the 1930s.', answer: 'flower-rich grasslands', explain: 'Đoạn E: "97 percent of flower-rich grasslands have disappeared".' },
-          { q: 'Oslo has created __________ to support pollinators in the city.', answer: 'bee highways', explain: 'Đoạn G: "cities such as Oslo have created bee highways".' }
-        ]
-      }
+      // ========== PASSAGE 1 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 1–5',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'Bees are responsible for pollinating about a third of human food.', answer: 'TRUE', explain: 'Đoạn A: "Bees pollinate approximately one-third of the food we eat".' },
+            { q: 'Colony Collapse Disorder usually leaves many dead bees near the hive.', answer: 'FALSE', explain: 'Đoạn B: "dead bodies are rarely found near the colony".' },
+            { q: 'Neonicotinoids are only harmful to bees at high doses.', answer: 'FALSE', explain: 'Đoạn C: "even at sub-lethal doses, neonicotinoids impair bees\' ability".' },
+            { q: 'Asian honeybees have natural defenses against the Varroa mite.', answer: 'TRUE', explain: 'Đoạn D: "Asian honeybees, which have evolved defenses against it".' },
+            { q: 'Bumblebee populations in the Rocky Mountains have remained stable.', answer: 'FALSE', explain: 'Đoạn F: "declining bumblebee numbers correlating with rising summer temperatures".' }
+          ]
+        },
+        {
+          group: 'Questions 6–9',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to the passage, the cause of bee decline is:', options: ['A. Primarily due to neonicotinoid pesticides', 'B. A combination of multiple interacting factors', 'C. Mostly attributable to climate change', 'D. Still completely unknown to scientists'], answer: 'B', explain: 'Đoạn C: "no single cause explains the crisis; instead, multiple stressors interact".' },
+            { q: 'The Varroa mite originally affected:', options: ['A. European honeybees', 'B. American bumblebees', 'C. Asian honeybees', 'D. All bee species equally'], answer: 'C', explain: 'Đoạn D: "Originally a parasite of Asian honeybees".' },
+            { q: 'Modern monoculture farming affects bees by:', options: ['A. Killing them with pesticide residues year-round', 'B. Providing food only during specific bloom periods', 'C. Reducing the number of bee species', 'D. Spreading parasites between hives'], answer: 'B', explain: 'Đoạn E: "provide bees with food during bloom but leave them starving for the rest of the year".' },
+            { q: 'The European Union\'s 2018 action against neonicotinoids:', options: ['A. Banned all uses of the chemicals', 'B. Only banned outdoor use of three specific types', 'C. Required mandatory labeling for farmers', 'D. Imposed heavy fines on manufacturers'], answer: 'B', explain: 'Đoạn G: "banned outdoor use of three major neonicotinoids in 2018".' }
+          ]
+        },
+        {
+          group: 'Questions 10–13',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'CCD first attracted widespread attention in the year __________.', answer: '2006', explain: 'Đoạn B: "first attracted widespread attention in 2006".' },
+            { q: 'Neonicotinoids were introduced in the __________.', answer: '1990s', explain: 'Đoạn C: "a class of pesticides introduced in the 1990s".' },
+            { q: 'In the UK, 97 percent of __________ have disappeared since the 1930s.', answer: 'flower-rich grasslands', explain: 'Đoạn E: "97 percent of flower-rich grasslands have disappeared".' },
+            { q: 'Oslo has created __________ to support pollinators in the city.', answer: 'bee highways', explain: 'Đoạn G: "cities such as Oslo have created bee highways".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 2 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 14–20',
+          type: 'matching-headings',
+          instruction: 'Reading Passage 2 has seven paragraphs, A-G. Choose the correct heading for each paragraph from the list below.',
+          headings: [
+            { id: 'i', text: 'How designs are physically created' },
+            { id: 'ii', text: 'Mathematical sophistication in traditional art' },
+            { id: 'iii', text: 'A unique tradition receiving international recognition' },
+            { id: 'iv', text: 'Modern threats to an ancient practice' },
+            { id: 'v', text: 'The cultural meanings encoded in designs' },
+            { id: 'vi', text: 'Recent attempts at revival and preservation' },
+            { id: 'vii', text: 'Important early documentation by outsiders' },
+            { id: 'viii', text: 'Geographical features of Vanuatu' },
+            { id: 'ix', text: 'Comparing different Pacific art traditions' }
+          ],
+          items: [
+            { q: 'A', answer: 'iii', explain: 'Đoạn A giới thiệu truyền thống độc đáo và được UNESCO công nhận.' },
+            { q: 'B', answer: 'i', explain: 'Đoạn B mô tả cách các thiết kế được tạo ra về mặt vật lý - lưới hướng dẫn, đường liên tục.' },
+            { q: 'C', answer: 'v', explain: 'Đoạn C nói về ý nghĩa văn hóa được mã hóa trong các thiết kế.' },
+            { q: 'D', answer: 'ii', explain: 'Đoạn D về sự tinh vi toán học - đồ thị Eulerian, hình học.' },
+            { q: 'E', answer: 'vii', explain: 'Đoạn E về tài liệu hóa ban đầu của Layard và Guiart - các nhà nghiên cứu nước ngoài.' },
+            { q: 'F', answer: 'iv', explain: 'Đoạn F về các mối đe dọa hiện đại với truyền thống cổ xưa.' },
+            { q: 'G', answer: 'vi', explain: 'Đoạn G về các nỗ lực phục hồi và bảo tồn gần đây.' }
+          ]
+        },
+        {
+          group: 'Questions 21–23',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 2? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'European mathematicians formalised the theory of Eulerian paths before the Vanuatu sand artists did.', answer: 'FALSE', explain: 'Đoạn D: "European mathematicians did not formalise the theory of such paths until the eighteenth century, the people of Vanuatu had been producing complex examples of them for centuries".' },
+            { q: 'John Layard recorded some of the oldest sand drawings still known today.', answer: 'NOT GIVEN', explain: 'Đoạn E nói Layard tài liệu hóa hàng trăm thiết kế nhưng không nói về tuổi của các thiết kế đó.' },
+            { q: 'All sand drawings are openly shared with anyone who wishes to see them.', answer: 'FALSE', explain: 'Đoạn C: "some are restricted to particular initiates and not shown to outsiders".' }
+          ]
+        },
+        {
+          group: 'Questions 24–26',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
+          items: [
+            { q: 'UNESCO recognised Vanuatu sand drawings as part of intangible cultural heritage in __________.', answer: '2003', explain: 'Đoạn A: "In 2003, UNESCO recognised these drawings".' },
+            { q: 'The sand drawings can be viewed as a visual __________ of cultural knowledge.', answer: 'library', explain: 'Đoạn C: "a visual library of cultural knowledge".' },
+            { q: 'Mathematicians have shown that the designs represent sophisticated examples of __________ graphs.', answer: 'Eulerian', explain: 'Đoạn D: "what mathematicians call Eulerian graphs".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 3 QUESTIONS (14 questions) ==========
+      [
+        {
+          group: 'Questions 27–32',
+          type: 'matching-information',
+          instruction: 'Reading Passage 3 has seven paragraphs, A-G. Which paragraph contains the following information?',
+          paragraphs: ['A','B','C','D','E','F','G'],
+          items: [
+            { q: 'A reference to the economic cost of inadequate rest.', answer: 'F', explain: 'Đoạn F: "sleep deprivation costs the American economy roughly 411 billion dollars annually".' },
+            { q: 'A specific percentage by which constant interruption reduces output.', answer: 'C', explain: 'Đoạn C: "may produce roughly 40 percent less work".' },
+            { q: 'A description of a state of complete absorption in a task.', answer: 'E', explain: 'Đoạn E: "Flow describes the state of complete absorption in a challenging but achievable task".' },
+            { q: 'Examples of organisations that experimented with reducing work hours.', answer: 'D', explain: 'Đoạn D: "organisations that have experimented with shorter work weeks — particularly the four-day week".' },
+            { q: 'A discussion of why research findings rarely reach workplaces.', answer: 'G', explain: 'Đoạn G: "these recommendations contradict workplace cultures that celebrate long hours and constant availability".' },
+            { q: 'An explanation that what is called "multitasking" is really task-switching.', answer: 'B', explain: 'Đoạn B: "what people call multitasking is actually rapid task-switching".' }
+          ]
+        },
+        {
+          group: 'Questions 33–36',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to the passage, brain activity studies have shown that:', options: ['A. The brain handles multiple complex tasks at once with no cost', 'B. Multitasking only has costs for certain personality types', 'C. The brain cannot truly process multiple complex tasks simultaneously', 'D. Younger workers can multitask better than older ones'], answer: 'C', explain: 'Đoạn B: "the brain cannot truly process multiple complex tasks simultaneously".' },
+            { q: 'According to research cited in the passage, refocusing after a task switch:', options: ['A. Takes about twenty minutes', 'B. Happens almost instantly', 'C. Is impossible for most workers', 'D. Depends entirely on motivation'], answer: 'A', explain: 'Đoạn C: "Each switch typically requires about twenty minutes for the mind to refocus completely".' },
+            { q: 'Workers sleeping less than six hours per night perform similarly to:', options: ['A. People with high blood pressure', 'B. Children with attention problems', 'C. Those legally too drunk to drive', 'D. Elderly people on memory tests'], answer: 'C', explain: 'Đoạn F: "perform similarly to those legally too drunk to drive on tests of cognitive function".' },
+            { q: 'The author suggests that the gap between productivity research and workplace practice:', options: ['A. Has been completely closed in recent years', 'B. Is too complex to be addressed', 'C. Represents an opportunity that has proven hard to act on', 'D. Cannot be measured accurately'], answer: 'C', explain: 'Đoạn G: "may represent the largest single opportunity for improving productivity... but closing this gap requires changes... that have proven remarkably resistant".' }
+          ]
+        },
+        {
+          group: 'Questions 37–40',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
+          items: [
+            { q: 'Productivity per hour declines significantly after about __________ hours of work per week.', answer: '50', explain: 'Đoạn D: "productivity per hour declines significantly after about 50 hours of work per week".' },
+            { q: 'Flow states are characterised by intense focus, loss of time awareness, and high-quality __________.', answer: 'output', explain: 'Đoạn E: "intense focus, loss of time awareness, and high-quality output".' },
+            { q: 'Sleep is often wrongly viewed as an __________ activity that takes time from work.', answer: 'unproductive', explain: 'Đoạn F: "Sleep, often viewed as an unproductive activity".' },
+            { q: 'Workers should focus on quality of attention rather than quantity of __________.', answer: 'hours', explain: 'Đoạn G: "focus on quality of attention rather than quantity of hours".' }
+          ]
+        }
+      ]
     ]
   },
 
@@ -1038,73 +1176,211 @@ const TESTS_DATA = {
     title: 'The Origins of Language',
     topic: 'Linguistics · Anthropology',
     difficulty: 'Hard',
-    passages: [{
-      label: 'Reading Passage 1',
-      title: 'The Mystery of Language Origins',
-      content: `<p><span class="para-num">A</span> No question in linguistics is more controversial than how human language first emerged. Unlike fossils of ancient bones or stone tools, speech leaves no physical trace. The earliest written records date from only about 5,000 years ago, but spoken language is certainly far older. Scholars have proposed dates ranging from 50,000 to over a million years for the emergence of fully modern language, with no consensus in sight. So intractable was this problem that in 1866, the Linguistic Society of Paris famously banned all papers on the topic, declaring it unsolvable.</p>
-      
-      <p><span class="para-num">B</span> Modern researchers have approached the question from multiple angles. Comparative anatomy provides some clues. The human vocal tract differs from those of other primates in ways that suggest adaptation for speech: a lower larynx position allows for the production of a wider range of sounds. However, this anatomical change may have evolved before language itself, perhaps for other reasons such as swallowing efficiency. Brain imaging has identified regions essential for language processing, but related structures exist in other primates, complicating attempts to pinpoint when human-like language capacity emerged.</p>
-      
-      <p><span class="para-num">C</span> Genetic evidence has added new dimensions to the debate. The FOXP2 gene, dubbed "the language gene" in popular media, came to attention through studies of a British family with severe speech disorders. Members affected by a mutation in this gene struggle with both producing and understanding language. The human version of FOXP2 differs from that of chimpanzees by just two amino acids, and these differences are thought to have spread through human populations within the last 200,000 years. However, calling FOXP2 a language gene is misleading; it appears to play roles in many aspects of motor control, not just speech. Language depends on hundreds of genes working together, not on any single one.</p>
-      
-      <p><span class="para-num">D</span> Some researchers have looked to existing primate communication for clues. Vervet monkeys produce distinct alarm calls for different predators — one for eagles, another for snakes, a third for leopards. This suggests a rudimentary form of symbolic communication. However, primate calls are largely fixed and instinctive, while human language is open-ended and learned. The gap between these systems is enormous and may indicate that human language did not evolve gradually from primate calls but emerged through some more dramatic transformation.</p>
-      
-      <p><span class="para-num">E</span> The American linguist Noam Chomsky has long argued that the human capacity for language is uniquely complex and probably arose suddenly rather than through gradual evolution. He points to the fact that any normal child can acquire any human language with remarkable speed and accuracy, suggesting that the basic structures of language are somehow innate. Critics, including the cognitive scientist Steven Pinker, accept that language is partly innate but argue that this capacity must have evolved through normal evolutionary processes over hundreds of thousands of years.</p>
-      
-      <p><span class="para-num">F</span> Recent archaeological evidence has shifted the conversation. The emergence of complex tool-making, symbolic art, and trade networks among Homo sapiens around 70,000 years ago — often called the "cognitive revolution" — coincides with what many scholars believe was the development of fully modern language. Cave paintings, beadwork, and other early symbolic objects from this period suggest that the underlying cognitive abilities supporting language were in place. Some researchers argue that this represents not the origin of language but a fundamental change in how it was used, perhaps the emergence of grammar capable of expressing abstract thoughts.</p>
-      
-      <p><span class="para-num">G</span> What seems increasingly clear is that no single answer will satisfy the question of language origins. Language is not a single trait but a complex of abilities — pronunciation, vocabulary, grammar, conversation, narrative — each of which may have its own evolutionary history. The cognitive, anatomical, and social changes that produced modern language likely unfolded over a very long period and involved many small steps rather than one revolutionary leap. The 1866 ban on language origin papers was eventually rescinded, but the underlying mystery remains as intriguing as ever.</p>`,
-      
-      vi: `<p><strong>Đoạn A:</strong> Không câu hỏi nào trong ngôn ngữ học gây tranh cãi hơn việc ngôn ngữ con người xuất hiện như thế nào. Không như hóa thạch, lời nói không để lại dấu vết vật chất. Ghi chép sớm nhất chỉ khoảng 5,000 năm trước. Năm 1866, Hội Ngôn ngữ Paris đã cấm tất cả bài về chủ đề này.</p>
-      
-      <p><strong>Đoạn B:</strong> Các nhà nghiên cứu hiện đại tiếp cận từ nhiều góc độ. Giải phẫu so sánh cho thấy đường hô hấp con người khác với linh trưởng khác - thanh quản thấp hơn cho phép tạo ra phạm vi âm thanh rộng hơn. Tuy nhiên, thay đổi giải phẫu này có thể đã tiến hóa trước khi có ngôn ngữ.</p>
-      
-      <p><strong>Đoạn C:</strong> Bằng chứng di truyền thêm chiều cạnh mới. Gen FOXP2 được mệnh danh "gen ngôn ngữ" qua nghiên cứu gia đình Anh bị rối loạn nói. Phiên bản FOXP2 ở người khác với tinh tinh chỉ 2 axit amin. Tuy nhiên, ngôn ngữ phụ thuộc vào hàng trăm gen.</p>
-      
-      <p><strong>Đoạn D:</strong> Khỉ vervet phát ra các tiếng kêu báo động khác nhau cho các động vật săn mồi khác nhau. Điều này gợi ý hình thức giao tiếp tượng trưng sơ khai. Tuy nhiên, tiếng kêu linh trưởng phần lớn cố định và bản năng, còn ngôn ngữ con người mở và được học.</p>
-      
-      <p><strong>Đoạn E:</strong> Noam Chomsky lập luận năng lực ngôn ngữ của con người là độc đáo phức tạp và có lẽ xuất hiện đột ngột. Trẻ em bình thường có thể học bất kỳ ngôn ngữ nào nhanh chóng và chính xác. Steven Pinker chấp nhận ngôn ngữ phần nào bẩm sinh nhưng cho rằng nó tiến hóa qua quá trình tự nhiên.</p>
-      
-      <p><strong>Đoạn F:</strong> Bằng chứng khảo cổ học gần đây đã thay đổi cuộc trò chuyện. Sự xuất hiện của chế tác công cụ phức tạp, nghệ thuật tượng trưng, mạng lưới thương mại khoảng 70,000 năm trước — "cách mạng nhận thức" — trùng với điều nhiều học giả tin là sự phát triển ngôn ngữ hiện đại đầy đủ.</p>
-      
-      <p><strong>Đoạn G:</strong> Càng ngày càng rõ rằng không có câu trả lời duy nhất. Ngôn ngữ không phải đặc điểm đơn lẻ mà là tập hợp phức tạp các khả năng. Các thay đổi nhận thức, giải phẫu, xã hội tạo ra ngôn ngữ hiện đại có lẽ diễn ra trong thời gian rất dài.</p>`
-    }],
+    passages: [
+      {
+        label: 'Reading Passage 1',
+        title: 'The Mystery of Language Origins',
+        content: `<p><span class="para-num">A</span> No question in linguistics is more controversial than how human language first emerged. Unlike fossils of ancient bones or stone tools, speech leaves no physical trace. The earliest written records date from only about 5,000 years ago, but spoken language is certainly far older. Scholars have proposed dates ranging from 50,000 to over a million years for the emergence of fully modern language, with no consensus in sight. So intractable was this problem that in 1866, the Linguistic Society of Paris famously banned all papers on the topic, declaring it unsolvable.</p>
+        
+        <p><span class="para-num">B</span> Modern researchers have approached the question from multiple angles. Comparative anatomy provides some clues. The human vocal tract differs from those of other primates in ways that suggest adaptation for speech: a lower larynx position allows for the production of a wider range of sounds. However, this anatomical change may have evolved before language itself, perhaps for other reasons such as swallowing efficiency. Brain imaging has identified regions essential for language processing, but related structures exist in other primates, complicating attempts to pinpoint when human-like language capacity emerged.</p>
+        
+        <p><span class="para-num">C</span> Genetic evidence has added new dimensions to the debate. The FOXP2 gene, dubbed "the language gene" in popular media, came to attention through studies of a British family with severe speech disorders. Members affected by a mutation in this gene struggle with both producing and understanding language. The human version of FOXP2 differs from that of chimpanzees by just two amino acids, and these differences are thought to have spread through human populations within the last 200,000 years. However, calling FOXP2 a language gene is misleading; it appears to play roles in many aspects of motor control, not just speech. Language depends on hundreds of genes working together, not on any single one.</p>
+        
+        <p><span class="para-num">D</span> Some researchers have looked to existing primate communication for clues. Vervet monkeys produce distinct alarm calls for different predators — one for eagles, another for snakes, a third for leopards. This suggests a rudimentary form of symbolic communication. However, primate calls are largely fixed and instinctive, while human language is open-ended and learned. The gap between these systems is enormous and may indicate that human language did not evolve gradually from primate calls but emerged through some more dramatic transformation.</p>
+        
+        <p><span class="para-num">E</span> The American linguist Noam Chomsky has long argued that the human capacity for language is uniquely complex and probably arose suddenly rather than through gradual evolution. He points to the fact that any normal child can acquire any human language with remarkable speed and accuracy, suggesting that the basic structures of language are somehow innate. Critics, including the cognitive scientist Steven Pinker, accept that language is partly innate but argue that this capacity must have evolved through normal evolutionary processes over hundreds of thousands of years.</p>
+        
+        <p><span class="para-num">F</span> Recent archaeological evidence has shifted the conversation. The emergence of complex tool-making, symbolic art, and trade networks among Homo sapiens around 70,000 years ago — often called the "cognitive revolution" — coincides with what many scholars believe was the development of fully modern language. Cave paintings, beadwork, and other early symbolic objects from this period suggest that the underlying cognitive abilities supporting language were in place. Some researchers argue that this represents not the origin of language but a fundamental change in how it was used, perhaps the emergence of grammar capable of expressing abstract thoughts.</p>
+        
+        <p><span class="para-num">G</span> What seems increasingly clear is that no single answer will satisfy the question of language origins. Language is not a single trait but a complex of abilities — pronunciation, vocabulary, grammar, conversation, narrative — each of which may have its own evolutionary history. The cognitive, anatomical, and social changes that produced modern language likely unfolded over a very long period and involved many small steps rather than one revolutionary leap. The 1866 ban on language origin papers was eventually rescinded, but the underlying mystery remains as intriguing as ever.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Không câu hỏi nào trong ngôn ngữ học gây tranh cãi hơn việc ngôn ngữ con người xuất hiện như thế nào. Năm 1866, Hội Ngôn ngữ Paris đã cấm tất cả bài về chủ đề này.</p>
+        <p><strong>Đoạn B:</strong> Giải phẫu so sánh cho thấy đường hô hấp con người khác với linh trưởng khác. Tuy nhiên, thay đổi giải phẫu này có thể đã tiến hóa trước khi có ngôn ngữ.</p>
+        <p><strong>Đoạn C:</strong> Gen FOXP2 được mệnh danh "gen ngôn ngữ" qua nghiên cứu gia đình Anh bị rối loạn nói. Phiên bản FOXP2 ở người khác với tinh tinh chỉ 2 axit amin.</p>
+        <p><strong>Đoạn D:</strong> Khỉ vervet phát ra các tiếng kêu báo động khác nhau cho các động vật săn mồi khác nhau. Tuy nhiên, khoảng cách giữa các hệ thống này lớn.</p>
+        <p><strong>Đoạn E:</strong> Noam Chomsky lập luận năng lực ngôn ngữ của con người là độc đáo phức tạp. Steven Pinker chấp nhận ngôn ngữ phần nào bẩm sinh nhưng cho rằng nó tiến hóa qua quá trình tự nhiên.</p>
+        <p><strong>Đoạn F:</strong> Bằng chứng khảo cổ học gần đây đã thay đổi cuộc trò chuyện. "Cách mạng nhận thức" khoảng 70,000 năm trước trùng với điều nhiều học giả tin là sự phát triển ngôn ngữ hiện đại đầy đủ.</p>
+        <p><strong>Đoạn G:</strong> Không có câu trả lời duy nhất. Ngôn ngữ không phải đặc điểm đơn lẻ mà là tập hợp phức tạp các khả năng. Các thay đổi có lẽ diễn ra trong thời gian rất dài.</p>`
+      },
+      {
+        label: 'Reading Passage 2',
+        title: 'The Search for Lost Empires',
+        content: `<p><span class="para-num">A</span> Throughout history, civilisations have risen, flourished, and then disappeared, leaving behind ruins that capture the imagination of subsequent generations. The discovery of lost cities and forgotten kingdoms has been one of the most romantic pursuits of archaeology, often combining serious scientific investigation with elements of treasure hunting and adventure. Yet behind these dramatic discoveries lies a more sober reality: most lost civilisations were not discovered but rediscovered, having always been known to the people whose ancestors built them or who lived near their remains.</p>
+        
+        <p><span class="para-num">B</span> The case of Petra, the ancient Nabataean city carved from rose-coloured cliffs in modern Jordan, illustrates this pattern. The Swiss explorer Johann Ludwig Burckhardt is widely credited with "discovering" Petra in 1812 — but Bedouin people had been living among and around the ruins for centuries before he arrived. They knew exactly where the city was; they had simply never told European outsiders. Burckhardt\'s achievement was not so much finding Petra as bringing it to European attention by disguising himself as a Muslim pilgrim and persuading local guides to lead him to the site. The story of his "discovery" reveals as much about European attitudes as about archaeology.</p>
+        
+        <p><span class="para-num">C</span> Similar patterns appear in many other famous archaeological discoveries. The American adventurer Hiram Bingham III did not so much find Machu Picchu in 1911 as become the first outsider to publicise its existence. Local Quechua people had known about the Inca site throughout the centuries since its abandonment, and at least one previous European visitor had reached it without recognising its significance. The temples of Angkor in Cambodia, sometimes described as "rediscovered" by the French naturalist Henri Mouhot in 1860, had been known to local people and visited by various foreign travellers for centuries before Mouhot arrived.</p>
+        
+        <p><span class="para-num">D</span> The story of the ancient city of Troy demonstrates how the dramatic narrative of archaeological discovery can sometimes overshadow the actual evidence. Heinrich Schliemann, a wealthy German businessman with no formal archaeological training, claimed to have discovered the historical Troy in the 1870s. His excavations at Hisarlik in modern Turkey were carried out with little of the careful methodology that would become standard in archaeology. Schliemann\'s enthusiastic but destructive digging probably eliminated evidence that more patient excavation would have preserved, and many of his most famous claims have been questioned by later researchers. Yet his romantic story continues to dominate popular understanding of how Troy was found.</p>
+        
+        <p><span class="para-num">E</span> Some lost civilisations have been discovered through more recent and sometimes accidental means. The Terracotta Army of China, one of the most spectacular archaeological finds of the twentieth century, was discovered in 1974 by Chinese farmers digging a well. The thousands of life-sized clay warriors guarding the tomb of the first Chinese emperor had remained completely unknown for over two thousand years. Sometimes, modern technology reveals what traditional methods missed. Satellite imagery, ground-penetrating radar, and other remote sensing technologies have identified hundreds of previously unknown archaeological sites in recent decades, including substantial settlements lost beneath Cambodian jungles and in the Amazon basin.</p>
+        
+        <p><span class="para-num">F</span> The reasons civilisations are lost are as varied as the civilisations themselves. Environmental degradation has been blamed for the collapse of many ancient societies, including the Maya civilisation in Central America, which appears to have suffered drought conditions that overwhelmed its agricultural systems. Political conflicts and military defeats have erased others. The cumulative effects of disease, especially when new pathogens encountered populations with no immunity, devastated many indigenous American civilisations following European contact. Climate change, both natural and human-caused, has played roles ranging from minor to decisive.</p>
+        
+        <p><span class="para-num">G</span> The ongoing search for lost civilisations continues to teach us about how complex societies arise, develop, and disappear. As archaeological methods have improved and become more sensitive to local knowledge and indigenous perspectives, our understanding of these ancient cultures has deepened considerably. Future discoveries will probably emerge from places that were never quite lost — locations where descendants of ancient peoples have preserved memories and traditions that archaeologists have not yet thought to learn from. The romantic story of intrepid explorers finding hidden cities is giving way to a more honest narrative of collaboration between scientists and the people whose heritage they study.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Trong suốt lịch sử, các nền văn minh đã trỗi dậy, phát triển, rồi biến mất. Hầu hết các nền văn minh "mất tích" không được phát hiện mà được tái phát hiện - người dân địa phương luôn biết về chúng.</p>
+        <p><strong>Đoạn B:</strong> Trường hợp Petra minh họa mô hình này. Burckhardt được ghi nhận "phát hiện" Petra năm 1812 - nhưng người Bedouin đã sống quanh đó nhiều thế kỷ trước khi ông đến.</p>
+        <p><strong>Đoạn C:</strong> Các mô hình tương tự xuất hiện trong nhiều khám phá khảo cổ nổi tiếng. Hiram Bingham III không tìm thấy Machu Picchu năm 1911 mà chỉ là người ngoài đầu tiên công bố sự tồn tại của nó.</p>
+        <p><strong>Đoạn D:</strong> Heinrich Schliemann tuyên bố phát hiện Troy lịch sử trong những năm 1870. Phương pháp khai quật của ông không cẩn thận, có thể đã loại bỏ bằng chứng quan trọng.</p>
+        <p><strong>Đoạn E:</strong> Quân đội Đất nung của Trung Quốc được phát hiện năm 1974 bởi nông dân đào giếng. Công nghệ vệ tinh, radar xuyên đất hiện đại đã xác định hàng trăm địa điểm khảo cổ chưa biết.</p>
+        <p><strong>Đoạn F:</strong> Lý do các nền văn minh bị mất tích đa dạng. Suy thoái môi trường, xung đột chính trị, dịch bệnh, biến đổi khí hậu đều đóng vai trò.</p>
+        <p><strong>Đoạn G:</strong> Cuộc tìm kiếm liên tục các nền văn minh mất tích tiếp tục dạy chúng ta về cách các xã hội phức tạp phát sinh, phát triển, và biến mất. Câu chuyện lãng mạn đang nhường chỗ cho một câu chuyện trung thực hơn về sự hợp tác.</p>`
+      },
+      {
+        label: 'Reading Passage 3',
+        title: 'The Science of Emotional Intelligence',
+        content: `<p><span class="para-num">A</span> The concept of emotional intelligence, often shortened to EI or EQ, has become one of the most influential ideas in modern psychology and business. First popularised by the science journalist Daniel Goleman in his 1995 bestseller, the idea suggested that traditional measures of intelligence — IQ tests and academic achievement — captured only part of what makes people successful in life. Equally important, according to Goleman, are abilities to understand and manage emotions in oneself and others. Although the concept has faced significant criticism, it has profoundly influenced how we think about education, leadership, and personal development.</p>
+        
+        <p><span class="para-num">B</span> Emotional intelligence as a formal psychological concept was developed by the researchers Peter Salovey and John Mayer in academic papers published in the late 1980s and early 1990s. They defined it as comprising four related abilities: perceiving emotions in oneself and others, using emotions to facilitate thinking, understanding the meanings and causes of emotions, and managing emotions effectively. This original formulation was relatively narrow and testable. Goleman\'s subsequent popularisation expanded the concept considerably, adding components such as motivation, social skills, and empathy that were less precisely defined.</p>
+        
+        <p><span class="para-num">C</span> Research has linked higher levels of emotional intelligence to numerous positive outcomes. Studies of students have found that emotional intelligence correlates with academic performance, even after controlling for traditional measures of intelligence. Workers with higher emotional intelligence tend to receive better performance evaluations and to advance further in their careers. Marriages and friendships involving people with higher emotional intelligence tend to be more stable and satisfying. Health outcomes also appear better for emotionally intelligent individuals, possibly because they manage stress more effectively.</p>
+        
+        <p><span class="para-num">D</span> Despite its popularity, emotional intelligence has faced substantial scientific criticism. Critics point out that the concept overlaps heavily with established personality traits, particularly conscientiousness and agreeableness, which can be measured more precisely. The methodologies used to test emotional intelligence have also been questioned. Some tests rely on people\'s judgements about their own abilities, which may reflect self-perception more than actual skill. Other tests use scenarios where there is no clearly correct answer, raising questions about what they really measure. Whether emotional intelligence represents a coherent ability distinct from personality and intelligence remains debated among researchers.</p>
+        
+        <p><span class="para-num">E</span> The application of emotional intelligence in workplace settings has been particularly enthusiastic. Many companies now use emotional intelligence assessments in hiring and promotion decisions, and provide training programmes intended to develop these skills. Research evidence supporting the effectiveness of such programmes is mixed at best. Some studies have found significant improvements in employee behaviour and team functioning following emotional intelligence training, while others have found minimal effects. The commercial market for emotional intelligence services may have grown faster than the scientific evidence supporting their value.</p>
+        
+        <p><span class="para-num">F</span> Cultural differences in emotional expression and recognition present another challenge for emotional intelligence research. Most studies have been conducted in Western contexts and may not generalise to other cultures. Standards for appropriate emotional expression vary considerably across societies; behaviours considered emotionally intelligent in one cultural setting may be inappropriate in another. East Asian cultures often value emotional restraint that Western emotional intelligence frameworks might interpret as low emotional awareness. Research on emotional intelligence in non-Western contexts has lagged behind, leaving questions about how universal the concept actually is.</p>
+        
+        <p><span class="para-num">G</span> Whatever the ultimate scientific status of emotional intelligence as a coherent psychological concept, its influence on practical thinking about human relationships and success has been substantial. The basic insight — that managing emotions effectively contributes to wellbeing and achievement — seems sound even if measurement remains imprecise. Schools have introduced curricula focused on developing emotional skills in children. Therapy approaches increasingly emphasise emotional regulation. Whether or not emotional intelligence represents a single ability that can be measured precisely, its popularisation has contributed to taking emotions seriously as legitimate subjects of study and skill development.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Khái niệm trí tuệ cảm xúc (EI/EQ) đã trở thành một trong những ý tưởng có ảnh hưởng nhất trong tâm lý học hiện đại. Lần đầu được phổ biến bởi nhà báo khoa học Daniel Goleman năm 1995.</p>
+        <p><strong>Đoạn B:</strong> Trí tuệ cảm xúc được Peter Salovey và John Mayer phát triển trong các bài báo học thuật cuối những năm 1980. Họ định nghĩa nó bao gồm 4 khả năng liên quan.</p>
+        <p><strong>Đoạn C:</strong> Nghiên cứu đã liên kết mức độ trí tuệ cảm xúc cao hơn với nhiều kết quả tích cực - học tập, sự nghiệp, hôn nhân, sức khỏe.</p>
+        <p><strong>Đoạn D:</strong> Mặc dù phổ biến, trí tuệ cảm xúc đã đối mặt với chỉ trích khoa học đáng kể. Các nhà phê bình chỉ ra rằng khái niệm này trùng lặp nhiều với các đặc điểm tính cách đã thiết lập.</p>
+        <p><strong>Đoạn E:</strong> Việc ứng dụng EI trong môi trường nơi làm việc đặc biệt nhiệt tình. Tuy nhiên, bằng chứng nghiên cứu hỗ trợ hiệu quả của các chương trình như vậy là hỗn hợp.</p>
+        <p><strong>Đoạn F:</strong> Khác biệt văn hóa trong biểu hiện cảm xúc là một thách thức khác cho nghiên cứu EI. Hầu hết các nghiên cứu được thực hiện trong bối cảnh phương Tây.</p>
+        <p><strong>Đoạn G:</strong> Bất kể tình trạng khoa học cuối cùng, ảnh hưởng của EI đối với tư duy thực tế đã đáng kể. Trường học đã giới thiệu chương trình phát triển kỹ năng cảm xúc cho trẻ em.</p>`
+      }
+    ],
     
     questions: [
-      {
-        group: 'Questions 1–6',
-        type: 'tfng',
-        instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
-        items: [
-          { q: 'There is general agreement among scholars about when language first appeared.', answer: 'FALSE', explain: 'Đoạn A: "no consensus in sight" - không có sự đồng thuận.' },
-          { q: 'The Linguistic Society of Paris banned papers on language origins in 1866.', answer: 'TRUE', explain: 'Đoạn A: "in 1866, the Linguistic Society of Paris famously banned all papers on the topic".' },
-          { q: 'The human larynx position evolved specifically for producing speech sounds.', answer: 'NOT GIVEN', explain: 'Đoạn B nói thanh quản thấp cho phép tạo âm thanh, nhưng cũng nói có thể tiến hóa vì lý do khác như nuốt.' },
-          { q: 'The FOXP2 gene is the only gene responsible for language ability.', answer: 'FALSE', explain: 'Đoạn C: "Language depends on hundreds of genes working together, not on any single one".' },
-          { q: 'Vervet monkeys can learn to produce new alarm calls when needed.', answer: 'NOT GIVEN', explain: 'Đoạn D nói tiếng kêu phần lớn cố định/bản năng nhưng không khẳng định chúng có thể/không thể học calls mới.' },
-          { q: 'Cave paintings appeared at roughly the same time as the cognitive revolution.', answer: 'TRUE', explain: 'Đoạn F: "Cave paintings, beadwork, and other early symbolic objects from this period" liên hệ với "cognitive revolution".' }
-        ]
-      },
-      {
-        group: 'Questions 7–10',
-        type: 'mcq',
-        instruction: 'Choose the correct letter, A, B, C or D.',
-        items: [
-          { q: 'According to the passage, the FOXP2 gene was studied through:', options: ['A. Research on chimpanzees', 'B. Computer simulations', 'C. A British family with speech disorders', 'D. Comparing different languages'], answer: 'C', explain: 'Đoạn C: "came to attention through studies of a British family with severe speech disorders".' },
-          { q: 'The "cognitive revolution" mentioned in the passage refers to:', options: ['A. The first development of written language', 'B. The emergence of complex behaviors around 70,000 years ago', 'C. A scientific theory developed by Chomsky', 'D. A modern teaching method for languages'], answer: 'B', explain: 'Đoạn F: "around 70,000 years ago — often called the cognitive revolution".' },
-          { q: 'Noam Chomsky believes that language:', options: ['A. Evolved very slowly over millions of years', 'B. Cannot be acquired by children naturally', 'C. Is uniquely complex and probably emerged suddenly', 'D. Developed from primate communication systems'], answer: 'C', explain: 'Đoạn E: "uniquely complex and probably arose suddenly rather than through gradual evolution".' },
-          { q: 'The author\'s overall conclusion about language origins is that:', options: ['A. The mystery has been mostly solved', 'B. A single dramatic event must explain everything', 'C. Many small changes likely contributed over a long period', 'D. The question will never be answered'], answer: 'C', explain: 'Đoạn G: "likely unfolded over a very long period and involved many small steps".' }
-        ]
-      },
-      {
-        group: 'Questions 11–13',
-        type: 'fill',
-        instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
-        items: [
-          { q: 'The human version of FOXP2 differs from chimpanzees\' by just __________ amino acids.', answer: 'two', explain: 'Đoạn C: "differs from that of chimpanzees by just two amino acids".' },
-          { q: 'Vervet monkeys use different __________ calls for different predators.', answer: 'alarm', explain: 'Đoạn D: "produce distinct alarm calls for different predators".' },
-          { q: 'Some scholars believe the development of __________ allowed the expression of abstract thoughts.', answer: 'grammar', explain: 'Đoạn F: "the emergence of grammar capable of expressing abstract thoughts".' }
-        ]
-      }
+      // ========== PASSAGE 1 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 1–6',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'There is general agreement among scholars about when language first appeared.', answer: 'FALSE', explain: 'Đoạn A: "no consensus in sight".' },
+            { q: 'The Linguistic Society of Paris banned papers on language origins in 1866.', answer: 'TRUE', explain: 'Đoạn A: "in 1866, the Linguistic Society of Paris famously banned all papers".' },
+            { q: 'The human larynx position evolved specifically for producing speech sounds.', answer: 'NOT GIVEN', explain: 'Đoạn B nói thanh quản thấp cho phép tạo âm thanh, nhưng cũng nói có thể tiến hóa vì lý do khác.' },
+            { q: 'The FOXP2 gene is the only gene responsible for language ability.', answer: 'FALSE', explain: 'Đoạn C: "Language depends on hundreds of genes working together".' },
+            { q: 'Vervet monkeys can learn to produce new alarm calls when needed.', answer: 'NOT GIVEN', explain: 'Đoạn D nói tiếng kêu phần lớn cố định/bản năng nhưng không khẳng định có thể/không thể học calls mới.' },
+            { q: 'Cave paintings appeared at roughly the same time as the cognitive revolution.', answer: 'TRUE', explain: 'Đoạn F: "Cave paintings, beadwork, and other early symbolic objects from this period" liên hệ với "cognitive revolution".' }
+          ]
+        },
+        {
+          group: 'Questions 7–10',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to the passage, the FOXP2 gene was studied through:', options: ['A. Research on chimpanzees', 'B. Computer simulations', 'C. A British family with speech disorders', 'D. Comparing different languages'], answer: 'C', explain: 'Đoạn C: "studies of a British family with severe speech disorders".' },
+            { q: 'The "cognitive revolution" mentioned in the passage refers to:', options: ['A. The first development of written language', 'B. The emergence of complex behaviors around 70,000 years ago', 'C. A scientific theory developed by Chomsky', 'D. A modern teaching method for languages'], answer: 'B', explain: 'Đoạn F: "around 70,000 years ago — often called the cognitive revolution".' },
+            { q: 'Noam Chomsky believes that language:', options: ['A. Evolved very slowly over millions of years', 'B. Cannot be acquired by children naturally', 'C. Is uniquely complex and probably emerged suddenly', 'D. Developed from primate communication systems'], answer: 'C', explain: 'Đoạn E: "uniquely complex and probably arose suddenly".' },
+            { q: 'The author\'s overall conclusion about language origins is that:', options: ['A. The mystery has been mostly solved', 'B. A single dramatic event must explain everything', 'C. Many small changes likely contributed over a long period', 'D. The question will never be answered'], answer: 'C', explain: 'Đoạn G: "likely unfolded over a very long period and involved many small steps".' }
+          ]
+        },
+        {
+          group: 'Questions 11–13',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'The human version of FOXP2 differs from chimpanzees\' by just __________ amino acids.', answer: 'two', explain: 'Đoạn C: "differs from that of chimpanzees by just two amino acids".' },
+            { q: 'Vervet monkeys use different __________ calls for different predators.', answer: 'alarm', explain: 'Đoạn D: "produce distinct alarm calls for different predators".' },
+            { q: 'Some scholars believe the development of __________ allowed the expression of abstract thoughts.', answer: 'grammar', explain: 'Đoạn F: "the emergence of grammar capable of expressing abstract thoughts".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 2 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 14–19',
+          type: 'matching-headings',
+          instruction: 'Reading Passage 2 has seven paragraphs, A-G. Choose the correct heading for each paragraph from the list below.',
+          headings: [
+            { id: 'i', text: 'A romantic but problematic narrative of discovery' },
+            { id: 'ii', text: 'Local knowledge that was always present' },
+            { id: 'iii', text: 'A famous case of European "discovery"' },
+            { id: 'iv', text: 'Patterns repeated across many sites' },
+            { id: 'v', text: 'How modern methods reveal hidden sites' },
+            { id: 'vi', text: 'Various causes of civilisational collapse' },
+            { id: 'vii', text: 'Toward a more collaborative future' },
+            { id: 'viii', text: 'Influence of religious sites on history' },
+            { id: 'ix', text: 'Mapping ancient trade routes' }
+          ],
+          items: [
+            { q: 'A', answer: 'ii', explain: 'Đoạn A giới thiệu thực tế rằng các nền văn minh "mất tích" thực ra luôn được người dân địa phương biết đến.' },
+            { q: 'B', answer: 'iii', explain: 'Đoạn B là một trường hợp nổi tiếng - Petra được Burckhardt "phát hiện".' },
+            { q: 'C', answer: 'iv', explain: 'Đoạn C nói các mô hình tương tự lặp lại ở nhiều di tích - Machu Picchu, Angkor.' },
+            { q: 'D', answer: 'i', explain: 'Đoạn D về câu chuyện Schliemann tìm Troy - romantic nhưng có vấn đề về phương pháp.' },
+            { q: 'E', answer: 'v', explain: 'Đoạn E về phương pháp hiện đại - vệ tinh, radar - tiết lộ địa điểm ẩn.' },
+            { q: 'F', answer: 'vi', explain: 'Đoạn F về các nguyên nhân khác nhau của sự sụp đổ văn minh.' }
+          ]
+        },
+        {
+          group: 'Questions 20–23',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 2? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'Burckhardt was the first European to visit Petra.', answer: 'NOT GIVEN', explain: 'Đoạn B nói ông được ghi nhận "phát hiện" Petra cho người châu Âu nhưng không khẳng định ông là người châu Âu đầu tiên.' },
+            { q: 'Hiram Bingham was the first European to reach Machu Picchu.', answer: 'FALSE', explain: 'Đoạn C: "at least one previous European visitor had reached it without recognising its significance".' },
+            { q: 'Schliemann had received formal training as an archaeologist.', answer: 'FALSE', explain: 'Đoạn D: "Heinrich Schliemann, a wealthy German businessman with no formal archaeological training".' },
+            { q: 'The Terracotta Army was discovered by professional archaeologists in 1974.', answer: 'FALSE', explain: 'Đoạn E: "discovered in 1974 by Chinese farmers digging a well".' }
+          ]
+        },
+        {
+          group: 'Questions 24–26',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'Burckhardt entered Petra disguised as a Muslim __________.', answer: 'pilgrim', explain: 'Đoạn B: "disguising himself as a Muslim pilgrim".' },
+            { q: 'The Maya civilisation appears to have suffered __________ conditions that overwhelmed agriculture.', answer: 'drought', explain: 'Đoạn F: "suffered drought conditions that overwhelmed its agricultural systems".' },
+            { q: 'Future discoveries will likely emerge through __________ between scientists and local people.', answer: 'collaboration', explain: 'Đoạn G: "collaboration between scientists and the people whose heritage they study".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 3 QUESTIONS (14 questions) ==========
+      [
+        {
+          group: 'Questions 27–32',
+          type: 'matching-information',
+          instruction: 'Reading Passage 3 has seven paragraphs, A-G. Which paragraph contains the following information?',
+          paragraphs: ['A','B','C','D','E','F','G'],
+          items: [
+            { q: 'A reference to a journalist who popularised the concept of emotional intelligence.', answer: 'A', explain: 'Đoạn A: "the science journalist Daniel Goleman in his 1995 bestseller".' },
+            { q: 'The names of the academic researchers who originally formulated emotional intelligence.', answer: 'B', explain: 'Đoạn B: "the researchers Peter Salovey and John Mayer".' },
+            { q: 'A discussion of why testing methods for emotional intelligence are problematic.', answer: 'D', explain: 'Đoạn D: "The methodologies used to test emotional intelligence have also been questioned".' },
+            { q: 'Mention of an East Asian cultural value that conflicts with Western EI frameworks.', answer: 'F', explain: 'Đoạn F: "East Asian cultures often value emotional restraint that Western emotional intelligence frameworks might interpret as low emotional awareness".' },
+            { q: 'A list of life outcomes linked to higher emotional intelligence.', answer: 'C', explain: 'Đoạn C: liệt kê - học tập, sự nghiệp, hôn nhân, sức khỏe.' },
+            { q: 'A summary of EI\'s influence on education and therapy.', answer: 'G', explain: 'Đoạn G: "Schools have introduced curricula... Therapy approaches increasingly emphasise emotional regulation".' }
+          ]
+        },
+        {
+          group: 'Questions 33–36',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to Salovey and Mayer\'s original formulation, emotional intelligence comprises:', options: ['A. Two main abilities', 'B. Four related abilities', 'C. Seven distinct components', 'D. An unlimited number of skills'], answer: 'B', explain: 'Đoạn B: "comprising four related abilities".' },
+            { q: 'A major criticism of emotional intelligence is that it:', options: ['A. Cannot be measured at all', 'B. Overlaps with established personality traits', 'C. Was only invented in the 21st century', 'D. Has no practical applications'], answer: 'B', explain: 'Đoạn D: "the concept overlaps heavily with established personality traits".' },
+            { q: 'Research evidence on emotional intelligence training programmes is:', options: ['A. Uniformly positive', 'B. Uniformly negative', 'C. Mixed at best', 'D. Not available'], answer: 'C', explain: 'Đoạn E: "Research evidence supporting the effectiveness of such programmes is mixed at best".' },
+            { q: 'The author\'s overall view is that emotional intelligence:', options: ['A. Is a precisely measurable scientific concept', 'B. Has been completely discredited by research', 'C. Has practical influence even if measurement remains imprecise', 'D. Will be replaced by better concepts soon'], answer: 'C', explain: 'Đoạn G: "its influence on practical thinking about human relationships... has been substantial. The basic insight... seems sound even if measurement remains imprecise".' }
+          ]
+        },
+        {
+          group: 'Questions 37–40',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
+          items: [
+            { q: 'Goleman\'s influential book on emotional intelligence was published in __________.', answer: '1995', explain: 'Đoạn A: "1995 bestseller".' },
+            { q: 'Some EI tests rely on people\'s judgements about their own __________.', answer: 'abilities', explain: 'Đoạn D: "Some tests rely on people\'s judgements about their own abilities".' },
+            { q: 'Most research on emotional intelligence has been conducted in __________ contexts.', answer: 'Western', explain: 'Đoạn F: "Most studies have been conducted in Western contexts".' },
+            { q: 'Therapy approaches increasingly emphasise emotional __________.', answer: 'regulation', explain: 'Đoạn G: "Therapy approaches increasingly emphasise emotional regulation".' }
+          ]
+        }
+      ]
     ]
   },
 
@@ -1788,73 +2064,211 @@ const TESTS_DATA = {
     title: 'The Hidden World of Fungi',
     topic: 'Biology · Ecology',
     difficulty: 'Medium',
-    passages: [{
-      label: 'Reading Passage 1',
-      title: 'The Hidden World of Fungi',
-      content: `<p><span class="para-num">A</span> When most people think of fungi, they picture mushrooms — the visible reproductive structures that occasionally appear on forest floors or in damp lawns. But mushrooms are merely the small visible tip of a vast hidden network. Beneath every step you take in a healthy forest, an extensive web of fungal filaments called mycelium spreads through the soil. A single fungal organism can extend over many square kilometres and weigh more than a hundred tonnes — among the largest living things on Earth. The fungus is one of nature\'s most fundamental yet least understood kingdoms of life.</p>
-      
-      <p><span class="para-num">B</span> Fungi occupy a unique position in the living world. They are neither plants nor animals but constitute their own biological kingdom. Unlike plants, fungi cannot photosynthesise; they obtain their energy by breaking down organic matter, whether dead leaves, fallen logs, or living tissues. Unlike animals, they do not move actively, instead growing toward food sources by extending their mycelial networks. Some fungi are microscopic, while others form structures visible from space. The estimated total number of fungal species is around five million, but only about 150,000 have been formally described — meaning most of fungal diversity remains entirely unknown to science.</p>
-      
-      <p><span class="para-num">C</span> Perhaps the most remarkable aspect of fungi is their relationship with plants. The vast majority of land plants — over 90 percent — depend on partnerships with specific fungi to thrive. These relationships, called mycorrhizal associations, involve fungi attaching to plant roots and exchanging resources. The fungi extend the effective root area enormously, gathering water and nutrients that the plant could not reach alone. In return, the plant supplies the fungi with sugars produced through photosynthesis. This partnership likely played a key role in the original colonisation of land by plants over 400 million years ago, and continues to be essential to nearly all terrestrial ecosystems today.</p>
-      
-      <p><span class="para-num">D</span> Recent research has revealed that mycorrhizal networks also connect different plants to each other. Trees in a forest can share resources through underground fungal connections, with mature trees sometimes transferring sugars to young saplings struggling to grow in the shade. The Canadian ecologist Suzanne Simard, whose pioneering work in this field popularised the term "wood-wide web," has shown that these networks can transfer not only nutrients but also chemical signals warning of insect attacks or other dangers. Trees that previously seemed to be solitary competitors emerge from this research as members of complex collaborative communities.</p>
-      
-      <p><span class="para-num">E</span> Fungi also serve as the principal decomposers in most ecosystems. When trees fall, leaves drop, or animals die, fungi are the primary agents that break this material down, releasing the nutrients it contains back into the soil for new growth. Without this decomposition, ecosystems would gradually choke on accumulated dead matter, and the nutrients required for new life would remain locked up in dead tissues. Fungi can break down compounds that almost nothing else can digest, including the tough cellulose and lignin that give wood its strength. Some specialised fungi can even break down petroleum products and certain plastics.</p>
-      
-      <p><span class="para-num">F</span> Humans have long made practical use of fungi, often without understanding what they were using. Bread, beer, and wine all depend on fungi called yeasts that ferment sugars into alcohol and carbon dioxide. Cheese-making frequently uses moulds to produce distinctive flavours and textures. The discovery of penicillin from a mould in 1928 launched the antibiotic revolution, and many other important medicines including statins and immunosuppressant drugs were originally derived from fungal compounds. More recently, researchers have begun exploring fungi as sustainable materials for construction, packaging, and even leather substitutes.</p>
-      
-      <p><span class="para-num">G</span> Despite their importance, fungi receive far less attention than plants or animals in conservation efforts. Many fungal species are threatened by habitat destruction, climate change, and pollution, but few are formally protected. Some scientists argue that this neglect reflects a broader cultural blindness to the importance of fungi — an underground kingdom whose contributions to ecosystem function and human welfare remain dramatically undervalued. Greater understanding of fungi, advocates suggest, could transform our approach to medicine, agriculture, materials science, and environmental management. The mushrooms we see emerging from forest floors are reminders of the vast unseen biological work occurring beneath our feet.</p>`,
-      
-      vi: `<p><strong>Đoạn A:</strong> Khi hầu hết mọi người nghĩ về nấm, họ hình dung mushroom - các cấu trúc sinh sản nhìn thấy được. Nhưng mushroom chỉ là phần đỉnh nhỏ nhìn thấy của một mạng lưới ẩn rộng lớn. Bên dưới mỗi bước đi trong rừng khỏe mạnh, mạng lưới sợi nấm gọi là mycelium lan rộng qua đất. Một sinh vật nấm đơn lẻ có thể trải dài hàng km vuông.</p>
-      
-      <p><strong>Đoạn B:</strong> Nấm chiếm vị trí độc đáo trong thế giới sống. Chúng không phải thực vật hay động vật mà là vương quốc sinh học riêng. Không như thực vật, nấm không thể quang hợp; chúng lấy năng lượng bằng cách phân hủy vật chất hữu cơ. Tổng số loài nấm ước tính khoảng 5 triệu, nhưng chỉ khoảng 150,000 đã được mô tả chính thức.</p>
-      
-      <p><strong>Đoạn C:</strong> Có lẽ khía cạnh đáng chú ý nhất của nấm là mối quan hệ với thực vật. Hơn 90% thực vật trên cạn phụ thuộc vào quan hệ đối tác với các loài nấm cụ thể. Các mối quan hệ này gọi là mycorrhizal - nấm gắn vào rễ cây và trao đổi tài nguyên. Nấm mở rộng diện tích rễ hiệu quả enormously. Đối tác này có lẽ đóng vai trò then chốt trong việc thực vật ban đầu chiếm lĩnh đất liền hơn 400 triệu năm trước.</p>
-      
-      <p><strong>Đoạn D:</strong> Nghiên cứu gần đây tiết lộ rằng mạng lưới mycorrhizal cũng kết nối các cây khác nhau với nhau. Cây trong rừng có thể chia sẻ tài nguyên qua kết nối nấm dưới lòng đất. Nhà sinh thái Canada Suzanne Simard đã phổ biến thuật ngữ "wood-wide web" - các mạng này có thể chuyển không chỉ chất dinh dưỡng mà còn tín hiệu hóa học cảnh báo về tấn công côn trùng.</p>
-      
-      <p><strong>Đoạn E:</strong> Nấm cũng phục vụ như chất phân hủy chính trong hầu hết hệ sinh thái. Khi cây đổ, lá rụng, động vật chết, nấm là tác nhân chính phân hủy vật liệu này. Không có sự phân hủy này, hệ sinh thái sẽ dần ngạt thở. Nấm có thể phân hủy các hợp chất mà hầu như không có gì khác có thể tiêu hóa, bao gồm cellulose và lignin tough. Một số nấm chuyên biệt thậm chí phân hủy sản phẩm dầu mỏ và nhựa.</p>
-      
-      <p><strong>Đoạn F:</strong> Con người từ lâu đã sử dụng thực tế nấm. Bánh mì, bia, rượu vang đều phụ thuộc vào yeast lên men đường thành cồn và CO2. Việc làm phô mai thường dùng nấm mốc. Phát hiện penicillin từ nấm mốc năm 1928 mở ra cuộc cách mạng kháng sinh. Các nhà nghiên cứu đang khám phá nấm như vật liệu bền vững cho xây dựng, đóng gói, thậm chí thay thế da.</p>
-      
-      <p><strong>Đoạn G:</strong> Mặc dù quan trọng, nấm nhận được ít sự chú ý hơn nhiều so với thực vật hay động vật trong nỗ lực bảo tồn. Nhiều loài nấm bị đe dọa bởi phá hủy môi trường sống, biến đổi khí hậu, ô nhiễm, nhưng ít được bảo vệ chính thức. Hiểu biết sâu hơn về nấm có thể biến đổi cách tiếp cận của chúng ta với y học, nông nghiệp, khoa học vật liệu.</p>`
-    }],
+    passages: [
+      {
+        label: 'Reading Passage 1',
+        title: 'The Hidden World of Fungi',
+        content: `<p><span class="para-num">A</span> When most people think of fungi, they picture mushrooms — the visible reproductive structures that occasionally appear on forest floors or in damp lawns. But mushrooms are merely the small visible tip of a vast hidden network. Beneath every step you take in a healthy forest, an extensive web of fungal filaments called mycelium spreads through the soil. A single fungal organism can extend over many square kilometres and weigh more than a hundred tonnes — among the largest living things on Earth. The fungus is one of nature\'s most fundamental yet least understood kingdoms of life.</p>
+        
+        <p><span class="para-num">B</span> Fungi occupy a unique position in the living world. They are neither plants nor animals but constitute their own biological kingdom. Unlike plants, fungi cannot photosynthesise; they obtain their energy by breaking down organic matter, whether dead leaves, fallen logs, or living tissues. Unlike animals, they do not move actively, instead growing toward food sources by extending their mycelial networks. Some fungi are microscopic, while others form structures visible from space. The estimated total number of fungal species is around five million, but only about 150,000 have been formally described — meaning most of fungal diversity remains entirely unknown to science.</p>
+        
+        <p><span class="para-num">C</span> Perhaps the most remarkable aspect of fungi is their relationship with plants. The vast majority of land plants — over 90 percent — depend on partnerships with specific fungi to thrive. These relationships, called mycorrhizal associations, involve fungi attaching to plant roots and exchanging resources. The fungi extend the effective root area enormously, gathering water and nutrients that the plant could not reach alone. In return, the plant supplies the fungi with sugars produced through photosynthesis. This partnership likely played a key role in the original colonisation of land by plants over 400 million years ago, and continues to be essential to nearly all terrestrial ecosystems today.</p>
+        
+        <p><span class="para-num">D</span> Recent research has revealed that mycorrhizal networks also connect different plants to each other. Trees in a forest can share resources through underground fungal connections, with mature trees sometimes transferring sugars to young saplings struggling to grow in the shade. The Canadian ecologist Suzanne Simard, whose pioneering work in this field popularised the term "wood-wide web," has shown that these networks can transfer not only nutrients but also chemical signals warning of insect attacks or other dangers. Trees that previously seemed to be solitary competitors emerge from this research as members of complex collaborative communities.</p>
+        
+        <p><span class="para-num">E</span> Fungi also serve as the principal decomposers in most ecosystems. When trees fall, leaves drop, or animals die, fungi are the primary agents that break this material down, releasing the nutrients it contains back into the soil for new growth. Without this decomposition, ecosystems would gradually choke on accumulated dead matter, and the nutrients required for new life would remain locked up in dead tissues. Fungi can break down compounds that almost nothing else can digest, including the tough cellulose and lignin that give wood its strength. Some specialised fungi can even break down petroleum products and certain plastics.</p>
+        
+        <p><span class="para-num">F</span> Humans have long made practical use of fungi, often without understanding what they were using. Bread, beer, and wine all depend on fungi called yeasts that ferment sugars into alcohol and carbon dioxide. Cheese-making frequently uses moulds to produce distinctive flavours and textures. The discovery of penicillin from a mould in 1928 launched the antibiotic revolution, and many other important medicines including statins and immunosuppressant drugs were originally derived from fungal compounds. More recently, researchers have begun exploring fungi as sustainable materials for construction, packaging, and even leather substitutes.</p>
+        
+        <p><span class="para-num">G</span> Despite their importance, fungi receive far less attention than plants or animals in conservation efforts. Many fungal species are threatened by habitat destruction, climate change, and pollution, but few are formally protected. Some scientists argue that this neglect reflects a broader cultural blindness to the importance of fungi — an underground kingdom whose contributions to ecosystem function and human welfare remain dramatically undervalued. Greater understanding of fungi, advocates suggest, could transform our approach to medicine, agriculture, materials science, and environmental management. The mushrooms we see emerging from forest floors are reminders of the vast unseen biological work occurring beneath our feet.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Khi hầu hết mọi người nghĩ về nấm, họ hình dung mushroom. Nhưng mushroom chỉ là phần đỉnh nhỏ nhìn thấy của một mạng lưới ẩn rộng lớn. Mycelium lan rộng qua đất - một sinh vật nấm đơn lẻ có thể trải dài hàng km vuông.</p>
+        <p><strong>Đoạn B:</strong> Nấm chiếm vị trí độc đáo - không phải thực vật hay động vật mà là vương quốc sinh học riêng. Tổng số loài nấm ước tính khoảng 5 triệu, nhưng chỉ khoảng 150,000 đã được mô tả chính thức.</p>
+        <p><strong>Đoạn C:</strong> Hơn 90% thực vật trên cạn phụ thuộc vào quan hệ đối tác với các loài nấm cụ thể. Mối quan hệ mycorrhizal - nấm gắn vào rễ cây và trao đổi tài nguyên.</p>
+        <p><strong>Đoạn D:</strong> Mycorrhizal networks cũng kết nối các cây khác nhau. Nhà sinh thái Canada Suzanne Simard phổ biến thuật ngữ "wood-wide web" - mạng này có thể chuyển chất dinh dưỡng và tín hiệu hóa học.</p>
+        <p><strong>Đoạn E:</strong> Nấm là chất phân hủy chính trong hầu hết hệ sinh thái. Nấm có thể phân hủy cellulose và lignin. Một số nấm chuyên biệt phân hủy dầu mỏ và nhựa.</p>
+        <p><strong>Đoạn F:</strong> Bánh mì, bia, rượu vang phụ thuộc vào yeast. Phát hiện penicillin từ nấm mốc năm 1928 mở ra cuộc cách mạng kháng sinh.</p>
+        <p><strong>Đoạn G:</strong> Nấm nhận được ít sự chú ý hơn nhiều trong bảo tồn. Hiểu biết sâu hơn có thể biến đổi cách tiếp cận của chúng ta với y học, nông nghiệp.</p>`
+      },
+      {
+        label: 'Reading Passage 2',
+        title: 'The Mystery of Mass Migrations',
+        content: `<p><span class="para-num">A</span> Throughout history, large populations have sometimes left their homelands to settle elsewhere — a phenomenon known as mass migration. These movements have shaped the genetic makeup of populations, transformed political boundaries, and produced cultures that blend influences from multiple sources. Some migrations are well documented in historical records; others must be reconstructed from archaeological evidence, linguistic patterns, or modern DNA studies. The reasons people migrate remain complex, but certain patterns recur throughout human history.</p>
+        
+        <p><span class="para-num">B</span> The most extensively studied prehistoric migration is the spread of farming peoples from Anatolia (modern Turkey) into Europe, beginning around 8,000 years ago. Ancient DNA evidence has confirmed that the genetic makeup of European populations changed substantially during this period as farmers expanded westward, partly replacing and partly mixing with the hunter-gatherer populations they encountered. This migration brought not only new genetic material but also the practice of agriculture, new languages, and distinctive types of pottery. The descendants of these early farmers contributed significantly to the genetic composition of all modern Europeans.</p>
+        
+        <p><span class="para-num">C</span> Another remarkable prehistoric movement was the colonisation of the Pacific by Austronesian-speaking peoples beginning around 5,000 years ago. From a homeland probably in modern Taiwan or southern China, these voyagers gradually spread across an enormous oceanic area, ultimately reaching destinations as distant as Madagascar to the west, Easter Island to the east, and New Zealand to the south. The technological achievement of these voyages, undertaken without modern navigation aids in small wooden boats, ranks among the great triumphs of human exploration. Genetic studies of modern Pacific populations confirm the basic patterns described by earlier linguistic research.</p>
+        
+        <p><span class="para-num">D</span> The reasons populations migrate are typically complex and often debated. Climate change has been blamed for many ancient movements — periods of drought or cooling temperatures driving populations to seek more favourable conditions. Population pressure on limited resources, particularly farmland, has motivated movements throughout history. Conflict and persecution have produced refugee migrations in many periods, from the dispersal of religious minorities to the population movements following major wars. Economic opportunity, both real and imagined, has drawn people to new regions throughout history. Often multiple factors operate simultaneously, making any simple explanation incomplete.</p>
+        
+        <p><span class="para-num">E</span> The Bantu expansion across Africa represents one of the most significant population movements in human history. Beginning around 3,000 years ago, Bantu-speaking peoples expanded from a homeland in the modern Cameroon-Nigeria border region across much of sub-Saharan Africa. They brought with them agricultural practices, iron-working technology, and language families that today account for hundreds of related African languages. By the time European colonisers arrived, Bantu speakers had spread across an enormous area, replacing or absorbing many earlier populations.</p>
+        
+        <p><span class="para-num">F</span> More recent migrations have been better documented and more controversial in their effects. The settlement of the Americas by Europeans, beginning around 500 years ago, transformed both continents through population movements involving tens of millions of people from Europe and Africa. Diseases brought by Europeans devastated indigenous American populations, sometimes killing 90 percent or more of affected communities. The mass enslavement of African peoples and their forced transportation to American colonies produced one of the most significant involuntary migrations in history. The cultural and genetic consequences of these movements continue to shape the Americas today.</p>
+        
+        <p><span class="para-num">G</span> Modern migration patterns differ in important ways from earlier movements. Industrial economies create labour demands that draw migrants across long distances. International transport makes movement possible on scales that would have been unimaginable to earlier generations. National borders, supported by passport controls and visa requirements, restrict movement in ways unknown to most historical migrations. Yet despite these changes, the basic patterns of mass migration — driven by economic opportunity, environmental change, conflict, and family connections — remain remarkably similar to those documented throughout history. Whether modern democracies can manage migration humanely while addressing legitimate concerns of host populations remains among the most contested political questions of our time.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Trong suốt lịch sử, các quần thể lớn đôi khi rời bỏ quê hương để định cư ở nơi khác — hiện tượng gọi là di cư hàng loạt. Một số di cư được ghi chép tốt trong lịch sử, những trường hợp khác phải tái dựng từ khảo cổ, ngôn ngữ, DNA.</p>
+        <p><strong>Đoạn B:</strong> Di cư tiền sử được nghiên cứu nhiều nhất là sự lan rộng của nông dân từ Anatolia vào châu Âu khoảng 8,000 năm trước. Bằng chứng DNA xác nhận cấu trúc di truyền châu Âu thay đổi đáng kể.</p>
+        <p><strong>Đoạn C:</strong> Người Austronesian thực dân hóa Thái Bình Dương từ 5,000 năm trước. Từ Đài Loan, họ đến Madagascar, đảo Phục Sinh, New Zealand. Một thành tựu công nghệ phi thường.</p>
+        <p><strong>Đoạn D:</strong> Lý do di cư phức tạp - biến đổi khí hậu, áp lực dân số, xung đột, cơ hội kinh tế. Thường nhiều yếu tố hoạt động cùng nhau.</p>
+        <p><strong>Đoạn E:</strong> Sự mở rộng Bantu khắp châu Phi từ 3,000 năm trước. Họ mang nông nghiệp, công nghệ sắt, các họ ngôn ngữ.</p>
+        <p><strong>Đoạn F:</strong> Di cư gần đây - thực dân hóa châu Mỹ thay đổi cả hai lục địa. Dịch bệnh giết 90% hoặc hơn cộng đồng bản địa. Buôn bán nô lệ là một trong những di cư không tự nguyện lớn nhất.</p>
+        <p><strong>Đoạn G:</strong> Di cư hiện đại khác biệt - kinh tế công nghiệp, vận tải quốc tế, kiểm soát biên giới. Tuy nhiên các yếu tố cơ bản vẫn tương tự lịch sử.</p>`
+      },
+      {
+        label: 'Reading Passage 3',
+        title: 'The Philosophy of Time',
+        content: `<p><span class="para-num">A</span> Few questions in philosophy have proven as resistant to definitive answers as the nature of time. Despite millennia of inquiry, philosophers continue to disagree fundamentally about what time actually is. Does time flow, in some objective sense, from past to future? Are past, present, and future equally real, or does only the present truly exist? Such questions might seem academic, but they connect to deeply practical concerns about personal identity, moral responsibility, and the meaning of human life.</p>
+        
+        <p><span class="para-num">B</span> The ancient Greek philosopher Heraclitus famously declared that "no one steps in the same river twice" — emphasising the constant change and flow that seemed to define time. His contemporary Parmenides took the opposite view, arguing that change itself was an illusion and that reality must consist of unchanging eternal truths. This ancient disagreement has continued through Western philosophy in various forms, with thinkers divided between those emphasising change and process and those emphasising permanence and being. Modern physics has not resolved this disagreement so much as transformed its terms.</p>
+        
+        <p><span class="para-num">C</span> The philosopher J.M.E. McTaggart, writing in 1908, proposed an influential distinction between two ways of thinking about time. The "A-series" describes events as past, present, or future — categories that shift as time passes. The "B-series" describes events as earlier than, simultaneous with, or later than other events — relationships that never change. McTaggart argued controversially that the A-series involves contradictions and that consequently time itself must be unreal. Few philosophers accepted his conclusion, but his framework for thinking about time has influenced philosophical discussion ever since.</p>
+        
+        <p><span class="para-num">D</span> Modern philosophy of time has been profoundly shaped by Einstein\'s theories of relativity. Special relativity implies that there is no universal "now" shared across the universe — different observers moving at different velocities will disagree about which events are simultaneous. This appears to support a "block universe" view, in which all moments of time are equally real, with past and future no different in ontological status from the present. The flow of time, on this interpretation, must be an illusion produced by our limited perception rather than a feature of physical reality.</p>
+        
+        <p><span class="para-num">E</span> Yet the block universe view conflicts sharply with how time appears to ordinary human experience. We experience the present as uniquely vivid; the past seems gone forever; the future appears genuinely open and uncertain. Philosophers who emphasise these features of subjective experience — sometimes called "presentists" — insist that only the present really exists, with past events no longer real and future events not yet real. Defenders of presentism must explain how a moving "now" can coexist with the relativistic physics that seems to deny its existence.</p>
+        
+        <p><span class="para-num">F</span> The question of time\'s nature connects directly to the problem of personal identity. If only the present is real, what justifies our sense of being the same person we were yesterday or last year? Some philosophers have argued that personal identity is fundamentally unstable across time and that our sense of continuity is more a social construct than a metaphysical reality. Buddhist traditions, developing their own analyses of time over centuries, reached related conclusions in arguing that the self has no fixed permanent existence. Such philosophical conclusions, whether eastern or western, have profound implications for how we should think about our lives.</p>
+        
+        <p><span class="para-num">G</span> Whatever the ultimate metaphysical truth about time, human beings cannot help but live in time. We remember pasts and anticipate futures, plan and hope and regret. The philosophical investigation of time may not change these basic features of human experience, but it can illuminate them. Whether we understand ourselves as travellers through a four-dimensional landscape, or as briefly existing beings carried along by the flow of becoming, philosophers continue to debate. The questions are old, but they remain genuinely open, with consequences for how we live our temporal lives.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Ít câu hỏi trong triết học khó trả lời như bản chất của thời gian. Các nhà triết học vẫn bất đồng cơ bản. Thời gian có chảy không? Quá khứ, hiện tại, tương lai có thực sự thật không?</p>
+        <p><strong>Đoạn B:</strong> Heraclitus tuyên bố "không ai bước vào cùng dòng sông hai lần" - nhấn mạnh sự thay đổi. Parmenides ngược lại - cho rằng thay đổi là ảo ảnh. Bất đồng cổ xưa này tiếp tục.</p>
+        <p><strong>Đoạn C:</strong> Triết gia J.M.E. McTaggart năm 1908 phân biệt hai cách nghĩ về thời gian - A-series (quá khứ, hiện tại, tương lai) và B-series (sớm hơn, đồng thời, muộn hơn).</p>
+        <p><strong>Đoạn D:</strong> Triết học hiện đại bị ảnh hưởng sâu sắc bởi thuyết tương đối Einstein. Không có "bây giờ" phổ quát. Quan điểm "block universe" - tất cả khoảnh khắc thời gian đều thực như nhau.</p>
+        <p><strong>Đoạn E:</strong> Tuy nhiên quan điểm block universe mâu thuẫn với trải nghiệm thông thường. "Presentist" - chỉ hiện tại là thực. Họ phải giải thích cách "bây giờ" di chuyển tồn tại với vật lý tương đối.</p>
+        <p><strong>Đoạn F:</strong> Câu hỏi bản chất thời gian kết nối với vấn đề bản sắc cá nhân. Bản sắc cá nhân có thực sự bất ổn theo thời gian không? Truyền thống Phật giáo cũng kết luận tự ngã không có sự tồn tại cố định.</p>
+        <p><strong>Đoạn G:</strong> Bất kể sự thật siêu hình cuối cùng, con người không thể không sống trong thời gian. Các câu hỏi cổ xưa nhưng vẫn mở.</p>`
+      }
+    ],
     
     questions: [
-      {
-        group: 'Questions 1–5',
-        type: 'tfng',
-        instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
-        items: [
-          { q: 'A single fungal organism can be among the largest living things on Earth.', answer: 'TRUE', explain: 'Đoạn A: "weigh more than a hundred tonnes — among the largest living things on Earth".' },
-          { q: 'Most fungal species have already been identified by scientists.', answer: 'FALSE', explain: 'Đoạn B: "only about 150,000 have been formally described — meaning most of fungal diversity remains entirely unknown".' },
-          { q: 'Mycorrhizal partnerships were essential for the original colonisation of land by plants.', answer: 'TRUE', explain: 'Đoạn C: "This partnership likely played a key role in the original colonisation of land by plants".' },
-          { q: 'Suzanne Simard discovered that trees never compete with each other.', answer: 'NOT GIVEN', explain: 'Đoạn D nói các cây có hợp tác qua mạng nấm, nhưng không nói chúng "không bao giờ" cạnh tranh.' },
-          { q: 'Penicillin was discovered before fungi were known to produce useful medicines.', answer: 'NOT GIVEN', explain: 'Đoạn F nói penicillin phát hiện 1928 nhưng không đề cập đến mốc thời gian liên quan đến biết đến thuốc khác từ nấm.' }
-        ]
-      },
-      {
-        group: 'Questions 6–9',
-        type: 'mcq',
-        instruction: 'Choose the correct letter, A, B, C or D.',
-        items: [
-          { q: 'According to the passage, fungi differ from plants because they:', options: ['A. Cannot reproduce without help', 'B. Cannot use photosynthesis to obtain energy', 'C. Are always microscopic in size', 'D. Live only in tropical forests'], answer: 'B', explain: 'Đoạn B: "Unlike plants, fungi cannot photosynthesise; they obtain their energy by breaking down organic matter".' },
-          { q: 'Mycorrhizal fungi benefit plants by:', options: ['A. Protecting them from all diseases', 'B. Producing sugars through photosynthesis', 'C. Extending the area from which water and nutrients can be obtained', 'D. Helping them reproduce more efficiently'], answer: 'C', explain: 'Đoạn C: "The fungi extend the effective root area enormously, gathering water and nutrients that the plant could not reach alone".' },
-          { q: 'According to the passage, fungal networks can transfer:', options: ['A. Only sugars between plants', 'B. Both nutrients and chemical warning signals', 'C. Only water in dry conditions', 'D. Genetic material between unrelated species'], answer: 'B', explain: 'Đoạn D: "these networks can transfer not only nutrients but also chemical signals warning of insect attacks".' },
-          { q: 'Fungi are described as crucial for ecosystems because they:', options: ['A. Produce most of the world\'s oxygen', 'B. Are the only organisms that produce food', 'C. Break down dead material and release nutrients', 'D. Control the population of all other species'], answer: 'C', explain: 'Đoạn E: "fungi are the primary agents that break this material down, releasing the nutrients".' }
-        ]
-      },
-      {
-        group: 'Questions 10–13',
-        type: 'fill',
-        instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
-        items: [
-          { q: 'The network of fungal filaments in soil is called __________.', answer: 'mycelium', explain: 'Đoạn A: "an extensive web of fungal filaments called mycelium".' },
-          { q: 'Suzanne Simard popularised the term __________ for the underground fungal network.', answer: 'wood-wide web', explain: 'Đoạn D: "popularised the term wood-wide web".' },
-          { q: 'Fungi can break down tough plant compounds including cellulose and __________.', answer: 'lignin', explain: 'Đoạn E: "the tough cellulose and lignin that give wood its strength".' },
-          { q: 'Yeasts are used in producing bread, wine, and __________.', answer: 'beer', explain: 'Đoạn F: "Bread, beer, and wine all depend on fungi called yeasts".' }
-        ]
-      }
+      // ========== PASSAGE 1 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 1–5',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'A single fungal organism can be among the largest living things on Earth.', answer: 'TRUE', explain: 'Đoạn A: "weigh more than a hundred tonnes — among the largest living things on Earth".' },
+            { q: 'Most fungal species have already been identified by scientists.', answer: 'FALSE', explain: 'Đoạn B: "only about 150,000 have been formally described — meaning most of fungal diversity remains entirely unknown".' },
+            { q: 'Mycorrhizal partnerships were essential for the original colonisation of land by plants.', answer: 'TRUE', explain: 'Đoạn C: "This partnership likely played a key role in the original colonisation of land".' },
+            { q: 'Suzanne Simard discovered that trees never compete with each other.', answer: 'NOT GIVEN', explain: 'Đoạn D nói các cây có hợp tác qua mạng nấm, nhưng không nói chúng "không bao giờ" cạnh tranh.' },
+            { q: 'Penicillin was discovered before fungi were known to produce useful medicines.', answer: 'NOT GIVEN', explain: 'Đoạn F nói penicillin phát hiện 1928 nhưng không đề cập mốc thời gian liên quan đến biết đến thuốc khác từ nấm.' }
+          ]
+        },
+        {
+          group: 'Questions 6–9',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to the passage, fungi differ from plants because they:', options: ['A. Cannot reproduce without help', 'B. Cannot use photosynthesis to obtain energy', 'C. Are always microscopic in size', 'D. Live only in tropical forests'], answer: 'B', explain: 'Đoạn B: "Unlike plants, fungi cannot photosynthesise".' },
+            { q: 'Mycorrhizal fungi benefit plants by:', options: ['A. Protecting them from all diseases', 'B. Producing sugars through photosynthesis', 'C. Extending the area from which water and nutrients can be obtained', 'D. Helping them reproduce more efficiently'], answer: 'C', explain: 'Đoạn C: "The fungi extend the effective root area enormously".' },
+            { q: 'According to the passage, fungal networks can transfer:', options: ['A. Only sugars between plants', 'B. Both nutrients and chemical warning signals', 'C. Only water in dry conditions', 'D. Genetic material between unrelated species'], answer: 'B', explain: 'Đoạn D: "these networks can transfer not only nutrients but also chemical signals warning of insect attacks".' },
+            { q: 'Fungi are described as crucial for ecosystems because they:', options: ['A. Produce most of the world\'s oxygen', 'B. Are the only organisms that produce food', 'C. Break down dead material and release nutrients', 'D. Control the population of all other species'], answer: 'C', explain: 'Đoạn E: "fungi are the primary agents that break this material down, releasing the nutrients".' }
+          ]
+        },
+        {
+          group: 'Questions 10–13',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'The network of fungal filaments in soil is called __________.', answer: 'mycelium', explain: 'Đoạn A: "fungal filaments called mycelium".' },
+            { q: 'Suzanne Simard popularised the term __________ for the underground fungal network.', answer: 'wood-wide web', explain: 'Đoạn D: "popularised the term wood-wide web".' },
+            { q: 'Fungi can break down tough plant compounds including cellulose and __________.', answer: 'lignin', explain: 'Đoạn E: "the tough cellulose and lignin that give wood its strength".' },
+            { q: 'Yeasts are used in producing bread, wine, and __________.', answer: 'beer', explain: 'Đoạn F: "Bread, beer, and wine all depend on fungi called yeasts".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 2 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 14–19',
+          type: 'matching-headings',
+          instruction: 'Reading Passage 2 has seven paragraphs, A-G. Choose the correct heading for each paragraph from the list below.',
+          headings: [
+            { id: 'i', text: 'A spectacular oceanic colonisation' },
+            { id: 'ii', text: 'The complex motivations behind movement' },
+            { id: 'iii', text: 'A foundational European migration' },
+            { id: 'iv', text: 'The basic phenomenon and how we study it' },
+            { id: 'v', text: 'Modern movements and their unique features' },
+            { id: 'vi', text: 'A major African expansion' },
+            { id: 'vii', text: 'Catastrophic effects of European colonisation' },
+            { id: 'viii', text: 'How animals and humans both migrate' },
+            { id: 'ix', text: 'Modern responses to refugee crises' }
+          ],
+          items: [
+            { q: 'A', answer: 'iv', explain: 'Đoạn A giới thiệu hiện tượng di cư hàng loạt và cách chúng ta nghiên cứu nó.' },
+            { q: 'B', answer: 'iii', explain: 'Đoạn B về di cư của nông dân từ Anatolia vào châu Âu - nền tảng.' },
+            { q: 'C', answer: 'i', explain: 'Đoạn C về thực dân hóa Thái Bình Dương ngoạn mục bởi người Austronesian.' },
+            { q: 'D', answer: 'ii', explain: 'Đoạn D về các động cơ phức tạp của di cư.' },
+            { q: 'E', answer: 'vi', explain: 'Đoạn E về sự mở rộng Bantu lớn ở châu Phi.' },
+            { q: 'F', answer: 'vii', explain: 'Đoạn F về tác động thảm khốc của thực dân châu Âu (dịch bệnh, nô lệ).' }
+          ]
+        },
+        {
+          group: 'Questions 20–23',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 2? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'The migration from Anatolia brought only genetic changes to Europe.', answer: 'FALSE', explain: 'Đoạn B: "This migration brought not only new genetic material but also the practice of agriculture, new languages".' },
+            { q: 'Austronesian voyagers reached destinations as far as Madagascar.', answer: 'TRUE', explain: 'Đoạn C: "ultimately reaching destinations as distant as Madagascar".' },
+            { q: 'Bantu speakers eliminated all previous African populations.', answer: 'FALSE', explain: 'Đoạn E: "replacing or absorbing many earlier populations" - "thay thế HOẶC hấp thụ", không loại bỏ hoàn toàn.' },
+            { q: 'European diseases killed up to 90 percent of some indigenous American communities.', answer: 'TRUE', explain: 'Đoạn F: "sometimes killing 90 percent or more of affected communities".' }
+          ]
+        },
+        {
+          group: 'Questions 24–26',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
+          items: [
+            { q: 'Farmers spread from Anatolia into Europe beginning around __________ years ago.', answer: '8,000', explain: 'Đoạn B: "beginning around 8,000 years ago".' },
+            { q: 'Austronesian voyagers travelled in small __________ boats.', answer: 'wooden', explain: 'Đoạn C: "in small wooden boats".' },
+            { q: 'The Bantu-speaking peoples brought iron-working technology and __________ practices.', answer: 'agricultural', explain: 'Đoạn E: "They brought with them agricultural practices, iron-working technology".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 3 QUESTIONS (14 questions) ==========
+      [
+        {
+          group: 'Questions 27–32',
+          type: 'matching-information',
+          instruction: 'Reading Passage 3 has seven paragraphs, A-G. Which paragraph contains the following information?',
+          paragraphs: ['A','B','C','D','E','F','G'],
+          items: [
+            { q: 'A famous statement comparing time to a river.', answer: 'B', explain: 'Đoạn B: "no one steps in the same river twice" - câu nói của Heraclitus về sông.' },
+            { q: 'Mention of a non-Western philosophical tradition\'s view on the self.', answer: 'F', explain: 'Đoạn F: "Buddhist traditions, developing their own analyses of time over centuries, reached related conclusions".' },
+            { q: 'A description of two contrasting frameworks for thinking about events in time.', answer: 'C', explain: 'Đoạn C: "A-series" và "B-series" - hai khung tư duy.' },
+            { q: 'A reference to Einstein\'s theories of physics.', answer: 'D', explain: 'Đoạn D: "Einstein\'s theories of relativity".' },
+            { q: 'A description of how time appears in subjective human experience.', answer: 'E', explain: 'Đoạn E: "the block universe view conflicts sharply with how time appears to ordinary human experience".' },
+            { q: 'An introduction to questions about time and their practical importance.', answer: 'A', explain: 'Đoạn A: giới thiệu các câu hỏi về thời gian và mối liên hệ với "personal identity, moral responsibility".' }
+          ]
+        },
+        {
+          group: 'Questions 33–36',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'Parmenides argued that:', options: ['A. Time flows like a river', 'B. Change itself is an illusion', 'C. Past and future are equally real', 'D. Time is purely subjective'], answer: 'B', explain: 'Đoạn B: "Parmenides took the opposite view, arguing that change itself was an illusion".' },
+            { q: 'McTaggart\'s conclusion about time was that:', options: ['A. It flows in a single direction', 'B. The A-series and B-series are equally valid', 'C. Time itself must be unreal', 'D. Future events do not exist'], answer: 'C', explain: 'Đoạn C: "McTaggart argued controversially that... time itself must be unreal".' },
+            { q: 'The "block universe" view holds that:', options: ['A. Only the present moment exists', 'B. All moments of time are equally real', 'C. Time flows differently in different places', 'D. The past changes our experience of the present'], answer: 'B', explain: 'Đoạn D: "all moments of time are equally real".' },
+            { q: 'Presentists believe that:', options: ['A. Only past events have full reality', 'B. The future is more real than the past', 'C. Only the present really exists', 'D. Time travel is logically possible'], answer: 'C', explain: 'Đoạn E: "only the present really exists".' }
+          ]
+        },
+        {
+          group: 'Questions 37–40',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'McTaggart\'s influential work on time was published in __________.', answer: '1908', explain: 'Đoạn C: "writing in 1908".' },
+            { q: 'According to relativity, there is no universal __________ shared across the universe.', answer: 'now', explain: 'Đoạn D: "there is no universal now shared across the universe".' },
+            { q: 'The philosophical question of time connects to the problem of personal __________.', answer: 'identity', explain: 'Đoạn F: "the problem of personal identity".' },
+            { q: 'Despite philosophical debates, the questions remain genuinely __________.', answer: 'open', explain: 'Đoạn G: "they remain genuinely open".' }
+          ]
+        }
+      ]
     ]
   },
 
@@ -2889,10 +3303,11 @@ const TESTS_DATA = {
     title: 'Tropical Rainforests',
     topic: 'Biology · Environment',
     difficulty: 'Medium',
-    passages: [{
-      label: 'Reading Passage 1',
-      title: 'The Truth About Tropical Rainforests',
-      content: `<p><span class="para-num">A</span> Tropical rainforests cover only about six percent of Earth\'s land surface yet contain more than half of all the planet\'s plant and animal species. Walking through one of these forests can be an overwhelming experience: dense vegetation reaching up to fifty metres above the ground, the constant noise of insects and birds, the heavy humidity that makes even slight exertion exhausting. Despite their familiarity from nature documentaries and tourist photography, rainforests harbour many features that surprise visitors. Many widely-held beliefs about them turn out to be incorrect.</p>
+    passages: [
+      {
+        label: 'Reading Passage 1',
+        title: 'The Truth About Tropical Rainforests',
+        content: `<p><span class="para-num">A</span> Tropical rainforests cover only about six percent of Earth\'s land surface yet contain more than half of all the planet\'s plant and animal species. Walking through one of these forests can be an overwhelming experience: dense vegetation reaching up to fifty metres above the ground, the constant noise of insects and birds, the heavy humidity that makes even slight exertion exhausting. Despite their familiarity from nature documentaries and tourist photography, rainforests harbour many features that surprise visitors. Many widely-held beliefs about them turn out to be incorrect.</p>
       
       <p><span class="para-num">B</span> One common misconception is that rainforest soils are extraordinarily fertile because of all the dense vegetation they support. The opposite is true. Tropical rainforest soils are typically among the poorest on Earth in terms of nutrient content. The lush vegetation grows not because of rich soils but in spite of them. The constant warmth and heavy rainfall mean that organic material decomposes very rapidly, with nutrients quickly absorbed by living plants before they can accumulate in the soil. When trees are cleared for agriculture, the apparent fertility disappears within just a few years, leaving land that is nearly useless for farming.</p>
       
@@ -2919,43 +3334,186 @@ const TESTS_DATA = {
       <p><strong>Đoạn F:</strong> Các mối đe dọa đối với rừng được biết đến nhưng thường bị hiểu sai. Nguyên nhân chính của sự phá hủy không phải là nhu cầu gỗ cứng nhiệt đới mà là mở rộng nông nghiệp. Hầu hết đất rừng được khai quang để chăn nuôi gia súc, trồng đậu nành, sản xuất dầu cọ. Một khi rừng bị khai quang, đất thường chỉ hỗ trợ nông nghiệp có lãi trong vài năm.</p>
       
       <p><strong>Đoạn G:</strong> Bảo tồn rừng nhiệt đới hiệu quả đòi hỏi vượt qua các câu chuyện đơn giản. Các phương pháp tiếp cận chỉ tập trung vào việc bảo vệ rừng "nguyên sơ" bỏ qua thực tế là hầu hết các rừng còn lại đã bị ảnh hưởng bởi hoạt động con người. Một số sáng kiến bảo tồn thành công nhất tập trung vào hỗ trợ quản lý đất truyền thống của người bản địa.</p>`
-    }],
+      },
+      {
+        label: 'Reading Passage 2',
+        title: 'The History of Photography',
+        content: `<p><span class="para-num">A</span> The invention of photography in the early nineteenth century transformed human relationships with images, memory, and visual evidence in ways that continue to unfold today. Before photography, visual representations of the world depended entirely on artists with the skill and time to produce paintings, drawings, or prints. Most people went through their lives without ever seeing accurate visual representations of distant places, important events, or even their own appearance. Photography democratised the visual record in ways that ultimately changed how humans understood the world and themselves.</p>
+        
+        <p><span class="para-num">B</span> The fundamental principle behind photography — that certain chemicals change colour when exposed to light — had been known to alchemists since the medieval period. The challenge that frustrated experimenters for centuries was how to capture and preserve images created this way. The French inventor Joseph Nicéphore Niépce produced what is generally considered the earliest surviving photograph around 1826, an image of the view from his window that required an exposure time of several hours. Niépce\'s collaborator Louis Daguerre developed a more practical method, called daguerreotype, which was publicly announced in 1839 — the year usually given as the birth of photography.</p>
+        
+        <p><span class="para-num">C</span> Early photographic methods had significant limitations that shaped how photography was used in its first decades. Long exposure times — often many minutes — meant that subjects had to remain absolutely still. Moving objects could not be captured at all and appeared as ghostly blurs or simply disappeared from the image. Each daguerreotype was a unique object, like a painting, that could not be copied or distributed widely. Photographic equipment was bulky and expensive, restricting practice to wealthy hobbyists and professional studios.</p>
+        
+        <p><span class="para-num">D</span> The development of negative-positive photography by the English inventor William Henry Fox Talbot in the 1840s solved one major limitation. Talbot\'s process produced a negative image on paper from which multiple positive copies could be made, allowing photographs to be distributed in ways that daguerreotypes could not. This approach, refined and improved through subsequent decades, became the foundation of all photography until the digital revolution of the late twentieth century. The ability to make multiple prints transformed photography from a curiosity into a medium for mass communication.</p>
+        
+        <p><span class="para-num">E</span> Photography revolutionised many human practices over the second half of the nineteenth century. Police forces began using photographs of criminals in the 1860s, establishing the first systematic identification systems. Scientific researchers used photography to record specimens, document expeditions, and capture observations beyond human visual capacity through telescopes and microscopes. Newspapers eventually incorporated photographs into news coverage, though early printing technologies made this difficult and most newspapers continued to use engravings for many decades.</p>
+        
+        <p><span class="para-num">F</span> The development of smaller, simpler cameras in the late nineteenth century brought photography to ordinary people. George Eastman\'s Kodak company, founded in the 1880s, sold inexpensive cameras with the slogan "You press the button, we do the rest." Customers took pictures and then returned the entire camera to Kodak for processing. This approach made photography accessible to amateur users for the first time, leading to enormous growth in personal photography that continues today. Family photographs, holiday snapshots, and casual portraits became common features of ordinary life.</p>
+        
+        <p><span class="para-num">G</span> Digital photography, beginning seriously in the 1990s and becoming dominant by the 2010s, transformed the medium more dramatically than any previous innovation. Digital cameras and especially smartphones made photography virtually free at the moment of use, while the internet enabled instant global sharing of images. Modern humans take approximately one trillion photographs per year, with no clear sense of how this enormous visual archive will be preserved or used. Whether the explosive growth of casual photography has made images more or less significant remains a question to which different observers give very different answers.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Phát minh nhiếp ảnh đầu thế kỷ 19 đã biến đổi mối quan hệ của con người với hình ảnh, trí nhớ, và bằng chứng thị giác. Trước nhiếp ảnh, biểu diễn thị giác hoàn toàn phụ thuộc vào nghệ sĩ.</p>
+        <p><strong>Đoạn B:</strong> Nguyên tắc cơ bản đằng sau nhiếp ảnh - một số hóa chất thay đổi màu khi tiếp xúc ánh sáng - đã được các nhà giả kim biết đến từ thời trung cổ. Joseph Nicéphore Niépce tạo ra bức ảnh sống sót đầu tiên khoảng năm 1826. Daguerreotype của Daguerre công bố năm 1839.</p>
+        <p><strong>Đoạn C:</strong> Các phương pháp nhiếp ảnh sớm có hạn chế đáng kể. Thời gian phơi sáng dài - thường nhiều phút - đối tượng phải giữ yên tuyệt đối. Mỗi daguerreotype là một vật thể duy nhất.</p>
+        <p><strong>Đoạn D:</strong> Sự phát triển của nhiếp ảnh phim âm-dương bởi William Henry Fox Talbot trong những năm 1840 giải quyết một hạn chế lớn. Phương pháp này cho phép tạo nhiều bản sao dương từ một âm bản.</p>
+        <p><strong>Đoạn E:</strong> Nhiếp ảnh cách mạng hóa nhiều thực hành trong nửa sau thế kỷ 19. Cảnh sát bắt đầu sử dụng ảnh tội phạm vào những năm 1860. Các nhà nghiên cứu khoa học sử dụng nhiếp ảnh để ghi mẫu vật.</p>
+        <p><strong>Đoạn F:</strong> Sự phát triển của các máy ảnh nhỏ hơn cuối thế kỷ 19 mang nhiếp ảnh đến người dân thường. George Eastman Kodak với slogan "You press the button, we do the rest".</p>
+        <p><strong>Đoạn G:</strong> Nhiếp ảnh số bắt đầu nghiêm túc trong những năm 1990 và trở nên thống trị vào những năm 2010. Con người hiện đại chụp khoảng một nghìn tỷ ảnh mỗi năm.</p>`
+      },
+      {
+        label: 'Reading Passage 3',
+        title: 'The Nature of Genius',
+        content: `<p><span class="para-num">A</span> What makes a genius? The question has fascinated thinkers since antiquity, but modern psychology has approached it with new tools and considerable scepticism about traditional answers. Earlier explanations, emphasising mysterious inborn gifts that distinguished geniuses from ordinary people, have largely given way to more complex accounts involving combinations of ability, opportunity, environment, and sustained effort. Yet defining and understanding extraordinary achievement remains one of the most challenging problems in the study of human capacity.</p>
+        
+        <p><span class="para-num">B</span> Traditional accounts of genius emphasised mysterious natural endowments. From the Romantic period onward, geniuses were often portrayed as figures touched by divine inspiration or possessed of capacities beyond ordinary understanding. The composer Wolfgang Amadeus Mozart was described as receiving complete musical compositions from supernatural sources, requiring only to write them down. Albert Einstein was sometimes presented as a similarly inexplicable phenomenon, producing revolutionary insights through pure inspiration. Such portrayals, while emotionally compelling, often distort the actual development of the achievements they describe.</p>
+        
+        <p><span class="para-num">C</span> Contemporary research consistently reveals that extraordinary achievement requires extraordinary preparation. The psychologist Anders Ericsson\'s research, popularised through the concept of "deliberate practice," found that world-class performers in many fields had invested approximately ten thousand hours of focused practice before reaching their highest levels. This research, popularised by Malcolm Gladwell\'s book "Outliers," has sometimes been oversimplified into the claim that anyone can achieve world-class performance through sufficient practice. Ericsson himself has emphasised that the picture is more complex — high-quality practice is essential, but so are other factors including initial aptitude, opportunity, and effective coaching.</p>
+        
+        <p><span class="para-num">D</span> The development of Mozart provides an instructive case. Far from receiving compositions through supernatural inspiration, the young Mozart studied music intensively under his father, an accomplished musician and teacher, from the age of three. By the time he composed his first significant works around age twelve, he had received more focused musical training than virtually any contemporary. His early compositions, while precocious for any child, were relatively conventional and clearly derivative of works he had studied. The truly original compositions on which his reputation rests came much later, after additional years of intensive development. The "miracle" of Mozart, properly understood, is no less impressive but also no more mysterious than the cumulative effects of exceptional dedication.</p>
+        
+        <p><span class="para-num">E</span> Similar patterns appear in other famous cases. Einstein\'s revolutionary work in physics emerged not from sudden inspiration but from years of obsessive engagement with physical problems that earlier scientists had set aside as too difficult. He read widely in physics and mathematics, corresponded with leading scientists of his day, and developed his theories through sustained effort rather than spontaneous brilliance. The pattern of extended preparation followed by breakthrough is characteristic of virtually all major achievements that have been examined in detail.</p>
+        
+        <p><span class="para-num">F</span> Yet the model of deliberate practice does not fully explain extraordinary achievement. Two people with similar amounts of practice typically produce very different results. Genetic studies suggest that natural aptitude — sometimes called "raw talent" — plays a substantial role in determining which individuals can reach the highest levels of performance. The specific abilities that contribute to excellence vary enormously across fields, from mathematical reasoning to musical pitch perception to athletic coordination. Practice can develop these abilities, but their underlying potential appears to vary substantially between individuals.</p>
+        
+        <p><span class="para-num">G</span> Social and historical context also shape what counts as genius. Cultures define which abilities matter and create or fail to create opportunities for exceptional development. Mozart\'s genius could exist only in a society that valued music, supported musicians, and provided performance opportunities. Einstein required not just personal ability but the cultural infrastructure of early twentieth-century physics. Many potential geniuses throughout history undoubtedly lived in conditions that prevented their abilities from developing or being recognised. The relatively few individuals we celebrate as geniuses represent perhaps only a fraction of those whose abilities could have qualified them, had circumstances been different. Genius emerges from the combination of individual capacity and social opportunity, with neither factor sufficient by itself.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Điều gì tạo nên một thiên tài? Câu hỏi này đã hấp dẫn các nhà tư tưởng từ thời cổ đại. Tâm lý học hiện đại đã tiếp cận với công cụ mới và hoài nghi đáng kể về câu trả lời truyền thống.</p>
+        <p><strong>Đoạn B:</strong> Các giải thích truyền thống về thiên tài nhấn mạnh năng khiếu tự nhiên bí ẩn. Mozart được mô tả nhận các bản nhạc hoàn chỉnh từ nguồn siêu nhiên. Einstein đôi khi được trình bày là hiện tượng không giải thích được.</p>
+        <p><strong>Đoạn C:</strong> Nghiên cứu hiện tại cho thấy thành tựu phi thường đòi hỏi sự chuẩn bị phi thường. Nghiên cứu của Anders Ericsson về "deliberate practice" - khoảng 10,000 giờ luyện tập tập trung. Malcolm Gladwell phổ biến qua sách "Outliers".</p>
+        <p><strong>Đoạn D:</strong> Sự phát triển của Mozart cho thấy bài học hữu ích. Mozart trẻ đã học nhạc dưới sự dạy bảo của cha mình từ năm 3 tuổi. Các tác phẩm gốc thực sự đến muộn hơn nhiều, sau nhiều năm phát triển chuyên sâu.</p>
+        <p><strong>Đoạn E:</strong> Mô hình tương tự xuất hiện trong các trường hợp nổi tiếng khác. Công trình cách mạng của Einstein không đến từ cảm hứng đột ngột mà từ nhiều năm tham gia với các vấn đề vật lý.</p>
+        <p><strong>Đoạn F:</strong> Tuy nhiên mô hình deliberate practice không giải thích đầy đủ thành tựu phi thường. Nghiên cứu di truyền cho rằng năng khiếu tự nhiên đóng vai trò đáng kể. Hai người luyện tập tương tự nhau có thể có kết quả khác nhau.</p>
+        <p><strong>Đoạn G:</strong> Bối cảnh xã hội và lịch sử cũng định hình thiên tài. Mozart cần xã hội đánh giá cao âm nhạc. Einstein cần cơ sở hạ tầng văn hóa. Nhiều thiên tài tiềm năng trong lịch sử không có cơ hội phát triển.</p>`
+      }
+    ],
     
     questions: [
-      {
-        group: 'Questions 1–5',
-        type: 'tfng',
-        instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
-        items: [
-          { q: 'Rainforest soils are generally very fertile.', answer: 'FALSE', explain: 'Đoạn B: "Tropical rainforest soils are typically among the poorest on Earth in terms of nutrient content".' },
-          { q: 'Most rainforest species are found in the canopy rather than on the ground.', answer: 'TRUE', explain: 'Đoạn C: "The majority of species live in the canopy".' },
-          { q: 'The Amazon produces about half of the world\'s oxygen.', answer: 'FALSE', explain: 'Đoạn D: "The Amazon... contributes only about six percent of global oxygen production".' },
-          { q: 'Indigenous peoples have intentionally modified rainforests for thousands of years.', answer: 'TRUE', explain: 'Đoạn E: "these peoples have actively shaped the forests around them".' },
-          { q: 'The main cause of rainforest destruction is the trade in tropical hardwoods.', answer: 'FALSE', explain: 'Đoạn F: "The primary cause of rainforest destruction is not the direct demand for tropical hardwoods... but agricultural expansion".' }
-        ]
-      },
-      {
-        group: 'Questions 6–9',
-        type: 'mcq',
-        instruction: 'Choose the correct letter, A, B, C or D.',
-        items: [
-          { q: 'According to the passage, the lush vegetation of rainforests grows because:', options: ['A. The soils are exceptionally rich', 'B. There is little competition between species', 'C. Nutrients are quickly recycled by living plants', 'D. There are no large herbivores to eat them'], answer: 'C', explain: 'Đoạn B: "nutrients quickly absorbed by living plants before they can accumulate in the soil".' },
-          { q: 'The passage suggests that the description of rainforests as "lungs of the planet" is:', options: ['A. Completely accurate', 'B. Misleading because they consume nearly as much oxygen as they produce', 'C. An exaggeration that should never be used', 'D. Only true for the Amazon rainforest'], answer: 'B', explain: 'Đoạn D: "This characterisation is misleading. While rainforests do produce vast amounts of oxygen... they consume nearly as much".' },
-          { q: 'Areas of unusually fertile soil in the Amazon are believed to have been:', options: ['A. Created naturally by river flooding', 'B. Created by indigenous peoples adding organic materials', 'C. Brought from elsewhere by European settlers', 'D. The result of ancient volcanic activity'], answer: 'B', explain: 'Đoạn E: "created by indigenous peoples thousands of years ago through systematic addition of charcoal, ash, and organic waste".' },
-          { q: 'According to the passage, successful conservation initiatives often:', options: ['A. Completely exclude humans from forest areas', 'B. Support traditional indigenous land management', 'C. Use only modern scientific approaches', 'D. Focus solely on protecting pristine forests'], answer: 'B', explain: 'Đoạn G: "Some of the most successful conservation initiatives now focus on supporting traditional indigenous land management".' }
-        ]
-      },
-      {
-        group: 'Questions 10–13',
-        type: 'fill',
-        instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
-        items: [
-          { q: 'Rainforests cover only about __________ percent of Earth\'s land surface.', answer: 'six', explain: 'Đoạn A: "Tropical rainforests cover only about six percent of Earth\'s land surface".' },
-          { q: 'The most important function of rainforests is storing __________.', answer: 'carbon dioxide', explain: 'Đoạn D: "they store enormous quantities of carbon dioxide".' },
-          { q: 'Forests are typically cleared for cattle ranching, soy farming, and __________ production.', answer: 'palm oil', explain: 'Đoạn F: "cattle ranching, soy farming, palm oil production".' },
-          { q: 'Long-term conservation depends on making standing forests more __________ than cleared land.', answer: 'valuable', explain: 'Đoạn G: "making standing forests more valuable than cleared land".' }
-        ]
-      }
+      // ========== PASSAGE 1 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 1–5',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'Rainforest soils are generally very fertile.', answer: 'FALSE', explain: 'Đoạn B: "Tropical rainforest soils are typically among the poorest on Earth in terms of nutrient content".' },
+            { q: 'Most rainforest species are found in the canopy rather than on the ground.', answer: 'TRUE', explain: 'Đoạn C: "The majority of species live in the canopy".' },
+            { q: 'The Amazon produces about half of the world\'s oxygen.', answer: 'FALSE', explain: 'Đoạn D: "The Amazon... contributes only about six percent of global oxygen production".' },
+            { q: 'Indigenous peoples have intentionally modified rainforests for thousands of years.', answer: 'TRUE', explain: 'Đoạn E: "these peoples have actively shaped the forests around them".' },
+            { q: 'The main cause of rainforest destruction is the trade in tropical hardwoods.', answer: 'FALSE', explain: 'Đoạn F: "The primary cause of rainforest destruction is not the direct demand for tropical hardwoods... but agricultural expansion".' }
+          ]
+        },
+        {
+          group: 'Questions 6–9',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to the passage, the lush vegetation of rainforests grows because:', options: ['A. The soils are exceptionally rich', 'B. There is little competition between species', 'C. Nutrients are quickly recycled by living plants', 'D. There are no large herbivores to eat them'], answer: 'C', explain: 'Đoạn B: "nutrients quickly absorbed by living plants before they can accumulate in the soil".' },
+            { q: 'The passage suggests that the description of rainforests as "lungs of the planet" is:', options: ['A. Completely accurate', 'B. Misleading because they consume nearly as much oxygen as they produce', 'C. An exaggeration that should never be used', 'D. Only true for the Amazon rainforest'], answer: 'B', explain: 'Đoạn D: "This characterisation is misleading. While rainforests do produce vast amounts of oxygen... they consume nearly as much".' },
+            { q: 'Areas of unusually fertile soil in the Amazon are believed to have been:', options: ['A. Created naturally by river flooding', 'B. Created by indigenous peoples adding organic materials', 'C. Brought from elsewhere by European settlers', 'D. The result of ancient volcanic activity'], answer: 'B', explain: 'Đoạn E: "created by indigenous peoples thousands of years ago through systematic addition of charcoal, ash, and organic waste".' },
+            { q: 'According to the passage, successful conservation initiatives often:', options: ['A. Completely exclude humans from forest areas', 'B. Support traditional indigenous land management', 'C. Use only modern scientific approaches', 'D. Focus solely on protecting pristine forests'], answer: 'B', explain: 'Đoạn G: "Some of the most successful conservation initiatives now focus on supporting traditional indigenous land management".' }
+          ]
+        },
+        {
+          group: 'Questions 10–13',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
+          items: [
+            { q: 'Rainforests cover only about __________ percent of Earth\'s land surface.', answer: 'six', explain: 'Đoạn A: "Tropical rainforests cover only about six percent of Earth\'s land surface".' },
+            { q: 'The most important function of rainforests is storing __________.', answer: 'carbon dioxide', explain: 'Đoạn D: "they store enormous quantities of carbon dioxide".' },
+            { q: 'Forests are typically cleared for cattle ranching, soy farming, and __________ production.', answer: 'palm oil', explain: 'Đoạn F: "cattle ranching, soy farming, palm oil production".' },
+            { q: 'Long-term conservation depends on making standing forests more __________ than cleared land.', answer: 'valuable', explain: 'Đoạn G: "making standing forests more valuable than cleared land".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 2 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 14–19',
+          type: 'matching-headings',
+          instruction: 'Reading Passage 2 has seven paragraphs, A-G. Choose the correct heading for each paragraph from the list below.',
+          headings: [
+            { id: 'i', text: 'From rare object to democratised image' },
+            { id: 'ii', text: 'A revolutionary new technology' },
+            { id: 'iii', text: 'Constraints that shaped early use' },
+            { id: 'iv', text: 'The transformative impact of accessible cameras' },
+            { id: 'v', text: 'Multiple inventors and a watershed year' },
+            { id: 'vi', text: 'A method that enabled mass reproduction' },
+            { id: 'vii', text: 'Expanded uses in science and society' },
+            { id: 'viii', text: 'Concerns about digital images today' },
+            { id: 'ix', text: 'Famous photographs of the 19th century' }
+          ],
+          items: [
+            { q: 'A', answer: 'i', explain: 'Đoạn A giới thiệu nhiếp ảnh biến đổi từ đối tượng hiếm hoi (chỉ nghệ sĩ làm) sang hình ảnh dân chủ hóa.' },
+            { q: 'B', answer: 'v', explain: 'Đoạn B nói về nhiều nhà phát minh (Niépce, Daguerre) và năm 1839 là năm sinh của nhiếp ảnh.' },
+            { q: 'C', answer: 'iii', explain: 'Đoạn C về các hạn chế (exposure dài, daguerreotype unique) định hình cách dùng sớm.' },
+            { q: 'D', answer: 'vi', explain: 'Đoạn D về phương pháp negative-positive của Talbot cho phép sao chép nhiều bản.' },
+            { q: 'E', answer: 'vii', explain: 'Đoạn E về các ứng dụng mới trong khoa học (telescope, microscope) và xã hội (cảnh sát).' },
+            { q: 'F', answer: 'iv', explain: 'Đoạn F về Kodak và máy ảnh dễ tiếp cận - tác động biến đổi.' }
+          ]
+        },
+        {
+          group: 'Questions 20–23',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 2? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'The principle that chemicals change colour with light exposure was known before photography was invented.', answer: 'TRUE', explain: 'Đoạn B: "had been known to alchemists since the medieval period".' },
+            { q: 'Early daguerreotypes could easily be copied to create multiple identical images.', answer: 'FALSE', explain: 'Đoạn C: "Each daguerreotype was a unique object, like a painting, that could not be copied".' },
+            { q: 'Newspapers immediately adopted photographs for news coverage.', answer: 'FALSE', explain: 'Đoạn E: "early printing technologies made this difficult and most newspapers continued to use engravings".' },
+            { q: 'Modern humans take more than a trillion photographs per year.', answer: 'TRUE', explain: 'Đoạn G: "Modern humans take approximately one trillion photographs per year".' }
+          ]
+        },
+        {
+          group: 'Questions 24–26',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
+          items: [
+            { q: 'Niépce produced what is considered the earliest surviving photograph around the year __________.', answer: '1826', explain: 'Đoạn B: "around 1826".' },
+            { q: 'Talbot\'s negative-positive process produced images on __________ from which copies could be made.', answer: 'paper', explain: 'Đoạn D: "Talbot\'s process produced a negative image on paper".' },
+            { q: 'George Eastman founded the __________ company in the 1880s.', answer: 'Kodak', explain: 'Đoạn F: "George Eastman\'s Kodak company, founded in the 1880s".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 3 QUESTIONS (14 questions) ==========
+      [
+        {
+          group: 'Questions 27–32',
+          type: 'matching-information',
+          instruction: 'Reading Passage 3 has seven paragraphs, A-G. Which paragraph contains the following information?',
+          paragraphs: ['A','B','C','D','E','F','G'],
+          items: [
+            { q: 'A statement that geniuses were once described as receiving supernatural inspiration.', answer: 'B', explain: 'Đoạn B: "geniuses were often portrayed as figures touched by divine inspiration".' },
+            { q: 'A reference to the cultural conditions necessary for genius to be recognised.', answer: 'G', explain: 'Đoạn G: "Cultures define which abilities matter and create or fail to create opportunities".' },
+            { q: 'The argument that natural aptitude varies substantially between individuals.', answer: 'F', explain: 'Đoạn F: "natural aptitude — sometimes called raw talent — plays a substantial role".' },
+            { q: 'A claim that Einstein\'s achievements came from sustained engagement rather than sudden inspiration.', answer: 'E', explain: 'Đoạn E: "Einstein\'s revolutionary work in physics emerged not from sudden inspiration but from years of obsessive engagement".' },
+            { q: 'Detailed information about a child\'s intensive musical training.', answer: 'D', explain: 'Đoạn D: "young Mozart studied music intensively under his father... from the age of three".' },
+            { q: 'A reference to a book that popularised the "ten thousand hours" concept.', answer: 'C', explain: 'Đoạn C: "Malcolm Gladwell\'s book Outliers".' }
+          ]
+        },
+        {
+          group: 'Questions 33–36',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to Anders Ericsson\'s research, world-class performers typically:', options: ['A. Are born with rare natural talents', 'B. Have invested around 10,000 hours of focused practice', 'C. Develop most of their skills after age 30', 'D. Achieve excellence in multiple unrelated fields'], answer: 'B', explain: 'Đoạn C: "invested approximately ten thousand hours of focused practice".' },
+            { q: 'The author suggests that Mozart\'s early compositions were:', options: ['A. Truly original works of genius', 'B. Largely derivative of works he had studied', 'C. Completely unlike any earlier music', 'D. Generally ignored during his lifetime'], answer: 'B', explain: 'Đoạn D: "His early compositions... were relatively conventional and clearly derivative of works he had studied".' },
+            { q: 'According to the passage, the "ten thousand hours" rule:', options: ['A. Is always sufficient to produce a genius', 'B. Has been disproved by modern psychology', 'C. Has sometimes been oversimplified', 'D. Applies only to musicians'], answer: 'C', explain: 'Đoạn C: "has sometimes been oversimplified into the claim that anyone can achieve world-class performance through sufficient practice".' },
+            { q: 'The author concludes that genius emerges from:', options: ['A. Pure natural talent regardless of circumstances', 'B. The combination of individual capacity and social opportunity', 'C. Mysterious processes that cannot be analysed', 'D. Practice alone, with no other factors needed'], answer: 'B', explain: 'Đoạn G: "Genius emerges from the combination of individual capacity and social opportunity".' }
+          ]
+        },
+        {
+          group: 'Questions 37–40',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'The concept of __________ practice was popularised by the psychologist Anders Ericsson.', answer: 'deliberate', explain: 'Đoạn C: "popularised through the concept of deliberate practice".' },
+            { q: 'Mozart began studying music with his father from the age of __________.', answer: 'three', explain: 'Đoạn D: "from the age of three".' },
+            { q: 'Natural aptitude is sometimes called "raw __________".', answer: 'talent', explain: 'Đoạn F: "natural aptitude — sometimes called raw talent".' },
+            { q: 'Mozart needed a society that valued music and supported __________.', answer: 'musicians', explain: 'Đoạn G: "a society that valued music, supported musicians".' }
+          ]
+        }
+      ]
     ]
   },
 
