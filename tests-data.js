@@ -651,73 +651,211 @@ const TESTS_DATA = {
     title: 'The Future of Work',
     topic: 'Technology · Economics',
     difficulty: 'Medium',
-    passages: [{
-      label: 'Reading Passage 1',
-      title: 'The Future of Work: Automation and the Human Workforce',
-      content: `<p><span class="para-num">A</span> The relationship between technology and employment has long fascinated economists. From the steam engines that displaced agricultural laborers in the eighteenth century to the assembly lines that transformed manufacturing, each wave of innovation has brought both anxiety about job loss and, eventually, new types of employment. Today, advances in artificial intelligence and robotics are sparking similar debates with renewed intensity. The question is no longer whether technology will reshape work, but how quickly and how profoundly.</p>
-      
-      <p><span class="para-num">B</span> A landmark 2013 study by economists at Oxford University estimated that 47 percent of American jobs were at high risk of automation within twenty years. The findings sent shockwaves through policy circles and ignited public debate. However, more recent analyses have challenged these estimates as overly pessimistic. The OECD, for instance, has suggested that only about 14 percent of jobs are at high risk of full automation, though many more will see significant changes in their tasks. The discrepancy reflects how difficult it is to predict which human capabilities machines will <span class="vocab" data-word="master" data-def="thành thạo, làm chủ">master</span> next.</p>
-      
-      <p><span class="para-num">C</span> What is clear is that automation does not affect all jobs equally. Routine, predictable tasks — whether physical or cognitive — are most vulnerable. Manufacturing roles involving repetitive assembly have been declining for decades. More recently, white-collar work involving data processing, simple legal research, and customer service has begun to feel the impact of AI. Conversely, jobs requiring complex problem-solving, creativity, social intelligence, or physical dexterity in unpredictable environments remain difficult to automate. A nurse comforting a frightened patient, a plumber working in a cramped basement, or a marketing strategist crafting a campaign all draw on capabilities that machines struggle to <span class="vocab" data-word="replicate" data-def="sao chép, tái tạo">replicate</span>.</p>
-      
-      <p><span class="para-num">D</span> History offers some grounds for cautious optimism. Despite repeated predictions of mass unemployment, total employment in industrialized nations has generally continued to grow over the long term. New technologies create new industries — the automobile gave rise to mechanics, road builders, and tourism; the internet enabled web designers, social media managers, and online retailers. Yet the transition period can be painful. Workers displaced by technology often lack the skills required for emerging roles, and the new jobs may appear in different regions or industries than the old ones.</p>
-      
-      <p><span class="para-num">E</span> The geographic dimension of this shift deserves particular attention. Manufacturing decline has hit specific communities — towns built around single factories, regions specialized in particular industries — with devastating force. The economic recovery that follows technological change tends to be concentrated in cities with strong education systems and diverse economies, leaving formerly prosperous industrial areas behind. This <span class="vocab" data-word="uneven" data-def="không đồng đều">uneven</span> distribution of gains and losses helps explain the political tensions surrounding globalization and automation in many democracies.</p>
-      
-      <p><span class="para-num">F</span> Education systems face significant pressure to adapt. The traditional model — learn a trade or profession in youth and practice it for decades — sits uneasily with a labor market where skills become obsolete more rapidly. Lifelong learning, once a fashionable phrase, is becoming a practical necessity. Some countries are experimenting with publicly funded retraining programs, while others rely more heavily on private initiatives. Singapore\'s SkillsFuture program, which provides every citizen over 25 with credits to spend on approved courses, has attracted international attention as a possible model.</p>
-      
-      <p><span class="para-num">G</span> Perhaps the most contested question concerns income distribution. Even if total employment remains healthy, automation may shift bargaining power decisively toward those who own technology and away from those who provide labor. Without policy intervention, this could lead to greater inequality and political instability. Proposals being seriously debated include universal basic income, expanded earned income tax credits, and policies giving workers ownership stakes in automated workplaces. The choices societies make in the coming decades will determine whether technological progress benefits the many or merely the few.</p>`,
-      
-      vi: `<p><strong>Đoạn A:</strong> Mối quan hệ giữa công nghệ và việc làm đã làm các nhà kinh tế học say mê từ lâu. Mỗi làn sóng đổi mới đều mang đến lo lắng về mất việc và sau đó là các loại việc làm mới. Ngày nay, AI và robot đang thổi bùng lại các cuộc tranh luận tương tự.</p>
-      
-      <p><strong>Đoạn B:</strong> Nghiên cứu năm 2013 của Đại học Oxford ước tính 47% việc làm Mỹ có nguy cơ tự động hóa trong 20 năm. OECD ước tính chỉ 14% có nguy cơ tự động hóa hoàn toàn. Sự khác biệt phản ánh khó khăn trong dự đoán khả năng nào của con người sẽ bị máy móc thay thế tiếp theo.</p>
-      
-      <p><strong>Đoạn C:</strong> Tự động hóa không ảnh hưởng đều đến tất cả công việc. Nhiệm vụ thường ngày, lặp đi lặp lại dễ bị thay thế nhất. Công việc đòi hỏi giải quyết vấn đề phức tạp, sáng tạo, trí thông minh xã hội, hoặc khéo léo trong môi trường không đoán trước được vẫn khó tự động hóa.</p>
-      
-      <p><strong>Đoạn D:</strong> Lịch sử cho thấy lý do lạc quan thận trọng. Công nghệ mới tạo ngành nghề mới. Tuy nhiên, giai đoạn chuyển tiếp có thể đau đớn - người lao động thường thiếu kỹ năng cần thiết cho công việc mới nổi.</p>
-      
-      <p><strong>Đoạn E:</strong> Khía cạnh địa lý của sự dịch chuyển đáng chú ý. Sự suy thoái sản xuất tấn công các cộng đồng cụ thể. Hồi phục kinh tế tập trung ở thành phố có hệ thống giáo dục mạnh, bỏ lại các vùng công nghiệp trước đây thịnh vượng.</p>
-      
-      <p><strong>Đoạn F:</strong> Hệ thống giáo dục đối mặt với áp lực thích nghi. Học suốt đời đang trở thành nhu cầu thực tế. Chương trình SkillsFuture của Singapore cung cấp tín dụng cho mọi công dân trên 25 tuổi để học khóa học được duyệt.</p>
-      
-      <p><strong>Đoạn G:</strong> Câu hỏi gây tranh cãi nhất liên quan đến phân phối thu nhập. Đề xuất bao gồm thu nhập cơ bản phổ quát. Lựa chọn xã hội đưa ra sẽ quyết định liệu tiến bộ công nghệ phục vụ số đông hay chỉ thiểu số.</p>`
-    }],
+    passages: [
+      {
+        label: 'Reading Passage 1',
+        title: 'The Future of Work: Automation and the Human Workforce',
+        content: `<p><span class="para-num">A</span> The relationship between technology and employment has long fascinated economists. From the steam engines that displaced agricultural laborers in the eighteenth century to the assembly lines that transformed manufacturing, each wave of innovation has brought both anxiety about job loss and, eventually, new types of employment. Today, advances in artificial intelligence and robotics are sparking similar debates with renewed intensity. The question is no longer whether technology will reshape work, but how quickly and how profoundly.</p>
+        
+        <p><span class="para-num">B</span> A landmark 2013 study by economists at Oxford University estimated that 47 percent of American jobs were at high risk of automation within twenty years. The findings sent shockwaves through policy circles and ignited public debate. However, more recent analyses have challenged these estimates as overly pessimistic. The OECD, for instance, has suggested that only about 14 percent of jobs are at high risk of full automation, though many more will see significant changes in their tasks. The discrepancy reflects how difficult it is to predict which human capabilities machines will <span class="vocab" data-word="master" data-def="thành thạo, làm chủ">master</span> next.</p>
+        
+        <p><span class="para-num">C</span> Routine tasks — both physical and cognitive — have proven most susceptible to automation. Manufacturing positions involving repetitive assembly, data entry roles, and even certain legal tasks like contract review have all seen significant displacement. Customer service is being transformed by chatbots and automated phone systems. Even areas once considered immune, such as journalism, are seeing algorithmic systems produce routine reports on sports results and financial summaries. The pattern suggests that vulnerability depends less on whether work is physical or mental, and more on whether the tasks involved follow predictable patterns.</p>
+        
+        <p><span class="para-num">D</span> Conversely, jobs requiring creativity, complex social interaction, or skilled physical work in unpredictable environments have proven more resistant. Teaching, healthcare nursing, plumbing, and emergency response all combine unpredictability with the need for human judgment in ways that current AI cannot easily replicate. Interestingly, professions requiring high education are not necessarily safer than skilled trades — a senior radiologist may face more automation pressure than a hairdresser, since reading medical images involves pattern recognition that AI excels at, while cutting hair on different head shapes does not.</p>
+        
+        <p><span class="para-num">E</span> History suggests that disruption usually creates new opportunities even as it eliminates old ones. When ATMs proliferated in the 1990s, many predicted the demise of bank tellers. Instead, the number of tellers initially increased, as cheaper branch operations allowed banks to open more locations. The work shifted toward customer relations and sales rather than routine cash handling. Similar transitions have occurred repeatedly. The challenge is not technology eliminating work, but rather the difficulty workers face in transitioning between fields, particularly as they age.</p>
+        
+        <p><span class="para-num">F</span> The geographic distribution of automation effects creates additional complications. Manufacturing regions in the American Midwest, parts of northern England, and former industrial centers in Germany and France have all experienced concentrated job losses that have proven politically destabilizing. New jobs tend to emerge in different cities — tech hubs like San Francisco, London, and Berlin — and former industrial workers may lack the resources or willingness to relocate. The result has been growing economic <span class="vocab" data-word="polarization" data-def="sự phân cực">polarization</span> within wealthy nations.</p>
+        
+        <p><span class="para-num">G</span> Policy responses have varied widely. Singapore has launched ambitious worker retraining programs through its SkillsFuture initiative, offering citizens credits for ongoing education. Finland conducted a high-profile experiment with universal basic income, providing unconditional payments to selected unemployed citizens. Other nations have invested in apprenticeship programs that combine education with workplace training. None of these approaches has been definitively shown to solve the challenges of technological displacement, but they reflect growing recognition that the consequences of automation will require active social intervention, not merely faith in market adjustment.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Mối quan hệ giữa công nghệ và việc làm từ lâu đã hấp dẫn các nhà kinh tế. Mỗi đợt đổi mới đều mang lại lo lắng về mất việc và cuối cùng các loại việc làm mới.</p>
+        <p><strong>Đoạn B:</strong> Một nghiên cứu năm 2013 của Oxford ước tính 47% việc làm Mỹ có nguy cơ tự động hóa cao. Tuy nhiên các phân tích gần đây - như OECD - cho rằng chỉ khoảng 14% việc làm có nguy cơ tự động hóa hoàn toàn.</p>
+        <p><strong>Đoạn C:</strong> Các nhiệm vụ thường lệ - cả thể chất và nhận thức - dễ bị tự động hóa nhất. Sản xuất, nhập dữ liệu, đánh giá hợp đồng, chăm sóc khách hàng đều bị thay thế.</p>
+        <p><strong>Đoạn D:</strong> Việc làm cần sáng tạo, tương tác xã hội phức tạp, hoặc lao động chân tay khéo léo trong môi trường không lường trước được lại bền vững hơn. Bác sĩ X-quang có thể đối mặt áp lực tự động hóa nhiều hơn thợ cắt tóc.</p>
+        <p><strong>Đoạn E:</strong> Lịch sử cho thấy sự gián đoạn thường tạo cơ hội mới. Khi ATM phổ biến những năm 1990, nhiều người dự đoán nhân viên ngân hàng sẽ biến mất. Thay vào đó, số lượng nhân viên ban đầu tăng lên.</p>
+        <p><strong>Đoạn F:</strong> Phân bố địa lý của tác động tự động hóa tạo thêm phức tạp. Các vùng sản xuất Midwest Mỹ, miền bắc Anh, các trung tâm công nghiệp cũ ở Đức và Pháp đã chịu mất việc tập trung.</p>
+        <p><strong>Đoạn G:</strong> Phản ứng chính sách khác nhau rộng rãi. Singapore khởi động SkillsFuture, Phần Lan thử nghiệm thu nhập cơ bản phổ quát. Không có cách nào được chứng minh giải quyết hoàn toàn các thách thức.</p>`
+      },
+      {
+        label: 'Reading Passage 2',
+        title: 'The Architecture of Cities',
+        content: `<p><span class="para-num">A</span> The shapes of cities — their patterns of streets, distribution of public spaces, density of buildings — have profound effects on how their inhabitants live, move, and interact. Urban planning, the discipline that consciously shapes these patterns, emerged as a formal profession only in the late nineteenth century, but the questions it addresses have been considered since ancient times. The Greek philosopher Aristotle observed that the proper size of a city was that in which all citizens could know each other; modern urbanists continue to debate the optimal scales and arrangements for human settlements.</p>
+        
+        <p><span class="para-num">B</span> Traditional cities, developed organically over centuries, typically displayed distinctive patterns. Streets followed irregular routes shaped by topography, property boundaries, and changing needs. Mixed-use development was the norm, with shops, residences, and workshops sharing buildings and neighbourhoods. Distances were necessarily short, since most movement happened on foot. Despite the lack of formal planning, such cities often produced remarkable urban environments: the medieval centres of European cities, traditional Japanese castle towns, and many Middle Eastern bazaars represent sophisticated solutions to the problem of organising human settlement.</p>
+        
+        <p><span class="para-num">C</span> The twentieth century saw the development of starkly different urban approaches. The Swiss-French architect Le Corbusier proposed designs based on widely separated tower blocks set in landscaped grounds, with cars travelling on dedicated roadways while pedestrians used elevated walkways. American suburban developments after World War II separated land uses comprehensively — residential areas distinct from shopping, both distinct from workplaces. The new approaches were intended to solve problems of overcrowding, poor sanitation, and traffic conflict that had plagued nineteenth-century industrial cities.</p>
+        
+        <p><span class="para-num">D</span> The results of these modernist experiments have generated decades of intense debate. Critics, beginning with the journalist Jane Jacobs in her influential 1961 book, have argued that strictly planned cities lacked the vitality, safety, and sense of community that characterised traditional urban areas. Jacobs documented how successful neighbourhoods required short blocks, mixed uses, and constant pedestrian activity — features that modernist planning systematically eliminated. Subsequent research has confirmed many of her observations, finding that strictly zoned suburban developments produce isolation, automobile dependence, and reduced physical activity.</p>
+        
+        <p><span class="para-num">E</span> Recent decades have seen renewed interest in traditional urban patterns. The "new urbanism" movement, beginning in the United States during the 1980s, deliberately reproduces the dense, walkable, mixed-use patterns of traditional cities in new developments. European cities have invested heavily in pedestrian areas, bicycle infrastructure, and public transit, often reversing earlier accommodations to automobile traffic. Major cities including Copenhagen, Barcelona, and Vienna have become models for how modern needs can be combined with traditional urban virtues.</p>
+        
+        <p><span class="para-num">F</span> The relationship between urban form and environmental sustainability has become increasingly important. Dense traditional cities, despite their reputation for pollution and crowding, generally produce much lower per-capita greenhouse gas emissions than sprawling suburban developments. Residents of compact cities walk and cycle more, drive less, occupy smaller dwellings that require less energy to heat and cool, and consume fewer resources overall. Urban density that critics once associated with poverty and unhealthiness is increasingly recognized as essential to environmental sustainability.</p>
+        
+        <p><span class="para-num">G</span> Looking toward the future, urban planners face complex challenges. Climate change threatens many coastal cities with rising sea levels. Aging populations require accessibility features that earlier planning often ignored. Affordable housing crises in major cities limit who can benefit from urban opportunities. Technology, from autonomous vehicles to remote work, may transform demands on urban form in ways still unclear. What seems certain is that the basic questions identified by Aristotle remain relevant: how should we design the physical environments in which we conduct our communal lives?</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Hình dạng các thành phố có ảnh hưởng sâu sắc đến cách cư dân sống, di chuyển và tương tác. Quy hoạch đô thị xuất hiện như nghề chính thức chỉ vào cuối thế kỷ 19. Aristotle nhận xét quy mô đúng đắn của thành phố là nơi tất cả công dân có thể biết nhau.</p>
+        <p><strong>Đoạn B:</strong> Các thành phố truyền thống phát triển hữu cơ qua nhiều thế kỷ. Đường phố theo các tuyến không đều, sử dụng hỗn hợp là bình thường. Trung tâm thời trung cổ châu Âu, thị trấn lâu đài Nhật Bản, bazaar Trung Đông đều là giải pháp tinh vi.</p>
+        <p><strong>Đoạn C:</strong> Thế kỷ 20 chứng kiến các cách tiếp cận đô thị khác hẳn. Le Corbusier đề xuất thiết kế dựa trên các tòa nhà tháp tách biệt. Các phát triển ngoại ô Mỹ sau Thế chiến II tách biệt các mục đích sử dụng đất.</p>
+        <p><strong>Đoạn D:</strong> Kết quả của các thử nghiệm hiện đại đã tạo ra nhiều thập kỷ tranh luận. Nhà báo Jane Jacobs trong cuốn sách năm 1961 lập luận các thành phố quy hoạch chặt chẽ thiếu sức sống.</p>
+        <p><strong>Đoạn E:</strong> Các thập kỷ gần đây chứng kiến sự quan tâm mới với các mô hình đô thị truyền thống. Phong trào "new urbanism" bắt đầu ở Mỹ những năm 1980. Copenhagen, Barcelona, Vienna đã trở thành mô hình.</p>
+        <p><strong>Đoạn F:</strong> Mối quan hệ giữa hình thái đô thị và bền vững môi trường ngày càng quan trọng. Các thành phố truyền thống dày đặc tạo ra ít phát thải khí nhà kính hơn so với phát triển ngoại ô lan rộng.</p>
+        <p><strong>Đoạn G:</strong> Nhìn về tương lai, các nhà quy hoạch đô thị đối mặt với thách thức phức tạp - biến đổi khí hậu, dân số già hóa, khủng hoảng nhà ở. Các câu hỏi cơ bản Aristotle xác định vẫn còn liên quan.</p>`
+      },
+      {
+        label: 'Reading Passage 3',
+        title: 'The Science of Sleep',
+        content: `<p><span class="para-num">A</span> Despite spending roughly a third of our lives sleeping, humans have only recently begun to understand what sleep actually is and why we need it. For most of history, sleep was viewed as a passive state — essentially the absence of wakefulness. Modern research has revealed sleep to be an active and biologically complex process during which the brain and body perform essential functions that cannot occur during waking hours. Yet despite considerable progress, fundamental questions about sleep\'s purpose continue to puzzle researchers.</p>
+        
+        <p><span class="para-num">B</span> The discovery in the 1950s that the brain remains highly active during certain phases of sleep transformed sleep research. Periods called REM (rapid eye movement) sleep involve brain activity similar to waking, while non-REM sleep involves distinct patterns including the deep slow waves associated with the deepest sleep. Throughout a typical night, humans cycle through these states multiple times, with REM periods becoming progressively longer toward morning. Different sleep stages appear to serve different biological functions, though much about these functions remains debated.</p>
+        
+        <p><span class="para-num">C</span> Memory consolidation is one of the best-established functions of sleep. Studies consistently show that people remember information learned shortly before sleep better than information learned at times not followed by sleep. Brain imaging during sleep reveals activity patterns that appear to replay and process information acquired during waking hours. This processing appears particularly important for procedural memories — skills like playing musical instruments or operating machinery — and for transferring information from short-term to long-term storage.</p>
+        
+        <p><span class="para-num">D</span> Sleep also appears crucial for emotional regulation. People deprived of sleep show enhanced reactions to negative experiences and reduced ability to manage emotional responses. Brain imaging studies have found that sleep deprivation produces dramatic increases in activity in brain regions associated with emotional reactions, while reducing activity in regions involved in regulating those reactions. The chronic sleep deprivation common in modern societies may contribute to widespread mood disorders, anxiety, and difficulties with emotional regulation in ways that remain poorly understood.</p>
+        
+        <p><span class="para-num">E</span> Recent research has identified physical maintenance functions performed during sleep that researchers had not previously suspected. The discovery of the glymphatic system, announced in 2013, revealed that brain tissue contracts during sleep, allowing cerebrospinal fluid to flow through expanded channels and clear metabolic waste products. This cleaning process appears to remove proteins associated with neurodegenerative diseases like Alzheimer\'s, suggesting that sleep disruptions may contribute to such conditions. Other research has linked sleep to immune function, metabolic regulation, and growth hormone release.</p>
+        
+        <p><span class="para-num">F</span> Despite the clear importance of adequate sleep, modern lifestyles often work against it. Artificial lighting, particularly the blue light from electronic screens, suppresses production of melatonin, the hormone signalling the brain to sleep. Demanding work schedules, social commitments, and entertainment options compete for time that previous generations spent sleeping. Average sleep duration has decreased by approximately one to two hours per night over the past century, with significant effects on health and wellbeing that researchers are only beginning to fully document.</p>
+        
+        <p><span class="para-num">G</span> Cultural attitudes toward sleep vary considerably and influence individual behaviour. Some cultures embrace afternoon napping as a normal part of daily life; others view daytime sleeping as a sign of laziness. Some societies celebrate working through fatigue as evidence of dedication; others recognize adequate rest as essential to performance. Research increasingly supports the latter view, demonstrating that fatigue produces effects on cognition and decision-making comparable to those of alcohol intoxication. As understanding of sleep grows, cultural attitudes are slowly shifting toward recognition that the time we spend asleep is not lost time but is rather essential to making the most of the time we spend awake.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Mặc dù dành khoảng 1/3 đời ngủ, con người chỉ gần đây mới bắt đầu hiểu giấc ngủ thực sự là gì. Trong hầu hết lịch sử, giấc ngủ được xem là trạng thái thụ động. Nghiên cứu hiện đại cho thấy giấc ngủ là quá trình tích cực phức tạp về sinh học.</p>
+        <p><strong>Đoạn B:</strong> Phát hiện những năm 1950 rằng não vẫn rất hoạt động trong các giai đoạn ngủ đã biến đổi nghiên cứu giấc ngủ. REM (chuyển động mắt nhanh) liên quan đến hoạt động não tương tự thức. Trong một đêm điển hình, con người chu trình qua các trạng thái này nhiều lần.</p>
+        <p><strong>Đoạn C:</strong> Củng cố trí nhớ là một trong những chức năng được thiết lập tốt nhất của giấc ngủ. Mọi người nhớ thông tin học trước khi ngủ tốt hơn. Quá trình này quan trọng đặc biệt cho trí nhớ thủ tục - kỹ năng như chơi nhạc cụ.</p>
+        <p><strong>Đoạn D:</strong> Giấc ngủ cũng rất quan trọng cho điều tiết cảm xúc. Người thiếu ngủ phản ứng mạnh hơn với trải nghiệm tiêu cực. Thiếu ngủ mãn tính phổ biến trong xã hội hiện đại có thể góp phần vào rối loạn tâm trạng, lo âu.</p>
+        <p><strong>Đoạn E:</strong> Nghiên cứu gần đây xác định các chức năng bảo trì vật lý. Phát hiện hệ thống glymphatic năm 2013 tiết lộ rằng mô não co lại trong giấc ngủ, cho phép dịch não tủy làm sạch chất thải chuyển hóa.</p>
+        <p><strong>Đoạn F:</strong> Mặc dù tầm quan trọng rõ ràng, lối sống hiện đại thường chống lại giấc ngủ đầy đủ. Đèn nhân tạo, đặc biệt là ánh sáng xanh từ màn hình điện tử, ức chế sản xuất melatonin. Thời lượng ngủ trung bình đã giảm 1-2 giờ mỗi đêm trong thế kỷ qua.</p>
+        <p><strong>Đoạn G:</strong> Thái độ văn hóa đối với giấc ngủ thay đổi đáng kể. Nghiên cứu chứng minh rằng mệt mỏi tạo ra hiệu ứng nhận thức tương đương với say rượu. Thái độ văn hóa đang chậm chuyển sang nhận thức thời gian ngủ không phải mất mà là thiết yếu.</p>`
+      }
+    ],
     
     questions: [
-      {
-        group: 'Questions 1–5',
-        type: 'tfng',
-        instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
-        items: [
-          { q: 'The 2013 Oxford study and the OECD analysis reached identical conclusions.', answer: 'FALSE', explain: 'Đoạn B: Oxford ước tính 47%, OECD 14% - khác biệt rõ rệt.' },
-          { q: 'Jobs requiring physical work in unpredictable settings are easily automated.', answer: 'FALSE', explain: 'Đoạn C: "physical dexterity in unpredictable environments remain difficult to automate".' },
-          { q: 'New technologies have historically created entirely new industries.', answer: 'TRUE', explain: 'Đoạn D: "New technologies create new industries — the automobile gave rise to mechanics...".' },
-          { q: 'The Oxford study has been widely accepted by all economists.', answer: 'FALSE', explain: 'Đoạn B: "more recent analyses have challenged these estimates".' },
-          { q: 'Singapore\'s SkillsFuture program is being copied by several other countries.', answer: 'NOT GIVEN', explain: 'Đoạn F nói chương trình "thu hút sự chú ý quốc tế như mô hình khả thi" nhưng không nói có nước nào sao chép.' }
-        ]
-      },
-      {
-        group: 'Questions 6–9',
-        type: 'mcq',
-        instruction: 'Choose the correct letter, A, B, C or D.',
-        items: [
-          { q: 'According to the passage, which type of job is MOST at risk from automation?', options: ['A. Complex creative work', 'B. Routine, predictable tasks', 'C. Jobs requiring social skills', 'D. Manual work in changing environments'], answer: 'B', explain: 'Đoạn C: "Routine, predictable tasks... are most vulnerable".' },
-          { q: 'The geographic impact of automation is described as:', options: ['A. Evenly spread across all regions', 'B. Concentrated mainly in rural areas', 'C. Uneven, with industrial towns most affected', 'D. Limited to developing countries'], answer: 'C', explain: 'Đoạn E: "Manufacturing decline has hit specific communities... industrial areas behind".' },
-          { q: 'The "traditional model" of education refers to:', options: ['A. Learning a profession in youth and practicing it for decades', 'B. Receiving education only in public schools', 'C. Studying multiple subjects throughout life', 'D. Combining academic and vocational training'], answer: 'A', explain: 'Đoạn F: "learn a trade or profession in youth and practice it for decades".' },
-          { q: 'The author suggests that without policy action, automation could lead to:', options: ['A. A return to manufacturing jobs', 'B. Reduced demand for higher education', 'C. Greater inequality and political instability', 'D. Increased global cooperation'], answer: 'C', explain: 'Đoạn G: "could lead to greater inequality and political instability".' }
-        ]
-      },
-      {
-        group: 'Questions 10–13',
-        type: 'fill',
-        instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
-        items: [
-          { q: 'The Oxford study estimated that __________ percent of American jobs could be automated.', answer: '47', explain: 'Đoạn B: "47 percent of American jobs were at high risk".' },
-          { q: 'Singapore\'s program provides citizens with __________ to spend on approved courses.', answer: 'credits', explain: 'Đoạn F: "provides every citizen over 25 with credits".' },
-          { q: 'One proposal to address inequality from automation is universal __________ income.', answer: 'basic', explain: 'Đoạn G: "Proposals being seriously debated include universal basic income".' },
-          { q: 'The shift from old to new jobs is described as a difficult __________ period.', answer: 'transition', explain: 'Đoạn D: "the transition period can be painful".' }
-        ]
-      }
+      // ========== PASSAGE 1 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 1–5',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'The 2013 Oxford study and the OECD analysis reached identical conclusions.', answer: 'FALSE', explain: 'Đoạn B: Oxford ước tính 47%, OECD 14% - khác biệt rõ rệt.' },
+            { q: 'Jobs requiring complex physical work in unpredictable settings are easily automated.', answer: 'FALSE', explain: 'Đoạn D: "jobs requiring creativity, complex social interaction, or skilled physical work in unpredictable environments have proven more resistant".' },
+            { q: 'Number of bank tellers initially increased when ATMs became widespread.', answer: 'TRUE', explain: 'Đoạn E: "the number of tellers initially increased, as cheaper branch operations allowed banks to open more locations".' },
+            { q: 'High-education jobs are always safer from automation than skilled trades.', answer: 'FALSE', explain: 'Đoạn D: "a senior radiologist may face more automation pressure than a hairdresser".' },
+            { q: 'Singapore\'s SkillsFuture program has been copied by many other countries.', answer: 'NOT GIVEN', explain: 'Đoạn G nói về SkillsFuture nhưng không nói có nước khác sao chép.' }
+          ]
+        },
+        {
+          group: 'Questions 6–9',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to the passage, which type of job is MOST at risk from automation?', options: ['A. Complex creative work', 'B. Routine, predictable tasks', 'C. Jobs requiring social skills', 'D. Manual work in changing environments'], answer: 'B', explain: 'Đoạn C: "Routine tasks — both physical and cognitive — have proven most susceptible to automation".' },
+            { q: 'The example of bank tellers in the 1990s shows that:', options: ['A. Technology always eliminates jobs immediately', 'B. New technology can lead to job shifts rather than disappearance', 'C. ATMs failed to spread as predicted', 'D. Banks lost money during the transition'], answer: 'B', explain: 'Đoạn E: số nhân viên tăng lên do mở thêm chi nhánh, công việc chuyển sang quan hệ khách hàng.' },
+            { q: 'Geographic concentration of automation effects has led to:', options: ['A. Equal distribution of new opportunities', 'B. Workers easily relocating to tech hubs', 'C. Growing economic polarisation within nations', 'D. Decline of all major cities'], answer: 'C', explain: 'Đoạn F: "growing economic polarization within wealthy nations".' },
+            { q: 'According to the passage, policy responses to automation:', options: ['A. Have been definitively shown to solve the problem', 'B. Are identical across all countries', 'C. Vary widely but reflect need for active intervention', 'D. Are no longer needed in modern economies'], answer: 'C', explain: 'Đoạn G: "Policy responses have varied widely... reflect growing recognition that the consequences of automation will require active social intervention".' }
+          ]
+        },
+        {
+          group: 'Questions 10–13',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
+          items: [
+            { q: 'The Oxford study estimated __________ percent of American jobs could be automated.', answer: '47', explain: 'Đoạn B: "47 percent of American jobs were at high risk".' },
+            { q: 'Even areas like __________ are seeing AI produce routine reports on sports results.', answer: 'journalism', explain: 'Đoạn C: "Even areas once considered immune, such as journalism".' },
+            { q: 'Finland conducted a high-profile experiment with universal __________ income.', answer: 'basic', explain: 'Đoạn G: "Finland conducted a high-profile experiment with universal basic income".' },
+            { q: 'Some nations have invested in __________ programs combining education with workplace training.', answer: 'apprenticeship', explain: 'Đoạn G: "invested in apprenticeship programs that combine education with workplace training".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 2 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 14–20',
+          type: 'matching-headings',
+          instruction: 'Reading Passage 2 has seven paragraphs, A-G. Choose the correct heading for each paragraph from the list below.',
+          headings: [
+            { id: 'i', text: 'Failed modernist experiments in city design' },
+            { id: 'ii', text: 'Density as key to sustainability' },
+            { id: 'iii', text: 'Wisdom of cities developed gradually' },
+            { id: 'iv', text: 'Ancient questions still being asked' },
+            { id: 'v', text: 'A return to traditional patterns' },
+            { id: 'vi', text: 'New approaches with major drawbacks' },
+            { id: 'vii', text: 'The ongoing challenges of urban planning' },
+            { id: 'viii', text: 'Tourist attractions in modern cities' },
+            { id: 'ix', text: 'Famous architects of the twentieth century' }
+          ],
+          items: [
+            { q: 'A', answer: 'iv', explain: 'Đoạn A giới thiệu các câu hỏi cổ xưa từ Aristotle vẫn được hỏi ngày nay.' },
+            { q: 'B', answer: 'iii', explain: 'Đoạn B mô tả trí tuệ của các thành phố phát triển hữu cơ qua nhiều thế kỷ.' },
+            { q: 'C', answer: 'vi', explain: 'Đoạn C về các cách tiếp cận mới (Le Corbusier, ngoại ô) với những hạn chế.' },
+            { q: 'D', answer: 'i', explain: 'Đoạn D về thử nghiệm modernist thất bại theo phê bình của Jane Jacobs.' },
+            { q: 'E', answer: 'v', explain: 'Đoạn E về sự trở lại với các mô hình truyền thống ("new urbanism").' },
+            { q: 'F', answer: 'ii', explain: 'Đoạn F về độ dày đặc là chìa khóa cho bền vững môi trường.' },
+            { q: 'G', answer: 'vii', explain: 'Đoạn G về các thách thức đang diễn ra của quy hoạch đô thị.' }
+          ]
+        },
+        {
+          group: 'Questions 21–23',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 2? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'Jane Jacobs criticised modernist planning in a 1961 book.', answer: 'TRUE', explain: 'Đoạn D: "the journalist Jane Jacobs in her influential 1961 book".' },
+            { q: 'Compact cities produce more greenhouse gas emissions per person than suburbs.', answer: 'FALSE', explain: 'Đoạn F: "Dense traditional cities... generally produce much lower per-capita greenhouse gas emissions".' },
+            { q: 'Climate change is the only challenge facing modern urban planners.', answer: 'FALSE', explain: 'Đoạn G: liệt kê nhiều thách thức - biến đổi khí hậu, dân số già, nhà ở, công nghệ.' }
+          ]
+        },
+        {
+          group: 'Questions 24–26',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'The Greek philosopher __________ observed that the proper size of a city was one where all citizens could know each other.', answer: 'Aristotle', explain: 'Đoạn A: "The Greek philosopher Aristotle observed".' },
+            { q: 'Le Corbusier proposed designs based on widely separated __________ blocks.', answer: 'tower', explain: 'Đoạn C: "designs based on widely separated tower blocks".' },
+            { q: 'The "new urbanism" movement began in the United States during the __________.', answer: '1980s', explain: 'Đoạn E: "beginning in the United States during the 1980s".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 3 QUESTIONS (14 questions) ==========
+      [
+        {
+          group: 'Questions 27–32',
+          type: 'matching-information',
+          instruction: 'Reading Passage 3 has seven paragraphs, A-G. Which paragraph contains the following information?',
+          paragraphs: ['A','B','C','D','E','F','G'],
+          items: [
+            { q: 'A description of a process that clears waste from the brain.', answer: 'E', explain: 'Đoạn E: "The discovery of the glymphatic system... allowing cerebrospinal fluid to flow through expanded channels and clear metabolic waste".' },
+            { q: 'A reference to a discovery that transformed sleep research in the 1950s.', answer: 'B', explain: 'Đoạn B: "The discovery in the 1950s that the brain remains highly active during certain phases of sleep transformed sleep research".' },
+            { q: 'The comparison between fatigue and alcohol\'s cognitive effects.', answer: 'G', explain: 'Đoạn G: "fatigue produces effects on cognition and decision-making comparable to those of alcohol intoxication".' },
+            { q: 'Mention of a hormone that signals the brain to sleep.', answer: 'F', explain: 'Đoạn F: "melatonin, the hormone signalling the brain to sleep".' },
+            { q: 'A discussion of how sleep loss affects emotional regulation.', answer: 'D', explain: 'Đoạn D: "Sleep also appears crucial for emotional regulation".' },
+            { q: 'A statement about how much sleep has decreased over recent generations.', answer: 'F', explain: 'Đoạn F: "Average sleep duration has decreased by approximately one to two hours per night over the past century".' }
+          ]
+        },
+        {
+          group: 'Questions 33–36',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to the passage, the discovery of REM sleep was important because it showed that:', options: ['A. Sleep is essentially passive', 'B. The brain remains active during sleep', 'C. Dreams cannot be remembered', 'D. Sleep is not necessary for adults'], answer: 'B', explain: 'Đoạn B: "The discovery in the 1950s that the brain remains highly active during certain phases of sleep transformed sleep research".' },
+            { q: 'Memory consolidation during sleep is particularly important for:', options: ['A. Mathematical formulas', 'B. Procedural memories like playing music', 'C. Names and faces', 'D. Recent emotional experiences'], answer: 'B', explain: 'Đoạn C: "particularly important for procedural memories — skills like playing musical instruments".' },
+            { q: 'The glymphatic system, discovered in 2013, is involved in:', options: ['A. Producing dreams', 'B. Removing metabolic waste from brain tissue', 'C. Generating REM sleep', 'D. Causing Alzheimer\'s disease'], answer: 'B', explain: 'Đoạn E: "allowing cerebrospinal fluid to flow through expanded channels and clear metabolic waste products".' },
+            { q: 'The author concludes that cultural attitudes toward sleep:', options: ['A. Are universally the same', 'B. Have never changed throughout history', 'C. Are slowly recognising sleep as essential', 'D. Always celebrated rest as important'], answer: 'C', explain: 'Đoạn G: "cultural attitudes are slowly shifting toward recognition that the time we spend asleep is not lost time".' }
+          ]
+        },
+        {
+          group: 'Questions 37–40',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
+          items: [
+            { q: 'REM periods become progressively __________ toward morning during the night.', answer: 'longer', explain: 'Đoạn B: "REM periods becoming progressively longer toward morning".' },
+            { q: 'The brain tissue __________ during sleep to allow waste clearance.', answer: 'contracts', explain: 'Đoạn E: "brain tissue contracts during sleep".' },
+            { q: 'Sleep clears proteins associated with neurodegenerative diseases like __________.', answer: 'Alzheimer\'s', explain: 'Đoạn E: "proteins associated with neurodegenerative diseases like Alzheimer\'s".' },
+            { q: 'Modern electronic screens emit __________ light that suppresses melatonin.', answer: 'blue', explain: 'Đoạn F: "the blue light from electronic screens, suppresses production of melatonin".' }
+          ]
+        }
+      ]
     ]
   },
 
@@ -726,10 +864,11 @@ const TESTS_DATA = {
     title: 'The Art of Sleep',
     topic: 'Health · Psychology',
     difficulty: 'Easy',
-    passages: [{
-      label: 'Reading Passage 1',
-      title: 'The Science and Art of Sleep',
-      content: `<p><span class="para-num">A</span> Humans spend roughly one-third of their lives asleep, yet the purpose of this <span class="vocab" data-word="seemingly" data-def="có vẻ như, dường như">seemingly</span> wasteful state has long puzzled scientists. Why would evolution favor creatures that lie helpless for hours each day, vulnerable to predators and unable to feed or reproduce? The answer, emerging from decades of research, is that sleep is not wasted time at all but a period of intense biological activity essential for survival.</p>
+    passages: [
+      {
+        label: 'Reading Passage 1',
+        title: 'The Science and Art of Sleep',
+        content: `<p><span class="para-num">A</span> Humans spend roughly one-third of their lives asleep, yet the purpose of this <span class="vocab" data-word="seemingly" data-def="có vẻ như, dường như">seemingly</span> wasteful state has long puzzled scientists. Why would evolution favor creatures that lie helpless for hours each day, vulnerable to predators and unable to feed or reproduce? The answer, emerging from decades of research, is that sleep is not wasted time at all but a period of intense biological activity essential for survival.</p>
       
       <p><span class="para-num">B</span> During sleep, the human brain cycles through several distinct stages, each characterized by different patterns of electrical activity. The cycle begins with light sleep, progresses through deeper stages of slow-wave sleep, and culminates in rapid eye movement (REM) sleep, when most vivid dreaming occurs. A complete cycle lasts roughly 90 minutes, and a typical night includes four to six cycles. Crucially, the proportions of different sleep stages shift across the night, with slow-wave sleep dominating early and REM sleep increasing toward morning.</p>
       
@@ -756,43 +895,186 @@ const TESTS_DATA = {
       <p><strong>Đoạn F:</strong> Bất chấp bằng chứng, xã hội hiện đại đang trong khủng hoảng thiếu ngủ. Người lớn ở các nước công nghiệp hiện ngủ ít hơn khoảng 1 giờ so với 50 năm trước. Nhiều người tự hào về việc thiếu ngủ mạn tính.</p>
       
       <p><strong>Đoạn G:</strong> Cải thiện giấc ngủ phần lớn nằm trong tầm kiểm soát của chúng ta. Các nhà khoa học khuyến nghị duy trì giờ ngủ và thức nhất quán, phòng ngủ mát mẻ, tránh caffeine sau trưa, hạn chế màn hình buổi tối. Hầu hết người lớn cần 7-9 giờ/đêm.</p>`
-    }],
+      },
+      {
+        label: 'Reading Passage 2',
+        title: 'The Story of the Olympic Games',
+        content: `<p><span class="para-num">A</span> The Olympic Games represent one of the world\'s most enduring cultural institutions, connecting the modern world to ancient Greek civilisation through more than 2,700 years of athletic competition. Yet the Games as we know them today bear only loose resemblance to their ancient predecessors. Understanding how the Olympics evolved from religious ritual in a small Greek valley into a global commercial spectacle reveals much about how cultural traditions adapt to changing times.</p>
+        
+        <p><span class="para-num">B</span> The original Olympic Games were held at Olympia in southwestern Greece beginning in 776 BCE, although athletic competitions had probably taken place there for centuries before formal records began. These ancient games were religious festivals dedicated to Zeus, the king of the Greek gods, and were one of four major athletic festivals held across Greece in a four-year cycle. Athletes came from across the Greek-speaking world, including colonies in Italy, Sicily, and Asia Minor. The games combined athletic competition with religious worship, philosophical discussion, and political negotiation, with even warring city-states observing temporary truces to allow safe travel to the festival.</p>
+        
+        <p><span class="para-num">C</span> Ancient Olympic events differed significantly from modern ones. The competitions included foot races of various distances, wrestling, boxing, the pentathlon (combining five events), chariot racing, and the pankration — a brutal combination of wrestling and boxing with almost no rules. Most events were performed entirely nude, reflecting Greek attitudes toward the unclothed athletic body. Women were barred not only from competing but from attending; the punishment for violating this rule was reportedly death, although there is no clear evidence that this penalty was ever imposed. Victors received only an olive wreath and the considerable prestige that came with Olympic victory.</p>
+        
+        <p><span class="para-num">D</span> The ancient Games continued for nearly twelve centuries before being abolished by the Roman emperor Theodosius I in 393 CE. As Christianity became dominant in the Roman Empire, athletic festivals associated with worship of pagan gods were increasingly viewed with hostility. The site of Olympia was gradually abandoned, eventually being destroyed by earthquakes and buried by river floods. The traditions of athletic competition that had defined Greek culture for over a millennium faded into historical memory.</p>
+        
+        <p><span class="para-num">E</span> The modern Olympic Games were revived through the efforts of the French educator Pierre de Coubertin, who saw athletic competition as a means of promoting peaceful international understanding. The first modern Games were held in Athens in 1896, with 14 nations sending 241 athletes to compete in 43 events. The international success of those Games launched what became a regular four-year cycle, although the Games were suspended during both world wars. From these modest beginnings, the Olympics have grown into one of the world\'s largest sporting events.</p>
+        
+        <p><span class="para-num">F</span> The modern Games have not been without controversy. Political disputes have repeatedly affected the Olympics, with major boycotts in 1980 and 1984 over Cold War tensions. The 1936 Berlin Games, used for propaganda purposes by the Nazi regime, demonstrated how the Games could be exploited for political ends. The increasing commercialisation of the Olympics has changed their character; the modern Games depend heavily on broadcasting rights, sponsorships, and other commercial activities that earlier organisers would not have recognised. Doping scandals have damaged the credibility of competitions across many sports.</p>
+        
+        <p><span class="para-num">G</span> Despite these challenges, the Olympics retain extraordinary cultural significance. The ceremonial elements — the lighting of the torch in Olympia and its journey to the host city, the parade of athletes during opening ceremonies, the medal podium with its three flags — connect spectators to a tradition that, however changed, traces continuous lineage back to ancient Greece. For two weeks every four years, billions of people around the world share an experience of international competition that remains, despite all its commercial elements, profoundly meaningful. Whatever criticism the modern Olympics deserve, they continue to fulfil at least part of Coubertin\'s original vision.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Olympic là một trong những thể chế văn hóa lâu đời nhất - hơn 2,700 năm thi đấu. Tuy nhiên Olympic ngày nay khác xa so với tiền thân Hy Lạp cổ đại.</p>
+        <p><strong>Đoạn B:</strong> Olympic gốc tổ chức ở Olympia từ 776 TCN. Là lễ hội tôn giáo dành cho Zeus. Vận động viên đến từ khắp thế giới nói tiếng Hy Lạp. Thậm chí thành phố đang chiến tranh cũng tạm ngừng để di chuyển an toàn.</p>
+        <p><strong>Đoạn C:</strong> Các môn Olympic cổ khác xa hiện đại - chạy bộ, đấu vật, đấu quyền, ngũ môn phối hợp, đua xe ngựa, pankration. Hầu hết các môn thi đấu khỏa thân. Phụ nữ bị cấm.</p>
+        <p><strong>Đoạn D:</strong> Olympic cổ kéo dài gần 12 thế kỷ trước khi bị hoàng đế Roman Theodosius I bãi bỏ năm 393 SCN. Khi Cơ Đốc Giáo trở nên thống trị, lễ hội tôn giáo dị giáo bị thù địch.</p>
+        <p><strong>Đoạn E:</strong> Olympic hiện đại được khôi phục bởi nhà giáo dục Pháp Pierre de Coubertin. Olympic hiện đại đầu tiên tại Athens năm 1896 - 14 quốc gia, 241 vận động viên, 43 môn.</p>
+        <p><strong>Đoạn F:</strong> Olympic hiện đại không tránh khỏi tranh cãi. Tẩy chay lớn năm 1980 và 1984. Berlin 1936 phục vụ tuyên truyền Đức Quốc xã. Thương mại hóa, doping scandals.</p>
+        <p><strong>Đoạn G:</strong> Olympic vẫn giữ ý nghĩa văn hóa phi thường. Các yếu tố nghi lễ - đuốc, diễu hành, bục huy chương - kết nối khán giả với truyền thống Hy Lạp cổ đại.</p>`
+      },
+      {
+        label: 'Reading Passage 3',
+        title: 'The Science of Music',
+        content: `<p><span class="para-num">A</span> Few human activities are as universally enjoyed as music. Across every known human culture, people make music, listen to music, and respond emotionally to musical sounds. Yet from a strictly evolutionary perspective, music presents a puzzle: the production and appreciation of organised sound patterns requires considerable cognitive resources, yet music seems to offer no obvious survival benefit. Why did our species develop such elaborate capacities for an activity that does not directly help us find food, escape predators, or reproduce? The science of music attempts to answer these questions and to understand how music affects our minds and bodies.</p>
+        
+        <p><span class="para-num">B</span> The American psychologist Steven Pinker famously described music as "auditory cheesecake" — a pleasant by-product of cognitive systems evolved for other purposes such as language, emotional communication, and pattern recognition. According to this view, music has no specific evolutionary function but happens to stimulate brain systems that respond pleasurably to certain sound patterns. Other scientists strongly disagree, arguing that music\'s universal presence in human cultures and its specific effects on brain function suggest a more fundamental role. The debate over music\'s evolutionary origins remains unresolved among researchers.</p>
+        
+        <p><span class="para-num">C</span> What is clear is that music affects the brain in distinctive and powerful ways. Brain imaging studies show that listening to music activates multiple brain regions simultaneously — areas involved in hearing, memory, emotion, movement, and even motor planning, as if the brain prepares to dance even when the body remains still. Particularly striking is music\'s effect on the brain\'s reward system, the same circuits activated by food and other pleasures. The pleasure people derive from music shows up in brain activity as clearly as any other reward, helping explain why music feels so emotionally compelling.</p>
+        
+        <p><span class="para-num">D</span> Music\'s effects on emotion have been extensively studied. Sad music can produce genuine feelings of sadness in listeners, just as joyful music produces feelings of happiness. Yet people often seek out sad music when they themselves are sad — a behaviour that puzzles researchers. Recent studies suggest that sad music may produce a complex emotional response that includes both sadness and a kind of comforting connection, perhaps reflecting the social functions of music in helping listeners feel understood. Music can also evoke memories with remarkable specificity, sometimes recalling experiences that conscious thought cannot access.</p>
+        
+        <p><span class="para-num">E</span> The therapeutic uses of music have a long history but are increasingly supported by scientific evidence. Music therapy is now used in many medical settings, from helping stroke patients regain language and movement abilities to reducing anxiety in patients before surgery. Studies have found that listening to music can lower blood pressure, reduce stress hormones, and ease the perception of pain. Patients with dementia often retain musical memories long after losing other cognitive abilities, and music can sometimes briefly restore communication ability that seemed completely lost. These effects remain incompletely understood but consistently observed.</p>
+        
+        <p><span class="para-num">F</span> Musical training appears to have lasting effects on brain development. Children who receive significant musical training show enhanced abilities in several non-musical domains, including verbal skills, mathematical reasoning, and certain types of memory. Brain imaging shows that musicians\' brains differ structurally from those of non-musicians in measurable ways. Yet questions remain about cause and effect — whether musical training produces these brain changes or whether children with particular brain characteristics are more likely to engage in musical training. The relationship between music education and broader cognitive development continues to be studied.</p>
+        
+        <p><span class="para-num">G</span> Modern digital technologies have transformed humans\' relationship with music. For most of human history, music required personal performance — either by oneself or in the presence of others. Recording technology, beginning in the late nineteenth century, allowed music to be preserved and replayed. Digital music made vast libraries accessible to anyone with a connection, and streaming services have given listeners unprecedented choice. Yet some researchers worry that these conveniences come at a cost. People who once would have made music themselves now passively consume it. Whether this represents progress or loss remains debated, but the basic human relationship with music — present in some form in every culture — seems likely to continue evolving as long as humans exist.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Ít hoạt động của con người được yêu thích phổ quát như âm nhạc. Tuy nhiên từ quan điểm tiến hóa, âm nhạc đặt ra câu đố - tại sao loài chúng ta phát triển khả năng này khi nó không mang lại lợi ích sinh tồn rõ ràng?</p>
+        <p><strong>Đoạn B:</strong> Steven Pinker mô tả âm nhạc là "auditory cheesecake" - sản phẩm phụ dễ chịu của các hệ thống nhận thức tiến hóa cho mục đích khác. Các nhà khoa học khác mạnh mẽ không đồng ý.</p>
+        <p><strong>Đoạn C:</strong> Âm nhạc ảnh hưởng đến não theo những cách độc đáo và mạnh mẽ. Chụp ảnh não cho thấy nghe âm nhạc kích hoạt nhiều vùng não đồng thời. Tác động lên hệ thống thưởng của não.</p>
+        <p><strong>Đoạn D:</strong> Tác động của âm nhạc lên cảm xúc đã được nghiên cứu rộng rãi. Âm nhạc buồn có thể tạo ra cảm giác buồn thực sự. Mọi người thường tìm âm nhạc buồn khi buồn - một hành vi gây bối rối.</p>
+        <p><strong>Đoạn E:</strong> Sử dụng trị liệu của âm nhạc có lịch sử dài. Trị liệu âm nhạc được sử dụng trong nhiều cơ sở y tế. Bệnh nhân sa sút trí tuệ thường vẫn giữ ký ức âm nhạc lâu sau khi mất các khả năng nhận thức khác.</p>
+        <p><strong>Đoạn F:</strong> Đào tạo âm nhạc có tác dụng lâu dài lên phát triển não. Trẻ em được đào tạo âm nhạc có khả năng nâng cao trong nhiều lĩnh vực không phải âm nhạc. Tuy nhiên còn câu hỏi về nguyên nhân và kết quả.</p>
+        <p><strong>Đoạn G:</strong> Công nghệ số hiện đại đã biến đổi mối quan hệ con người với âm nhạc. Công nghệ ghi âm, nhạc số, dịch vụ streaming đã thay đổi cách chúng ta trải nghiệm âm nhạc.</p>`
+      }
+    ],
     
     questions: [
-      {
-        group: 'Questions 1–4',
-        type: 'tfng',
-        instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
-        items: [
-          { q: 'Sleep is an inactive period when little happens in the body.', answer: 'FALSE', explain: 'Đoạn A: sleep là "period of intense biological activity" - hoạt động sinh học cường độ cao.' },
-          { q: 'Vivid dreams mostly occur during REM sleep.', answer: 'TRUE', explain: 'Đoạn B: "REM sleep, when most vivid dreaming occurs".' },
-          { q: 'Students who stay awake all night before exams generally do better.', answer: 'FALSE', explain: 'Đoạn C: "pulling an all-nighter before an exam may actually impair the very memory".' },
-          { q: 'The University of Rochester study was conducted on human subjects.', answer: 'NOT GIVEN', explain: 'Đoạn E nói có phát hiện năm 2013 nhưng không nêu đối tượng là người hay động vật.' }
-        ]
-      },
-      {
-        group: 'Questions 5–9',
-        type: 'mcq',
-        instruction: 'Choose the correct letter, A, B, C or D.',
-        items: [
-          { q: 'A complete sleep cycle lasts approximately:', options: ['A. 30 minutes', 'B. 60 minutes', 'C. 90 minutes', 'D. 120 minutes'], answer: 'C', explain: 'Đoạn B: "A complete cycle lasts roughly 90 minutes".' },
-          { q: 'According to the passage, REM sleep:', options: ['A. Dominates the early part of the night', 'B. Increases in proportion toward morning', 'C. Occurs only in young children', 'D. Is the deepest stage of sleep'], answer: 'B', explain: 'Đoạn B: "REM sleep increasing toward morning".' },
-          { q: 'The University of Rochester study found that during sleep:', options: ['A. The brain produces more waste products', 'B. Memory deteriorates rapidly', 'C. Spaces between brain cells expand', 'D. Cerebrospinal fluid stops flowing'], answer: 'C', explain: 'Đoạn E: "the space between brain cells expands".' },
-          { q: 'The author describes "sleep debt" as:', options: ['A. A problem that can be solved by weekend rest', 'B. A deficit that cannot be easily repaid', 'C. A condition limited to shift workers', 'D. A myth not supported by science'], answer: 'B', explain: 'Đoạn F: "sleep debt — a deficit that cannot simply be paid off".' },
-          { q: 'The passage suggests that sleep should be regarded as:', options: ['A. A luxury for those who can afford it', 'B. A biological necessity', 'C. An optional activity for adults', 'D. A sign of laziness'], answer: 'B', explain: 'Đoạn G: "Treating sleep as a luxury rather than a necessity... is a mistake".' }
-        ]
-      },
-      {
-        group: 'Questions 10–13',
-        type: 'fill',
-        instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
-        items: [
-          { q: 'During deep sleep, the body releases __________ hormone.', answer: 'growth', explain: 'Đoạn D: "the body releases growth hormone".' },
-          { q: 'Waste products linked to __________ disease accumulate during waking hours.', answer: 'Alzheimer\'s', explain: 'Đoạn E: "proteins associated with Alzheimer\'s disease".' },
-          { q: 'Adults in industrialized countries now sleep about __________ less per night than 50 years ago.', answer: 'an hour', explain: 'Đoạn F: "about an hour less per night".' },
-          { q: 'Most adults function best with __________ hours of sleep per night.', answer: 'seven to nine', explain: 'Đoạn G: "most adults function best with seven to nine hours".' }
-        ]
-      }
+      // ========== PASSAGE 1 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 1–4',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'Sleep is an inactive period when little happens in the body.', answer: 'FALSE', explain: 'Đoạn A: sleep là "period of intense biological activity".' },
+            { q: 'Vivid dreams mostly occur during REM sleep.', answer: 'TRUE', explain: 'Đoạn B: "REM sleep, when most vivid dreaming occurs".' },
+            { q: 'Students who stay awake all night before exams generally do better.', answer: 'FALSE', explain: 'Đoạn C: "pulling an all-nighter before an exam may actually impair the very memory".' },
+            { q: 'The University of Rochester study was conducted on human subjects.', answer: 'NOT GIVEN', explain: 'Đoạn E nói có phát hiện năm 2013 nhưng không nêu đối tượng nghiên cứu là người hay động vật.' }
+          ]
+        },
+        {
+          group: 'Questions 5–9',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'A complete sleep cycle lasts approximately:', options: ['A. 30 minutes', 'B. 60 minutes', 'C. 90 minutes', 'D. 120 minutes'], answer: 'C', explain: 'Đoạn B: "A complete cycle lasts roughly 90 minutes".' },
+            { q: 'According to the passage, REM sleep:', options: ['A. Dominates the early part of the night', 'B. Increases in proportion toward morning', 'C. Occurs only in young children', 'D. Is the deepest stage of sleep'], answer: 'B', explain: 'Đoạn B: "REM sleep increasing toward morning".' },
+            { q: 'The University of Rochester study found that during sleep:', options: ['A. The brain produces more waste products', 'B. Memory deteriorates rapidly', 'C. Spaces between brain cells expand', 'D. Cerebrospinal fluid stops flowing'], answer: 'C', explain: 'Đoạn E: "the space between brain cells expands".' },
+            { q: 'The author describes "sleep debt" as:', options: ['A. A problem that can be solved by weekend rest', 'B. A deficit that cannot be easily repaid', 'C. A condition limited to shift workers', 'D. A myth not supported by science'], answer: 'B', explain: 'Đoạn F: "sleep debt — a deficit that cannot simply be paid off".' },
+            { q: 'The passage suggests that sleep should be regarded as:', options: ['A. A luxury for those who can afford it', 'B. A biological necessity', 'C. An optional activity for adults', 'D. A sign of laziness'], answer: 'B', explain: 'Đoạn G: "Treating sleep as a luxury rather than a necessity... is a mistake".' }
+          ]
+        },
+        {
+          group: 'Questions 10–13',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'During deep sleep, the body releases __________ hormone.', answer: 'growth', explain: 'Đoạn D: "the body releases growth hormone".' },
+            { q: 'Waste products linked to __________ disease accumulate during waking hours.', answer: 'Alzheimer\'s', explain: 'Đoạn E: "proteins associated with Alzheimer\'s disease".' },
+            { q: 'Adults in industrialized countries now sleep about __________ less per night than 50 years ago.', answer: 'an hour', explain: 'Đoạn F: "about an hour less per night".' },
+            { q: 'Most adults function best with __________ hours of sleep per night.', answer: 'seven to nine', explain: 'Đoạn G: "most adults function best with seven to nine hours".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 2 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 14–20',
+          type: 'matching-headings',
+          instruction: 'Reading Passage 2 has seven paragraphs, A-G. Choose the correct heading for each paragraph from the list below.',
+          headings: [
+            { id: 'i', text: 'A long-distance connection across centuries' },
+            { id: 'ii', text: 'Religious festival for Greek athletes' },
+            { id: 'iii', text: 'Unique features of ancient competition' },
+            { id: 'iv', text: 'Why the ancient Games ended' },
+            { id: 'v', text: 'Revival through one man\'s vision' },
+            { id: 'vi', text: 'Problems and pressures of modern Games' },
+            { id: 'vii', text: 'Enduring meaning despite imperfections' },
+            { id: 'viii', text: 'Greek heroes of the Olympic era' },
+            { id: 'ix', text: 'Olympic athletes and their training methods' }
+          ],
+          items: [
+            { q: 'A', answer: 'i', explain: 'Đoạn A giới thiệu Olympic kết nối với Hy Lạp cổ qua 2,700 năm.' },
+            { q: 'B', answer: 'ii', explain: 'Đoạn B về Olympic gốc là lễ hội tôn giáo dành cho Zeus.' },
+            { q: 'C', answer: 'iii', explain: 'Đoạn C về các đặc điểm độc đáo của thi đấu cổ - khỏa thân, pankration.' },
+            { q: 'D', answer: 'iv', explain: 'Đoạn D về lý do Olympic cổ kết thúc - Theodosius I bãi bỏ.' },
+            { q: 'E', answer: 'v', explain: 'Đoạn E về Coubertin khôi phục Olympic.' },
+            { q: 'F', answer: 'vi', explain: 'Đoạn F về các vấn đề và áp lực của Olympic hiện đại.' },
+            { q: 'G', answer: 'vii', explain: 'Đoạn G về ý nghĩa lâu dài bất chấp những vấn đề.' }
+          ]
+        },
+        {
+          group: 'Questions 21–23',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 2? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'Olympic athletes in ancient times received valuable prizes for their victories.', answer: 'FALSE', explain: 'Đoạn C: "Victors received only an olive wreath".' },
+            { q: 'The penalty for women attending the ancient Games was definitely enforced.', answer: 'NOT GIVEN', explain: 'Đoạn C nói "no clear evidence that this penalty was ever imposed" - không xác định được.' },
+            { q: 'The 1936 Berlin Games were used for political purposes by the Nazi government.', answer: 'TRUE', explain: 'Đoạn F: "The 1936 Berlin Games, used for propaganda purposes by the Nazi regime".' }
+          ]
+        },
+        {
+          group: 'Questions 24–26',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
+          items: [
+            { q: 'The original Olympic Games began at Olympia in the year __________ BCE.', answer: '776', explain: 'Đoạn B: "beginning in 776 BCE".' },
+            { q: 'The Roman emperor __________ abolished the ancient Olympic Games in 393 CE.', answer: 'Theodosius', explain: 'Đoạn D: "abolished by the Roman emperor Theodosius I".' },
+            { q: 'The first modern Olympic Games were held in __________ in 1896.', answer: 'Athens', explain: 'Đoạn E: "The first modern Games were held in Athens in 1896".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 3 QUESTIONS (14 questions) ==========
+      [
+        {
+          group: 'Questions 27–32',
+          type: 'matching-information',
+          instruction: 'Reading Passage 3 has seven paragraphs, A-G. Which paragraph contains the following information?',
+          paragraphs: ['A','B','C','D','E','F','G'],
+          items: [
+            { q: 'A reference to a psychologist who described music as a by-product of evolution.', answer: 'B', explain: 'Đoạn B: "Steven Pinker famously described music as auditory cheesecake".' },
+            { q: 'A description of how music affects the brain\'s reward circuits.', answer: 'C', explain: 'Đoạn C: "music\'s effect on the brain\'s reward system".' },
+            { q: 'Mention of music\'s usefulness in helping stroke patients recover.', answer: 'E', explain: 'Đoạn E: "helping stroke patients regain language and movement abilities".' },
+            { q: 'Discussion of how digital technology has changed access to music.', answer: 'G', explain: 'Đoạn G: "Digital music made vast libraries accessible... streaming services have given listeners unprecedented choice".' },
+            { q: 'A puzzling behaviour involving people seeking out sad music.', answer: 'D', explain: 'Đoạn D: "people often seek out sad music when they themselves are sad — a behaviour that puzzles researchers".' },
+            { q: 'A statement that musical training may correlate with non-musical abilities.', answer: 'F', explain: 'Đoạn F: "Children who receive significant musical training show enhanced abilities in several non-musical domains".' }
+          ]
+        },
+        {
+          group: 'Questions 33–36',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to the passage, music presents an evolutionary puzzle because:', options: ['A. It is harmful to human survival', 'B. It requires cognitive resources but has no obvious survival benefit', 'C. Only humans can make music', 'D. It is found in only a few cultures'], answer: 'B', explain: 'Đoạn A: "requires considerable cognitive resources, yet music seems to offer no obvious survival benefit".' },
+            { q: 'Brain imaging shows that listening to music activates regions involved in:', options: ['A. Only hearing', 'B. Only emotion', 'C. Hearing, memory, emotion, and movement', 'D. Vision and balance'], answer: 'C', explain: 'Đoạn C: "areas involved in hearing, memory, emotion, movement".' },
+            { q: 'Patients with dementia often retain:', options: ['A. All cognitive abilities equally', 'B. Musical memories long after other abilities decline', 'C. The ability to learn new musical pieces', 'D. Their ability to perform music professionally'], answer: 'B', explain: 'Đoạn E: "Patients with dementia often retain musical memories long after losing other cognitive abilities".' },
+            { q: 'The author concludes that the relationship between music and humans:', options: ['A. Will end soon due to technology', 'B. Has remained completely unchanged for centuries', 'C. Will likely continue evolving as long as humans exist', 'D. Has been thoroughly understood by scientists'], answer: 'C', explain: 'Đoạn G: "seems likely to continue evolving as long as humans exist".' }
+          ]
+        },
+        {
+          group: 'Questions 37–40',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'Steven Pinker described music as "__________ cheesecake".', answer: 'auditory', explain: 'Đoạn B: "music as auditory cheesecake".' },
+            { q: 'Music therapy can lower blood pressure and reduce __________ hormones.', answer: 'stress', explain: 'Đoạn E: "lower blood pressure, reduce stress hormones".' },
+            { q: 'Musicians\' brains differ __________ from those of non-musicians.', answer: 'structurally', explain: 'Đoạn F: "musicians\' brains differ structurally from those of non-musicians".' },
+            { q: 'Recording technology began in the late __________ century.', answer: 'nineteenth', explain: 'Đoạn G: "Recording technology, beginning in the late nineteenth century".' }
+          ]
+        }
+      ]
     ]
   },
 
@@ -1389,10 +1671,11 @@ const TESTS_DATA = {
     title: 'Bird Migration',
     topic: 'Biology · Ornithology',
     difficulty: 'Medium',
-    passages: [{
-      label: 'Reading Passage 1',
-      title: 'The Wonder of Bird Migration',
-      content: `<p><span class="para-num">A</span> Every year, billions of birds undertake journeys of extraordinary length and difficulty. The Arctic tern travels from the Arctic to Antarctica and back, covering roughly 40,000 miles annually — the longest migration of any animal. Bar-tailed godwits fly non-stop for over a week from Alaska to New Zealand, a distance of more than 7,000 miles. These remarkable feats of endurance and navigation have fascinated scientists and naturalists for centuries, yet many fundamental questions about bird migration remain unanswered.</p>
+    passages: [
+      {
+        label: 'Reading Passage 1',
+        title: 'The Wonder of Bird Migration',
+        content: `<p><span class="para-num">A</span> Every year, billions of birds undertake journeys of extraordinary length and difficulty. The Arctic tern travels from the Arctic to Antarctica and back, covering roughly 40,000 miles annually — the longest migration of any animal. Bar-tailed godwits fly non-stop for over a week from Alaska to New Zealand, a distance of more than 7,000 miles. These remarkable feats of endurance and navigation have fascinated scientists and naturalists for centuries, yet many fundamental questions about bird migration remain unanswered.</p>
       
       <p><span class="para-num">B</span> Migration is driven primarily by the seasonal availability of food and suitable breeding conditions. In the temperate and polar regions, summer brings an abundance of insects and plant growth that can support large populations of breeding birds. As autumn approaches and these resources disappear, birds that cannot survive the cold winter must move to warmer climates or starve. Species that have evolved to take advantage of these seasonal patterns now make regular journeys between breeding grounds and wintering areas, sometimes spanning entire hemispheres.</p>
       
@@ -1419,43 +1702,186 @@ const TESTS_DATA = {
       <p><strong>Đoạn F:</strong> Hoạt động con người gây mối đe dọa khác. Phá hủy các điểm dừng — đầm lầy, rừng — có thể đặc biệt tàn khốc. Ô nhiễm ánh sáng từ thành phố làm chim mất phương hướng, dẫn đến va chạm với tòa nhà. Va chạm cửa sổ giết hàng trăm triệu con chim mỗi năm ở Bắc Mỹ.</p>
       
       <p><strong>Đoạn G:</strong> Nỗ lực bảo tồn đã tạo ra một số kết quả khích lệ. Bảo vệ các đầm lầy then chốt dọc theo đường bay Đông Á-Australasia đã giúp ổn định quần thể. Các dự án khoa học công dân đã thu hút hàng triệu người theo dõi quần thể chim. Cần hợp tác quốc tế.</p>`
-    }],
+      },
+      {
+        label: 'Reading Passage 2',
+        title: 'The Origins of Writing',
+        content: `<p><span class="para-num">A</span> The invention of writing represents one of the most consequential intellectual achievements in human history. Before writing, communication was limited to those within speaking distance and to what could be transmitted through oral tradition. Writing made it possible to preserve thoughts, transactions, and stories across time and to communicate across vast distances. Yet despite its central importance, writing was invented independently only a few times in human history — most scholars accept four or five separate origins — making it among the rarest of major human innovations.</p>
+        
+        <p><span class="para-num">B</span> The earliest known writing system developed in ancient Mesopotamia (modern Iraq) around 3,400 BCE. The Sumerian civilisation, which had emerged in this region, created systems of symbols pressed into wet clay tablets with reed styluses to record economic transactions. This script, called cuneiform from its wedge-shaped marks, initially recorded mainly commercial information — quantities of grain stored, livestock owned, debts to be paid. Only gradually did writing expand from accounting to other purposes, eventually being used for religious texts, royal proclamations, and literary works.</p>
+        
+        <p><span class="para-num">C</span> Egyptian hieroglyphic writing developed slightly later than Sumerian cuneiform, around 3,200 BCE. Whether the Egyptian invention was independent or influenced by Mesopotamian developments remains debated among scholars. The hieroglyphic system combined symbols representing whole words with others representing sounds, producing one of the most visually elegant writing systems ever created. Egyptian writing was used for religious and royal purposes for over three thousand years before being gradually forgotten, only to be deciphered by French scholar Jean-François Champollion in 1822.</p>
+        
+        <p><span class="para-num">D</span> Chinese writing emerged around 1,200 BCE during the Shang dynasty, the earliest examples being inscriptions on oracle bones used for divination. Unlike Western alphabets, Chinese writing uses logograms — symbols representing whole words or concepts rather than sounds. This approach has both advantages and disadvantages compared to alphabetic systems. Chinese can be read regardless of how the reader pronounces the words, allowing speakers of mutually incomprehensible Chinese dialects to communicate in writing. However, the system requires memorising thousands of distinct characters, making literacy significantly harder to achieve.</p>
+        
+        <p><span class="para-num">E</span> The Mesoamerican civilisations developed writing independently from Old World traditions, with the earliest examples coming from the Zapotec people of southern Mexico around 500 BCE. Mayan writing, developed by 200 BCE and reaching maturity around 250 CE, combined sound-based signs with logograms in sophisticated ways. The Maya wrote on bark paper books, monuments, and pottery, recording historical events, astronomical observations, religious texts, and royal genealogies. Most Mayan books were destroyed by Spanish colonists, but the surviving examples reveal a fully developed literary tradition.</p>
+        
+        <p><span class="para-num">F</span> The development of alphabetic writing transformed the spread of literacy. Earlier writing systems required mastering hundreds or thousands of symbols, making literacy practical only for specialist scribes. Alphabets, requiring memorisation of only about 20 to 30 symbols representing sounds, dramatically reduced the difficulty of learning to read. The first true alphabet appears to have developed among Semitic-speaking peoples in the Levant around 1,800 BCE. From this original alphabet descended the Phoenician, Hebrew, Greek, Latin, Arabic, and many other writing systems used today.</p>
+        
+        <p><span class="para-num">G</span> Writing\'s consequences for human societies have been profound and continuing. Written records allowed the accumulation of knowledge across generations in ways that oral traditions could never match. Religious traditions based on sacred texts became possible. Government bureaucracies could maintain consistent administration across large territories. Personal communication across distance and time became possible. Even today, despite radio, television, and other communications media, written text remains central to how complex societies operate. The remarkable fact that all this depends on people scratching marks on surfaces — an innovation invented only a few times in our species\' history — remains striking on reflection.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Phát minh chữ viết là một trong những thành tựu trí tuệ quan trọng nhất trong lịch sử nhân loại. Tuy nhiên, chữ viết chỉ được phát minh độc lập 4-5 lần trong lịch sử, khiến nó là một trong những đổi mới hiếm nhất.</p>
+        <p><strong>Đoạn B:</strong> Hệ chữ viết sớm nhất phát triển ở Mesopotamia khoảng 3,400 TCN. Người Sumer tạo ra chữ tượng hình hình nêm (cuneiform) trên đất sét bằng cây sậy, ban đầu để ghi giao dịch thương mại.</p>
+        <p><strong>Đoạn C:</strong> Chữ tượng hình Ai Cập phát triển hơi muộn hơn, khoảng 3,200 TCN. Liệu phát minh Ai Cập có độc lập hay bị ảnh hưởng vẫn được tranh luận. Jean-François Champollion giải mã năm 1822.</p>
+        <p><strong>Đoạn D:</strong> Chữ Trung Quốc xuất hiện khoảng 1,200 TCN trong triều Thương, ví dụ sớm nhất là khắc trên xương oracle. Chữ Trung sử dụng logogram - ký hiệu đại diện toàn bộ từ. Yêu cầu nhớ hàng nghìn ký tự.</p>
+        <p><strong>Đoạn E:</strong> Các nền văn minh Mesoamerica phát triển chữ viết độc lập. Người Zapotec khoảng 500 TCN. Chữ Maya kết hợp ký hiệu âm thanh với logogram. Hầu hết sách Maya bị phá hủy bởi người Tây Ban Nha.</p>
+        <p><strong>Đoạn F:</strong> Sự phát triển chữ viết theo bảng chữ cái đã biến đổi sự lan truyền của khả năng đọc viết. Chỉ cần nhớ 20-30 ký hiệu đại diện cho âm thanh. Bảng chữ cái thực sự đầu tiên xuất hiện trong các dân tộc Semitic ở Levant khoảng 1,800 TCN.</p>
+        <p><strong>Đoạn G:</strong> Hậu quả của chữ viết đối với xã hội con người là sâu sắc và tiếp diễn. Cho phép tích lũy kiến thức qua các thế hệ. Bộ máy hành chính chính phủ có thể duy trì quản lý nhất quán trên các vùng lãnh thổ rộng lớn.</p>`
+      },
+      {
+        label: 'Reading Passage 3',
+        title: 'The Psychology of Decision Making',
+        content: `<p><span class="para-num">A</span> Throughout the twentieth century, economists assumed that human decision-making could be understood through the model of the "rational actor" — a hypothetical person who calmly weighs costs and benefits before choosing the option that maximises personal benefit. This assumption produced elegant economic theories and useful predictions in many situations. Yet psychologists who actually studied how people make decisions consistently found behaviour that contradicted the rational actor model. This contradiction eventually produced a new field, behavioural economics, that has transformed our understanding of human choice.</p>
+        
+        <p><span class="para-num">B</span> The Israeli-American psychologists Daniel Kahneman and Amos Tversky, working together in the 1970s, conducted experiments that revealed systematic biases in human decision-making. Their work showed that people consistently make predictable errors when judging probabilities, comparing options, and reasoning about uncertain situations. These were not random mistakes that disappeared with education or careful thought; they were stable patterns built into how human minds work. Kahneman received the Nobel Prize in Economics in 2002 — an unusual honour for a psychologist, indicating the importance of this work for understanding economic behaviour.</p>
+        
+        <p><span class="para-num">C</span> One of the most influential findings concerns what Kahneman and Tversky called "loss aversion" — the tendency for people to feel losses more strongly than equivalent gains. Most people would refuse a gamble offering equal chances of winning or losing the same amount of money, even though a rational actor would be indifferent to such a bet. The pain of losing $100, research suggests, is roughly twice as intense as the pleasure of gaining $100. This asymmetry has powerful implications for how people respond to investment risks, insurance offerings, and many other choices.</p>
+        
+        <p><span class="para-num">D</span> Closely related is the "endowment effect" — the tendency to value things more when we own them than when we do not. Experiments have shown that people offered a coffee mug typically demand significantly more money to sell it than they would have paid to buy the same mug. From the rational actor perspective, this makes no sense; the value of the mug should be the same whether one owns it or not. From the psychology of loss aversion, however, the pattern makes perfect sense — giving up the mug feels like a loss, while not buying it would have felt like a non-gain.</p>
+        
+        <p><span class="para-num">E</span> Behavioural research has also revealed how easily people can be influenced by the way choices are presented. Identical options can produce different decisions depending on how they are described — what behavioural economists call "framing effects." A medical procedure described as having a 90 percent survival rate will seem more attractive than one described as having a 10 percent mortality rate, even though the underlying facts are identical. Politicians, advertisers, and other persuaders exploit these effects continuously, often without their audiences realising what is happening.</p>
+        
+        <p><span class="para-num">F</span> The practical implications of behavioural economics have led to new approaches called "choice architecture" — designing how choices are presented to encourage particular outcomes. The default option in a decision typically has enormous influence simply because many people accept defaults without considering alternatives. Switching countries from requiring people to opt in to organ donation to requiring opt-out has dramatically increased donor rates simply by changing the default. Critics worry about whether such "nudging" represents helpful guidance or manipulative control, but the underlying empirical findings about default effects are not seriously disputed.</p>
+        
+        <p><span class="para-num">G</span> Behavioural economics has not replaced traditional economic analysis but has supplemented it in important ways. The rational actor model remains useful for predicting average behaviour in markets with strong competitive pressures. But understanding why individual decisions deviate from this model, and how systematic biases can affect collective outcomes, has become essential to addressing issues from financial regulation to public health to climate change. The recognition that humans are not perfectly rational does not make us less worthy of respect; it makes us more interesting subjects of study and more challenging participants in the social systems we have created.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Trong suốt thế kỷ 20, các nhà kinh tế giả định ra quyết định của con người có thể hiểu qua mô hình "tác nhân lý trí". Tuy nhiên, các nhà tâm lý học liên tục thấy hành vi mâu thuẫn với mô hình này, dẫn đến lĩnh vực kinh tế hành vi.</p>
+        <p><strong>Đoạn B:</strong> Daniel Kahneman và Amos Tversky làm việc cùng nhau trong những năm 1970, tiến hành các thí nghiệm cho thấy các thiên kiến hệ thống trong việc ra quyết định. Kahneman nhận giải Nobel Kinh tế năm 2002.</p>
+        <p><strong>Đoạn C:</strong> Một trong những phát hiện ảnh hưởng nhất là "loss aversion" - xu hướng cảm nhận tổn thất mạnh hơn lợi ích tương đương. Nỗi đau mất $100 mạnh gấp đôi niềm vui có thêm $100.</p>
+        <p><strong>Đoạn D:</strong> Liên quan chặt chẽ là "endowment effect" - xu hướng đánh giá cao hơn những thứ mình sở hữu. Thí nghiệm cho thấy người được tặng cốc cà phê đòi nhiều tiền hơn khi bán so với khi mua.</p>
+        <p><strong>Đoạn E:</strong> Nghiên cứu hành vi cũng tiết lộ cách dễ dàng người ta bị ảnh hưởng bởi cách trình bày lựa chọn - "framing effects". Phẫu thuật có 90% tỷ lệ sống sót sẽ hấp dẫn hơn 10% tỷ lệ tử vong, dù sự thật cơ bản giống nhau.</p>
+        <p><strong>Đoạn F:</strong> "Choice architecture" - thiết kế cách trình bày lựa chọn để khuyến khích kết quả cụ thể. Chuyển từ opt-in sang opt-out cho hiến tạng đã tăng dramatically tỷ lệ hiến.</p>
+        <p><strong>Đoạn G:</strong> Kinh tế hành vi không thay thế phân tích kinh tế truyền thống mà bổ sung. Việc hiểu tại sao quyết định cá nhân lệch khỏi mô hình này đã trở thành thiết yếu cho điều tiết tài chính, y tế công cộng, biến đổi khí hậu.</p>`
+      }
+    ],
     
     questions: [
-      {
-        group: 'Questions 1–5',
-        type: 'tfng',
-        instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
-        items: [
-          { q: 'The bar-tailed godwit completes its 7,000-mile journey without stopping.', answer: 'TRUE', explain: 'Đoạn A: "Bar-tailed godwits fly non-stop for over a week from Alaska to New Zealand".' },
-          { q: 'Birds primarily migrate to escape predators in their breeding grounds.', answer: 'FALSE', explain: 'Đoạn B: di cư "driven primarily by the seasonal availability of food and suitable breeding conditions".' },
-          { q: 'All migratory birds use the same navigation method.', answer: 'FALSE', explain: 'Đoạn C: "birds use multiple cues simultaneously" và mỗi loài dùng khác nhau.' },
-          { q: 'Some birds shrink their digestive organs before migration.', answer: 'TRUE', explain: 'Đoạn D: "reduce the size of internal organs... including portions of their digestive system".' },
-          { q: 'Birds arriving earlier at breeding grounds always benefit from climate change.', answer: 'FALSE', explain: 'Đoạn E: "This sounds like a positive adaptation, but it can create serious problems".' }
-        ]
-      },
-      {
-        group: 'Questions 6–9',
-        type: 'mcq',
-        instruction: 'Choose the correct letter, A, B, C or D.',
-        items: [
-          { q: 'According to the passage, magnetite in birds\' beaks:', options: ['A. Allows them to taste their food', 'B. May help them detect direction', 'C. Develops during long migrations', 'D. Is found only in pigeons'], answer: 'B', explain: 'Đoạn C: "may function as biological compasses".' },
-          { q: 'Window strikes in North America kill approximately:', options: ['A. Thousands of birds annually', 'B. Tens of thousands of birds annually', 'C. Millions of birds annually', 'D. Hundreds of millions of birds annually'], answer: 'D', explain: 'Đoạn F: "window strikes alone kill hundreds of millions of birds annually in North America".' },
-          { q: 'The protection of wetlands along the East Asian-Australasian flyway has:', options: ['A. Completely solved the problem of bird decline', 'B. Helped stabilize some waterbird populations', 'C. Been opposed by local communities', 'D. Failed despite considerable effort'], answer: 'B', explain: 'Đoạn G: "has helped stabilize populations of several waterbird species".' },
-          { q: 'According to the final paragraph, effective bird protection requires:', options: ['A. Stricter laws within individual countries', 'B. Greater scientific research funding', 'C. International cooperation across entire migration routes', 'D. The relocation of vulnerable species'], answer: 'C', explain: 'Đoạn G: "Effective protection requires international cooperation across the entire migration route".' }
-        ]
-      },
-      {
-        group: 'Questions 10–13',
-        type: 'fill',
-        instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
-        items: [
-          { q: 'The Arctic tern travels approximately __________ miles annually.', answer: '40,000', explain: 'Đoạn A: "roughly 40,000 miles annually".' },
-          { q: 'Birds may __________ their body weight by storing fat before migration.', answer: 'double', explain: 'Đoạn D: "sometimes doubling their mass with stored fat".' },
-          { q: 'Birds rest and refuel at __________ during their long journeys.', answer: 'stopover sites', explain: 'Đoạn F: "stopover sites — wetlands, forests, and other habitats where birds rest and refuel".' },
-          { q: '__________ science projects have helped monitor bird populations.', answer: 'Citizen', explain: 'Đoạn G: "Citizen science projects have engaged millions of people".' }
-        ]
-      }
+      // ========== PASSAGE 1 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 1–5',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'The bar-tailed godwit completes its 7,000-mile journey without stopping.', answer: 'TRUE', explain: 'Đoạn A: "Bar-tailed godwits fly non-stop for over a week from Alaska to New Zealand".' },
+            { q: 'Birds primarily migrate to escape predators in their breeding grounds.', answer: 'FALSE', explain: 'Đoạn B: di cư "driven primarily by the seasonal availability of food and suitable breeding conditions".' },
+            { q: 'All migratory birds use the same navigation method.', answer: 'FALSE', explain: 'Đoạn C: "birds use multiple cues simultaneously".' },
+            { q: 'Some birds shrink their digestive organs before migration.', answer: 'TRUE', explain: 'Đoạn D: "reduce the size of internal organs... including portions of their digestive system".' },
+            { q: 'Birds arriving earlier at breeding grounds always benefit from climate change.', answer: 'FALSE', explain: 'Đoạn E: "This sounds like a positive adaptation, but it can create serious problems".' }
+          ]
+        },
+        {
+          group: 'Questions 6–9',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to the passage, magnetite in birds\' beaks:', options: ['A. Allows them to taste their food', 'B. May help them detect direction', 'C. Develops during long migrations', 'D. Is found only in pigeons'], answer: 'B', explain: 'Đoạn C: "may function as biological compasses".' },
+            { q: 'Window strikes in North America kill approximately:', options: ['A. Thousands of birds annually', 'B. Tens of thousands of birds annually', 'C. Millions of birds annually', 'D. Hundreds of millions of birds annually'], answer: 'D', explain: 'Đoạn F: "window strikes alone kill hundreds of millions of birds annually in North America".' },
+            { q: 'The protection of wetlands along the East Asian-Australasian flyway has:', options: ['A. Completely solved the problem of bird decline', 'B. Helped stabilize some waterbird populations', 'C. Been opposed by local communities', 'D. Failed despite considerable effort'], answer: 'B', explain: 'Đoạn G: "has helped stabilize populations of several waterbird species".' },
+            { q: 'According to the final paragraph, effective bird protection requires:', options: ['A. Stricter laws within individual countries', 'B. Greater scientific research funding', 'C. International cooperation across entire migration routes', 'D. The relocation of vulnerable species'], answer: 'C', explain: 'Đoạn G: "Effective protection requires international cooperation across the entire migration route".' }
+          ]
+        },
+        {
+          group: 'Questions 10–13',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
+          items: [
+            { q: 'The Arctic tern travels approximately __________ miles annually.', answer: '40,000', explain: 'Đoạn A: "roughly 40,000 miles annually".' },
+            { q: 'Birds may __________ their body weight by storing fat before migration.', answer: 'double', explain: 'Đoạn D: "sometimes doubling their mass with stored fat".' },
+            { q: 'Birds rest and refuel at __________ during their long journeys.', answer: 'stopover sites', explain: 'Đoạn F: "stopover sites — wetlands, forests, and other habitats where birds rest and refuel".' },
+            { q: '__________ science projects have helped monitor bird populations.', answer: 'Citizen', explain: 'Đoạn G: "Citizen science projects have engaged millions of people".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 2 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 14–20',
+          type: 'matching-headings',
+          instruction: 'Reading Passage 2 has seven paragraphs, A-G. Choose the correct heading for each paragraph from the list below.',
+          headings: [
+            { id: 'i', text: 'The rarest of major human innovations' },
+            { id: 'ii', text: 'How alphabets transformed literacy' },
+            { id: 'iii', text: 'A writing system based on whole-word symbols' },
+            { id: 'iv', text: 'An independent New World development' },
+            { id: 'v', text: 'The earliest known writing for commercial records' },
+            { id: 'vi', text: 'Far-reaching consequences for civilisation' },
+            { id: 'vii', text: 'A long-lasting and visually elegant system' },
+            { id: 'viii', text: 'Writing\'s role in religion' },
+            { id: 'ix', text: 'Modern computer code descended from ancient scripts' }
+          ],
+          items: [
+            { q: 'A', answer: 'i', explain: 'Đoạn A giới thiệu chữ viết là phát minh hiếm nhất - chỉ độc lập 4-5 lần.' },
+            { q: 'B', answer: 'v', explain: 'Đoạn B về cuneiform của Sumer dùng cho ghi chép thương mại đầu tiên.' },
+            { q: 'C', answer: 'vii', explain: 'Đoạn C về chữ tượng hình Ai Cập kéo dài và đẹp mắt.' },
+            { q: 'D', answer: 'iii', explain: 'Đoạn D về chữ Trung Quốc dùng logogram - đại diện toàn bộ từ.' },
+            { q: 'E', answer: 'iv', explain: 'Đoạn E về phát triển độc lập của Mesoamerica - Zapotec, Maya.' },
+            { q: 'F', answer: 'ii', explain: 'Đoạn F về bảng chữ cái biến đổi khả năng đọc viết.' },
+            { q: 'G', answer: 'vi', explain: 'Đoạn G về hậu quả sâu sắc và tiếp diễn của chữ viết đối với xã hội.' }
+          ]
+        },
+        {
+          group: 'Questions 21–23',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 2? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'Egyptian hieroglyphs were deciphered before Mesopotamian cuneiform.', answer: 'NOT GIVEN', explain: 'Đoạn C đề cập Champollion giải mã năm 1822 nhưng không so sánh với cuneiform.' },
+            { q: 'Chinese characters allow speakers of different dialects to communicate in writing.', answer: 'TRUE', explain: 'Đoạn D: "allowing speakers of mutually incomprehensible Chinese dialects to communicate in writing".' },
+            { q: 'Most Mayan books survive to this day.', answer: 'FALSE', explain: 'Đoạn E: "Most Mayan books were destroyed by Spanish colonists".' }
+          ]
+        },
+        {
+          group: 'Questions 24–26',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
+          items: [
+            { q: 'Cuneiform was pressed into wet __________ tablets with reed styluses.', answer: 'clay', explain: 'Đoạn B: "symbols pressed into wet clay tablets".' },
+            { q: 'The earliest examples of Chinese writing are inscriptions on __________ bones.', answer: 'oracle', explain: 'Đoạn D: "inscriptions on oracle bones used for divination".' },
+            { q: 'The first true alphabet developed in the __________ around 1,800 BCE.', answer: 'Levant', explain: 'Đoạn F: "developed among Semitic-speaking peoples in the Levant around 1,800 BCE".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 3 QUESTIONS (14 questions) ==========
+      [
+        {
+          group: 'Questions 27–32',
+          type: 'matching-information',
+          instruction: 'Reading Passage 3 has seven paragraphs, A-G. Which paragraph contains the following information?',
+          paragraphs: ['A','B','C','D','E','F','G'],
+          items: [
+            { q: 'Mention of a Nobel Prize awarded for psychological research on economics.', answer: 'B', explain: 'Đoạn B: "Kahneman received the Nobel Prize in Economics in 2002".' },
+            { q: 'An example using a medical procedure to illustrate framing effects.', answer: 'E', explain: 'Đoạn E: "A medical procedure described as having a 90 percent survival rate".' },
+            { q: 'A discussion of how default options affect important decisions.', answer: 'F', explain: 'Đoạn F: "The default option in a decision typically has enormous influence".' },
+            { q: 'Reference to organ donation rates affected by default settings.', answer: 'F', explain: 'Đoạn F: "Switching countries from requiring people to opt in to organ donation to requiring opt-out".' },
+            { q: 'An assertion that humans are not perfectly rational beings.', answer: 'G', explain: 'Đoạn G: "The recognition that humans are not perfectly rational".' },
+            { q: 'The experimental finding about coffee mugs.', answer: 'D', explain: 'Đoạn D: "people offered a coffee mug typically demand significantly more money to sell it".' }
+          ]
+        },
+        {
+          group: 'Questions 33–36',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'The traditional "rational actor" model assumed that people:', options: ['A. Made decisions based on emotion alone', 'B. Calmly weigh costs and benefits to maximise personal benefit', 'C. Followed religious or cultural traditions', 'D. Made systematic errors in reasoning'], answer: 'B', explain: 'Đoạn A: "calmly weighs costs and benefits before choosing the option that maximises personal benefit".' },
+            { q: 'According to the passage, the pain of losing $100 is roughly:', options: ['A. Equal to the pleasure of gaining $100', 'B. Half as intense as the pleasure of gaining $100', 'C. Twice as intense as the pleasure of gaining $100', 'D. Ten times more intense than gaining $100'], answer: 'C', explain: 'Đoạn C: "roughly twice as intense as the pleasure of gaining $100".' },
+            { q: '"Choice architecture" refers to:', options: ['A. The mathematical theory behind decisions', 'B. Designing how choices are presented', 'C. Building physical environments for shopping', 'D. The history of economic decision-making'], answer: 'B', explain: 'Đoạn F: "designing how choices are presented to encourage particular outcomes".' },
+            { q: 'The author concludes that behavioural economics has:', options: ['A. Completely replaced traditional economic analysis', 'B. Been rejected by mainstream economists', 'C. Supplemented traditional economics in important ways', 'D. Limited applications outside academia'], answer: 'C', explain: 'Đoạn G: "Behavioural economics has not replaced traditional economic analysis but has supplemented it in important ways".' }
+          ]
+        },
+        {
+          group: 'Questions 37–40',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'Kahneman and Tversky began their groundbreaking research in the __________.', answer: '1970s', explain: 'Đoạn B: "working together in the 1970s".' },
+            { q: 'The tendency to value things more when we own them is called the __________ effect.', answer: 'endowment', explain: 'Đoạn D: "the endowment effect".' },
+            { q: 'The tendency to feel losses more strongly than equivalent gains is called loss __________.', answer: 'aversion', explain: 'Đoạn C: "what Kahneman and Tversky called loss aversion".' },
+            { q: 'Critics worry that "__________" represents manipulative control rather than helpful guidance.', answer: 'nudging', explain: 'Đoạn F: "Critics worry about whether such nudging represents helpful guidance or manipulative control".' }
+          ]
+        }
+      ]
     ]
   },
 
@@ -1464,10 +1890,11 @@ const TESTS_DATA = {
     title: 'The Science of Happiness',
     topic: 'Psychology · Wellbeing',
     difficulty: 'Medium',
-    passages: [{
-      label: 'Reading Passage 1',
-      title: 'The Science of Happiness',
-      content: `<p><span class="para-num">A</span> For most of its history, psychology focused almost exclusively on what goes wrong in human minds. The field developed elaborate categories of mental illness and refined methods for treating depression, anxiety, and other disorders. Yet relatively little attention was given to what makes some people thrive — to what constitutes the psychology of happiness rather than the psychology of misery. This imbalance began to change around the turn of the millennium with the emergence of positive psychology, a movement championed by the American psychologist Martin Seligman among others.</p>
+    passages: [
+      {
+        label: 'Reading Passage 1',
+        title: 'The Science of Happiness',
+        content: `<p><span class="para-num">A</span> For most of its history, psychology focused almost exclusively on what goes wrong in human minds. The field developed elaborate categories of mental illness and refined methods for treating depression, anxiety, and other disorders. Yet relatively little attention was given to what makes some people thrive — to what constitutes the psychology of happiness rather than the psychology of misery. This imbalance began to change around the turn of the millennium with the emergence of positive psychology, a movement championed by the American psychologist Martin Seligman among others.</p>
       
       <p><span class="para-num">B</span> Positive psychology asks fundamentally different questions from traditional clinical work. Rather than focusing on how to reduce suffering, it investigates what makes life worth living. What are the components of a happy and meaningful existence? Can these qualities be measured scientifically? Can they be deliberately cultivated? The answers emerging from this research have sometimes surprised both scientists and the public.</p>
       
@@ -1494,43 +1921,186 @@ const TESTS_DATA = {
       <p><strong>Đoạn F:</strong> Phát hiện hành động được nhất là các thực hành cụ thể có thể tăng phúc lợi. Biểu hiện lòng biết ơn thường xuyên — viết thư cảm ơn, nhật ký biết ơn — đã được chứng minh cải thiện tâm trạng. Hành động tử tế mang lại lợi ích tương tự. Thiền chánh niệm có bằng chứng đáng kể.</p>
       
       <p><strong>Đoạn G:</strong> Bất chấp các phát hiện hứa hẹn, tâm lý học tích cực gặp chỉ trích. Một số học giả cho rằng lĩnh vực đã phóng đại tính dễ uốn nắn của hạnh phúc. Người khác lo lắng việc nhấn mạnh thực hành cá nhân làm phân tâm khỏi điều kiện xã hội kinh tế.</p>`
-    }],
+      },
+      {
+        label: 'Reading Passage 2',
+        title: 'The Story of Maps',
+        content: `<p><span class="para-num">A</span> Maps have shaped how humans understand the world for as long as we have records of human thought. The earliest known maps date from about 2,500 BCE, but the idea of representing space visually probably emerged much earlier. Throughout history, maps have served many purposes — practical guides for travel, instruments of administration and military strategy, expressions of religious or political ideology, and tools for scientific understanding. The story of how mapmaking developed illuminates much about how cultures perceive themselves and their place in the wider world.</p>
+        
+        <p><span class="para-num">B</span> Ancient maps differed dramatically from modern conceptions of geographical accuracy. The Babylonian Map of the World, created around 600 BCE, places Babylon at the centre of a flat circular world surrounded by ocean and inhabited by mythical creatures. Ancient Egyptian maps show roads and irrigation systems with clear practical purpose but minimal concern for geographical proportion. The famous Roman Tabula Peutingeriana, surviving only in a medieval copy, stretches geography to fit a long thin strip, emphasising road connections rather than spatial accuracy. These maps reflected priorities very different from those of modern cartography.</p>
+        
+        <p><span class="para-num">C</span> Medieval European maps were dominated by religious concerns. The famous mappae mundi placed Jerusalem at the centre of the world, often depicted as round disc divided into three continents. East was placed at the top — explaining the modern word "orientation" — because Paradise was believed to lie in the east. Such maps were intended less as practical guides than as statements about how Christians should understand the world\'s spiritual organisation. Geographical accuracy in our modern sense was simply not the primary purpose.</p>
+        
+        <p><span class="para-num">D</span> Two major developments transformed European mapmaking from the fifteenth century onward. The recovery of ancient Greek geographical works, particularly Ptolemy\'s "Geography" with its mathematical projection systems, gave mapmakers new theoretical tools. The age of European exploration produced enormous demand for accurate sea charts, since errors could lead to shipwreck and economic loss. Cartographers like Gerardus Mercator developed map projections specifically designed for navigation, accepting distortions of land masses in exchange for navigationally useful properties. Mercator\'s 1569 world map, despite well-known distortions making polar regions appear enormous, remained the standard for centuries.</p>
+        
+        <p><span class="para-num">E</span> Maps have always been used for political purposes, often subtly. The choice of what to include or exclude, how to label features, what to centre and emphasise — all such choices express political positions. Maps drawn during colonial periods routinely showed European nations at impressive sizes while marginalising other regions. The Mercator projection, used in many classroom maps throughout the twentieth century, has been criticised for making Europe and North America appear larger relative to equatorial regions like Africa than they actually are. Even modern maps, despite their apparent objectivity, embed political assumptions about what matters in geography.</p>
+        
+        <p><span class="para-num">F</span> The development of detailed topographic surveys revolutionised what maps could show. The British Ordnance Survey, established in 1791 for military purposes, eventually produced detailed maps of the entire United Kingdom. Similar national mapping organisations developed in other countries. By the early twentieth century, governments could produce maps accurate to within metres, transforming everything from urban planning to agricultural management. The cost of producing such surveys was enormous, but the value to societies that conducted them was even greater.</p>
+        
+        <p><span class="para-num">G</span> Modern digital mapping has transformed humans\' relationship with geographic information. Satellite imaging provides views of Earth that earlier mapmakers could only imagine. GPS technology allows continuous precise positioning. Online mapping services like Google Maps have made detailed geographic information available to anyone with internet access. Smartphone navigation has made paper maps largely obsolete for everyday use. These transformations have happened so quickly that humans are still adjusting to the implications — both the practical benefits and the loss of certain kinds of geographic intuition that previous generations developed from working with traditional maps.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Bản đồ đã định hình cách con người hiểu thế giới từ rất lâu. Bản đồ sớm nhất từ 2,500 TCN. Trong suốt lịch sử, bản đồ phục vụ nhiều mục đích.</p>
+        <p><strong>Đoạn B:</strong> Bản đồ cổ khác xa khái niệm hiện đại về độ chính xác. Babylonian Map khoảng 600 TCN đặt Babylon ở trung tâm. Bản đồ Ai Cập tập trung mục đích thực tiễn.</p>
+        <p><strong>Đoạn C:</strong> Bản đồ châu Âu trung cổ bị thống trị bởi mối quan tâm tôn giáo. Mappae mundi đặt Jerusalem ở trung tâm. Đông được đặt ở trên - giải thích từ "orientation".</p>
+        <p><strong>Đoạn D:</strong> Hai phát triển lớn biến đổi bản đồ học châu Âu từ thế kỷ 15. Phục hồi tác phẩm Hy Lạp cổ - Ptolemy\'s "Geography". Mercator phát triển phép chiếu bản đồ năm 1569.</p>
+        <p><strong>Đoạn E:</strong> Bản đồ luôn được sử dụng cho mục đích chính trị. Việc chọn gì để bao gồm hoặc loại trừ thể hiện quan điểm chính trị. Phép chiếu Mercator bị chỉ trích vì làm châu Âu và Bắc Mỹ trông to hơn.</p>
+        <p><strong>Đoạn F:</strong> Phát triển khảo sát địa hình chi tiết đã cách mạng hóa. British Ordnance Survey thành lập 1791 cho mục đích quân sự. Đầu thế kỷ 20, chính phủ có thể sản xuất bản đồ chính xác đến mét.</p>
+        <p><strong>Đoạn G:</strong> Bản đồ số hiện đại đã biến đổi mối quan hệ với thông tin địa lý. Hình ảnh vệ tinh, GPS, Google Maps, điều hướng smartphone. Thay đổi nhanh chóng.</p>`
+      },
+      {
+        label: 'Reading Passage 3',
+        title: 'The Power of Storytelling',
+        content: `<p><span class="para-num">A</span> Humans are storytelling creatures. Every culture ever documented has developed traditions of narrative, from mythological epics to bedtime stories to gossip about neighbours. Modern researchers estimate that adults spend roughly one-third of their waking hours either telling, reading, watching, or thinking about stories. Yet this universal human activity has only recently begun to receive serious scientific attention. What does the science of storytelling reveal about why narratives so powerfully engage human minds?</p>
+        
+        <p><span class="para-num">B</span> The first thing scientific research reveals is that stories activate brain networks differently from other kinds of information. When people listen to stories, brain imaging shows simultaneous activity in regions involved in language processing, emotional response, sensory imagination, and what neuroscientists call "theory of mind" — the capacity to understand other people\'s mental states. A single compelling story can activate brain regions that no other type of cognitive task engages simultaneously. This suggests that storytelling engages multiple cognitive systems in coordinated ways.</p>
+        
+        <p><span class="para-num">C</span> One important finding concerns what researchers call "narrative transportation" — the absorbed state listeners or readers enter when fully engaged with a story. When transported, people\'s sense of their own surroundings can fade as they imagine the world the story describes. Studies have shown that narratively transported readers may respond emotionally to fictional events as if they were real, lose track of time, and even briefly forget where they actually are. This state of cognitive engagement contributes to why stories so effectively communicate ideas and influence attitudes.</p>
+        
+        <p><span class="para-num">D</span> Stories appear to have evolved as effective tools for transmitting practical knowledge. Information embedded in narrative form is remembered far better than the same facts presented in isolation. People who could remember stories about how predecessors had handled dangers or opportunities would have practical advantages over those who could not. This may explain why almost every traditional culture has developed extensive oral traditions, with elders transmitting their accumulated wisdom through stories rather than abstract teachings. The cognitive equipment for processing stories appears to be a deep feature of human evolution.</p>
+        
+        <p><span class="para-num">E</span> Stories also serve crucial social functions. Shared narratives create community by giving members common reference points and shared values. National myths, religious texts, and even popular entertainment all function partly to create and maintain social cohesion. Researchers have found that people who share favourite stories often develop stronger social bonds, and that introducing strangers to mutually appreciated narratives can quickly create connection. The communal element of storytelling — gathering to hear, watch, or discuss narratives together — has been a feature of human cultures from earliest documented periods.</p>
+        
+        <p><span class="para-num">F</span> The persuasive power of stories has practical implications across many fields. Politicians who can frame their positions through compelling narratives often prove more effective than those who rely on abstract arguments. Advertisers have long used storytelling techniques to make their products memorable. Public health campaigns that frame information narratively typically produce more behaviour change than purely informational approaches. The legal profession has developed sophisticated understanding of how to construct narratives that persuade juries. Across diverse domains, the principle remains consistent: stories typically influence people more powerfully than facts alone.</p>
+        
+        <p><span class="para-num">G</span> Modern technologies have transformed how stories are produced, distributed, and consumed. Recording technology preserved oral performances. Cinema added moving images and synchronised sound. Television brought storytelling into homes on a continuous basis. Streaming services and social media platforms have created environments where billions of stories compete for attention. Some researchers worry that the sheer volume of available narratives may reduce the depth of engagement that earlier generations brought to a smaller number of stories. Yet the basic human appetite for narrative shows no signs of diminishing. Whatever forms it takes, storytelling seems likely to remain at the heart of human experience.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Con người là sinh vật kể chuyện. Mọi nền văn hóa đều phát triển truyền thống kể chuyện. Người lớn dành khoảng 1/3 thời gian thức để kể, đọc, xem, hoặc nghĩ về chuyện.</p>
+        <p><strong>Đoạn B:</strong> Nghiên cứu khoa học cho thấy chuyện kích hoạt mạng lưới não khác với thông tin khác. Một chuyện hấp dẫn có thể kích hoạt các vùng não mà không có nhiệm vụ nhận thức nào khác kích hoạt đồng thời.</p>
+        <p><strong>Đoạn C:</strong> "Narrative transportation" - trạng thái hấp thụ mà người nghe đi vào khi tham gia hoàn toàn với câu chuyện. Người được vận chuyển có thể phản ứng cảm xúc với sự kiện hư cấu như thể chúng có thực.</p>
+        <p><strong>Đoạn D:</strong> Chuyện dường như đã tiến hóa như công cụ hiệu quả để truyền kiến thức thực tiễn. Thông tin trong dạng tường thuật được nhớ tốt hơn nhiều so với sự thật riêng lẻ.</p>
+        <p><strong>Đoạn E:</strong> Chuyện cũng phục vụ các chức năng xã hội quan trọng. Truyền thuyết quốc gia, văn bản tôn giáo, giải trí phổ biến đều hoạt động một phần để tạo và duy trì sự gắn kết xã hội.</p>
+        <p><strong>Đoạn F:</strong> Sức mạnh thuyết phục của chuyện có ý nghĩa thực tế trên nhiều lĩnh vực - chính trị, quảng cáo, y tế công cộng, pháp lý. Chuyện thường ảnh hưởng mạnh hơn dữ kiện đơn lẻ.</p>
+        <p><strong>Đoạn G:</strong> Công nghệ hiện đại biến đổi cách chuyện được sản xuất, phân phối, tiêu thụ. Ghi âm, điện ảnh, TV, streaming. Khẩu vị về chuyện không có dấu hiệu giảm.</p>`
+      }
+    ],
     
     questions: [
-      {
-        group: 'Questions 1–5',
-        type: 'tfng',
-        instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
-        items: [
-          { q: 'For most of its history, psychology mainly studied mental disorders rather than wellbeing.', answer: 'TRUE', explain: 'Đoạn A: "psychology focused almost exclusively on what goes wrong in human minds".' },
-          { q: 'Martin Seligman invented the term "positive psychology".', answer: 'NOT GIVEN', explain: 'Đoạn A nói ông là người ủng hộ phong trào nhưng không nói ai phát minh thuật ngữ.' },
-          { q: 'Wealthier individuals in a society are generally happier than poorer ones.', answer: 'TRUE', explain: 'Đoạn C: "wealthier people do tend to be somewhat happier than poorer people".' },
-          { q: 'Average happiness in developed countries has increased significantly since 1950.', answer: 'FALSE', explain: 'Đoạn C: "the dramatic increase in wealth... has not produced any corresponding increase in average happiness".' },
-          { q: 'The Harvard Study of Adult Development began in the 1990s.', answer: 'NOT GIVEN', explain: 'Đoạn D nói nghiên cứu theo dõi trong 80 năm nhưng không cho biết bắt đầu khi nào.' }
-        ]
-      },
-      {
-        group: 'Questions 6–9',
-        type: 'mcq',
-        instruction: 'Choose the correct letter, A, B, C or D.',
-        items: [
-          { q: 'According to the Harvard Study, the quality of relationships at age 50 was:', options: ['A. Less important than cholesterol levels for later health', 'B. A better predictor of health at 80 than cholesterol', 'C. Unrelated to physical health outcomes', 'D. Only important for mental health, not physical health'], answer: 'B', explain: 'Đoạn D: "a better predictor of physical and mental health at age eighty than cholesterol levels".' },
-          { q: 'The state of "flow" described by Csikszentmihalyi:', options: ['A. Occurs mainly during passive entertainment', 'B. Has been observed only in professional athletes', 'C. Involves complete absorption in challenging tasks', 'D. Cannot be cultivated through practice'], answer: 'C', explain: 'Đoạn E: "the state of complete absorption in a challenging but achievable task".' },
-          { q: 'Research has shown that acts of kindness:', options: ['A. Benefit only the recipient', 'B. Mainly help those who are already happy', 'C. Benefit the giver as well as the recipient', 'D. Are less effective than gratitude practices'], answer: 'C', explain: 'Đoạn F: "generosity benefits the giver as much as the recipient".' },
-          { q: 'A criticism of positive psychology mentioned in the passage is that it:', options: ['A. Uses unreliable measurement methods', 'B. May ignore social and economic factors affecting wellbeing', 'C. Has not produced any practical applications', 'D. Was developed too quickly without proper research'], answer: 'B', explain: 'Đoạn G: "emphasis on individual happiness practices distracts attention from the social and economic conditions".' }
-        ]
-      },
-      {
-        group: 'Questions 10–13',
-        type: 'fill',
-        instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
-        items: [
-          { q: 'The relationship between wealth and happiness across nations is called the __________ paradox.', answer: 'Easterlin', explain: 'Đoạn C: "Researchers refer to this phenomenon as the Easterlin paradox".' },
-          { q: 'Research shows that social __________ are among the most important factors for happiness.', answer: 'relationships', explain: 'Đoạn D: "Research consistently identifies social relationships as among the most important factors".' },
-          { q: 'Writing in a __________ journal has been shown to improve mood.', answer: 'gratitude', explain: 'Đoạn F: "keeping a gratitude journal... measurable improvements in mood".' },
-          { q: 'Mindfulness __________ has been shown to reduce anxiety and depression.', answer: 'meditation', explain: 'Đoạn F: "Mindfulness meditation... reducing anxiety and depression".' }
-        ]
-      }
+      // ========== PASSAGE 1 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 1–5',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'For most of its history, psychology mainly studied mental disorders rather than wellbeing.', answer: 'TRUE', explain: 'Đoạn A: "psychology focused almost exclusively on what goes wrong in human minds".' },
+            { q: 'Martin Seligman invented the term "positive psychology".', answer: 'NOT GIVEN', explain: 'Đoạn A nói ông là người ủng hộ phong trào nhưng không nói ai phát minh thuật ngữ.' },
+            { q: 'Wealthier individuals in a society are generally happier than poorer ones.', answer: 'TRUE', explain: 'Đoạn C: "wealthier people do tend to be somewhat happier than poorer people".' },
+            { q: 'Average happiness in developed countries has increased significantly since 1950.', answer: 'FALSE', explain: 'Đoạn C: "the dramatic increase in wealth... has not produced any corresponding increase in average happiness".' },
+            { q: 'The Harvard Study of Adult Development began in the 1990s.', answer: 'NOT GIVEN', explain: 'Đoạn D nói nghiên cứu theo dõi 80 năm nhưng không cho biết bắt đầu khi nào.' }
+          ]
+        },
+        {
+          group: 'Questions 6–9',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to the Harvard Study, the quality of relationships at age 50 was:', options: ['A. Less important than cholesterol levels for later health', 'B. A better predictor of health at 80 than cholesterol', 'C. Unrelated to physical health outcomes', 'D. Only important for mental health'], answer: 'B', explain: 'Đoạn D: "a better predictor of physical and mental health at age eighty than cholesterol levels".' },
+            { q: 'The state of "flow" described by Csikszentmihalyi:', options: ['A. Occurs mainly during passive entertainment', 'B. Has been observed only in professional athletes', 'C. Involves complete absorption in challenging tasks', 'D. Cannot be cultivated through practice'], answer: 'C', explain: 'Đoạn E: "the state of complete absorption in a challenging but achievable task".' },
+            { q: 'Research has shown that acts of kindness:', options: ['A. Benefit only the recipient', 'B. Mainly help those who are already happy', 'C. Benefit the giver as well as the recipient', 'D. Are less effective than gratitude practices'], answer: 'C', explain: 'Đoạn F: "generosity benefits the giver as much as the recipient".' },
+            { q: 'A criticism of positive psychology mentioned in the passage is that it:', options: ['A. Uses unreliable measurement methods', 'B. May ignore social and economic factors affecting wellbeing', 'C. Has not produced any practical applications', 'D. Was developed too quickly'], answer: 'B', explain: 'Đoạn G: "emphasis on individual happiness practices distracts attention from the social and economic conditions".' }
+          ]
+        },
+        {
+          group: 'Questions 10–13',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'The relationship between wealth and happiness across nations is called the __________ paradox.', answer: 'Easterlin', explain: 'Đoạn C: "Researchers refer to this phenomenon as the Easterlin paradox".' },
+            { q: 'Research shows that social __________ are among the most important factors for happiness.', answer: 'relationships', explain: 'Đoạn D: "Research consistently identifies social relationships as among the most important factors".' },
+            { q: 'Writing in a __________ journal has been shown to improve mood.', answer: 'gratitude', explain: 'Đoạn F: "keeping a gratitude journal... measurable improvements in mood".' },
+            { q: 'Mindfulness __________ has been shown to reduce anxiety and depression.', answer: 'meditation', explain: 'Đoạn F: "Mindfulness meditation... reducing anxiety and depression".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 2 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 14–20',
+          type: 'matching-headings',
+          instruction: 'Reading Passage 2 has seven paragraphs, A-G. Choose the correct heading for each paragraph from the list below.',
+          headings: [
+            { id: 'i', text: 'Religious priorities in medieval mapping' },
+            { id: 'ii', text: 'Modern transformation through digital tools' },
+            { id: 'iii', text: 'Why maps have always mattered' },
+            { id: 'iv', text: 'Ancient maps with very different goals' },
+            { id: 'v', text: 'Two developments that changed European mapping' },
+            { id: 'vi', text: 'Political messages in cartography' },
+            { id: 'vii', text: 'How national surveys transformed accuracy' },
+            { id: 'viii', text: 'The role of Arab mapmakers' },
+            { id: 'ix', text: 'Why ancient peoples needed maps' }
+          ],
+          items: [
+            { q: 'A', answer: 'iii', explain: 'Đoạn A giới thiệu - tại sao bản đồ luôn quan trọng đối với con người.' },
+            { q: 'B', answer: 'iv', explain: 'Đoạn B về bản đồ cổ với mục tiêu khác hẳn hiện đại.' },
+            { q: 'C', answer: 'i', explain: 'Đoạn C về mối quan tâm tôn giáo trong bản đồ trung cổ.' },
+            { q: 'D', answer: 'v', explain: 'Đoạn D về hai phát triển thay đổi bản đồ châu Âu (Ptolemy, Mercator).' },
+            { q: 'E', answer: 'vi', explain: 'Đoạn E về các thông điệp chính trị trong bản đồ.' },
+            { q: 'F', answer: 'vii', explain: 'Đoạn F về khảo sát quốc gia (British Ordnance Survey) biến đổi độ chính xác.' },
+            { q: 'G', answer: 'ii', explain: 'Đoạn G về sự biến đổi hiện đại nhờ công cụ kỹ thuật số.' }
+          ]
+        },
+        {
+          group: 'Questions 21–23',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 2? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'Medieval European maps placed east at the top of the page.', answer: 'TRUE', explain: 'Đoạn C: "East was placed at the top".' },
+            { q: 'The Mercator projection was created specifically for educational purposes.', answer: 'FALSE', explain: 'Đoạn D: "developed map projections specifically designed for navigation".' },
+            { q: 'The British Ordnance Survey was originally created for military reasons.', answer: 'TRUE', explain: 'Đoạn F: "The British Ordnance Survey, established in 1791 for military purposes".' }
+          ]
+        },
+        {
+          group: 'Questions 24–26',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
+          items: [
+            { q: 'The Babylonian Map of the World was created around __________ BCE.', answer: '600', explain: 'Đoạn B: "around 600 BCE".' },
+            { q: 'Medieval maps known as mappae mundi placed __________ at the centre of the world.', answer: 'Jerusalem', explain: 'Đoạn C: "placed Jerusalem at the centre of the world".' },
+            { q: 'Mercator created his famous world map in __________.', answer: '1569', explain: 'Đoạn D: "Mercator\'s 1569 world map".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 3 QUESTIONS (14 questions) ==========
+      [
+        {
+          group: 'Questions 27–32',
+          type: 'matching-information',
+          instruction: 'Reading Passage 3 has seven paragraphs, A-G. Which paragraph contains the following information?',
+          paragraphs: ['A','B','C','D','E','F','G'],
+          items: [
+            { q: 'An estimate of how much waking time people spend engaged with stories.', answer: 'A', explain: 'Đoạn A: "adults spend roughly one-third of their waking hours either telling, reading, watching, or thinking about stories".' },
+            { q: 'Description of an absorbed state of cognitive engagement with narrative.', answer: 'C', explain: 'Đoạn C: "narrative transportation — the absorbed state listeners or readers enter".' },
+            { q: 'How traditional cultures transmit wisdom through stories.', answer: 'D', explain: 'Đoạn D: "elders transmitting their accumulated wisdom through stories".' },
+            { q: 'The role of stories in creating community among strangers.', answer: 'E', explain: 'Đoạn E: "introducing strangers to mutually appreciated narratives can quickly create connection".' },
+            { q: 'Examples of professional fields that use storytelling techniques.', answer: 'F', explain: 'Đoạn F: chính trị, quảng cáo, y tế công cộng, pháp lý.' },
+            { q: 'Discussion of concerns about the volume of available narratives today.', answer: 'G', explain: 'Đoạn G: "sheer volume of available narratives may reduce the depth of engagement".' }
+          ]
+        },
+        {
+          group: 'Questions 33–36',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to the passage, stories activate the brain in a unique way because they:', options: ['A. Use very little energy compared to other tasks', 'B. Engage multiple cognitive systems simultaneously', 'C. Only work in childhood', 'D. Replace the need for sleep'], answer: 'B', explain: 'Đoạn B: "storytelling engages multiple cognitive systems in coordinated ways".' },
+            { q: 'Information embedded in narrative form is:', options: ['A. Harder to understand', 'B. Less reliable than factual reports', 'C. Remembered far better than isolated facts', 'D. Only useful for entertainment'], answer: 'C', explain: 'Đoạn D: "Information embedded in narrative form is remembered far better than the same facts presented in isolation".' },
+            { q: 'The passage suggests that politicians who use narratives effectively:', options: ['A. Are typically less honest', 'B. Often prove more effective than those using abstract arguments', 'C. Cannot win elections in modern democracies', 'D. Should be banned from public office'], answer: 'B', explain: 'Đoạn F: "Politicians who can frame their positions through compelling narratives often prove more effective".' },
+            { q: 'The author concludes that the human appetite for stories:', options: ['A. Is diminishing in the digital age', 'B. Has become entirely passive', 'C. Shows no signs of diminishing', 'D. Will be replaced by data-driven information'], answer: 'C', explain: 'Đoạn G: "the basic human appetite for narrative shows no signs of diminishing".' }
+          ]
+        },
+        {
+          group: 'Questions 37–40',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'Brain imaging shows that stories activate regions involved in "theory of __________".', answer: 'mind', explain: 'Đoạn B: "theory of mind — the capacity to understand other people\'s mental states".' },
+            { q: 'When transported, readers may briefly lose track of __________.', answer: 'time', explain: 'Đoạn C: "lose track of time".' },
+            { q: 'Shared narratives create __________ by giving members common reference points.', answer: 'community', explain: 'Đoạn E: "Shared narratives create community by giving members common reference points".' },
+            { q: 'Public health campaigns that frame information narratively typically produce more behaviour __________.', answer: 'change', explain: 'Đoạn F: "produce more behaviour change than purely informational approaches".' }
+          ]
+        }
+      ]
     ]
   },
 
@@ -2277,10 +2847,11 @@ const TESTS_DATA = {
     title: 'The Hidden Costs of Tourism',
     topic: 'Society · Economics',
     difficulty: 'Medium',
-    passages: [{
-      label: 'Reading Passage 1',
-      title: 'The Hidden Costs of Mass Tourism',
-      content: `<p><span class="para-num">A</span> Tourism has become one of the world\'s largest industries, generating roughly ten percent of global economic activity and supporting hundreds of millions of jobs. For many countries, particularly smaller ones with limited resources, tourist spending represents a vital source of foreign currency and economic opportunity. Yet alongside these benefits, the rapid growth of international tourism has created problems that are only now being seriously addressed. The phenomenon known as "overtourism" — when destinations attract more visitors than they can comfortably accommodate — has emerged as a defining challenge of the twenty-first century travel industry.</p>
+    passages: [
+      {
+        label: 'Reading Passage 1',
+        title: 'The Hidden Costs of Mass Tourism',
+        content: `<p><span class="para-num">A</span> Tourism has become one of the world\'s largest industries, generating roughly ten percent of global economic activity and supporting hundreds of millions of jobs. For many countries, particularly smaller ones with limited resources, tourist spending represents a vital source of foreign currency and economic opportunity. Yet alongside these benefits, the rapid growth of international tourism has created problems that are only now being seriously addressed. The phenomenon known as "overtourism" — when destinations attract more visitors than they can comfortably accommodate — has emerged as a defining challenge of the twenty-first century travel industry.</p>
       
       <p><span class="para-num">B</span> The scale of modern tourism is unprecedented. International tourist arrivals have grown from roughly 25 million in 1950 to over 1.4 billion before the disruptions of the recent pandemic, an increase of more than five thousand percent. Air travel has become dramatically cheaper, opening up international travel to populations that could not previously afford it. The rise of online platforms for booking flights and accommodation has further reduced the practical barriers to international travel. The result is that destinations once visited by tens of thousands now receive millions of visitors annually, creating pressures that infrastructure designed for smaller populations struggles to manage.</p>
       
@@ -2307,43 +2878,186 @@ const TESTS_DATA = {
       <p><strong>Đoạn F:</strong> Các cộng đồng địa phương thường gánh chịu chi phí của du lịch trong khi nhận được lợi ích hạn chế. Các doanh nghiệp du lịch lợi nhuận nhất thuộc sở hữu các tập đoàn đa quốc gia, hầu hết doanh thu chảy ra ngoài. Công nhân dịch vụ thường được tuyển dụng với mức lương thấp. Truyền thống văn hóa có thể bị biến đổi thành biểu diễn thương mại.</p>
       
       <p><strong>Đoạn G:</strong> Các phản ứng với những thách thức này vẫn đang được phát triển. Một số điểm đến đã thực hiện giới hạn khách, yêu cầu đặt trước hoặc tính phí vào cửa. Các chiến dịch giáo dục thúc giục khách du lịch xem xét tác động và hành xử có trách nhiệm.</p>`
-    }],
+      },
+      {
+        label: 'Reading Passage 2',
+        title: 'The Spice Trade That Changed the World',
+        content: `<p><span class="para-num">A</span> For most of recorded history, the trade in spices was among the most economically significant and politically important commercial activities on Earth. The exotic flavours and aromas of pepper, cinnamon, cloves, nutmeg, and ginger were prized in cooking, medicine, and religious ceremony across Europe, the Middle East, and Asia. Yet these spices grew naturally only in a few specific locations — the islands of present-day Indonesia, the coasts of India, the highlands of Sri Lanka — meaning that the desire for spices required networks of trade spanning thousands of miles. The history of the spice trade illuminates much about how the modern world came to be.</p>
+        
+        <p><span class="para-num">B</span> The earliest evidence of spice trade dates back at least four thousand years. Cloves found at archaeological sites in Syria, dating from around 1700 BCE, came from islands in modern Indonesia — a distance of over 5,000 miles by the trade routes of the time. Pepper from India has been found in ancient Egyptian mummies. The Roman Empire developed extensive spice trade with India, with ships carrying gold and silver eastward and returning loaded with pepper, cinnamon, and other valuable goods. The economic impact was so significant that Roman writers expressed concern about the drain of currency to the East.</p>
+        
+        <p><span class="para-num">C</span> Throughout the medieval period, the spice trade was dominated by various Middle Eastern intermediaries. Arab merchants controlled the routes between Asian producers and European consumers, ultimately delivering spices to Mediterranean ports through which Italian merchants distributed them across Europe. This arrangement made spices extraordinarily expensive in European markets — at certain periods, pepper was literally worth its weight in silver. The high prices reflected the long supply chain, the dangers of the journey, and the monopolies maintained at various points along the route.</p>
+        
+        <p><span class="para-num">D</span> The desire to bypass these intermediaries motivated the great European voyages of exploration in the fifteenth and sixteenth centuries. The Portuguese explorer Vasco da Gama, reaching India by sailing around Africa in 1498, established the first direct sea route between Europe and Asia. His arrival was greeted with hostility by established Arab traders, but the new route eventually broke their monopoly. The Spanish sponsored Columbus\'s voyages in part to find another route to the spice islands; he eventually reached the Americas instead, but his "discovery" of new lands would have long-lasting consequences for the spice trade.</p>
+        
+        <p><span class="para-num">E</span> The Dutch and English East India Companies, founded in the early seventeenth century, used military force and political alliance to gain control of major spice-producing areas. The Dutch in particular dominated the lucrative trade in cloves and nutmeg from the Moluccas (the "Spice Islands"), sometimes through extraordinarily brutal methods. The 1621 massacre of the Banda Islanders by Dutch forces, sometimes described as the first colonial genocide, was motivated almost entirely by securing control over nutmeg production. The wealth generated by these companies financed the Dutch and English economic rise and helped shape modern capitalism.</p>
+        
+        <p><span class="para-num">F</span> The spice trade declined in economic importance during the eighteenth and nineteenth centuries for several reasons. New crops cultivated in the Americas, particularly chili peppers, provided alternatives to traditional Asian spices. The development of refrigeration reduced the need for spices as food preservatives. Changes in fashion led European cooks toward different flavour profiles. By the time decolonisation transformed the spice islands in the twentieth century, spices had become relatively ordinary commodities rather than luxury goods of strategic importance.</p>
+        
+        <p><span class="para-num">G</span> Yet the consequences of the historical spice trade continue to shape the modern world. The colonial empires established largely in pursuit of spice profits created political boundaries that persist today. The international companies developed for the spice trade evolved into the modern corporation. Cultural connections established through centuries of trade continue to influence cooking, religion, and language across enormous areas. When we sprinkle pepper on our food or buy cinnamon for baking, we engage with commodities whose history has shaped the world in which we live.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Trong phần lớn lịch sử, buôn bán gia vị là một trong những hoạt động thương mại quan trọng nhất về kinh tế và chính trị. Tiêu, quế, đinh hương, nhục đậu khấu, gừng được trồng tự nhiên chỉ ở một vài địa điểm cụ thể.</p>
+        <p><strong>Đoạn B:</strong> Bằng chứng sớm nhất về buôn bán gia vị có ít nhất 4,000 năm. Đinh hương tìm thấy tại Syria từ 1700 TCN đến từ Indonesia. Tiêu từ Ấn Độ trong các xác ướp Ai Cập cổ đại.</p>
+        <p><strong>Đoạn C:</strong> Trong thời trung cổ, thương nhân Ả Rập kiểm soát các tuyến đường. Sắp xếp này khiến gia vị cực kỳ đắt - đôi lúc tiêu có giá bằng cân với bạc.</p>
+        <p><strong>Đoạn D:</strong> Mong muốn bỏ qua các trung gian thúc đẩy các chuyến thám hiểm châu Âu lớn thế kỷ 15-16. Vasco da Gama đến Ấn Độ bằng cách đi vòng quanh châu Phi năm 1498. Columbus đi tìm đường đến đảo gia vị nhưng đến châu Mỹ.</p>
+        <p><strong>Đoạn E:</strong> Các Công ty Đông Ấn của Hà Lan và Anh đã sử dụng vũ lực để kiểm soát các vùng sản xuất gia vị. Vụ thảm sát Banda Islanders năm 1621 đôi khi được mô tả là cuộc diệt chủng thuộc địa đầu tiên.</p>
+        <p><strong>Đoạn F:</strong> Buôn bán gia vị suy giảm trong thế kỷ 18-19. Ớt từ châu Mỹ cung cấp lựa chọn thay thế. Phát triển làm lạnh giảm nhu cầu gia vị làm chất bảo quản.</p>
+        <p><strong>Đoạn G:</strong> Tuy nhiên hậu quả của buôn bán gia vị lịch sử tiếp tục định hình thế giới hiện đại. Đế quốc thuộc địa, công ty quốc tế đa quốc gia, kết nối văn hóa.</p>`
+      },
+      {
+        label: 'Reading Passage 3',
+        title: 'The Power of Curiosity',
+        content: `<p><span class="para-num">A</span> Curiosity is one of the defining features of human cognition. From earliest childhood, we ask questions about the world around us, explore unfamiliar environments, and seek out new experiences for no apparent immediate benefit. This drive to investigate the unknown distinguishes humans from most other animals and underlies our most important achievements as a species. Yet despite curiosity\'s obvious importance, the cognitive science of why we are curious — and why curiosity sometimes fails — has only recently begun to receive serious scientific attention.</p>
+        
+        <p><span class="para-num">B</span> Curiosity appears to be driven by what researchers call the "information gap" — the difference between what we know and what we want to know. When we encounter something puzzling or surprising, our minds register the gap and become motivated to fill it. This process operates without conscious decision; we feel drawn toward information even when seeking it has no practical purpose. Studies using brain imaging have shown that curious states activate the same neural pathways involved in processing rewards like food or money, suggesting that discovering new information is intrinsically pleasurable for human brains.</p>
+        
+        <p><span class="para-num">C</span> The American psychologist George Loewenstein distinguished between two main types of curiosity, each with different psychological characteristics. "Epistemic curiosity" refers to the desire to understand and acquire abstract knowledge — what makes people enjoy learning about distant historical periods, scientific theories, or unfamiliar cultures. "Perceptual curiosity" refers to the response to novel sensory information — what makes us want to explore new environments, try unfamiliar foods, or watch unusual events. Both types contribute to learning and discovery but operate somewhat differently.</p>
+        
+        <p><span class="para-num">D</span> Curiosity\'s relationship to learning is particularly important for educators and parents. Children who are curious learn more effectively because curiosity activates motivational and attention systems that facilitate memory formation. Educational approaches that nurture curiosity — by posing intriguing questions, encouraging exploration, and acknowledging the limits of current knowledge — appear to produce better learning outcomes than approaches focused purely on information transmission. Yet many traditional educational settings inadvertently discourage curiosity by emphasising correct answers over interesting questions.</p>
+        
+        <p><span class="para-num">E</span> The Hungarian-American psychologist Mihaly Csikszentmihalyi\'s influential research on "flow states" — periods of intense engagement when challenging tasks fully absorb attention — has identified curiosity as one of the key factors enabling such states. People become absorbed in activities that present optimal challenges to their current abilities, where curiosity about how to proceed pulls them forward through engaging tasks. This research has practical implications for designing work environments, educational experiences, and recreational activities that promote both productivity and wellbeing.</p>
+        
+        <p><span class="para-num">F</span> Yet curiosity has limits and can be inhibited by various factors. Anxiety appears to reduce curiosity, with people feeling threatened becoming focused on avoiding harm rather than exploring possibilities. Excessive stress, both immediate and chronic, also undermines curious engagement with the world. Even comfort can reduce curiosity when situations become too routine or predictable. The optimal conditions for curiosity appear to involve moderate levels of novelty and challenge, supported by sufficient psychological security to feel safe in exploring.</p>
+        
+        <p><span class="para-num">G</span> Modern digital technology presents complex effects on human curiosity. The instant availability of information through search engines and online resources can satisfy curiosity in ways previous generations could not imagine. Yet some researchers argue that this easy availability may also undermine sustained curious engagement, as questions become quickly answered rather than productively pursued. Social media platforms that present constantly new content may stimulate "shallow" curiosity at the expense of deeper inquiry. Whether digital environments will enhance or diminish the curiosity that has driven human achievement remains among the most important questions about technology and human cognition.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Tò mò là một trong những đặc điểm xác định của nhận thức con người. Từ thời thơ ấu, chúng ta đặt câu hỏi về thế giới xung quanh. Tuy nhiên khoa học nhận thức về tò mò chỉ gần đây mới được chú ý nghiêm túc.</p>
+        <p><strong>Đoạn B:</strong> Tò mò được thúc đẩy bởi "khoảng cách thông tin" - sự khác biệt giữa những gì chúng ta biết và muốn biết. Chụp ảnh não cho thấy trạng thái tò mò kích hoạt các đường thần kinh giống như xử lý phần thưởng.</p>
+        <p><strong>Đoạn C:</strong> George Loewenstein phân biệt hai loại tò mò chính. "Tò mò nhận thức" - mong muốn hiểu kiến thức trừu tượng. "Tò mò tri giác" - phản ứng với thông tin cảm quan mới.</p>
+        <p><strong>Đoạn D:</strong> Mối quan hệ của tò mò với học tập đặc biệt quan trọng cho giáo viên và phụ huynh. Trẻ em tò mò học hiệu quả hơn. Nhiều bối cảnh giáo dục truyền thống vô tình ngăn cản tò mò.</p>
+        <p><strong>Đoạn E:</strong> Nghiên cứu của Mihaly Csikszentmihalyi về "flow states" - thời kỳ tham gia mãnh liệt khi nhiệm vụ thách thức hấp thụ hoàn toàn sự chú ý - xác định tò mò là yếu tố quan trọng.</p>
+        <p><strong>Đoạn F:</strong> Tò mò có giới hạn và có thể bị ức chế. Lo lắng làm giảm tò mò. Căng thẳng quá mức cũng làm suy yếu sự tham gia tò mò. Điều kiện tối ưu cho tò mò là mức độ trung bình của mới mẻ và thách thức.</p>
+        <p><strong>Đoạn G:</strong> Công nghệ số trình bày các tác động phức tạp đối với tò mò. Tính khả dụng tức thì của thông tin có thể thỏa mãn tò mò nhưng cũng có thể làm suy yếu sự tham gia tò mò bền vững.</p>`
+      }
+    ],
     
     questions: [
-      {
-        group: 'Questions 1–5',
-        type: 'tfng',
-        instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
-        items: [
-          { q: 'International tourist numbers grew by over 5,000 percent between 1950 and the recent pandemic.', answer: 'TRUE', explain: 'Đoạn B: "an increase of more than five thousand percent".' },
-          { q: 'Venice has a permanent population of about 30 million people.', answer: 'FALSE', explain: 'Đoạn C: "a permanent population of only about 50,000" - 30 triệu là số khách du lịch hàng năm.' },
-          { q: 'Cruise ships pay high taxes to the cities they visit.', answer: 'NOT GIVEN', explain: 'Đoạn C nói tàu du lịch chi tiêu ít ở địa phương nhưng không đề cập đến việc chúng có/không trả thuế cao.' },
-          { q: 'Aviation accounts for around three percent of global CO2 emissions.', answer: 'TRUE', explain: 'Đoạn E: "Aviation alone accounts for approximately three percent of global carbon dioxide emissions".' },
-          { q: 'Workers in tourism are usually employed in highly secure, well-paid positions.', answer: 'FALSE', explain: 'Đoạn F: "typically employed at low wages, often seasonally and without security".' }
-        ]
-      },
-      {
-        group: 'Questions 6–9',
-        type: 'mcq',
-        instruction: 'Choose the correct letter, A, B, C or D.',
-        items: [
-          { q: 'According to the passage, the rise of online booking platforms has:', options: ['A. Made flights more expensive', 'B. Increased visa requirements globally', 'C. Reduced practical barriers to international travel', 'D. Limited tourist access to popular destinations'], answer: 'C', explain: 'Đoạn B: "The rise of online platforms for booking flights and accommodation has further reduced the practical barriers to international travel".' },
-          { q: 'In Venice, short-term rentals have:', options: ['A. Provided affordable housing for locals', 'B. Driven up property prices and displaced residents', 'C. Been completely banned by the city', 'D. Lowered prices for traditional shops'], answer: 'B', explain: 'Đoạn C: "Property prices have been driven up by short-term rentals catering to tourists, displacing the resident population".' },
-          { q: 'The damage to ancient archaeological sites comes from:', options: ['A. The chemicals used to clean them', 'B. The wear caused by millions of visitors', 'C. Looting by professional thieves', 'D. Sound vibrations from tour buses'], answer: 'B', explain: 'Đoạn D: "Ancient archaeological sites suffer wear from millions of visitors walking on surfaces".' },
-          { q: 'According to the passage, local communities often:', options: ['A. Receive most of the profits from tourism', 'B. Bear the costs while seeing limited benefits', 'C. Welcome unlimited tourist development', 'D. Have no involvement in tourist activities'], answer: 'B', explain: 'Đoạn F: "Local communities frequently bear the costs of tourism while seeing limited benefits".' }
-        ]
-      },
-      {
-        group: 'Questions 10–13',
-        type: 'fill',
-        instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
-        items: [
-          { q: 'Tourism generates approximately __________ percent of global economic activity.', answer: 'ten', explain: 'Đoạn A: "generating roughly ten percent of global economic activity".' },
-          { q: 'In 1950, international tourist arrivals were roughly __________ million.', answer: '25', explain: 'Đoạn B: "from roughly 25 million in 1950".' },
-          { q: 'Coral reefs are damaged by boats, physical contact, and __________ chemicals.', answer: 'sunscreen', explain: 'Đoạn D: "boats, sunscreen chemicals, and physical contact".' },
-          { q: 'Some destinations now require __________ bookings to limit visitor numbers.', answer: 'advance', explain: 'Đoạn G: "requiring advance bookings or charging entrance fees".' }
-        ]
-      }
+      // ========== PASSAGE 1 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 1–5',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'International tourist numbers grew by over 5,000 percent between 1950 and the recent pandemic.', answer: 'TRUE', explain: 'Đoạn B: "an increase of more than five thousand percent".' },
+            { q: 'Venice has a permanent population of about 30 million people.', answer: 'FALSE', explain: 'Đoạn C: "a permanent population of only about 50,000" - 30 triệu là số khách du lịch.' },
+            { q: 'Cruise ships pay high taxes to the cities they visit.', answer: 'NOT GIVEN', explain: 'Đoạn C nói tàu du lịch chi tiêu ít ở địa phương nhưng không đề cập thuế.' },
+            { q: 'Aviation accounts for around three percent of global CO2 emissions.', answer: 'TRUE', explain: 'Đoạn E: "Aviation alone accounts for approximately three percent of global carbon dioxide emissions".' },
+            { q: 'Workers in tourism are usually employed in highly secure, well-paid positions.', answer: 'FALSE', explain: 'Đoạn F: "typically employed at low wages".' }
+          ]
+        },
+        {
+          group: 'Questions 6–9',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to the passage, the rise of online booking platforms has:', options: ['A. Made flights more expensive', 'B. Increased visa requirements globally', 'C. Reduced practical barriers to international travel', 'D. Limited tourist access to popular destinations'], answer: 'C', explain: 'Đoạn B: "The rise of online platforms... has further reduced the practical barriers".' },
+            { q: 'In Venice, short-term rentals have:', options: ['A. Provided affordable housing for locals', 'B. Driven up property prices and displaced residents', 'C. Been completely banned by the city', 'D. Lowered prices for traditional shops'], answer: 'B', explain: 'Đoạn C: "Property prices have been driven up by short-term rentals catering to tourists, displacing the resident population".' },
+            { q: 'The damage to ancient archaeological sites comes from:', options: ['A. The chemicals used to clean them', 'B. The wear caused by millions of visitors', 'C. Looting by professional thieves', 'D. Sound vibrations from tour buses'], answer: 'B', explain: 'Đoạn D: "Ancient archaeological sites suffer wear from millions of visitors walking on surfaces".' },
+            { q: 'According to the passage, local communities often:', options: ['A. Receive most of the profits from tourism', 'B. Bear the costs while seeing limited benefits', 'C. Welcome unlimited tourist development', 'D. Have no involvement in tourist activities'], answer: 'B', explain: 'Đoạn F: "Local communities frequently bear the costs of tourism while seeing limited benefits".' }
+          ]
+        },
+        {
+          group: 'Questions 10–13',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
+          items: [
+            { q: 'Tourism generates approximately __________ percent of global economic activity.', answer: 'ten', explain: 'Đoạn A: "generating roughly ten percent of global economic activity".' },
+            { q: 'In 1950, international tourist arrivals were roughly __________ million.', answer: '25', explain: 'Đoạn B: "from roughly 25 million in 1950".' },
+            { q: 'Coral reefs are damaged by boats, physical contact, and __________ chemicals.', answer: 'sunscreen', explain: 'Đoạn D: "boats, sunscreen chemicals, and physical contact".' },
+            { q: 'Some destinations now require __________ bookings to limit visitor numbers.', answer: 'advance', explain: 'Đoạn G: "requiring advance bookings or charging entrance fees".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 2 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 14–20',
+          type: 'matching-headings',
+          instruction: 'Reading Passage 2 has seven paragraphs, A-G. Choose the correct heading for each paragraph from the list below.',
+          headings: [
+            { id: 'i', text: 'The lasting modern legacies' },
+            { id: 'ii', text: 'A trade with surprisingly ancient origins' },
+            { id: 'iii', text: 'European companies dominate through force' },
+            { id: 'iv', text: 'Why the trade declined in importance' },
+            { id: 'v', text: 'Voyages that broke the monopoly' },
+            { id: 'vi', text: 'Geography and the demand for spices' },
+            { id: 'vii', text: 'Middle Eastern control of medieval trade' },
+            { id: 'viii', text: 'Differences between major spice varieties' },
+            { id: 'ix', text: 'Modern cooking traditions worldwide' }
+          ],
+          items: [
+            { q: 'A', answer: 'vi', explain: 'Đoạn A nói về địa lý hạn chế (chỉ vài địa điểm trồng) và nhu cầu gia vị.' },
+            { q: 'B', answer: 'ii', explain: 'Đoạn B về thương mại có nguồn gốc cổ xưa - 4,000 năm trước.' },
+            { q: 'C', answer: 'vii', explain: 'Đoạn C về kiểm soát Trung Đông trong thương mại trung cổ.' },
+            { q: 'D', answer: 'v', explain: 'Đoạn D về các chuyến đi (da Gama, Columbus) phá vỡ độc quyền.' },
+            { q: 'E', answer: 'iii', explain: 'Đoạn E về Công ty Đông Ấn Hà Lan/Anh sử dụng vũ lực.' },
+            { q: 'F', answer: 'iv', explain: 'Đoạn F về lý do thương mại gia vị suy giảm.' },
+            { q: 'G', answer: 'i', explain: 'Đoạn G về di sản hiện đại lâu dài từ thương mại gia vị.' }
+          ]
+        },
+        {
+          group: 'Questions 21–23',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 2? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'Pepper was once worth its weight in silver in European markets.', answer: 'TRUE', explain: 'Đoạn C: "pepper was literally worth its weight in silver".' },
+            { q: 'Christopher Columbus reached India before Vasco da Gama.', answer: 'FALSE', explain: 'Đoạn D: Columbus đi tìm đường đến đảo gia vị nhưng "reached the Americas instead". Da Gama đến Ấn Độ năm 1498.' },
+            { q: 'The Dutch were the first Europeans to reach the Spice Islands.', answer: 'NOT GIVEN', explain: 'Đoạn E nói về sự kiểm soát của Hà Lan nhưng không nói họ là người châu Âu đầu tiên đến.' }
+          ]
+        },
+        {
+          group: 'Questions 24–26',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
+          items: [
+            { q: 'Cloves found in Syria dating from 1700 BCE came from islands in modern __________.', answer: 'Indonesia', explain: 'Đoạn B: "came from islands in modern Indonesia".' },
+            { q: 'Vasco da Gama reached India by sailing around __________ in 1498.', answer: 'Africa', explain: 'Đoạn D: "by sailing around Africa in 1498".' },
+            { q: 'The 1621 massacre took place on the __________ Islands.', answer: 'Banda', explain: 'Đoạn E: "The 1621 massacre of the Banda Islanders".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 3 QUESTIONS (14 questions) ==========
+      [
+        {
+          group: 'Questions 27–32',
+          type: 'matching-information',
+          instruction: 'Reading Passage 3 has seven paragraphs, A-G. Which paragraph contains the following information?',
+          paragraphs: ['A','B','C','D','E','F','G'],
+          items: [
+            { q: 'A description of two distinct types of curiosity identified by a psychologist.', answer: 'C', explain: 'Đoạn C: "George Loewenstein distinguished between two main types of curiosity".' },
+            { q: 'A reference to neural research showing curiosity activates reward pathways.', answer: 'B', explain: 'Đoạn B: "curious states activate the same neural pathways involved in processing rewards".' },
+            { q: 'Discussion of how traditional education may inhibit curiosity.', answer: 'D', explain: 'Đoạn D: "many traditional educational settings inadvertently discourage curiosity".' },
+            { q: 'A reference to how anxiety affects curious behaviour.', answer: 'F', explain: 'Đoạn F: "Anxiety appears to reduce curiosity".' },
+            { q: 'A discussion of how digital technologies affect deep inquiry.', answer: 'G', explain: 'Đoạn G: "easy availability may also undermine sustained curious engagement".' },
+            { q: 'Mention of psychological research on completely absorbed engagement.', answer: 'E', explain: 'Đoạn E: "research on flow states — periods of intense engagement when challenging tasks fully absorb attention".' }
+          ]
+        },
+        {
+          group: 'Questions 33–36',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to the passage, curiosity is driven by:', options: ['A. Religious or moral beliefs', 'B. The gap between what we know and want to know', 'C. Genetic predispositions only', 'D. Material rewards alone'], answer: 'B', explain: 'Đoạn B: "the difference between what we know and what we want to know".' },
+            { q: 'Educational approaches that nurture curiosity tend to:', options: ['A. Produce worse learning outcomes', 'B. Be widely used in traditional schools', 'C. Produce better learning outcomes', 'D. Focus only on factual memorization'], answer: 'C', explain: 'Đoạn D: "appear to produce better learning outcomes than approaches focused purely on information transmission".' },
+            { q: 'The optimal conditions for curiosity involve:', options: ['A. Complete safety and zero challenge', 'B. Extreme novelty and high stress', 'C. Moderate novelty with psychological security', 'D. Predictable routines and comfort'], answer: 'C', explain: 'Đoạn F: "moderate levels of novelty and challenge, supported by sufficient psychological security".' },
+            { q: 'The author concludes that the impact of digital technology on curiosity is:', options: ['A. Definitely positive', 'B. Definitely negative', 'C. Both potentially positive and concerning', 'D. Completely understood by researchers'], answer: 'C', explain: 'Đoạn G: "Whether digital environments will enhance or diminish the curiosity... remains among the most important questions".' }
+          ]
+        },
+        {
+          group: 'Questions 37–40',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'The desire to understand abstract knowledge is called __________ curiosity.', answer: 'epistemic', explain: 'Đoạn C: "Epistemic curiosity refers to the desire to understand and acquire abstract knowledge".' },
+            { q: 'The response to novel sensory information is called __________ curiosity.', answer: 'perceptual', explain: 'Đoạn C: "Perceptual curiosity refers to the response to novel sensory information".' },
+            { q: 'Curiosity is one of the key factors enabling __________ states.', answer: 'flow', explain: 'Đoạn E: "research on flow states... has identified curiosity as one of the key factors".' },
+            { q: 'Social media may stimulate __________ curiosity at the expense of deeper inquiry.', answer: 'shallow', explain: 'Đoạn G: "may stimulate shallow curiosity at the expense of deeper inquiry".' }
+          ]
+        }
+      ]
     ]
   },
 
@@ -2352,10 +3066,11 @@ const TESTS_DATA = {
     title: 'The Lost City of Petra',
     topic: 'Archaeology · History',
     difficulty: 'Medium',
-    passages: [{
-      label: 'Reading Passage 1',
-      title: 'The Lost City of Petra',
-      content: `<p><span class="para-num">A</span> Hidden deep in the mountainous deserts of southern Jordan lies one of the world\'s most remarkable archaeological sites: the ancient city of Petra. For centuries this elaborate metropolis, with its temples and tombs carved directly into rose-red sandstone cliffs, was unknown to the outside world. When the Swiss explorer Johann Ludwig Burckhardt rediscovered it in 1812, posing as a Muslim pilgrim to access territory closed to Europeans, he found a city that had been largely abandoned for over a thousand years. Today Petra attracts hundreds of thousands of visitors annually and stands as one of UNESCO\'s World Heritage Sites.</p>
+    passages: [
+      {
+        label: 'Reading Passage 1',
+        title: 'The Lost City of Petra',
+        content: `<p><span class="para-num">A</span> Hidden deep in the mountainous deserts of southern Jordan lies one of the world\'s most remarkable archaeological sites: the ancient city of Petra. For centuries this elaborate metropolis, with its temples and tombs carved directly into rose-red sandstone cliffs, was unknown to the outside world. When the Swiss explorer Johann Ludwig Burckhardt rediscovered it in 1812, posing as a Muslim pilgrim to access territory closed to Europeans, he found a city that had been largely abandoned for over a thousand years. Today Petra attracts hundreds of thousands of visitors annually and stands as one of UNESCO\'s World Heritage Sites.</p>
       
       <p><span class="para-num">B</span> Petra was the capital of the Nabataean kingdom, a people whose origins remain somewhat mysterious. They appear to have been Arab nomads who gradually settled along the trade routes connecting Arabia, the Mediterranean, and Mesopotamia. By the fourth century BCE they had established Petra as their main centre, taking advantage of its strategic location at the intersection of major trade routes. The site was also remarkable for its defensibility — surrounded by mountains and accessed primarily through a narrow gorge called the Siq, which winds through cliffs over 80 metres high.</p>
       
@@ -2382,43 +3097,186 @@ const TESTS_DATA = {
       <p><strong>Đoạn F:</strong> Sự suy thoái của Petra bắt đầu với việc La Mã sáp nhập vương quốc Nabataean năm 106 SCN. Người La Mã xây đường vòng qua Petra và giảm tầm quan trọng thương mại. Trận động đất tàn phá năm 363 SCN làm hỏng nhiều tòa nhà và quan trọng làm gián đoạn hệ thống nước. Vào thời chinh phục Hồi giáo thế kỷ 7, Petra phần lớn bị bỏ hoang.</p>
       
       <p><strong>Đoạn G:</strong> Khảo cổ học hiện đại tiếp tục tiết lộ các khía cạnh mới của Petra. Ít hơn 15% thành phố cổ đã được khai quật chính thức. Hình ảnh vệ tinh gần đây đã xác định các cấu trúc bị chôn vùi có thể chỉ ra sự phức tạp lớn hơn nghi ngờ trước đây. Khu vực đối mặt với thách thức nghiêm trọng từ xói mòn tự nhiên, lũ quét, và tác động của du lịch hàng loạt.</p>`
-    }],
+      },
+      {
+        label: 'Reading Passage 2',
+        title: 'The Hidden Lives of Trees',
+        content: `<p><span class="para-num">A</span> For most of human history, trees have been viewed primarily as individual organisms — living things that happen to grow in proximity to one another but otherwise operate independently. This view has begun to change dramatically over the past few decades as scientific research has revealed previously unsuspected complexity in how trees relate to one another and to their environment. The findings have practical implications for forest management, climate policy, and conservation, but they also invite us to reconsider basic assumptions about the natural world.</p>
+        
+        <p><span class="para-num">B</span> The German forester Peter Wohlleben became internationally famous after his 2015 book described forests as social communities in which trees communicate, cooperate, and care for one another. His characterisation, while controversial among more cautious researchers, reflected genuine scientific findings that had been accumulating for years. Trees, it appears, can share resources through underground networks, warn neighbours of impending dangers, and even support younger trees that struggle to grow in shaded conditions. Wohlleben\'s popular treatment may have romanticised these findings, but the underlying science is real.</p>
+        
+        <p><span class="para-num">C</span> Much of the communication and resource-sharing between trees occurs through underground networks of fungi called mycorrhizae. These fungi form intimate associations with tree roots, exchanging nutrients with the trees in return for sugars produced through photosynthesis. The fungal networks extend through the soil between trees, allowing chemical signals and even nutrients to flow from one tree to another. The Canadian ecologist Suzanne Simard, whose research established much of what is now known about these networks, has documented how mature trees can support struggling saplings of the same species, and even occasionally other species, through these fungal connections.</p>
+        
+        <p><span class="para-num">D</span> Trees also communicate through chemical signals released into the air. When attacked by insects, many trees release volatile compounds that warn nearby trees, which respond by producing defensive chemicals before they themselves are attacked. African acacia trees famously release a chemical that increases tannin production in their leaves when browsed by giraffes, making the leaves unpalatable; nearby acacias detect the chemical and increase their own tannin production preemptively. This kind of plant-to-plant communication, once dismissed as biologically implausible, is now well documented across many species.</p>
+        
+        <p><span class="para-num">E</span> Recent research has revealed that trees of the same species often coordinate their reproductive cycles. Beech trees across large areas may all produce massive seed crops in the same year — a phenomenon called "masting" — followed by years of low seed production. The synchronisation across vast distances cannot be explained by weather or other local factors. Researchers now believe that masting represents a strategy that overwhelms seed predators with more food than they can consume in mast years, allowing more seeds to germinate, while leaving predator populations to decline in lean years. The information required to coordinate masting must be transmitted between trees, though exactly how remains incompletely understood.</p>
+        
+        <p><span class="para-num">F</span> The implications of these findings for forestry practice are significant. Traditional commercial forestry has typically focused on individual trees as units, optimising for growth rate and lumber quality of single specimens. The newer research suggests that this approach may underestimate the importance of forest structure, biodiversity, and the complex relationships between trees. Some forest managers are experimenting with approaches that preserve more old-growth trees, maintain greater species diversity, and protect the underground fungal networks that support forest health. Whether such approaches can produce both economic returns and ecological benefits remains an active area of research.</p>
+        
+        <p><span class="para-num">G</span> Despite the genuine scientific interest of these findings, some researchers worry about how the new understanding of trees is being communicated to the public. Words like "communication," "cooperation," and "support" carry connotations that may misrepresent what trees actually do. Trees do not have intentions or preferences in the way that conscious organisms do; their behaviours emerge from biological processes shaped by natural selection. The risk is that popular accounts that anthropomorphise trees may make the science seem less credible to skeptical readers. Yet the underlying findings about forest complexity are robust, and they have transformed how scientists understand these ecosystems. The wood is more wonderful than we previously knew.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Trong hầu hết lịch sử, cây được xem là sinh vật cá thể. Quan điểm này đã thay đổi đáng kể trong vài thập kỷ qua khi nghiên cứu khoa học tiết lộ sự phức tạp chưa được nghi ngờ.</p>
+        <p><strong>Đoạn B:</strong> Peter Wohlleben trở nên nổi tiếng quốc tế sau cuốn sách năm 2015 mô tả rừng là cộng đồng xã hội. Đặc tả của ông phản ánh các phát hiện khoa học thực sự.</p>
+        <p><strong>Đoạn C:</strong> Nhiều giao tiếp giữa các cây xảy ra qua mạng lưới nấm mycorrhizae. Suzanne Simard ghi nhận cách cây trưởng thành có thể hỗ trợ cây con đang vật lộn qua các kết nối nấm.</p>
+        <p><strong>Đoạn D:</strong> Cây cũng giao tiếp qua tín hiệu hóa học vào không khí. Khi bị côn trùng tấn công, nhiều cây giải phóng các hợp chất bay hơi cảnh báo các cây gần đó.</p>
+        <p><strong>Đoạn E:</strong> Cây cùng loài thường phối hợp chu kỳ sinh sản. Hiện tượng "masting" - tất cả sản xuất vụ hạt lớn cùng năm. Phối hợp khoảng cách lớn không thể giải thích bởi thời tiết.</p>
+        <p><strong>Đoạn F:</strong> Hàm ý cho thực hành lâm nghiệp là đáng kể. Phương pháp hiện đại có thể đánh giá thấp tầm quan trọng của cấu trúc rừng. Một số nhà quản lý đang thử nghiệm các phương pháp bảo tồn.</p>
+        <p><strong>Đoạn G:</strong> Một số nhà nghiên cứu lo lắng về cách truyền đạt cho công chúng. Cây không có ý định như sinh vật có ý thức. Tuy nhiên phát hiện cơ bản về độ phức tạp của rừng là vững chắc.</p>`
+      },
+      {
+        label: 'Reading Passage 3',
+        title: 'The Mystery of Yawning',
+        content: `<p><span class="para-num">A</span> Yawning is among the most universal human behaviours. People yawn dozens of times each day; foetuses yawn in the womb; people yawn upon waking and before sleeping, when bored, when tired, and sometimes apparently for no reason at all. Yet despite this universality, the biological function of yawning remains surprisingly poorly understood. Different theories have been proposed to explain why we yawn, but none has yet gained complete scientific acceptance.</p>
+        
+        <p><span class="para-num">B</span> The most popular folk explanation for yawning — that we yawn to bring oxygen to the brain or expel carbon dioxide — has been thoroughly investigated and largely rejected by researchers. Studies in which subjects breathed pure oxygen showed that the rate of yawning did not change, contradicting the prediction that oxygen-deficient blood should trigger yawning. Modern research has had to look elsewhere for explanations of this puzzling behaviour, with multiple competing theories attracting various degrees of evidence.</p>
+        
+        <p><span class="para-num">C</span> One leading theory, proposed by the American researcher Andrew Gallup, suggests that yawning helps cool the brain. The mechanical actions involved in yawning — the deep inhalation, the stretching of facial muscles, the brief change in blood pressure — could plausibly cool blood flowing to the brain, helping maintain optimal temperature for cognitive function. Studies have shown that people yawn more often when ambient temperatures are within a moderate range that allows yawning to effectively cool the brain, but yawn less when temperatures are very high or very low. This finding supports the cooling hypothesis, though it has not been universally accepted.</p>
+        
+        <p><span class="para-num">D</span> The contagious nature of yawning has fascinated researchers and led to important findings about social cognition. People who see, hear, or even read about others yawning often feel a strong urge to yawn themselves. This contagion effect has been documented in chimpanzees, dogs, and several other social species, suggesting it represents an evolutionarily ancient feature of social mammals. Studies have found that contagious yawning is more likely between socially close individuals — family members and friends — than between strangers, suggesting it may relate to empathy or social bonding.</p>
+        
+        <p><span class="para-num">E</span> Some research has linked contagious yawning to broader empathy abilities. Children typically do not show contagious yawning until around age four, the same age when various aspects of empathy begin to develop. People diagnosed with certain conditions affecting social cognition, including autism spectrum disorders, sometimes show reduced contagious yawning compared to others. These observations have suggested that contagious yawning might serve as a measurable indicator of empathy or social cognitive abilities, though the relationship remains debated.</p>
+        
+        <p><span class="para-num">F</span> Researchers have found significant variation in yawning frequency between species. Animals with larger brains relative to their body size generally yawn longer and more often than animals with smaller relative brains. The differences are striking — adult humans typically yawn for around six seconds, while mice yawn for only about one second. The pattern suggests that whatever yawning does, larger and more complex brains may require more of it. This finding is consistent with theories that yawning serves a function related to brain maintenance or activity.</p>
+        
+        <p><span class="para-num">G</span> Despite considerable research, key questions about yawning remain unresolved. Whether the cooling hypothesis fully explains yawning, whether contagious yawning genuinely relates to empathy, what role yawning plays in transitions between sleep and wakefulness — all these questions continue to be investigated. Yawning may seem like a trivial behaviour, but it touches on important questions about how brains function, how social species coordinate behaviour, and how seemingly simple actions can serve multiple biological purposes. The next time you yawn — and others around you join in — you participate in one of the more mysterious universal behaviours in human life.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Ngáp là một trong những hành vi phổ quát nhất của con người. Tuy nhiên, chức năng sinh học của ngáp vẫn được hiểu biết kém.</p>
+        <p><strong>Đoạn B:</strong> Giải thích dân gian phổ biến nhất - ngáp để mang oxy đến não - đã được điều tra kỹ lưỡng và bị bác bỏ. Các nghiên cứu cho thấy hít oxy nguyên chất không thay đổi tỷ lệ ngáp.</p>
+        <p><strong>Đoạn C:</strong> Một lý thuyết hàng đầu của Andrew Gallup cho rằng ngáp giúp làm mát não. Nghiên cứu cho thấy người ta ngáp nhiều hơn khi nhiệt độ ở mức vừa phải.</p>
+        <p><strong>Đoạn D:</strong> Bản chất lây lan của ngáp đã hấp dẫn các nhà nghiên cứu. Ngáp lây lan đã được ghi nhận ở tinh tinh, chó. Phổ biến hơn giữa các cá nhân thân thiết về mặt xã hội.</p>
+        <p><strong>Đoạn E:</strong> Một số nghiên cứu liên kết ngáp lây lan với khả năng đồng cảm rộng hơn. Trẻ em thường không ngáp lây lan đến tuổi 4. Người tự kỷ đôi khi có ít ngáp lây lan hơn.</p>
+        <p><strong>Đoạn F:</strong> Có sự khác biệt đáng kể về tần suất ngáp giữa các loài. Động vật có não lớn hơn so với cơ thể thường ngáp lâu hơn và thường xuyên hơn.</p>
+        <p><strong>Đoạn G:</strong> Bất chấp nghiên cứu đáng kể, các câu hỏi quan trọng về ngáp vẫn chưa được giải quyết. Ngáp có thể có vẻ tầm thường nhưng chạm đến các câu hỏi quan trọng về cách não hoạt động.</p>`
+      }
+    ],
     
     questions: [
-      {
-        group: 'Questions 1–5',
-        type: 'tfng',
-        instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
-        items: [
-          { q: 'Burckhardt rediscovered Petra by disguising himself as a Muslim pilgrim.', answer: 'TRUE', explain: 'Đoạn A: "posing as a Muslim pilgrim to access territory closed to Europeans".' },
-          { q: 'The Nabataean people were originally from Mesopotamia.', answer: 'FALSE', explain: 'Đoạn B: "They appear to have been Arab nomads" - người Ả Rập du mục.' },
-          { q: 'Petra is mainly accessed through a narrow gorge called the Siq.', answer: 'TRUE', explain: 'Đoạn B: "accessed primarily through a narrow gorge called the Siq".' },
-          { q: 'Petra received less rainfall than most other cities of its time.', answer: 'NOT GIVEN', explain: 'Đoạn D cho biết Petra nhận 150mm mưa nhưng không so sánh với các thành phố khác cùng thời.' },
-          { q: 'Al-Khazneh actually contained hidden pirate treasure.', answer: 'FALSE', explain: 'Đoạn E: "acquired its current name from a legend that pirates had hidden treasure" - chỉ là truyền thuyết.' }
-        ]
-      },
-      {
-        group: 'Questions 6–9',
-        type: 'mcq',
-        instruction: 'Choose the correct letter, A, B, C or D.',
-        items: [
-          { q: 'According to the passage, the Nabataeans grew wealthy primarily from:', options: ['A. Mining precious metals', 'B. Farming irrigated land', 'C. Controlling trade in incense', 'D. Building monuments for foreign rulers'], answer: 'C', explain: 'Đoạn C: "The Nabataeans grew wealthy by controlling the lucrative trade in incense".' },
-          { q: 'The architectural style of Petra shows influences from:', options: ['A. Only Greek and Roman traditions', 'B. Several civilizations including Greek, Egyptian, and Arab', 'C. Native Arab styles exclusively', 'D. Indian and Chinese sources only'], answer: 'B', explain: 'Đoạn E: "Greek influences... Egyptian motifs... Native Arab styles".' },
-          { q: 'The decline of Petra was caused by several factors including:', options: ['A. The Roman annexation and an earthquake', 'B. Invasion by Egyptian armies', 'C. The discovery of better trade routes by sea', 'D. Religious conflict between Christians and Muslims'], answer: 'A', explain: 'Đoạn F: "Roman annexation of the Nabataean kingdom in 106 CE... devastating earthquake in 363 CE".' },
-          { q: 'According to the passage, what percentage of Petra has been formally excavated?', options: ['A. About half', 'B. Roughly 30 percent', 'C. Less than 15 percent', 'D. The entire site'], answer: 'C', explain: 'Đoạn G: "Less than fifteen percent of the ancient city has been formally excavated".' }
-        ]
-      },
-      {
-        group: 'Questions 10–13',
-        type: 'fill',
-        instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
-        items: [
-          { q: 'Petra was rediscovered by Burckhardt in __________.', answer: '1812', explain: 'Đoạn A: "the Swiss explorer Johann Ludwig Burckhardt rediscovered it in 1812".' },
-          { q: 'At its peak, Petra may have had a population of approximately __________.', answer: '30,000', explain: 'Đoạn C: "a population of 30,000".' },
-          { q: 'Petra receives only about __________ millimetres of rainfall annually.', answer: '150', explain: 'Đoạn D: "Petra receives only about 150 millimetres of rainfall annually".' },
-          { q: 'A devastating earthquake damaged Petra in the year __________.', answer: '363', explain: 'Đoạn F: "A devastating earthquake in 363 CE damaged many buildings".' }
-        ]
-      }
+      // ========== PASSAGE 1 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 1–5',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'Burckhardt rediscovered Petra by disguising himself as a Muslim pilgrim.', answer: 'TRUE', explain: 'Đoạn A: "posing as a Muslim pilgrim to access territory closed to Europeans".' },
+            { q: 'The Nabataean people were originally from Mesopotamia.', answer: 'FALSE', explain: 'Đoạn B: "They appear to have been Arab nomads".' },
+            { q: 'Petra is mainly accessed through a narrow gorge called the Siq.', answer: 'TRUE', explain: 'Đoạn B: "accessed primarily through a narrow gorge called the Siq".' },
+            { q: 'Petra received less rainfall than most other cities of its time.', answer: 'NOT GIVEN', explain: 'Đoạn D cho biết Petra nhận 150mm mưa nhưng không so sánh với các thành phố khác.' },
+            { q: 'Al-Khazneh actually contained hidden pirate treasure.', answer: 'FALSE', explain: 'Đoạn E: "acquired its current name from a legend that pirates had hidden treasure" - chỉ là truyền thuyết.' }
+          ]
+        },
+        {
+          group: 'Questions 6–9',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to the passage, the Nabataeans grew wealthy primarily from:', options: ['A. Mining precious metals', 'B. Farming irrigated land', 'C. Controlling trade in incense', 'D. Building monuments for foreign rulers'], answer: 'C', explain: 'Đoạn C: "The Nabataeans grew wealthy by controlling the lucrative trade in incense".' },
+            { q: 'The architectural style of Petra shows influences from:', options: ['A. Only Greek and Roman traditions', 'B. Several civilizations including Greek, Egyptian, and Arab', 'C. Native Arab styles exclusively', 'D. Indian and Chinese sources only'], answer: 'B', explain: 'Đoạn E: "Greek influences... Egyptian motifs... Native Arab styles".' },
+            { q: 'The decline of Petra was caused by several factors including:', options: ['A. The Roman annexation and an earthquake', 'B. Invasion by Egyptian armies', 'C. The discovery of better trade routes by sea', 'D. Religious conflict'], answer: 'A', explain: 'Đoạn F: "Roman annexation of the Nabataean kingdom in 106 CE... devastating earthquake in 363 CE".' },
+            { q: 'According to the passage, what percentage of Petra has been formally excavated?', options: ['A. About half', 'B. Roughly 30 percent', 'C. Less than 15 percent', 'D. The entire site'], answer: 'C', explain: 'Đoạn G: "Less than fifteen percent of the ancient city has been formally excavated".' }
+          ]
+        },
+        {
+          group: 'Questions 10–13',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
+          items: [
+            { q: 'Petra was rediscovered by Burckhardt in __________.', answer: '1812', explain: 'Đoạn A: "the Swiss explorer Johann Ludwig Burckhardt rediscovered it in 1812".' },
+            { q: 'At its peak, Petra may have had a population of approximately __________.', answer: '30,000', explain: 'Đoạn C: "a population of 30,000".' },
+            { q: 'Petra receives only about __________ millimetres of rainfall annually.', answer: '150', explain: 'Đoạn D: "Petra receives only about 150 millimetres of rainfall annually".' },
+            { q: 'A devastating earthquake damaged Petra in the year __________.', answer: '363', explain: 'Đoạn F: "A devastating earthquake in 363 CE damaged many buildings".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 2 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 14–20',
+          type: 'matching-headings',
+          instruction: 'Reading Passage 2 has seven paragraphs, A-G. Choose the correct heading for each paragraph from the list below.',
+          headings: [
+            { id: 'i', text: 'Concerns about anthropomorphising scientific findings' },
+            { id: 'ii', text: 'Air-borne chemical signals between plants' },
+            { id: 'iii', text: 'Implications for forestry practice' },
+            { id: 'iv', text: 'A shift in how we understand trees' },
+            { id: 'v', text: 'A best-selling book and the science behind it' },
+            { id: 'vi', text: 'Underground fungal communication networks' },
+            { id: 'vii', text: 'Synchronised reproductive cycles' },
+            { id: 'viii', text: 'How insects damage tree populations' },
+            { id: 'ix', text: 'Common tree species in temperate forests' }
+          ],
+          items: [
+            { q: 'A', answer: 'iv', explain: 'Đoạn A giới thiệu sự thay đổi cách hiểu về cây.' },
+            { q: 'B', answer: 'v', explain: 'Đoạn B về Wohlleben và cuốn sách bán chạy năm 2015.' },
+            { q: 'C', answer: 'vi', explain: 'Đoạn C về mạng nấm mycorrhizae dưới đất giữa các cây.' },
+            { q: 'D', answer: 'ii', explain: 'Đoạn D về tín hiệu hóa học bay hơi trong không khí giữa cây.' },
+            { q: 'E', answer: 'vii', explain: 'Đoạn E về masting - chu kỳ sinh sản đồng bộ.' },
+            { q: 'F', answer: 'iii', explain: 'Đoạn F về hàm ý cho thực hành lâm nghiệp.' },
+            { q: 'G', answer: 'i', explain: 'Đoạn G về lo ngại nhân hóa cây trong khoa học.' }
+          ]
+        },
+        {
+          group: 'Questions 21–23',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 2? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'Peter Wohlleben\'s book was published in 2015.', answer: 'TRUE', explain: 'Đoạn B: "after his 2015 book".' },
+            { q: 'Suzanne Simard documented trees supporting only saplings of their own species.', answer: 'FALSE', explain: 'Đoạn C: "support struggling saplings of the same species, and even occasionally other species".' },
+            { q: 'The phenomenon of masting can be fully explained by local weather patterns.', answer: 'FALSE', explain: 'Đoạn E: "cannot be explained by weather or other local factors".' }
+          ]
+        },
+        {
+          group: 'Questions 24–26',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'African __________ trees increase tannin production when browsed by giraffes.', answer: 'acacia', explain: 'Đoạn D: "African acacia trees famously release a chemical".' },
+            { q: '__________ trees produce massive seed crops in synchrony across vast areas.', answer: 'Beech', explain: 'Đoạn E: "Beech trees across large areas may all produce massive seed crops".' },
+            { q: 'Trees do not have intentions in the way that __________ organisms do.', answer: 'conscious', explain: 'Đoạn G: "Trees do not have intentions or preferences in the way that conscious organisms do".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 3 QUESTIONS (14 questions) ==========
+      [
+        {
+          group: 'Questions 27–32',
+          type: 'matching-information',
+          instruction: 'Reading Passage 3 has seven paragraphs, A-G. Which paragraph contains the following information?',
+          paragraphs: ['A','B','C','D','E','F','G'],
+          items: [
+            { q: 'A reference to a researcher who proposed that yawning cools the brain.', answer: 'C', explain: 'Đoạn C: "Andrew Gallup, suggests that yawning helps cool the brain".' },
+            { q: 'Mention of an age at which children begin showing contagious yawning.', answer: 'E', explain: 'Đoạn E: "Children typically do not show contagious yawning until around age four".' },
+            { q: 'Information about the comparative yawning duration in different species.', answer: 'F', explain: 'Đoạn F: "adult humans typically yawn for around six seconds, while mice yawn for only about one second".' },
+            { q: 'Discussion of why the oxygen theory of yawning has been rejected.', answer: 'B', explain: 'Đoạn B: "Studies in which subjects breathed pure oxygen showed that the rate of yawning did not change".' },
+            { q: 'A list of universal yawning circumstances throughout human life.', answer: 'A', explain: 'Đoạn A: "People yawn dozens of times each day; foetuses yawn in the womb".' },
+            { q: 'The observation that contagious yawning is documented in non-human animals.', answer: 'D', explain: 'Đoạn D: "documented in chimpanzees, dogs, and several other social species".' }
+          ]
+        },
+        {
+          group: 'Questions 33–36',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to the passage, the popular belief that we yawn to bring more oxygen to the brain has been:', options: ['A. Confirmed by extensive testing', 'B. Largely rejected by researchers', 'C. Only partially supported', 'D. Never seriously investigated'], answer: 'B', explain: 'Đoạn B: "has been thoroughly investigated and largely rejected by researchers".' },
+            { q: 'Studies of contagious yawning suggest it is more likely between:', options: ['A. Complete strangers', 'B. People of different cultures', 'C. Socially close individuals', 'D. Children and the elderly only'], answer: 'C', explain: 'Đoạn D: "contagious yawning is more likely between socially close individuals".' },
+            { q: 'According to the passage, animals with larger brains relative to body size:', options: ['A. Never yawn at all', 'B. Yawn shorter and less often', 'C. Yawn longer and more often', 'D. Yawn only when threatened'], answer: 'C', explain: 'Đoạn F: "Animals with larger brains relative to their body size generally yawn longer and more often".' },
+            { q: 'The author concludes that yawning:', options: ['A. Is now completely understood by scientists', 'B. Has no biological function at all', 'C. Touches on important questions about brain function', 'D. Will be eliminated by human evolution'], answer: 'C', explain: 'Đoạn G: "it touches on important questions about how brains function".' }
+          ]
+        },
+        {
+          group: 'Questions 37–40',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'The cooling theory of yawning was proposed by American researcher Andrew __________.', answer: 'Gallup', explain: 'Đoạn C: "Andrew Gallup".' },
+            { q: 'Contagious yawning may relate to __________ or social bonding.', answer: 'empathy', explain: 'Đoạn D: "may relate to empathy or social bonding".' },
+            { q: 'Adult humans typically yawn for around __________ seconds.', answer: 'six', explain: 'Đoạn F: "adult humans typically yawn for around six seconds".' },
+            { q: 'People with __________ spectrum disorders sometimes show reduced contagious yawning.', answer: 'autism', explain: 'Đoạn E: "autism spectrum disorders, sometimes show reduced contagious yawning".' }
+          ]
+        }
+      ]
     ]
   },
 
@@ -3522,10 +4380,11 @@ const TESTS_DATA = {
     title: 'The Origins of Agriculture',
     topic: 'History · Archaeology',
     difficulty: 'Hard',
-    passages: [{
-      label: 'Reading Passage 1',
-      title: 'The Origins of Agriculture',
-      content: `<p><span class="para-num">A</span> For approximately 95 percent of human existence, our ancestors lived as hunter-gatherers, obtaining their food directly from wild plants and animals. The transition to agriculture — the deliberate cultivation of plants and management of animals — happened relatively recently in human history, beginning around 12,000 years ago, and not in just one place but independently in several different regions of the world. This transition was perhaps the most fundamental change in human history, transforming nearly every aspect of how humans lived, worked, and organised themselves.</p>
+    passages: [
+      {
+        label: 'Reading Passage 1',
+        title: 'The Origins of Agriculture',
+        content: `<p><span class="para-num">A</span> For approximately 95 percent of human existence, our ancestors lived as hunter-gatherers, obtaining their food directly from wild plants and animals. The transition to agriculture — the deliberate cultivation of plants and management of animals — happened relatively recently in human history, beginning around 12,000 years ago, and not in just one place but independently in several different regions of the world. This transition was perhaps the most fundamental change in human history, transforming nearly every aspect of how humans lived, worked, and organised themselves.</p>
       
       <p><span class="para-num">B</span> The process of agricultural development was much slower than once believed. Rather than a sudden discovery, the shift involved thousands of years of gradual experimentation with plants and animals. Early communities probably encouraged useful wild plants by removing competitors and ensuring water reached them. Over many generations, the plants that responded best to such encouragement became the focus of more intensive management. True domestication — in which plants and animals develop genetic characteristics that depend on human care — emerged only after long periods of selective pressure.</p>
       
@@ -3552,43 +4411,186 @@ const TESTS_DATA = {
       <p><strong>Đoạn F:</strong> Hậu quả xã hội của nông nghiệp rất sâu sắc. Các xã hội săn bắt-hái lượm thường nhỏ, di động và tương đối bình đẳng. Các xã hội nông nghiệp lớn hơn, định cư hơn, và phát triển các thứ bậc phức tạp. Nhu cầu lưu trữ và bảo vệ cây trồng dẫn đến sự phát triển của các pháo đài, tổ chức quân sự, và cuối cùng là sự xuất hiện của các thành phố và nhà nước.</p>
       
       <p><strong>Đoạn G:</strong> Nông nghiệp cũng biến đổi con người về mặt sinh học. Chế độ ăn trở nên ít đa dạng hơn. Sự tiếp xúc gần gũi giữa con người và động vật được thuần hóa đã cho phép chuyển bệnh từ động vật sang quần thể người. Một số thích nghi di truyền xuất hiện, bao gồm khả năng của người lớn tiêu hóa sữa.</p>`
-    }],
+      },
+      {
+        label: 'Reading Passage 2',
+        title: 'How Coffee Conquered the World',
+        content: `<p><span class="para-num">A</span> Coffee is now consumed by an estimated three billion people worldwide every day, making it among the most popular beverages ever developed. Yet six hundred years ago, coffee was unknown outside a small region of East Africa, and its rapid spread across the globe represents one of the most successful product launches in human history. The story of coffee\'s journey from obscure Ethiopian shrub to global commodity reveals as much about human society as about the plant itself.</p>
+        
+        <p><span class="para-num">B</span> Coffee originated in the Ethiopian highlands, where it grew wild for thousands of years before being cultivated. According to popular legend, its stimulating effects were discovered by a goatherd named Kaldi who noticed his goats becoming unusually energetic after eating berries from a particular shrub. The historical record is less certain about exactly when humans began consuming coffee, but archaeological evidence suggests deliberate cultivation began in Yemen sometime between the thirteenth and fifteenth centuries. The Arab world became the first major coffee-consuming culture, with coffee houses serving as important social centres across Islamic civilisation.</p>
+        
+        <p><span class="para-num">C</span> Coffee reached Europe in the seventeenth century, initially viewed with suspicion as an exotic and possibly dangerous foreign substance. Religious authorities debated whether Christians could legitimately consume what was sometimes called "the Muslim drink." However, coffee\'s stimulating properties quickly attracted enthusiasts, and the first European coffee houses opened in Venice, Vienna, Paris, and London during the second half of the century. These establishments quickly became important social institutions where merchants conducted business, intellectuals exchanged ideas, and political debates flourished. Some historians have argued that coffee houses played a crucial role in the development of modern commercial and intellectual culture.</p>
+        
+        <p><span class="para-num">D</span> European colonial expansion transformed coffee into a global commodity. The Dutch began cultivating coffee in their colonies in Java (modern Indonesia) during the seventeenth century, breaking the Arab world\'s monopoly on production. French, Spanish, and Portuguese colonisers established coffee plantations in their territories in the Caribbean, Central and South America, and parts of Africa. By the early eighteenth century, Brazil — which would eventually become the world\'s largest coffee producer — was beginning its long history of coffee cultivation. The labour for these plantations was often supplied by enslaved Africans, creating a dark history that coffee continues to confront.</p>
+        
+        <p><span class="para-num">E</span> The economic structure of the coffee industry has historically created tensions between producers and consumers. Coffee is grown almost exclusively in tropical countries, often by small farmers whose incomes depend heavily on global market prices that they cannot influence. Consumption is concentrated in wealthier nations whose populations pay prices many times higher than what farmers receive. Volatile price fluctuations can devastate producing communities while having minimal effect on consumer markets. The fair trade movement, which emerged in the 1980s, attempts to address these inequities by guaranteeing minimum prices and improved working conditions for coffee farmers, though its impact remains limited compared to total trade volumes.</p>
+        
+        <p><span class="para-num">F</span> Climate change presents serious threats to the coffee industry. The two main coffee species — Arabica and Robusta — both require specific climate conditions to thrive. Arabica, which produces higher-quality beans, is particularly sensitive to temperature changes. Studies suggest that suitable land for Arabica cultivation may shrink by up to fifty percent by 2050 under projected climate scenarios. Coffee diseases that previously affected only specific regions are spreading as temperatures change, threatening crops in areas that have produced coffee for centuries. Researchers are working to develop more resistant coffee varieties, but the future of the industry remains uncertain.</p>
+        
+        <p><span class="para-num">G</span> Modern coffee consumption has been transformed by the "third wave" coffee movement, which began in the late twentieth century and emphasises high-quality beans, careful brewing methods, and detailed attention to origin. Specialty coffee shops now operate in cities around the world, offering coffees from particular farms or regions in the way that wines are distinguished by their vineyards. This approach has dramatically improved quality at the higher end of the market and increased the prices paid to some producers. Yet the vast majority of coffee continues to be sold as a commodity product, with relatively little of the final price reaching the farmers who grow it. The future of the industry will depend on whether the values of the specialty market can be extended more broadly across global coffee production.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Cà phê hiện được tiêu thụ bởi khoảng 3 tỷ người trên toàn thế giới mỗi ngày. 600 năm trước, cà phê chưa được biết đến ngoài Đông Phi. Sự lan rộng nhanh chóng là một trong những lần ra mắt sản phẩm thành công nhất trong lịch sử.</p>
+        <p><strong>Đoạn B:</strong> Cà phê có nguồn gốc từ cao nguyên Ethiopia. Theo truyền thuyết, hiệu ứng kích thích được phát hiện bởi một người chăn dê tên Kaldi. Bằng chứng khảo cổ cho thấy canh tác có chủ đích bắt đầu ở Yemen thế kỷ 13-15.</p>
+        <p><strong>Đoạn C:</strong> Cà phê đến châu Âu thế kỷ 17, ban đầu được xem với sự nghi ngờ. Các quán cà phê châu Âu đầu tiên mở ở Venice, Vienna, Paris, London. Một số nhà sử học lập luận các quán cà phê đóng vai trò then chốt trong phát triển văn hóa thương mại và trí tuệ hiện đại.</p>
+        <p><strong>Đoạn D:</strong> Mở rộng thuộc địa châu Âu biến cà phê thành hàng hóa toàn cầu. Người Hà Lan bắt đầu trồng cà phê ở Java thế kỷ 17. Brazil trở thành nhà sản xuất lớn nhất. Lao động cho các đồn điền thường được cung cấp bởi nô lệ châu Phi.</p>
+        <p><strong>Đoạn E:</strong> Cấu trúc kinh tế của ngành cà phê tạo ra căng thẳng giữa nhà sản xuất và người tiêu dùng. Phong trào Fair Trade xuất hiện những năm 1980 cố gắng giải quyết bất bình đẳng.</p>
+        <p><strong>Đoạn F:</strong> Biến đổi khí hậu là mối đe dọa nghiêm trọng. Arabica đặc biệt nhạy cảm với thay đổi nhiệt độ. Đất phù hợp cho Arabica có thể giảm tới 50% vào năm 2050.</p>
+        <p><strong>Đoạn G:</strong> Tiêu thụ cà phê hiện đại đã được biến đổi bởi phong trào "third wave" - nhấn mạnh chất lượng cao, phương pháp pha cẩn thận, chú ý đến nguồn gốc.</p>`
+      },
+      {
+        label: 'Reading Passage 3',
+        title: 'The Mystery of Consciousness',
+        content: `<p><span class="para-num">A</span> Consciousness — the subjective experience of being aware, of feeling sensations, of having thoughts that feel like something from the inside — remains one of the most puzzling phenomena in nature. Despite remarkable advances in neuroscience, philosophers and scientists continue to debate the most basic questions: What is consciousness? Why do brain processes give rise to subjective experience? Could machines ever be conscious? The Australian philosopher David Chalmers has called these questions "the hard problem of consciousness," distinguishing them from the merely "easy problems" of explaining specific cognitive functions like memory or attention.</p>
+        
+        <p><span class="para-num">B</span> The hard problem stems from what appears to be an explanatory gap between physical processes and subjective experience. Scientists can describe in increasing detail how neurons fire, how sensory information is processed, how memories are encoded, and many other brain functions. Yet no current scientific theory adequately explains why these physical processes should be accompanied by any inner experience at all. Why should brain activity produce the redness of red, the painfulness of pain, the felt quality of joy? A perfectly functional brain processing information without any accompanying experience seems logically possible, raising profound questions about why consciousness exists at all.</p>
+        
+        <p><span class="para-num">C</span> Different theoretical approaches attempt to address the consciousness puzzle. The Integrated Information Theory, proposed by neuroscientist Giulio Tononi, suggests that consciousness corresponds to the integration of information in physical systems — the more integrated the information, the more conscious the system. This theory has the controversial implication that any sufficiently integrated system, including some non-biological systems, might possess some degree of consciousness. The Global Workspace Theory, associated with cognitive scientist Bernard Baars, proposes that consciousness arises when information is "broadcast" across multiple brain regions, becoming available for various cognitive processes.</p>
+        
+        <p><span class="para-num">D</span> Other approaches deny the hard problem altogether. The American philosopher Daniel Dennett has argued that what philosophers call the hard problem is essentially an illusion — that detailed explanations of cognitive functions, taken together, will eventually explain everything that needs explaining about consciousness. On this view, the apparent mystery of subjective experience reflects our incomplete understanding rather than any genuinely irreducible feature of reality. Critics consider Dennett\'s position too dismissive of subjective experience, while supporters see it as the only scientifically respectable approach to consciousness.</p>
+        
+        <p><span class="para-num">E</span> The question of animal consciousness has profound ethical implications. If consciousness arises from particular kinds of brain organisation, then organisms with similar brains likely have similar inner experiences. Mammals possess brain structures similar to those associated with human consciousness, suggesting they probably experience pain, fear, and pleasure in something like the way humans do. Birds, although their brain organisation differs from mammals, show sophisticated cognitive abilities that suggest consciousness. Even more controversial are questions about the inner lives of insects, fish, and other creatures whose neural systems differ substantially from human brains.</p>
+        
+        <p><span class="para-num">F</span> Artificial intelligence raises both practical and philosophical questions about consciousness. Could a sufficiently sophisticated computer ever be conscious? Different theories give different answers. According to integrated information theory, some digital systems might possess some degree of consciousness if their information integration is sufficient. According to other approaches that emphasise the importance of biological substrates, machines might process information without any accompanying experience, no matter how sophisticated they become. As AI systems develop increasingly impressive capabilities, these abstract philosophical questions are acquiring practical urgency.</p>
+        
+        <p><span class="para-num">G</span> Whatever the ultimate resolution of these questions, the study of consciousness continues to deepen our understanding of mind and brain. Brain imaging studies have identified neural correlates of conscious states — patterns of brain activity reliably associated with particular conscious experiences. Studies of conditions affecting consciousness, from anaesthesia to brain injury to certain meditative states, have revealed how various brain systems contribute to conscious experience. These findings have not solved the hard problem, but they have refined the question and ruled out many possibilities. The mystery of consciousness — why there is something it is like to be conscious, rather than nothing — may remain among the most fascinating unsolved puzzles humans have encountered.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Ý thức - trải nghiệm chủ quan của việc nhận thức - vẫn là một trong những hiện tượng khó hiểu nhất. Triết gia David Chalmers gọi đây là "vấn đề khó của ý thức".</p>
+        <p><strong>Đoạn B:</strong> Vấn đề khó xuất phát từ khoảng trống giải thích giữa quá trình vật lý và trải nghiệm chủ quan. Tại sao hoạt động não tạo ra màu đỏ của màu đỏ, cảm giác đau của nỗi đau?</p>
+        <p><strong>Đoạn C:</strong> Lý thuyết Thông tin Tích hợp của Giulio Tononi đề xuất ý thức tương ứng với sự tích hợp thông tin. Lý thuyết Không gian làm việc Toàn cầu của Bernard Baars cho rằng ý thức xuất hiện khi thông tin được "phát sóng" qua nhiều vùng não.</p>
+        <p><strong>Đoạn D:</strong> Daniel Dennett lập luận rằng vấn đề khó về cơ bản là ảo ảnh. Các nhà phê bình coi quan điểm Dennett quá bác bỏ trải nghiệm chủ quan.</p>
+        <p><strong>Đoạn E:</strong> Câu hỏi về ý thức động vật có ý nghĩa đạo đức sâu sắc. Động vật có vú có cấu trúc não tương tự con người. Chim có khả năng nhận thức tinh vi.</p>
+        <p><strong>Đoạn F:</strong> AI nâng cao câu hỏi thực tế và triết học về ý thức. Máy tính đủ tinh vi có thể có ý thức không? Các lý thuyết khác nhau đưa ra câu trả lời khác nhau.</p>
+        <p><strong>Đoạn G:</strong> Bất kể giải pháp cuối cùng, nghiên cứu ý thức tiếp tục làm sâu sắc hiểu biết của chúng ta về tâm trí và não. Nghiên cứu chụp ảnh não đã xác định các tương quan thần kinh.</p>`
+      }
+    ],
     
     questions: [
-      {
-        group: 'Questions 1–6',
-        type: 'tfng',
-        instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
-        items: [
-          { q: 'Agriculture developed in a single region and then spread to other parts of the world.', answer: 'FALSE', explain: 'Đoạn A: "independently in several different regions of the world".' },
-          { q: 'The transition to agriculture happened quickly once it began.', answer: 'FALSE', explain: 'Đoạn B: "much slower than once believed... thousands of years of gradual experimentation".' },
-          { q: 'The Fertile Crescent had natural advantages for early agriculture.', answer: 'TRUE', explain: 'Đoạn C: "The region\'s natural advantages were considerable".' },
-          { q: 'Wild teosinte and modern maize look very similar to each other.', answer: 'NOT GIVEN', explain: 'Đoạn D nói teosinte là tổ tiên của maize qua hàng ngàn năm thuần hóa nhưng không so sánh ngoại hình của chúng.' },
-          { q: 'Early farmers were generally healthier than hunter-gatherers.', answer: 'FALSE', explain: 'Đoạn E: "early farmers actually had worse nutrition and shorter lives than the hunter-gatherers".' },
-          { q: 'The ability to digest milk evolved in just one human population.', answer: 'FALSE', explain: 'Đoạn G: "appeared independently in several populations".' }
-        ]
-      },
-      {
-        group: 'Questions 7–10',
-        type: 'mcq',
-        instruction: 'Choose the correct letter, A, B, C or D.',
-        items: [
-          { q: 'According to the passage, agriculture began approximately:', options: ['A. 5,000 years ago', 'B. 12,000 years ago', 'C. 50,000 years ago', 'D. 100,000 years ago'], answer: 'B', explain: 'Đoạn A: "beginning around 12,000 years ago".' },
-          { q: 'The fact that agriculture emerged independently in many regions suggests that:', options: ['A. People were copying each other across long distances', 'B. There was something fundamental driving the transition in human societies', 'C. The same climate conditions existed worldwide', 'D. Agriculture was forced on people by external invaders'], answer: 'B', explain: 'Đoạn D: "suggests that something fundamental about human society was driving this transformation".' },
-          { q: 'After the agricultural transition, social structures became:', options: ['A. More egalitarian than before', 'B. Simpler and more flexible', 'C. More hierarchical with greater inequality', 'D. Identical across different regions'], answer: 'C', explain: 'Đoạn F: "developed elaborate hierarchies... social inequalities... appear to have intensified or developed".' },
-          { q: 'Domesticated animals transferred which of the following to humans?', options: ['A. Influenza, measles, and smallpox', 'B. Heart disease and diabetes', 'C. Mental health disorders', 'D. None of the above'], answer: 'A', explain: 'Đoạn G: "diseases like influenza, measles, and smallpox from animal to human populations".' }
-        ]
-      },
-      {
-        group: 'Questions 11–13',
-        type: 'fill',
-        instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
-        items: [
-          { q: 'In northern China, communities began cultivating __________ around 8,000 BCE.', answer: 'millet', explain: 'Đoạn D: "communities along the Yellow River began cultivating millet around 8,000 BCE".' },
-          { q: 'In Mesoamerica, indigenous peoples domesticated maize from a wild grass called __________.', answer: 'teosinte', explain: 'Đoạn D: "domesticated maize from a wild grass called teosinte".' },
-          { q: 'Agricultural societies developed __________ to protect their food crops.', answer: 'fortifications', explain: 'Đoạn F: "led to the development of fortifications".' }
-        ]
-      }
+      // ========== PASSAGE 1 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 1–6',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'Agriculture developed in a single region and then spread to other parts of the world.', answer: 'FALSE', explain: 'Đoạn A: "independently in several different regions of the world".' },
+            { q: 'The transition to agriculture happened quickly once it began.', answer: 'FALSE', explain: 'Đoạn B: "much slower than once believed... thousands of years of gradual experimentation".' },
+            { q: 'The Fertile Crescent had natural advantages for early agriculture.', answer: 'TRUE', explain: 'Đoạn C: "The region\'s natural advantages were considerable".' },
+            { q: 'Wild teosinte and modern maize look very similar to each other.', answer: 'NOT GIVEN', explain: 'Đoạn D nói teosinte là tổ tiên của maize nhưng không so sánh ngoại hình.' },
+            { q: 'Early farmers were generally healthier than hunter-gatherers.', answer: 'FALSE', explain: 'Đoạn E: "early farmers actually had worse nutrition and shorter lives".' },
+            { q: 'The ability to digest milk evolved in just one human population.', answer: 'FALSE', explain: 'Đoạn G: "appeared independently in several populations".' }
+          ]
+        },
+        {
+          group: 'Questions 7–10',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to the passage, agriculture began approximately:', options: ['A. 5,000 years ago', 'B. 12,000 years ago', 'C. 50,000 years ago', 'D. 100,000 years ago'], answer: 'B', explain: 'Đoạn A: "beginning around 12,000 years ago".' },
+            { q: 'The fact that agriculture emerged independently in many regions suggests that:', options: ['A. People were copying each other across long distances', 'B. There was something fundamental driving the transition in human societies', 'C. The same climate conditions existed worldwide', 'D. Agriculture was forced on people by external invaders'], answer: 'B', explain: 'Đoạn D: "suggests that something fundamental about human society was driving this transformation".' },
+            { q: 'After the agricultural transition, social structures became:', options: ['A. More egalitarian than before', 'B. Simpler and more flexible', 'C. More hierarchical with greater inequality', 'D. Identical across different regions'], answer: 'C', explain: 'Đoạn F: "developed elaborate hierarchies... social inequalities... appear to have intensified".' },
+            { q: 'Domesticated animals transferred which of the following to humans?', options: ['A. Influenza, measles, and smallpox', 'B. Heart disease and diabetes', 'C. Mental health disorders', 'D. None of the above'], answer: 'A', explain: 'Đoạn G: "diseases like influenza, measles, and smallpox from animal to human populations".' }
+          ]
+        },
+        {
+          group: 'Questions 11–13',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'In northern China, communities began cultivating __________ around 8,000 BCE.', answer: 'millet', explain: 'Đoạn D: "communities along the Yellow River began cultivating millet around 8,000 BCE".' },
+            { q: 'In Mesoamerica, indigenous peoples domesticated maize from a wild grass called __________.', answer: 'teosinte', explain: 'Đoạn D: "domesticated maize from a wild grass called teosinte".' },
+            { q: 'Agricultural societies developed __________ to protect their food crops.', answer: 'fortifications', explain: 'Đoạn F: "led to the development of fortifications".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 2 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 14–20',
+          type: 'matching-headings',
+          instruction: 'Reading Passage 2 has seven paragraphs, A-G. Choose the correct heading for each paragraph from the list below.',
+          headings: [
+            { id: 'i', text: 'The rise of high-quality specialty coffee' },
+            { id: 'ii', text: 'Climate threats to the coffee industry' },
+            { id: 'iii', text: 'How coffee spread from Africa to the Arab world' },
+            { id: 'iv', text: 'A drink with surprising historical reach' },
+            { id: 'v', text: 'Inequalities between producers and consumers' },
+            { id: 'vi', text: 'Resistance and acceptance in Europe' },
+            { id: 'vii', text: 'Colonial expansion and global production' },
+            { id: 'viii', text: 'Health benefits of coffee consumption' },
+            { id: 'ix', text: 'New coffee shops in modern cities' }
+          ],
+          items: [
+            { q: 'A', answer: 'iv', explain: 'Đoạn A giới thiệu - cà phê với 3 tỷ người uống, lịch sử ấn tượng.' },
+            { q: 'B', answer: 'iii', explain: 'Đoạn B về việc cà phê lan từ Ethiopia đến Yemen và thế giới Ả Rập.' },
+            { q: 'C', answer: 'vi', explain: 'Đoạn C về sự kháng cự và chấp nhận ở châu Âu.' },
+            { q: 'D', answer: 'vii', explain: 'Đoạn D về mở rộng thuộc địa châu Âu và sản xuất toàn cầu.' },
+            { q: 'E', answer: 'v', explain: 'Đoạn E về bất bình đẳng giữa nhà sản xuất và người tiêu dùng.' },
+            { q: 'F', answer: 'ii', explain: 'Đoạn F về các mối đe dọa khí hậu đối với ngành cà phê.' },
+            { q: 'G', answer: 'i', explain: 'Đoạn G về sự trỗi dậy của cà phê chuyên biệt chất lượng cao.' }
+          ]
+        },
+        {
+          group: 'Questions 21–23',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 2? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'Some historians believe coffee houses played a key role in modern intellectual culture.', answer: 'TRUE', explain: 'Đoạn C: "coffee houses played a crucial role in the development of modern commercial and intellectual culture".' },
+            { q: 'The fair trade movement has eliminated all inequities in the coffee industry.', answer: 'FALSE', explain: 'Đoạn E: "its impact remains limited compared to total trade volumes".' },
+            { q: 'Robusta coffee is more sensitive to temperature changes than Arabica.', answer: 'FALSE', explain: 'Đoạn F: "Arabica... is particularly sensitive to temperature changes".' }
+          ]
+        },
+        {
+          group: 'Questions 24–26',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'A goatherd named __________ supposedly discovered coffee\'s effects when he saw goats becoming energetic.', answer: 'Kaldi', explain: 'Đoạn B: "a goatherd named Kaldi".' },
+            { q: 'The Dutch broke the Arab world\'s monopoly by cultivating coffee in __________.', answer: 'Java', explain: 'Đoạn D: "Dutch began cultivating coffee in their colonies in Java".' },
+            { q: 'Suitable land for Arabica cultivation may shrink by up to __________ percent by 2050.', answer: 'fifty', explain: 'Đoạn F: "may shrink by up to fifty percent by 2050".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 3 QUESTIONS (14 questions) ==========
+      [
+        {
+          group: 'Questions 27–32',
+          type: 'matching-information',
+          instruction: 'Reading Passage 3 has seven paragraphs, A-G. Which paragraph contains the following information?',
+          paragraphs: ['A','B','C','D','E','F','G'],
+          items: [
+            { q: 'A philosopher who argues that the hard problem is essentially an illusion.', answer: 'D', explain: 'Đoạn D: "Daniel Dennett has argued that what philosophers call the hard problem is essentially an illusion".' },
+            { q: 'A theory suggesting consciousness corresponds to integrated information.', answer: 'C', explain: 'Đoạn C: "Integrated Information Theory... consciousness corresponds to the integration of information".' },
+            { q: 'A discussion of which animals might experience consciousness.', answer: 'E', explain: 'Đoạn E: thảo luận về ý thức động vật - động vật có vú, chim, côn trùng.' },
+            { q: 'A reference to brain imaging research identifying neural correlates.', answer: 'G', explain: 'Đoạn G: "Brain imaging studies have identified neural correlates of conscious states".' },
+            { q: 'Mention of the explanatory gap between physical processes and subjective experience.', answer: 'B', explain: 'Đoạn B: "an explanatory gap between physical processes and subjective experience".' },
+            { q: 'Discussion of whether artificial intelligence systems could be conscious.', answer: 'F', explain: 'Đoạn F: "Could a sufficiently sophisticated computer ever be conscious?".' }
+          ]
+        },
+        {
+          group: 'Questions 33–36',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'David Chalmers calls the question of subjective experience:', options: ['A. The easy problem', 'B. The hard problem of consciousness', 'C. The impossible question', 'D. An unsolved technical problem'], answer: 'B', explain: 'Đoạn A: "The Australian philosopher David Chalmers has called these questions the hard problem of consciousness".' },
+            { q: 'Integrated Information Theory implies that:', options: ['A. Only humans can be conscious', 'B. Only biological systems can be conscious', 'C. Sufficiently integrated systems might have some consciousness', 'D. Consciousness is impossible to study'], answer: 'C', explain: 'Đoạn C: "any sufficiently integrated system, including some non-biological systems, might possess some degree of consciousness".' },
+            { q: 'According to the passage, mammals likely experience:', options: ['A. Nothing similar to human consciousness', 'B. Pain, fear, and pleasure similar to humans', 'C. Only physical sensations but no emotions', 'D. Consciousness only when interacting with humans'], answer: 'B', explain: 'Đoạn E: "they probably experience pain, fear, and pleasure in something like the way humans do".' },
+            { q: 'The author concludes that the mystery of consciousness:', options: ['A. Has been completely solved', 'B. Will never be studied scientifically', 'C. May remain among the most fascinating unsolved puzzles', 'D. Is unimportant for science'], answer: 'C', explain: 'Đoạn G: "may remain among the most fascinating unsolved puzzles humans have encountered".' }
+          ]
+        },
+        {
+          group: 'Questions 37–40',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'David Chalmers distinguishes the hard problem from the merely "__________" problems of cognitive functions.', answer: 'easy', explain: 'Đoạn A: "the merely easy problems of explaining specific cognitive functions".' },
+            { q: 'The Integrated Information Theory was proposed by neuroscientist Giulio __________.', answer: 'Tononi', explain: 'Đoạn C: "Integrated Information Theory, proposed by neuroscientist Giulio Tononi".' },
+            { q: 'The Global Workspace Theory is associated with cognitive scientist Bernard __________.', answer: 'Baars', explain: 'Đoạn C: "Global Workspace Theory, associated with cognitive scientist Bernard Baars".' },
+            { q: 'Brain imaging studies have identified neural __________ of conscious states.', answer: 'correlates', explain: 'Đoạn G: "identified neural correlates of conscious states".' }
+          ]
+        }
+      ]
     ]
   },
 
@@ -3597,10 +4599,11 @@ const TESTS_DATA = {
     title: 'The Power of Habit',
     topic: 'Psychology · Behaviour',
     difficulty: 'Medium',
-    passages: [{
-      label: 'Reading Passage 1',
-      title: 'The Power of Habit',
-      content: `<p><span class="para-num">A</span> Habits play a surprisingly large role in human behaviour. Researchers estimate that around 40 percent of the actions people take each day are performed not as conscious decisions but as habits — automatic responses to familiar situations. We typically brush our teeth without consciously deciding to do so, drive familiar routes without thinking about navigation, and reach for the same snacks during particular activities. The mental efficiency that habits provide is enormous — they free up our limited capacity for conscious thought to focus on novel or important decisions. Yet this efficiency comes with costs that are only now being fully understood.</p>
+    passages: [
+      {
+        label: 'Reading Passage 1',
+        title: 'The Power of Habit',
+        content: `<p><span class="para-num">A</span> Habits play a surprisingly large role in human behaviour. Researchers estimate that around 40 percent of the actions people take each day are performed not as conscious decisions but as habits — automatic responses to familiar situations. We typically brush our teeth without consciously deciding to do so, drive familiar routes without thinking about navigation, and reach for the same snacks during particular activities. The mental efficiency that habits provide is enormous — they free up our limited capacity for conscious thought to focus on novel or important decisions. Yet this efficiency comes with costs that are only now being fully understood.</p>
       
       <p><span class="para-num">B</span> The neuroscience of habit formation has been extensively studied in recent decades. Habits appear to be stored in a region of the brain called the basal ganglia, separate from the areas involved in conscious decision-making. This separation explains why habits can persist even when we consciously want to change them. Damage to the basal ganglia, whether from disease or injury, can disrupt habits while leaving conscious thinking largely intact, while damage to areas involved in conscious thinking can leave habits unchanged. Patients with severe memory disorders may forget meeting researchers from one day to the next yet learn complex motor habits through practice.</p>
       
@@ -3627,43 +4630,186 @@ const TESTS_DATA = {
       <p><strong>Đoạn F:</strong> Nghiên cứu đã xác định các chiến lược tăng khả năng hình thành thói quen thành công. Bắt đầu với những hành vi nhỏ, dễ đạt được. Chọn một ý định thực hiện cụ thể - "Tôi sẽ tập X vào thời gian Y tại địa điểm Z". Hình thành thói quen thường đòi hỏi sự lặp lại nhất quán trong nhiều tuần hoặc nhiều tháng, một nghiên cứu được trích dẫn rộng rãi gợi ý trung bình 66 ngày.</p>
       
       <p><strong>Đoạn G:</strong> Thói quen cũng có ý nghĩa quan trọng vượt ra ngoài hành vi cá nhân. Các doanh nghiệp và chính phủ ngày càng tinh vi trong việc hiểu và ảnh hưởng đến thói quen. Thiết kế sòng bạc, giao diện truyền thông xã hội, bố trí siêu thị tất cả đều kết hợp các nguyên tắc hình thành thói quen.</p>`
-    }],
+      },
+      {
+        label: 'Reading Passage 2',
+        title: 'The Story of Glassmaking',
+        content: `<p><span class="para-num">A</span> Glass is so ubiquitous in modern life that it can be easy to forget what an extraordinary material it is. Transparent yet solid, easy to shape when hot yet permanent when cooled, glass has properties that no other common material shares. From the windows that admit light into our buildings to the screens of our smartphones, from drinking vessels to optical instruments, glass enables aspects of modern life that would otherwise be impossible. Yet the history of glassmaking spans over four thousand years of technological development, with each generation building on discoveries that often came by chance.</p>
+        
+        <p><span class="para-num">B</span> The earliest known glass objects come from ancient Mesopotamia, dating from around 2,500 BCE. These early glass beads were probably produced as a by-product of metal smelting, when sand and ash accidentally fused into glassy materials in furnaces. The first deliberate glassmaking developed in the same region by about 1,500 BCE, with craftsmen learning to produce small decorative objects by pressing molten glass into shaped moulds. Ancient Egyptian glass was particularly valued, with multicoloured glass vessels among the prized possessions of pharaohs.</p>
+        
+        <p><span class="para-num">C</span> The most transformative early development in glassmaking was the discovery of glassblowing, which occurred along the eastern Mediterranean coast around 100 BCE. By gathering molten glass on the end of a hollow metal tube and blowing into it, craftsmen could produce vessels of varied shapes much more quickly than earlier moulding methods. The technique spread rapidly throughout the Roman Empire, where glass production reached impressive levels. Roman glass workshops produced both luxury items and ordinary household vessels for trade across the empire and beyond, with surviving examples found from Britain to India.</p>
+        
+        <p><span class="para-num">D</span> During the medieval period, the city of Venice emerged as Europe\'s preeminent glassmaking centre. Venetian craftsmen on the island of Murano, where glass furnaces were concentrated after 1291 to reduce fire risk in the city, developed techniques that remained closely guarded secrets. Murano glass became famous throughout Europe for its quality, clarity, and elaborate decoration. Skilled glassworkers were so valuable that Venetian authorities forbade them from leaving Venice on penalty of death, although some did escape and spread Venetian techniques to other European centres.</p>
+        
+        <p><span class="para-num">E</span> The development of plate glass production in seventeenth-century France marked another major advance. The French government, hoping to break Venetian dominance, established the Saint-Gobain factory in 1665. The factory developed techniques for producing large flat sheets of glass suitable for windows and mirrors. The Hall of Mirrors at the Palace of Versailles, completed in 1684 with hundreds of large mirrors made by Saint-Gobain, demonstrated French technological achievement. This factory still exists today, having been in continuous operation for over 350 years.</p>
+        
+        <p><span class="para-num">F</span> The Industrial Revolution transformed glassmaking from craft to mass production. The introduction of coal-fired furnaces allowed much higher temperatures than wood-fired ones, improving glass quality. Mechanical processes for producing bottles, window glass, and other standardised products gradually replaced hand techniques. The price of glass dropped dramatically, making it available to ordinary households for purposes — drinking glasses, window panes, kitchen jars — that had previously been luxuries. This democratisation of glass had broad effects on daily life and material culture.</p>
+        
+        <p><span class="para-num">G</span> Modern glass technologies have created applications that would have seemed magical to earlier glassmakers. Optical fibres carry the data that supports modern telecommunications. Specially formulated glass screens display the images on smartphones, televisions, and computers. Bulletproof glass protects vehicles and buildings. Glass laboratory equipment enables scientific research that requires absolute purity. Despite the development of plastics and other modern materials, glass remains essential to many technologies. The four-thousand-year history of glassmaking continues to unfold in new directions, with applications that earlier generations could not have imagined.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Kính phổ biến đến mức dễ quên đó là vật liệu phi thường. Lịch sử làm kính trải dài hơn 4,000 năm phát triển công nghệ.</p>
+        <p><strong>Đoạn B:</strong> Đồ vật kính sớm nhất từ Mesopotamia 2,500 TCN, có lẽ là sản phẩm phụ của nấu chảy kim loại. Làm kính có chủ đích phát triển từ 1,500 TCN. Kính Ai Cập cổ đặc biệt được đánh giá cao.</p>
+        <p><strong>Đoạn C:</strong> Phát hiện thổi kính khoảng 100 TCN dọc bờ biển Đông Địa Trung Hải. Kỹ thuật này lan rộng nhanh chóng khắp Đế quốc La Mã.</p>
+        <p><strong>Đoạn D:</strong> Thời trung cổ, Venice là trung tâm làm kính hàng đầu châu Âu. Thợ làm kính tập trung trên đảo Murano sau 1291. Họ bị cấm rời Venice với án tử hình.</p>
+        <p><strong>Đoạn E:</strong> Phát triển kính tấm ở Pháp thế kỷ 17 đánh dấu bước tiến lớn. Nhà máy Saint-Gobain thành lập 1665. Hall of Mirrors ở Versailles hoàn thành 1684.</p>
+        <p><strong>Đoạn F:</strong> Cách mạng Công nghiệp biến đổi làm kính từ thủ công thành sản xuất hàng loạt. Lò nung than đá cho phép nhiệt độ cao hơn. Giá kính giảm mạnh, làm cho người dân thường có thể mua.</p>
+        <p><strong>Đoạn G:</strong> Công nghệ kính hiện đại đã tạo ra các ứng dụng có vẻ ma thuật. Sợi quang, màn hình điện thoại thông minh, kính chống đạn, thiết bị phòng thí nghiệm. Lịch sử 4,000 năm tiếp tục phát triển.</p>`
+      },
+      {
+        label: 'Reading Passage 3',
+        title: 'The Hidden Side of Communication',
+        content: `<p><span class="para-num">A</span> Communication is so central to human life that we rarely stop to consider how much of it happens without conscious awareness. While verbal communication — the words we use — receives most analytical attention, researchers studying human interaction have found that non-verbal elements often carry equal or greater weight in conveying meaning. Body posture, facial expressions, vocal tone, eye contact, and even the spaces we maintain between ourselves and others all contribute to what we communicate, often more powerfully than the words we speak.</p>
+        
+        <p><span class="para-num">B</span> The American psychologist Albert Mehrabian conducted influential research in the 1960s on what he called the "three Vs" of communication: verbal (the words used), vocal (the way they are spoken), and visual (body language). His research, often oversimplified in popular presentations, suggested that when verbal content conflicts with vocal tone and body language, listeners typically give more weight to the non-verbal elements. The widely repeated claim that "55 percent of communication is body language" derives from his work but distorts its actual findings, which applied only to specific situations involving emotional content.</p>
+        
+        <p><span class="para-num">C</span> Facial expressions communicate emotions across cultural boundaries with remarkable consistency. The American psychologist Paul Ekman, in research extending from the 1960s, documented that certain basic emotional expressions — happiness, sadness, anger, fear, surprise, and disgust — are recognised across human cultures, including in isolated populations with no exposure to modern media. This finding strongly suggests that basic emotional expression has evolutionary roots predating cultural development. Subtle variations in these expressions, however, do show cultural influence, with norms about when and how strongly to display emotions varying considerably between societies.</p>
+        
+        <p><span class="para-num">D</span> Eye contact patterns reveal cultural differences clearly. In many Western cultures, sustained eye contact during conversation indicates honesty, attention, and engagement; avoiding eye contact may be interpreted as evasive or disrespectful. In contrast, many East Asian, African, and Latin American cultures view sustained direct eye contact as confrontational, particularly in interactions across status differences. These differences can produce serious misunderstandings in cross-cultural interactions, with both parties believing they are communicating respectfully while reading each other\'s behaviour negatively.</p>
+        
+        <p><span class="para-num">E</span> The concept of personal space — the physical distance people maintain during interactions — varies dramatically across cultures. The American anthropologist Edward Hall developed the influential field of "proxemics" in the 1960s, identifying four zones around individuals: intimate, personal, social, and public. These distances vary widely by culture, with Northern Europeans and North Americans typically requiring larger personal space than people from Mediterranean, Middle Eastern, or Latin American cultures. The difference can produce awkward interactions when people from different cultures meet, with one party feeling crowded while the other perceives standoffishness.</p>
+        
+        <p><span class="para-num">F</span> Voice characteristics carry information beyond the explicit content of speech. Tone, pitch, speaking rate, and emphasis can convey emotion, sincerity, doubt, urgency, or sarcasm — sometimes contradicting the literal meaning of words. The phrase "I\'m fine" can communicate quite different things depending on how it is said. Listeners learn early in life to interpret these subtleties, often without being able to articulate the rules they apply. Computer systems have made remarkable progress in producing natural-sounding speech, but reading vocal nuances remains challenging for artificial intelligence.</p>
+        
+        <p><span class="para-num">G</span> Modern communication technologies have changed the balance of communicative channels in interesting ways. Email and text messaging strip away most non-verbal cues, leaving only the bare verbal content — sometimes producing misunderstandings about tone or emotional meaning. Video calls preserve facial expressions and some body language but reduce the impact of personal space and other physical cues. Emoji and other symbols have developed partly to restore some emotional and tonal information lost in text-based communication. Whether these new patterns of communication will reshape how humans understand each other in the long term remains to be seen, but they certainly continue an extended human history of developing new ways to convey what we mean to others.</p>`,
+        
+        vi: `<p><strong>Đoạn A:</strong> Giao tiếp rất trung tâm đến mức chúng ta hiếm khi xem xét bao nhiêu của nó xảy ra không có ý thức. Các yếu tố phi ngôn ngữ thường mang trọng lượng tương đương hoặc lớn hơn từ ngữ.</p>
+        <p><strong>Đoạn B:</strong> Albert Mehrabian nghiên cứu "ba V" của giao tiếp - verbal, vocal, visual. Nghiên cứu của ông thường bị đơn giản hóa thành câu nói phổ biến nhưng sai lệch "55% giao tiếp là body language".</p>
+        <p><strong>Đoạn C:</strong> Paul Ekman ghi nhận rằng các biểu cảm cảm xúc cơ bản - vui, buồn, giận, sợ, ngạc nhiên, ghê tởm - được nhận ra qua các nền văn hóa. Gợi ý rằng biểu cảm cảm xúc cơ bản có nguồn gốc tiến hóa.</p>
+        <p><strong>Đoạn D:</strong> Các mô hình giao tiếp bằng mắt cho thấy sự khác biệt văn hóa rõ ràng. Văn hóa phương Tây xem giao tiếp bằng mắt là thành thật; châu Á, châu Phi, Mỹ Latinh xem là đối đầu.</p>
+        <p><strong>Đoạn E:</strong> Khoảng cách cá nhân khác nhau dramatically giữa các văn hóa. Edward Hall phát triển proxemics những năm 1960. Bắc Âu, Bắc Mỹ cần không gian cá nhân lớn hơn người Địa Trung Hải, Trung Đông.</p>
+        <p><strong>Đoạn F:</strong> Đặc điểm giọng nói mang thông tin vượt nội dung lời nói. Tone, pitch, tốc độ, nhấn mạnh truyền tải cảm xúc. "I\'m fine" có thể truyền đạt những điều khác nhau.</p>
+        <p><strong>Đoạn G:</strong> Công nghệ giao tiếp hiện đại đã thay đổi cân bằng các kênh giao tiếp. Email, tin nhắn loại bỏ hầu hết tín hiệu phi ngôn ngữ. Emoji phát triển một phần để khôi phục thông tin cảm xúc.</p>`
+      }
+    ],
     
     questions: [
-      {
-        group: 'Questions 1–5',
-        type: 'tfng',
-        instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
-        items: [
-          { q: 'Habits free up mental capacity for more important decisions.', answer: 'TRUE', explain: 'Đoạn A: "they free up our limited capacity for conscious thought to focus on novel or important decisions".' },
-          { q: 'Damage to the basal ganglia leaves both habits and conscious thinking unchanged.', answer: 'FALSE', explain: 'Đoạn B: "Damage to the basal ganglia... can disrupt habits while leaving conscious thinking largely intact".' },
-          { q: 'Patients with severe memory disorders cannot learn new motor habits.', answer: 'FALSE', explain: 'Đoạn B: "Patients with severe memory disorders may forget meeting researchers from one day to the next yet learn complex motor habits".' },
-          { q: 'Charles Duhigg recommends eliminating cues to break habits.', answer: 'FALSE', explain: 'Đoạn D: "Rather than trying to eliminate cues, which is often impossible".' },
-          { q: 'Casino designs are based on principles of habit formation.', answer: 'TRUE', explain: 'Đoạn G: "Casino designs... all incorporate principles of habit formation".' }
-        ]
-      },
-      {
-        group: 'Questions 6–9',
-        type: 'mcq',
-        instruction: 'Choose the correct letter, A, B, C or D.',
-        items: [
-          { q: 'According to researchers, what proportion of daily actions are habits rather than conscious decisions?', options: ['A. About 20 percent', 'B. About 40 percent', 'C. About 60 percent', 'D. About 80 percent'], answer: 'B', explain: 'Đoạn A: "around 40 percent of the actions people take each day".' },
-          { q: 'The three components of the habit loop are:', options: ['A. Thought, action, consequence', 'B. Cue, routine, reward', 'C. Decision, motivation, completion', 'D. Stimulus, response, learning'], answer: 'B', explain: 'Đoạn C: "a cue triggers the habit, the routine itself is performed, and a reward reinforces".' },
-          { q: 'The author suggests that difficulty in changing habits is mainly due to:', options: ['A. Weakness of personal willpower', 'B. The neurological power of established habits', 'C. Lack of proper education', 'D. Insufficient motivation'], answer: 'B', explain: 'Đoạn E: "not weakness of will but the genuine neurological power of established habits".' },
-          { q: 'According to research, habit formation works best when:', options: ['A. Starting with ambitious large-scale changes', 'B. Trying many different approaches simultaneously', 'C. Starting with small, achievable behaviours', 'D. Avoiding any specific time or place commitments'], answer: 'C', explain: 'Đoạn F: "Starting with small, easily achievable behaviours rather than ambitious changes appears to be more effective".' }
-        ]
-      },
-      {
-        group: 'Questions 10–13',
-        type: 'fill',
-        instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
-        items: [
-          { q: 'Habits are stored in a brain region called the __________.', answer: 'basal ganglia', explain: 'Đoạn B: "Habits appear to be stored in a region of the brain called the basal ganglia".' },
-          { q: 'Specifying when, where, and what to do creates an implementation __________.', answer: 'intention', explain: 'Đoạn F: "Choosing a specific implementation intention".' },
-          { q: 'One study suggests habit formation takes an average of __________ days.', answer: '66', explain: 'Đoạn F: "an average of 66 days".' },
-          { q: 'Knowledge of habits has implications for personal autonomy and informed __________.', answer: 'citizenship', explain: 'Đoạn G: "personal autonomy and informed citizenship".' }
-        ]
-      }
+      // ========== PASSAGE 1 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 1–5',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'Habits free up mental capacity for more important decisions.', answer: 'TRUE', explain: 'Đoạn A: "they free up our limited capacity for conscious thought to focus on novel or important decisions".' },
+            { q: 'Damage to the basal ganglia leaves both habits and conscious thinking unchanged.', answer: 'FALSE', explain: 'Đoạn B: "Damage to the basal ganglia... can disrupt habits while leaving conscious thinking largely intact".' },
+            { q: 'Patients with severe memory disorders cannot learn new motor habits.', answer: 'FALSE', explain: 'Đoạn B: "Patients with severe memory disorders may forget meeting researchers from one day to the next yet learn complex motor habits".' },
+            { q: 'Charles Duhigg recommends eliminating cues to break habits.', answer: 'FALSE', explain: 'Đoạn D: "Rather than trying to eliminate cues, which is often impossible".' },
+            { q: 'Casino designs are based on principles of habit formation.', answer: 'TRUE', explain: 'Đoạn G: "Casino designs... all incorporate principles of habit formation".' }
+          ]
+        },
+        {
+          group: 'Questions 6–9',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to researchers, what proportion of daily actions are habits rather than conscious decisions?', options: ['A. About 20 percent', 'B. About 40 percent', 'C. About 60 percent', 'D. About 80 percent'], answer: 'B', explain: 'Đoạn A: "around 40 percent of the actions people take each day".' },
+            { q: 'The three components of the habit loop are:', options: ['A. Thought, action, consequence', 'B. Cue, routine, reward', 'C. Decision, motivation, completion', 'D. Stimulus, response, learning'], answer: 'B', explain: 'Đoạn C: "a cue triggers the habit, the routine itself is performed, and a reward reinforces".' },
+            { q: 'The author suggests that difficulty in changing habits is mainly due to:', options: ['A. Weakness of personal willpower', 'B. The neurological power of established habits', 'C. Lack of proper education', 'D. Insufficient motivation'], answer: 'B', explain: 'Đoạn E: "not weakness of will but the genuine neurological power of established habits".' },
+            { q: 'According to research, habit formation works best when:', options: ['A. Starting with ambitious large-scale changes', 'B. Trying many different approaches simultaneously', 'C. Starting with small, achievable behaviours', 'D. Avoiding any specific time or place commitments'], answer: 'C', explain: 'Đoạn F: "Starting with small, easily achievable behaviours rather than ambitious changes appears to be more effective".' }
+          ]
+        },
+        {
+          group: 'Questions 10–13',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
+          items: [
+            { q: 'Habits are stored in a brain region called the __________.', answer: 'basal ganglia', explain: 'Đoạn B: "Habits appear to be stored in a region of the brain called the basal ganglia".' },
+            { q: 'Specifying when, where, and what to do creates an implementation __________.', answer: 'intention', explain: 'Đoạn F: "Choosing a specific implementation intention".' },
+            { q: 'One study suggests habit formation takes an average of __________ days.', answer: '66', explain: 'Đoạn F: "an average of 66 days".' },
+            { q: 'Knowledge of habits has implications for personal autonomy and informed __________.', answer: 'citizenship', explain: 'Đoạn G: "personal autonomy and informed citizenship".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 2 QUESTIONS (13 questions) ==========
+      [
+        {
+          group: 'Questions 14–20',
+          type: 'matching-headings',
+          instruction: 'Reading Passage 2 has seven paragraphs, A-G. Choose the correct heading for each paragraph from the list below.',
+          headings: [
+            { id: 'i', text: 'A material we take for granted' },
+            { id: 'ii', text: 'A breakthrough in shaping techniques' },
+            { id: 'iii', text: 'Industrial methods bring glass to ordinary homes' },
+            { id: 'iv', text: 'Mass-produced modern applications' },
+            { id: 'v', text: 'Accidental beginnings in early furnaces' },
+            { id: 'vi', text: 'French breakthroughs in flat-glass production' },
+            { id: 'vii', text: 'Italian dominance and protected secrets' },
+            { id: 'viii', text: 'Modern recycling of glass products' },
+            { id: 'ix', text: 'Roman trade networks' }
+          ],
+          items: [
+            { q: 'A', answer: 'i', explain: 'Đoạn A giới thiệu kính là vật liệu phổ biến nhưng đặc biệt mà chúng ta coi là điều hiển nhiên.' },
+            { q: 'B', answer: 'v', explain: 'Đoạn B về khởi đầu tình cờ - sản phẩm phụ của nấu chảy kim loại.' },
+            { q: 'C', answer: 'ii', explain: 'Đoạn C về phát hiện thổi kính - đột phá trong kỹ thuật tạo hình.' },
+            { q: 'D', answer: 'vii', explain: 'Đoạn D về Venice/Murano - sự thống trị của Ý với bí mật được bảo vệ.' },
+            { q: 'E', answer: 'vi', explain: 'Đoạn E về bước đột phá của Pháp trong sản xuất kính phẳng (Saint-Gobain).' },
+            { q: 'F', answer: 'iii', explain: 'Đoạn F về phương pháp công nghiệp mang kính đến nhà dân thường.' },
+            { q: 'G', answer: 'iv', explain: 'Đoạn G về các ứng dụng hiện đại của kính.' }
+          ]
+        },
+        {
+          group: 'Questions 21–23',
+          type: 'tfng',
+          instruction: 'Do the following statements agree with the information given in Reading Passage 2? Write TRUE, FALSE, or NOT GIVEN.',
+          items: [
+            { q: 'Glassblowing was invented in ancient Mesopotamia.', answer: 'FALSE', explain: 'Đoạn C: "discovery of glassblowing, which occurred along the eastern Mediterranean coast around 100 BCE" - không phải Mesopotamia.' },
+            { q: 'Venetian glassworkers faced severe punishment if they tried to leave Venice.', answer: 'TRUE', explain: 'Đoạn D: "Venetian authorities forbade them from leaving Venice on penalty of death".' },
+            { q: 'The Saint-Gobain factory was France\'s only major glass producer in the 17th century.', answer: 'NOT GIVEN', explain: 'Đoạn E nói Saint-Gobain được thành lập 1665 nhưng không nói nó là nhà sản xuất duy nhất.' }
+          ]
+        },
+        {
+          group: 'Questions 24–26',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS AND/OR A NUMBER from the passage for each answer.',
+          items: [
+            { q: 'The earliest known glass objects come from ancient __________.', answer: 'Mesopotamia', explain: 'Đoạn B: "The earliest known glass objects come from ancient Mesopotamia".' },
+            { q: 'The Hall of Mirrors at Versailles was completed in __________.', answer: '1684', explain: 'Đoạn E: "completed in 1684".' },
+            { q: 'The introduction of __________ furnaces allowed much higher temperatures than wood-fired ones.', answer: 'coal-fired', explain: 'Đoạn F: "introduction of coal-fired furnaces allowed much higher temperatures".' }
+          ]
+        }
+      ],
+      
+      // ========== PASSAGE 3 QUESTIONS (14 questions) ==========
+      [
+        {
+          group: 'Questions 27–32',
+          type: 'matching-information',
+          instruction: 'Reading Passage 3 has seven paragraphs, A-G. Which paragraph contains the following information?',
+          paragraphs: ['A','B','C','D','E','F','G'],
+          items: [
+            { q: 'A reference to a misinterpreted statistic about body language.', answer: 'B', explain: 'Đoạn B: "the widely repeated claim that 55 percent of communication is body language... distorts its actual findings".' },
+            { q: 'Discussion of how certain emotional expressions are universally recognised.', answer: 'C', explain: 'Đoạn C: "basic emotional expressions... are recognised across human cultures".' },
+            { q: 'A description of cultural differences in physical distance during conversation.', answer: 'E', explain: 'Đoạn E: "personal space... varies dramatically across cultures".' },
+            { q: 'A description of an anthropologist who identified four interaction zones.', answer: 'E', explain: 'Đoạn E: "Edward Hall... identifying four zones around individuals".' },
+            { q: 'A discussion of how text-based communication strips away non-verbal cues.', answer: 'G', explain: 'Đoạn G: "Email and text messaging strip away most non-verbal cues".' },
+            { q: 'A mention of how vocal characteristics can contradict literal meanings.', answer: 'F', explain: 'Đoạn F: "Tone, pitch, speaking rate, and emphasis can convey emotion... sometimes contradicting the literal meaning of words".' }
+          ]
+        },
+        {
+          group: 'Questions 33–36',
+          type: 'mcq',
+          instruction: 'Choose the correct letter, A, B, C or D.',
+          items: [
+            { q: 'According to the passage, Paul Ekman\'s research showed that basic emotional expressions:', options: ['A. Are entirely culturally specific', 'B. Are only recognised within Western cultures', 'C. Are recognised across human cultures', 'D. Cannot be reliably documented'], answer: 'C', explain: 'Đoạn C: "are recognised across human cultures".' },
+            { q: 'In many East Asian cultures, sustained direct eye contact:', options: ['A. Always indicates respect and engagement', 'B. May be viewed as confrontational', 'C. Is considered absolutely necessary', 'D. Has no cultural meaning'], answer: 'B', explain: 'Đoạn D: "many East Asian, African, and Latin American cultures view sustained direct eye contact as confrontational".' },
+            { q: 'According to the passage, AI systems:', options: ['A. Can perfectly interpret vocal nuances', 'B. Have made progress in producing speech but struggle to read vocal nuances', 'C. Can never produce realistic speech', 'D. Already understand human communication completely'], answer: 'B', explain: 'Đoạn F: "Computer systems have made remarkable progress in producing natural-sounding speech, but reading vocal nuances remains challenging for artificial intelligence".' },
+            { q: 'The author suggests that emoji and similar symbols have developed:', options: ['A. To replace verbal communication entirely', 'B. As a fashion trend', 'C. Partly to restore information lost in text-based communication', 'D. Only for use by young people'], answer: 'C', explain: 'Đoạn G: "Emoji and other symbols have developed partly to restore some emotional and tonal information lost in text-based communication".' }
+          ]
+        },
+        {
+          group: 'Questions 37–40',
+          type: 'fill',
+          instruction: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
+          items: [
+            { q: 'Albert Mehrabian called his three components the "three __________" of communication.', answer: 'Vs', explain: 'Đoạn B: "what he called the three Vs of communication".' },
+            { q: 'Paul Ekman documented six basic emotional expressions including happiness, sadness, anger, fear, surprise, and __________.', answer: 'disgust', explain: 'Đoạn C: "happiness, sadness, anger, fear, surprise, and disgust".' },
+            { q: 'Edward Hall founded the field of __________ in the 1960s.', answer: 'proxemics', explain: 'Đoạn E: "developed the influential field of proxemics in the 1960s".' },
+            { q: '__________ calls preserve facial expressions but reduce the impact of physical cues.', answer: 'Video', explain: 'Đoạn G: "Video calls preserve facial expressions and some body language but reduce the impact of personal space".' }
+          ]
+        }
+      ]
     ]
   },
 
