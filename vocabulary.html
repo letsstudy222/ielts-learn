@@ -294,6 +294,16 @@
     padding:8px 12px;border:2px solid var(--ink);border-radius:8px;
     font-family:inherit;font-size:13px;font-weight:600;background:var(--paper);cursor:pointer;
   }
+  
+  /* TIER BADGE */
+  .tier-badge{
+    display:inline-block;font-size:11px;font-weight:700;
+    padding:3px 9px;border-radius:12px;
+    border:2px solid var(--ink);
+    text-transform:uppercase;letter-spacing:.3px;
+  }
+  .tier-foundation{background:var(--mint);color:var(--ink);}
+  .tier-intermediate{background:var(--coral);color:var(--paper);}
 
   .fade-in{opacity:0;transform:translateY(20px);animation:fadeIn .6s ease-out forwards;}
   @keyframes fadeIn{to{opacity:1;transform:translateY(0);}}
@@ -324,10 +334,11 @@
     <header class="page-header fade-in delay-1">
       <span class="crumb">Module 05 · Vocabulary</span>
       <h1 class="page-title">Từ vựng theo <em>chủ đề</em></h1>
-      <p class="page-sub">300 từ vựng band 6.5-8.0 trên 10 chủ đề IELTS phổ biến. Học bằng flashcard, kiểm tra với quiz, theo dõi tiến độ chi tiết.</p>
+      <p class="page-sub">300 từ vựng chia 2 cấp độ: 🌱 <strong>Foundation</strong> (Band 5-6) và 🔥 <strong>Intermediate</strong> (Band 6.5-7.5). Học bằng flashcard, kiểm tra quiz, lọc theo cấp độ trong chế độ List.</p>
       <div class="quick-stats">
         <div class="stat-pill">📚 <strong>10</strong> chủ đề</div>
-        <div class="stat-pill">📝 <strong>300</strong> từ vựng</div>
+        <div class="stat-pill">🌱 <strong>150</strong> Foundation</div>
+        <div class="stat-pill">🔥 <strong>150</strong> Intermediate</div>
         <div class="stat-pill">✅ Đã thuộc: <strong id="totalKnown">0</strong></div>
         <div class="stat-pill">🔄 Cần ôn: <strong id="totalReview">0</strong></div>
       </div>
@@ -355,7 +366,13 @@
     </div>
 
     <div class="filter-bar" id="filterBar" style="display:none;">
-      <label>Hiển thị:</label>
+      <label>Cấp độ:</label>
+      <select id="filterTier" onchange="renderListMode()">
+        <option value="all">Tất cả</option>
+        <option value="foundation">🌱 Foundation (Band 5-6)</option>
+        <option value="intermediate">🔥 Intermediate (Band 6.5-7.5)</option>
+      </select>
+      <label>Trạng thái:</label>
       <select id="filterStatus" onchange="renderListMode()">
         <option value="all">Tất cả</option>
         <option value="unknown">Chưa thuộc</option>
@@ -375,7 +392,10 @@
       <div class="flashcard-container">
         <div class="flashcard" id="flashcard" onclick="flipCard()">
           <div class="card-front">
-            <div class="card-pos" id="cardPos">noun</div>
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;margin-bottom:8px;">
+              <div class="card-pos" id="cardPos">noun</div>
+              <span class="tier-badge" id="cardTier">🌱 Foundation</span>
+            </div>
             <div class="card-word" id="cardWord">example</div>
             <div class="card-ipa" id="cardIpa">/ɪɡˈzɑːmpl/</div>
           </div>
@@ -545,6 +565,15 @@ function renderFlashcard(){
   document.getElementById('cardVi').textContent = word.vi;
   document.getElementById('cardExample').textContent = word.ex;
   document.getElementById('cardColl').textContent = word.coll;
+  // Set tier badge
+  const tierEl = document.getElementById('cardTier');
+  if(word.tier === 'foundation'){
+    tierEl.textContent = '🌱 Foundation';
+    tierEl.className = 'tier-badge tier-foundation';
+  } else {
+    tierEl.textContent = '🔥 Intermediate';
+    tierEl.className = 'tier-badge tier-intermediate';
+  }
   
   const card = document.getElementById('flashcard');
   card.classList.toggle('flipped', isFlipped);
@@ -592,10 +621,15 @@ function markCard(status){
 function renderListMode(){
   const topic = VOCAB_DATA[currentTopic];
   const filter = document.getElementById('filterStatus').value;
+  const tierFilter = document.getElementById('filterTier').value;
   const list = document.getElementById('wordList');
   const status = getStatus()[currentTopic]||{};
   
   let words = topic.words.map((w,i)=>({...w, idx:i, status:status[w.w]||null}));
+  // Lọc theo tier
+  if(tierFilter==='foundation') words = words.filter(w=>w.tier==='foundation');
+  else if(tierFilter==='intermediate') words = words.filter(w=>w.tier==='intermediate');
+  // Lọc theo status
   if(filter==='unknown') words = words.filter(w=>!w.status);
   else if(filter==='known') words = words.filter(w=>w.status==='known');
   else if(filter==='review') words = words.filter(w=>w.status==='review');
@@ -612,6 +646,7 @@ function renderListMode(){
           <span class="word-row-word">${w.w}</span>
           <span class="word-row-ipa">${w.ipa}</span>
           <span class="word-row-pos">${w.pos}</span>
+          <span class="tier-badge tier-${w.tier}">${w.tier==='foundation'?'🌱 Foundation':'🔥 Intermediate'}</span>
         </div>
         <div class="word-row-vi">${w.vi}</div>
         <div class="word-row-ex">📝 ${w.ex}</div>
